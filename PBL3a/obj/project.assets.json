@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Github\\PBL3\\PBL3a\\PBL3a\\PBL3a.csproj",
+      "projectUniqueName": "C:\\Github\\PBL3a\\PBL3a\\PBL3a.csproj",
       "projectName": "PBL3a",
-      "projectPath": "C:\\Github\\PBL3\\PBL3a\\PBL3a\\PBL3a.csproj",
+      "projectPath": "C:\\Github\\PBL3a\\PBL3a\\PBL3a.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Github\\PBL3\\PBL3a\\PBL3a\\obj\\",
+      "outputPath": "C:\\Github\\PBL3a\\PBL3a\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
