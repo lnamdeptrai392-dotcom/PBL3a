@@ -36,8 +36,8 @@
             // LoginTable1
             // 
             LoginTable1.ColumnCount = 2;
-            LoginTable1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
-            LoginTable1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            LoginTable1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.0065145F));
+            LoginTable1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85.9934845F));
             LoginTable1.Controls.Add(lblUsername, 0, 0);
             LoginTable1.Controls.Add(txtUsername, 1, 0);
             LoginTable1.Controls.Add(lblPassword, 0, 1);
@@ -50,54 +50,54 @@
             LoginTable1.Name = "LoginTable1";
             LoginTable1.Padding = new Padding(20);
             LoginTable1.RowCount = 4;
-            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 94F));
-            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 78F));
-            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 87F));
-            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            LoginTable1.Size = new Size(921, 489);
+            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
+            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
+            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 49F));
+            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 136F));
+            LoginTable1.Size = new Size(961, 525);
             LoginTable1.TabIndex = 0;
             // 
             // lblUsername
             // 
-            lblUsername.Anchor = AnchorStyles.Left;
+            lblUsername.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(23, 57);
+            lblUsername.Location = new Point(83, 20);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(78, 20);
+            lblUsername.Size = new Size(63, 15);
             lblUsername.TabIndex = 0;
             lblUsername.Text = "Username:";
             // 
             // txtUsername
             // 
             txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtUsername.Location = new Point(287, 23);
+            txtUsername.Location = new Point(152, 23);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(611, 27);
+            txtUsername.Size = new Size(786, 23);
             txtUsername.TabIndex = 1;
             // 
             // lblPassword
             // 
-            lblPassword.Anchor = AnchorStyles.Left;
+            lblPassword.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(23, 143);
+            lblPassword.Location = new Point(86, 65);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(73, 20);
+            lblPassword.Size = new Size(60, 15);
             lblPassword.TabIndex = 2;
             lblPassword.Text = "Password:";
             // 
             // txtPassword
             // 
             txtPassword.Dock = DockStyle.Fill;
-            txtPassword.Location = new Point(287, 117);
+            txtPassword.Location = new Point(152, 68);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(611, 27);
+            txtPassword.Size = new Size(786, 23);
             txtPassword.TabIndex = 3;
             txtPassword.UseSystemPasswordChar = true;
             // 
             // chkShowPassword
             // 
             chkShowPassword.Anchor = AnchorStyles.Left;
-            chkShowPassword.Location = new Point(287, 223);
+            chkShowPassword.Location = new Point(152, 114);
             chkShowPassword.Name = "chkShowPassword";
             chkShowPassword.Size = new Size(104, 24);
             chkShowPassword.TabIndex = 4;
@@ -106,17 +106,17 @@
             // 
             // btnLogin
             // 
-            btnLogin.Anchor = AnchorStyles.None;
-            btnLogin.Location = new Point(555, 356);
+            btnLogin.Anchor = AnchorStyles.Top;
+            btnLogin.Location = new Point(507, 154);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(75, 36);
+            btnLogin.Size = new Size(75, 45);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.Click += btnLogin_Click;
             // 
             // LoginForm
             // 
-            ClientSize = new Size(921, 489);
+            ClientSize = new Size(961, 525);
             Controls.Add(LoginTable1);
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
