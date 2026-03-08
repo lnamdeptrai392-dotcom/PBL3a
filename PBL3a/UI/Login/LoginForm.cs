@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+
 namespace PBL3a.UI.Login
 {
     public partial class LoginForm : Form
@@ -12,18 +13,69 @@ namespace PBL3a.UI.Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-            
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
-            if (username == "admin" && password == "123")
+            string connectionString = "Server=.\\SQLEXPRESS;Database=PBL3aDB;Trusted_Connection=True;TrustServerCertificate=True;";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                MessageBox.Show("Login success!");
+                try
+                {
+                    conn.Open();
+
+                    string query = "SELECT Role FROM accountList WHERE Username = @u AND Password = @p";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@u", username);
+                    cmd.Parameters.AddWithValue("@p", password);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string role = reader["Role"].ToString();
+                        MessageBox.Show("Đăng nhập thành công. Role: " + role);
+
+                        reader.Close();
+                        OpenFormByRole(role);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi kết nối SQL: " + ex.Message);
+                }
+            }
+        }
+
+        private void OpenFormByRole(string role)
+        {
+            Form nextForm = null;
+
+            if (role == "AdminC")
+            {
+                nextForm = new PBL3a.UI.AdminC.AdminC();
+            }
+            else if (role == "AdminDD")
+            {
+                nextForm = new PBL3a.UI.AdminDD.Form1();
+            }
+            else if (role == "AdminTC")
+            {
+                nextForm = new PBL3a.UI.AdminTC.QuanLyChung();
             }
             else
             {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                MessageBox.Show("Role không hợp lệ hoặc chưa có màn hình tương ứng");
+                return;
             }
+
+            nextForm.Show();
+            this.Hide();
         }
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)

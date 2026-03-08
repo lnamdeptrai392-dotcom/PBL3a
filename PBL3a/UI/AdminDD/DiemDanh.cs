@@ -14,5 +14,10 @@ namespace PBL3a.UI.AdminDD
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

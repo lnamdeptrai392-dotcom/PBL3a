@@ -14,5 +14,10 @@ namespace PBL3a.UI.AdminTC
         {
             InitializeComponent();
         }
+
+        private void QuanLyChung_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

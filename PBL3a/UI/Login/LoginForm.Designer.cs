@@ -61,9 +61,9 @@
             // 
             lblUsername.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(68, 20);
+            lblUsername.Location = new Point(83, 20);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(78, 20);
+            lblUsername.Size = new Size(63, 15);
             lblUsername.TabIndex = 0;
             lblUsername.Text = "Username:";
             // 
@@ -72,16 +72,16 @@
             txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtUsername.Location = new Point(152, 23);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(786, 27);
+            txtUsername.Size = new Size(786, 23);
             txtUsername.TabIndex = 1;
             // 
             // lblPassword
             // 
             lblPassword.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(73, 65);
+            lblPassword.Location = new Point(86, 65);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(73, 20);
+            lblPassword.Size = new Size(60, 15);
             lblPassword.TabIndex = 2;
             lblPassword.Text = "Password:";
             // 
@@ -90,7 +90,7 @@
             txtPassword.Dock = DockStyle.Fill;
             txtPassword.Location = new Point(152, 68);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(786, 27);
+            txtPassword.Size = new Size(786, 23);
             txtPassword.TabIndex = 3;
             txtPassword.UseSystemPasswordChar = true;
             // 
