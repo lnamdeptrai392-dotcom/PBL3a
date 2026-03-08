@@ -4,6 +4,27 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UI\AdminDD\DiemDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminTC\HocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminTC\KhoanChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminTC\KhoanThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminTC\LoiNhuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminTC\LuongGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminTC\QuanLyChung.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UI\Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

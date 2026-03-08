@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace PBL3a.UI.Login
 {
     public partial class LoginForm : Form
@@ -14,6 +14,7 @@ namespace PBL3a.UI.Login
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
+            
 
             if (username == "admin" && password == "123")
             {
