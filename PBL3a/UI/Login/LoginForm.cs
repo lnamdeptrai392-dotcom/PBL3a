@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using PBL3a.services;
 
 namespace PBL3a.UI.Login
 {
     public partial class LoginForm : Form
     {
+        private DatabaseHelper db = new DatabaseHelper();
+
         public LoginForm()
         {
             InitializeComponent();
@@ -16,15 +19,13 @@ namespace PBL3a.UI.Login
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            string connectionString = "Server=.\\SQLEXPRESS;Database=PBL3aDB;Trusted_Connection=True;TrustServerCertificate=True;";
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = db.GetConnection())
             {
                 try
                 {
                     conn.Open();
 
-                    string query = "SELECT Role FROM accountList WHERE Username = @u AND Password = @p";
+                    string query = "SELECT Role FROM accountList WHERE username = @u AND Password = @p";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@u", username);
