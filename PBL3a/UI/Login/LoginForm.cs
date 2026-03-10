@@ -69,7 +69,12 @@ namespace PBL3a.UI.Login
             {
                 nextForm = new PBL3a.UI.AdminTC.QuanLyChungTC();
             }
+            else if (role == "Student")
+            {
+                nextForm = new PBL3a.UI.Student.StudentAll();
+            }
             else
+
             {
                 MessageBox.Show("Role không hợp lệ hoặc chưa có màn hình tương ứng");
                 return;
