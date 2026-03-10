@@ -19,31 +19,40 @@ namespace PBL3a.UI.Login
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ tài khoản và mật khẩu");
+                return;
+            }
+
             using (SqlConnection conn = db.GetConnection())
             {
                 try
                 {
                     conn.Open();
 
-                    string query = "SELECT Role FROM accountList WHERE username = @u AND Password = @p";
+                    string query = "SELECT Role FROM accountList WHERE Username = @u AND Password = @p";
 
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@u", username);
-                    cmd.Parameters.AddWithValue("@p", password);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    if (reader.Read())
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        string role = reader["Role"].ToString();
-                        MessageBox.Show("Đăng nhập thành công. Role: " + role);
+                        cmd.Parameters.AddWithValue("@u", username);
+                        cmd.Parameters.AddWithValue("@p", password);
 
-                        reader.Close();
-                        OpenFormByRole(role);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string role = reader["Role"].ToString();
+                                MessageBox.Show("Đăng nhập thành công. Role: " + role);
+                                reader.Close();
+
+                                OpenFormByRole(role);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -74,14 +83,14 @@ namespace PBL3a.UI.Login
                 nextForm = new PBL3a.UI.Student.StudentAll();
             }
             else
-
             {
                 MessageBox.Show("Role không hợp lệ hoặc chưa có màn hình tương ứng");
                 return;
             }
 
-            nextForm.Show();
-            this.Hide();
+            this.Hide();              // Ẩn form login
+            nextForm.ShowDialog();    // Mở form mới theo kiểu modal
+            this.Close();             // Khi form kia đóng thì login cũng đóng luôn
         }
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)

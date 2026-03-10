@@ -155,3 +155,129 @@ GO
 
 SELECT * FROM Attendance;
 GO
+USE PBL3aDB;
+GO
+
+IF OBJECT_ID('dbo.HocPhi', 'U') IS NOT NULL
+    DROP TABLE dbo.HocPhi;
+GO
+
+CREATE TABLE HocPhi
+(
+    HocPhiID INT IDENTITY(1,1) PRIMARY KEY,
+    AccountID NVARCHAR(20) NOT NULL,
+    ClassID INT NOT NULL,
+    TuitionMonth INT NOT NULL,
+    TuitionYear INT NOT NULL,
+    SoTien DECIMAL(18,0) NOT NULL,
+    TrangThai NVARCHAR(30) NOT NULL DEFAULT N'Chưa đóng',
+    NgayDong DATE NULL,
+    GhiChu NVARCHAR(255) NULL,
+
+    CONSTRAINT FK_HocPhi_Account
+        FOREIGN KEY (AccountID) REFERENCES accountList(Id),
+
+    CONSTRAINT FK_HocPhi_Class
+        FOREIGN KEY (ClassID) REFERENCES Class(classID),
+
+    CONSTRAINT UQ_HocPhi UNIQUE (AccountID, ClassID, TuitionMonth, TuitionYear)
+);
+GO
+INSERT INTO HocPhi (AccountID, ClassID, TuitionMonth, TuitionYear, SoTien, TrangThai, NgayDong, GhiChu)
+VALUES
+('S001', 1, 3, 2026, 500000, N'Đã đóng', '2026-03-05', N'Đóng đủ'),
+('S002', 1, 3, 2026, 500000, N'Chưa đóng', NULL, NULL),
+('S003', 2, 3, 2026, 600000, N'Đã đóng', '2026-03-07', N''),
+('S001', 3, 3, 2026, 550000, N'Chưa đóng', NULL, N'');
+GO
+
+SELECT * FROM HocPhi;
+GO
+USE PBL3aDB;
+GO
+
+IF OBJECT_ID('dbo.LuongGV', 'U') IS NOT NULL
+    DROP TABLE dbo.LuongGV;
+GO
+
+CREATE TABLE LuongGV
+(
+    LuongID INT IDENTITY(1,1) PRIMARY KEY,
+    TeacherID NVARCHAR(20) NOT NULL,
+    SalaryMonth INT NOT NULL,
+    SalaryYear INT NOT NULL,
+    SoLopDay INT NOT NULL DEFAULT 0,
+    SoBuoiDay INT NOT NULL DEFAULT 0,
+    LuongCoBan DECIMAL(18,0) NOT NULL DEFAULT 0,
+    Thuong DECIMAL(18,0) NOT NULL DEFAULT 0,
+    Phat DECIMAL(18,0) NOT NULL DEFAULT 0,
+    TongLuong DECIMAL(18,0) NOT NULL DEFAULT 0,
+    TrangThai NVARCHAR(30) NOT NULL DEFAULT N'Chưa thanh toán',
+    NgayThanhToan DATE NULL,
+    GhiChu NVARCHAR(255) NULL,
+
+    CONSTRAINT FK_LuongGV_Account
+        FOREIGN KEY (TeacherID) REFERENCES accountList(Id),
+
+    CONSTRAINT UQ_LuongGV UNIQUE (TeacherID, SalaryMonth, SalaryYear)
+);
+GO
+INSERT INTO LuongGV
+(TeacherID, SalaryMonth, SalaryYear, SoLopDay, SoBuoiDay, LuongCoBan, Thuong, Phat, TongLuong, TrangThai, NgayThanhToan, GhiChu)
+VALUES
+('T001', 3, 2026, 3, 20, 8000000, 500000, 0, 8500000, N'Chưa thanh toán', NULL, N'Lương tháng 3');
+GO
+
+SELECT * FROM LuongGV;
+USE PBL3aDB;
+GO
+
+IF OBJECT_ID('dbo.KhoanThu', 'U') IS NOT NULL
+    DROP TABLE dbo.KhoanThu;
+GO
+
+CREATE TABLE KhoanThu
+(
+    ThuID INT IDENTITY(1,1) PRIMARY KEY,
+    ThuMonth INT NOT NULL,
+    ThuYear INT NOT NULL,
+    LoaiThu NVARCHAR(100) NOT NULL,
+    NoiDung NVARCHAR(255) NOT NULL,
+    SoTien DECIMAL(18,0) NOT NULL,
+    NgayThu DATE NOT NULL,
+    GhiChu NVARCHAR(255) NULL
+);
+GO
+USE PBL3aDB;
+GO
+
+IF OBJECT_ID('dbo.KhoanChi', 'U') IS NOT NULL
+    DROP TABLE dbo.KhoanChi;
+GO
+
+CREATE TABLE KhoanChi
+(
+    ChiID INT IDENTITY(1,1) PRIMARY KEY,
+    ChiMonth INT NOT NULL,
+    ChiYear INT NOT NULL,
+    LoaiChi NVARCHAR(100) NOT NULL,
+    NoiDung NVARCHAR(255) NOT NULL,
+    SoTien DECIMAL(18,0) NOT NULL,
+    NgayChi DATE NOT NULL,
+    GhiChu NVARCHAR(255) NULL
+);
+GO
+INSERT INTO KhoanThu (ThuMonth, ThuYear, LoaiThu, NoiDung, SoTien, NgayThu, GhiChu)
+VALUES
+(3, 2026, N'Học phí', N'Thu học phí lớp Toán 10A', 1000000, '2026-03-05', N'Từ học sinh S001, S002'),
+(3, 2026, N'Học phí', N'Thu học phí lớp Anh văn 9A', 550000, '2026-03-06', NULL),
+(3, 2026, N'Thu khác', N'Phí tài liệu', 200000, '2026-03-08', N'');
+GO
+INSERT INTO KhoanChi (ChiMonth, ChiYear, LoaiChi, NoiDung, SoTien, NgayChi, GhiChu)
+VALUES
+(3, 2026, N'Lương GV', N'Thanh toán lương giáo viên T001', 8500000, '2026-03-25', N'Tháng 3'),
+(3, 2026, N'Điện nước', N'Tiền điện nước trung tâm', 1200000, '2026-03-20', NULL),
+(3, 2026, N'Văn phòng phẩm', N'Mua bút, giấy, sổ', 350000, '2026-03-12', N'');
+GO
+SELECT * FROM KhoanChi;
+SELECT * FROM KhoanThu;

@@ -22,15 +22,11 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             tbKT = new TextBox();
             tbNam = new TextBox();
-            listView1 = new ListView();
+            dataGridView1 = new DataGridView();
             btT = new Button();
             btOK = new Button();
             lbTT = new Label();
@@ -39,6 +35,7 @@
             LaKT = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             comboBox1 = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,16 +57,16 @@
             tbNam.Size = new Size(438, 35);
             tbNam.TabIndex = 10;
             // 
-            // listView1
+            // dataGridView1
             // 
-            tableLayoutPanel1.SetColumnSpan(listView1, 4);
-            listView1.Dock = DockStyle.Fill;
-            listView1.Location = new Point(53, 216);
-            listView1.Name = "listView1";
-            tableLayoutPanel1.SetRowSpan(listView1, 3);
-            listView1.Size = new Size(1196, 488);
-            listView1.TabIndex = 8;
-            listView1.UseCompatibleStateImageBehavior = false;
+            tableLayoutPanel1.SetColumnSpan(dataGridView1, 4);
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(53, 216);
+            dataGridView1.Name = "dataGridView1";
+            tableLayoutPanel1.SetRowSpan(dataGridView1, 3);
+            dataGridView1.Size = new Size(1196, 488);
+            dataGridView1.TabIndex = 8;
             // 
             // btT
             // 
@@ -93,6 +90,7 @@
             btOK.TabIndex = 6;
             btOK.Text = "OK";
             btOK.UseVisualStyleBackColor = true;
+            btOK.Click += btOK_Click;
             // 
             // lbTT
             // 
@@ -157,7 +155,7 @@
             tableLayoutPanel1.Controls.Add(lbTT, 1, 7);
             tableLayoutPanel1.Controls.Add(btOK, 6, 4);
             tableLayoutPanel1.Controls.Add(btT, 6, 5);
-            tableLayoutPanel1.Controls.Add(listView1, 1, 3);
+            tableLayoutPanel1.Controls.Add(dataGridView1, 1, 3);
             tableLayoutPanel1.Controls.Add(tbNam, 4, 1);
             tableLayoutPanel1.Controls.Add(tbKT, 2, 7);
             tableLayoutPanel1.Controls.Add(comboBox1, 2, 1);
@@ -195,6 +193,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "KhoanThu";
             Text = "KhoanThu";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
@@ -210,7 +209,7 @@
         private Label lbTT;
         private Button btOK;
         private Button btT;
-        private ListView listView1;
+        private DataGridView dataGridView1;
         private TextBox tbNam;
         private ComboBox comboBox1;
     }
