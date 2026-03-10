@@ -139,3 +139,8 @@ C:\Users\21024\OneDrive\Tài liệu\GitHub\PBL3a\PBL3a\obj\Debug\net10.0-windo
 C:\Users\21024\OneDrive\Tài liệu\GitHub\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.genruntimeconfig.cache
 C:\Users\21024\OneDrive\Tài liệu\GitHub\PBL3a\PBL3a\obj\Debug\net10.0-windows\ref\PBL3a.dll
 C:\Users\21024\OneDrive\Tài liệu\GitHub\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.Student.StudentAll.resources
+C:\Users\21024\OneDrive\Tài liệu\GitHub\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.Student.StudentFee.resources
+C:\Users\21024\OneDrive\Tài liệu\GitHub\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.Student.StudentINFO.resources
+C:\Users\21024\OneDrive\Tài liệu\GitHub\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.Student.StudentMaterial.resources
+C:\Users\21024\OneDrive\Tài liệu\GitHub\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.Student.StudentSchedule.resources
+C:\Users\21024\OneDrive\Tài liệu\GitHub\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.Student.StudentScore.resources
