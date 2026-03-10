@@ -1,50 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Github\\PBL3a\\",
+  "WorkspaceRootPath": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\github\\pbl3a\\pbl3a\\ui\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Github\\PBL3a\\pbl3a\\ui\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\pbl3a\\ui\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\github\\pbl3a\\pbl3a\\services\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\services\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\users\\21024\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\pbl3a\\pbl3a\\ui\\student\\studentall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\student\\studentall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\github\\pbl3a\\pbl3a\\data\\accountlist.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\data\\accountlist.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\users\\21024\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\pbl3a\\pbl3a\\ui\\student\\studentall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\student\\studentall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\github\\pbl3a\\pbl3a\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Github\\PBL3a\\pbl3a\\ui\\admintc\\luonggv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\admintc\\luonggv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Github\\PBL3a\\pbl3a\\ui\\admintc\\hocphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\admintc\\hocphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Github\\PBL3a\\pbl3a\\ui\\admindd\\diemdanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\admindd\\diemdanh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Github\\PBL3a\\pbl3a\\ui\\adminc\\quanlykhoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\adminc\\quanlykhoahoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Github\\PBL3a\\pbl3a\\ui\\adminc\\quanlyduyetdon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\adminc\\quanlyduyetdon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Github\\PBL3a\\pbl3a\\ui\\adminc\\adminc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\adminc\\adminc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\users\\21024\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\pbl3a\\pbl3a\\ui\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,135 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "databaseHelper.cs",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\services\\databaseHelper.cs",
-              "RelativeDocumentMoniker": "PBL3a\\services\\databaseHelper.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\services\\databaseHelper.cs",
-              "RelativeToolTip": "PBL3a\\services\\databaseHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Title": "StudentAll.cs",
+              "DocumentMoniker": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentAll.cs",
+              "RelativeDocumentMoniker": "PBL3a\\UI\\Student\\StudentAll.cs",
+              "ToolTip": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentAll.cs*",
+              "RelativeToolTip": "PBL3a\\UI\\Student\\StudentAll.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T03:10:37.587Z",
+              "WhenOpened": "2026-03-10T08:33:27.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "StudentAll.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentAll.cs",
+              "RelativeDocumentMoniker": "PBL3a\\UI\\Student\\StudentAll.cs",
+              "ToolTip": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentAll.cs [Design]*",
+              "RelativeToolTip": "PBL3a\\UI\\Student\\StudentAll.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T08:27:27.166Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\Login\\LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Login\\LoginForm.cs",
               "RelativeDocumentMoniker": "PBL3a\\UI\\Login\\LoginForm.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\Login\\LoginForm.cs",
-              "RelativeToolTip": "PBL3a\\UI\\Login\\LoginForm.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAiwFYAAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Login\\LoginForm.cs*",
+              "RelativeToolTip": "PBL3a\\UI\\Login\\LoginForm.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-08T16:11:58.467Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DiemDanh.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminDD\\DiemDanh.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminDD\\DiemDanh.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminDD\\DiemDanh.cs [Design]",
-              "RelativeToolTip": "PBL3a\\UI\\AdminDD\\DiemDanh.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T16:12:38.671Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\Login\\LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Login\\LoginForm.cs",
               "RelativeDocumentMoniker": "PBL3a\\UI\\Login\\LoginForm.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\Login\\LoginForm.cs [Design]",
-              "RelativeToolTip": "PBL3a\\UI\\Login\\LoginForm.cs [Design]",
+              "ToolTip": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Login\\LoginForm.cs [Design]*",
+              "RelativeToolTip": "PBL3a\\UI\\Login\\LoginForm.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-08T16:11:53.481Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LuongGV.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\LuongGV.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminTC\\LuongGV.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\LuongGV.cs [Design]*",
-              "RelativeToolTip": "PBL3a\\UI\\AdminTC\\LuongGV.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T16:12:52.643Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\models\\Student.cs",
-              "RelativeDocumentMoniker": "PBL3a\\models\\Student.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\models\\Student.cs",
-              "RelativeToolTip": "PBL3a\\models\\Student.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T02:27:40.344Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "quanLyKhoaHoc.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminC\\quanLyKhoaHoc.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminC\\quanLyKhoaHoc.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminC\\quanLyKhoaHoc.cs [Design]",
-              "RelativeToolTip": "PBL3a\\UI\\AdminC\\quanLyKhoaHoc.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T16:12:35.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Accountlist.sql",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\data\\Accountlist.sql",
-              "RelativeDocumentMoniker": "PBL3a\\data\\Accountlist.sql",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\data\\Accountlist.sql",
-              "RelativeToolTip": "PBL3a\\data\\Accountlist.sql",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-03-09T02:23:29.081Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdminC.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminC\\AdminC.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminC\\AdminC.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminC\\AdminC.cs [Design]*",
-              "RelativeToolTip": "PBL3a\\UI\\AdminC\\AdminC.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T16:12:14.557Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HocPhi.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\HocPhi.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminTC\\HocPhi.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\HocPhi.cs [Design]*",
-              "RelativeToolTip": "PBL3a\\UI\\AdminTC\\HocPhi.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T16:12:43.262Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "quanLyDuyetDon.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminC\\quanLyDuyetDon.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminC\\quanLyDuyetDon.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminC\\quanLyDuyetDon.cs [Design]",
-              "RelativeToolTip": "PBL3a\\UI\\AdminC\\quanLyDuyetDon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T16:12:12.422Z"
             }
           ]
         }

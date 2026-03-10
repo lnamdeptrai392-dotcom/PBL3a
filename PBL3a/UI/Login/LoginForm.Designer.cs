@@ -51,8 +51,8 @@
             LoginTable1.Padding = new Padding(20);
             LoginTable1.RowCount = 4;
             LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
-            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
-            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 49F));
+            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 36F));
+            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
             LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 136F));
             LoginTable1.Size = new Size(961, 525);
             LoginTable1.TabIndex = 0;
