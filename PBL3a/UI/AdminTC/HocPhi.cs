@@ -14,7 +14,7 @@ namespace PBL3a.UI.AdminTC
         {
             InitializeComponent();
         }
-
+//
         private void btSetHP_Click(object sender, EventArgs e)
         {
             ThietLapHP thlap = new ThietLapHP();
