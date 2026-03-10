@@ -8,16 +8,17 @@ using System.Windows.Forms;
 
 namespace PBL3a.UI.Teacher
 {
-    public partial class QuanLyChungT : Form
+    public partial class TTCN : Form
     {
-        public QuanLyChungT()
+        public TTCN()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btT_Click(object sender, EventArgs e)
         {
-            TTCN nextForm = new TTCN();
+
+            QuanLyChungT nextForm = new QuanLyChungT();
             this.Close();
             nextForm.ShowDialog();
             this.Show();
