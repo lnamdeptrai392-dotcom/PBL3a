@@ -55,9 +55,9 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 175F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 434F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 64F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 170F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 398F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 12F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 215F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 388F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 10F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(label2, 1, 1);
             tableLayoutPanel1.Controls.Add(label3, 1, 2);
@@ -75,6 +75,7 @@
             tableLayoutPanel1.Controls.Add(comboBox1, 2, 2);
             tableLayoutPanel1.Controls.Add(dateTimePicker1, 2, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Font = new Font("Segoe UI", 11.1428576F);
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
@@ -91,132 +92,150 @@
             // label1
             // 
             label1.AutoSize = true;
+            tableLayoutPanel1.SetColumnSpan(label1, 7);
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(130, 60);
+            label1.Size = new Size(1468, 137);
             label1.TabIndex = 0;
             label1.Text = "THÔNG TIN CÁ NHÂN";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11.1428576F);
             label2.Location = new Point(165, 137);
             label2.Name = "label2";
-            label2.Size = new Size(108, 30);
+            label2.Size = new Size(137, 37);
             label2.TabIndex = 1;
             label2.Text = "Họ và tên:";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11.1428576F);
             label3.Location = new Point(165, 241);
             label3.Name = "label3";
-            label3.Size = new Size(97, 30);
+            label3.Size = new Size(125, 37);
             label3.TabIndex = 2;
             label3.Text = "Giới tính:";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11.1428576F);
             label4.Location = new Point(165, 348);
             label4.Name = "label4";
-            label4.Size = new Size(117, 30);
+            label4.Size = new Size(148, 37);
             label4.TabIndex = 3;
             label4.Text = "Ngày sinh: ";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11.1428576F);
             label5.Location = new Point(165, 461);
             label5.Name = "label5";
-            label5.Size = new Size(55, 30);
+            label5.Size = new Size(70, 37);
             label5.TabIndex = 4;
             label5.Text = "SĐT:";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 11.1428576F);
             label6.Location = new Point(165, 569);
             label6.Name = "label6";
-            label6.Size = new Size(68, 30);
+            label6.Size = new Size(88, 37);
             label6.TabIndex = 5;
             label6.Text = "Email:";
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 11.1428576F);
             label7.Location = new Point(838, 137);
             label7.Name = "label7";
-            label7.Size = new Size(100, 30);
+            label7.Size = new Size(128, 37);
             label7.TabIndex = 6;
             label7.Text = "Môn dạy:";
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 11.1428576F);
             label8.Location = new Point(838, 241);
             label8.Name = "label8";
-            label8.Size = new Size(150, 30);
+            label8.Size = new Size(192, 37);
             label8.TabIndex = 7;
             label8.Text = "Mã giảng viên:";
             // 
             // button1
             // 
-            button1.Location = new Point(1008, 666);
+            button1.Location = new Point(1053, 666);
             button1.Name = "button1";
-            button1.Size = new Size(131, 40);
+            button1.Size = new Size(172, 90);
             button1.TabIndex = 8;
             button1.Text = "Thoát";
             button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
+            textBox1.Dock = DockStyle.Fill;
             textBox1.Location = new Point(340, 140);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(181, 35);
+            textBox1.Size = new Size(428, 42);
             textBox1.TabIndex = 9;
             // 
             // textBox2
             // 
+            textBox2.Dock = DockStyle.Fill;
             textBox2.Location = new Point(340, 464);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(181, 35);
+            textBox2.Size = new Size(428, 42);
             textBox2.TabIndex = 10;
             // 
             // textBox3
             // 
+            textBox3.Dock = DockStyle.Fill;
             textBox3.Location = new Point(340, 572);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(181, 35);
+            textBox3.Size = new Size(428, 42);
             textBox3.TabIndex = 11;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(1008, 140);
+            textBox4.Dock = DockStyle.Fill;
+            textBox4.Location = new Point(1053, 140);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(181, 35);
+            textBox4.Size = new Size(382, 42);
             textBox4.TabIndex = 12;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(1008, 244);
+            textBox5.Dock = DockStyle.Fill;
+            textBox5.Location = new Point(1053, 244);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(181, 35);
+            textBox5.Size = new Size(382, 42);
             textBox5.TabIndex = 13;
             // 
             // comboBox1
             // 
+            comboBox1.Dock = DockStyle.Fill;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(340, 244);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(212, 38);
+            comboBox1.Size = new Size(428, 44);
             comboBox1.TabIndex = 14;
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.Dock = DockStyle.Fill;
             dateTimePicker1.Location = new Point(340, 351);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(350, 35);
+            dateTimePicker1.Size = new Size(428, 42);
             dateTimePicker1.TabIndex = 15;
             // 
             // QuanLyChungT
