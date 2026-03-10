@@ -24,7 +24,7 @@ namespace PBL3a.UI.AdminTC
         private void btHP_Click(object sender, EventArgs e)
         {
             HocPhi hocPhi = new HocPhi();
-            this.Hide();
+            this.Close();
             hocPhi.ShowDialog();
             this.Show();
         }
@@ -32,7 +32,7 @@ namespace PBL3a.UI.AdminTC
         private void btT_Click(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
-            this.Hide();
+            this.Close();
             login.ShowDialog();
             this.Show();
         }
@@ -40,7 +40,7 @@ namespace PBL3a.UI.AdminTC
         private void btLGV_Click(object sender, EventArgs e)
         {
             LuongGV luong = new LuongGV();
-            this.Hide();
+            this.Close();
             luong.ShowDialog();
             this.Show();
         }
@@ -48,7 +48,7 @@ namespace PBL3a.UI.AdminTC
         private void btLN_Click(object sender, EventArgs e)
         {
             LoiNhuan loinhuan = new LoiNhuan();
-            this.Hide();
+            this.Close();
             loinhuan.ShowDialog();
             this.Show();
         }

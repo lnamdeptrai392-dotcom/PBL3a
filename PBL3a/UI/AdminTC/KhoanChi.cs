@@ -18,7 +18,7 @@ namespace PBL3a.UI.AdminTC
         private void btT_Click(object sender, EventArgs e)
         {
             LoiNhuan loinhuan = new LoiNhuan();
-            this.Hide();
+            this.Close();
             loinhuan.ShowDialog();
             this.Show();
         }

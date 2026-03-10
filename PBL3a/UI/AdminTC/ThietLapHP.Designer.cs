@@ -33,52 +33,51 @@
             LaHP = new Label();
             laML = new Label();
             laTL = new Label();
-            tbML = new TextBox();
             btT = new Button();
             btLuu = new Button();
             lbHP = new Label();
             textBox1 = new TextBox();
             laTT = new Label();
             textBox2 = new TextBox();
+            comboBox1 = new ComboBox();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 8;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 13F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 29.8273163F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70.17268F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 121F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 277F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 28F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 170F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 182F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 416F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 42F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 255F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 22F));
             tableLayoutPanel1.Controls.Add(tbTL, 4, 1);
             tableLayoutPanel1.Controls.Add(LaHP, 1, 0);
             tableLayoutPanel1.Controls.Add(laML, 1, 1);
             tableLayoutPanel1.Controls.Add(laTL, 3, 1);
-            tableLayoutPanel1.Controls.Add(tbML, 2, 1);
             tableLayoutPanel1.Controls.Add(btT, 6, 6);
             tableLayoutPanel1.Controls.Add(btLuu, 6, 5);
             tableLayoutPanel1.Controls.Add(lbHP, 1, 3);
             tableLayoutPanel1.Controls.Add(textBox1, 2, 3);
             tableLayoutPanel1.Controls.Add(laTT, 3, 3);
             tableLayoutPanel1.Controls.Add(textBox2, 4, 3);
+            tableLayoutPanel1.Controls.Add(comboBox1, 2, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 8;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 68.1415939F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 31.858408F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 86F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 23F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 69F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 66F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 14F));
-            tableLayoutPanel1.Size = new Size(1047, 560);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 112F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 129F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 34F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 104F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 99F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel1.Size = new Size(1570, 840);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // tbTL
@@ -86,10 +85,9 @@
             tableLayoutPanel1.SetColumnSpan(tbTL, 2);
             tbTL.Dock = DockStyle.Fill;
             tbTL.Enabled = false;
-            tbTL.Location = new Point(559, 156);
-            tbTL.Margin = new Padding(2, 2, 2, 2);
+            tbTL.Location = new Point(837, 235);
             tbTL.Name = "tbTL";
-            tbTL.Size = new Size(301, 27);
+            tbTL.Size = new Size(452, 35);
             tbTL.TabIndex = 4;
             // 
             // LaHP
@@ -98,10 +96,9 @@
             tableLayoutPanel1.SetColumnSpan(LaHP, 6);
             LaHP.Dock = DockStyle.Fill;
             LaHP.Font = new Font("Segoe UI", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LaHP.Location = new Point(15, 0);
-            LaHP.Margin = new Padding(2, 0, 2, 0);
+            LaHP.Location = new Point(23, 0);
             LaHP.Name = "LaHP";
-            LaHP.Size = new Size(1015, 154);
+            LaHP.Size = new Size(1521, 232);
             LaHP.TabIndex = 0;
             LaHP.Text = "THIẾT LẬP HỌC PHÍ";
             LaHP.TextAlign = ContentAlignment.MiddleCenter;
@@ -111,10 +108,9 @@
             laML.AutoSize = true;
             laML.Dock = DockStyle.Right;
             laML.Font = new Font("Segoe UI", 12F);
-            laML.Location = new Point(50, 154);
-            laML.Margin = new Padding(2, 0, 2, 0);
+            laML.Location = new Point(81, 232);
             laML.Name = "laML";
-            laML.Size = new Size(87, 72);
+            laML.Size = new Size(124, 108);
             laML.TabIndex = 1;
             laML.Text = "Mã Lớp: ";
             // 
@@ -123,30 +119,19 @@
             laTL.AutoSize = true;
             laTL.Dock = DockStyle.Right;
             laTL.Font = new Font("Segoe UI", 12F);
-            laTL.Location = new Point(467, 154);
-            laTL.Margin = new Padding(2, 0, 2, 0);
+            laTL.Location = new Point(703, 232);
             laTL.Name = "laTL";
-            laTL.Size = new Size(88, 72);
+            laTL.Size = new Size(128, 108);
             laTL.TabIndex = 2;
             laTL.Text = "Tên Lớp: ";
-            // 
-            // tbML
-            // 
-            tbML.Dock = DockStyle.Fill;
-            tbML.Location = new Point(141, 156);
-            tbML.Margin = new Padding(2, 2, 2, 2);
-            tbML.Name = "tbML";
-            tbML.Size = new Size(293, 27);
-            tbML.TabIndex = 3;
             // 
             // btT
             // 
             btT.Dock = DockStyle.Bottom;
             btT.Font = new Font("Segoe UI", 9.857143F);
-            btT.Location = new Point(864, 492);
-            btT.Margin = new Padding(2, 2, 2, 2);
+            btT.Location = new Point(1295, 739);
             btT.Name = "btT";
-            btT.Size = new Size(166, 51);
+            btT.Size = new Size(249, 76);
             btT.TabIndex = 7;
             btT.Text = "Thoát";
             btT.UseVisualStyleBackColor = true;
@@ -156,10 +141,9 @@
             // 
             btLuu.Dock = DockStyle.Bottom;
             btLuu.Font = new Font("Segoe UI", 9.857143F);
-            btLuu.Location = new Point(864, 426);
-            btLuu.Margin = new Padding(2, 2, 2, 2);
+            btLuu.Location = new Point(1295, 640);
             btLuu.Name = "btLuu";
-            btLuu.Size = new Size(166, 51);
+            btLuu.Size = new Size(249, 76);
             btLuu.TabIndex = 6;
             btLuu.Text = "Lưu";
             btLuu.UseVisualStyleBackColor = true;
@@ -169,19 +153,17 @@
             lbHP.AutoSize = true;
             lbHP.Dock = DockStyle.Right;
             lbHP.Font = new Font("Segoe UI", 12F);
-            lbHP.Location = new Point(46, 301);
-            lbHP.Margin = new Padding(2, 0, 2, 0);
+            lbHP.Location = new Point(75, 452);
             lbHP.Name = "lbHP";
-            lbHP.Size = new Size(91, 86);
+            lbHP.Size = new Size(130, 129);
             lbHP.TabIndex = 8;
             lbHP.Text = "Số tiền / người";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(141, 303);
-            textBox1.Margin = new Padding(2, 2, 2, 2);
+            textBox1.Location = new Point(211, 455);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(293, 27);
+            textBox1.Size = new Size(438, 35);
             textBox1.TabIndex = 9;
             // 
             // laTT
@@ -189,10 +171,9 @@
             laTT.AutoSize = true;
             laTT.Dock = DockStyle.Right;
             laTT.Font = new Font("Segoe UI", 12F);
-            laTT.Location = new Point(460, 301);
-            laTT.Margin = new Padding(2, 0, 2, 0);
+            laTT.Location = new Point(696, 452);
             laTT.Name = "laTT";
-            laTT.Size = new Size(95, 86);
+            laTT.Size = new Size(135, 129);
             laTT.TabIndex = 10;
             laTT.Text = "Tổng tiền";
             laTT.TextAlign = ContentAlignment.TopRight;
@@ -201,19 +182,26 @@
             // 
             tableLayoutPanel1.SetColumnSpan(textBox2, 2);
             textBox2.Enabled = false;
-            textBox2.Location = new Point(559, 303);
-            textBox2.Margin = new Padding(2, 2, 2, 2);
+            textBox2.Location = new Point(837, 455);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(301, 27);
+            textBox2.Size = new Size(450, 35);
             textBox2.TabIndex = 11;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Dock = DockStyle.Fill;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(211, 235);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(438, 38);
+            comboBox1.TabIndex = 12;
             // 
             // ThietLapHP
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1047, 560);
+            ClientSize = new Size(1570, 840);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(2, 2, 2, 2);
             Name = "ThietLapHP";
             Text = "ThietLapHP";
             tableLayoutPanel1.ResumeLayout(false);
@@ -228,12 +216,12 @@
         private Label LaHP;
         private Label laML;
         private Label laTL;
-        private TextBox tbML;
         private Button btT;
         private Button btLuu;
         private Label lbHP;
-        private TextBox textBox1;
         private Label laTT;
         private TextBox textBox2;
+        private TextBox textBox1;
+        private ComboBox comboBox1;
     }
 }
