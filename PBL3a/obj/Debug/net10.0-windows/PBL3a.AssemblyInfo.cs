@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PBL3a")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+793d12827bfc6c4737b8a7316a5bf75c7972e8ca")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ced88f96fa12899ac5c19ecba5f18e084440bb1a")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("PBL3a")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PBL3a")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
