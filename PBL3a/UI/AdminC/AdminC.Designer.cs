@@ -28,91 +28,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelAdminC1 = new Label();
-            labelAdminC2 = new Label();
-            buttonAdminC1 = new Button();
-            buttonAdminC2 = new Button();
+            gbDuyetDon = new GroupBox();
+            radioButton1 = new RadioButton();
+            btnOkDuyetDon = new Button();
+            rdoViewDuyetDon = new RadioButton();
+            gbKhoaLopHoc = new GroupBox();
+            radioButton2 = new RadioButton();
+            btnOkKhoaHoc = new Button();
+            rdoViewKhoaHoc = new RadioButton();
+            gbDuyetDon.SuspendLayout();
+            gbKhoaLopHoc.SuspendLayout();
             SuspendLayout();
             // 
-            // labelAdminC1
+            // gbDuyetDon
             // 
-            labelAdminC1.Anchor = AnchorStyles.None;
-            labelAdminC1.AutoSize = true;
-            labelAdminC1.BackColor = SystemColors.Info;
-            labelAdminC1.BorderStyle = BorderStyle.Fixed3D;
-            labelAdminC1.FlatStyle = FlatStyle.Popup;
-            labelAdminC1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelAdminC1.Location = new Point(237, 189);
-            labelAdminC1.Name = "labelAdminC1";
-            labelAdminC1.Size = new Size(223, 30);
-            labelAdminC1.TabIndex = 0;
-            labelAdminC1.Text = "QUẢN LÝ DUYỆT ĐƠN";
+            gbDuyetDon.Anchor = AnchorStyles.None;
+            gbDuyetDon.BackColor = SystemColors.Info;
+            gbDuyetDon.Controls.Add(radioButton1);
+            gbDuyetDon.Controls.Add(btnOkDuyetDon);
+            gbDuyetDon.Controls.Add(rdoViewDuyetDon);
+            gbDuyetDon.Location = new Point(46, 113);
+            gbDuyetDon.Name = "gbDuyetDon";
+            gbDuyetDon.Size = new Size(285, 196);
+            gbDuyetDon.TabIndex = 3;
+            gbDuyetDon.TabStop = false;
+            gbDuyetDon.Text = "Quản Lý Duyệt Đơn";
             // 
-            // labelAdminC2
+            // radioButton1
             // 
-            labelAdminC2.Anchor = AnchorStyles.None;
-            labelAdminC2.AutoSize = true;
-            labelAdminC2.BackColor = SystemColors.Info;
-            labelAdminC2.BorderStyle = BorderStyle.Fixed3D;
-            labelAdminC2.FlatStyle = FlatStyle.Popup;
-            labelAdminC2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelAdminC2.Location = new Point(608, 189);
-            labelAdminC2.Name = "labelAdminC2";
-            labelAdminC2.Size = new Size(261, 30);
-            labelAdminC2.TabIndex = 1;
-            labelAdminC2.Text = "QUẢN LÝ KHÓA, LỚP HỌC";
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(110, 89);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(66, 24);
+            radioButton1.TabIndex = 6;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "None";
+            radioButton1.UseVisualStyleBackColor = true;
             // 
-            // buttonAdminC1
+            // btnOkDuyetDon
             // 
-            buttonAdminC1.Anchor = AnchorStyles.None;
-            buttonAdminC1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            buttonAdminC1.BackColor = SystemColors.Info;
-            buttonAdminC1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonAdminC1.ForeColor = Color.Firebrick;
-            buttonAdminC1.Location = new Point(258, 261);
-            buttonAdminC1.Name = "buttonAdminC1";
-            buttonAdminC1.Size = new Size(191, 84);
-            buttonAdminC1.TabIndex = 0;
-            buttonAdminC1.Text = "VIEW";
-            buttonAdminC1.UseVisualStyleBackColor = false;
-            buttonAdminC1.Click += buttonAdminC1_Click;
+            btnOkDuyetDon.BackColor = Color.FromArgb(255, 192, 192);
+            btnOkDuyetDon.Location = new Point(97, 133);
+            btnOkDuyetDon.Name = "btnOkDuyetDon";
+            btnOkDuyetDon.Size = new Size(94, 29);
+            btnOkDuyetDon.TabIndex = 5;
+            btnOkDuyetDon.Text = "OK";
+            btnOkDuyetDon.UseVisualStyleBackColor = false;
+            btnOkDuyetDon.Click += btnOkDuyetDon_Click;
             // 
-            // buttonAdminC2
+            // rdoViewDuyetDon
             // 
-            buttonAdminC2.Anchor = AnchorStyles.None;
-            buttonAdminC2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            buttonAdminC2.BackColor = SystemColors.Info;
-            buttonAdminC2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonAdminC2.ForeColor = Color.Firebrick;
-            buttonAdminC2.Location = new Point(645, 261);
-            buttonAdminC2.Name = "buttonAdminC2";
-            buttonAdminC2.Size = new Size(191, 84);
-            buttonAdminC2.TabIndex = 2;
-            buttonAdminC2.Text = "VIEW";
-            buttonAdminC2.UseVisualStyleBackColor = false;
-            buttonAdminC2.Click += buttonAdminC2_Click;
+            rdoViewDuyetDon.AutoSize = true;
+            rdoViewDuyetDon.Location = new Point(110, 50);
+            rdoViewDuyetDon.Name = "rdoViewDuyetDon";
+            rdoViewDuyetDon.Size = new Size(62, 24);
+            rdoViewDuyetDon.TabIndex = 0;
+            rdoViewDuyetDon.TabStop = true;
+            rdoViewDuyetDon.Text = "View";
+            rdoViewDuyetDon.UseVisualStyleBackColor = true;
+            // 
+            // gbKhoaLopHoc
+            // 
+            gbKhoaLopHoc.Anchor = AnchorStyles.None;
+            gbKhoaLopHoc.BackColor = SystemColors.Info;
+            gbKhoaLopHoc.Controls.Add(radioButton2);
+            gbKhoaLopHoc.Controls.Add(btnOkKhoaHoc);
+            gbKhoaLopHoc.Controls.Add(rdoViewKhoaHoc);
+            gbKhoaLopHoc.Location = new Point(361, 113);
+            gbKhoaLopHoc.Name = "gbKhoaLopHoc";
+            gbKhoaLopHoc.Size = new Size(295, 196);
+            gbKhoaLopHoc.TabIndex = 4;
+            gbKhoaLopHoc.TabStop = false;
+            gbKhoaLopHoc.Text = "Quản Lý Khóa/ Lớp Học";
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(118, 89);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(66, 24);
+            radioButton2.TabIndex = 7;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "None";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // btnOkKhoaHoc
+            // 
+            btnOkKhoaHoc.BackColor = Color.FromArgb(255, 192, 192);
+            btnOkKhoaHoc.Location = new Point(109, 133);
+            btnOkKhoaHoc.Name = "btnOkKhoaHoc";
+            btnOkKhoaHoc.Size = new Size(94, 29);
+            btnOkKhoaHoc.TabIndex = 2;
+            btnOkKhoaHoc.Text = "OK";
+            btnOkKhoaHoc.UseVisualStyleBackColor = false;
+            btnOkKhoaHoc.Click += btnOkKhoaHoc_Click;
+            // 
+            // rdoViewKhoaHoc
+            // 
+            rdoViewKhoaHoc.AutoSize = true;
+            rdoViewKhoaHoc.Location = new Point(118, 50);
+            rdoViewKhoaHoc.Name = "rdoViewKhoaHoc";
+            rdoViewKhoaHoc.Size = new Size(62, 24);
+            rdoViewKhoaHoc.TabIndex = 0;
+            rdoViewKhoaHoc.TabStop = true;
+            rdoViewKhoaHoc.Text = "View";
+            rdoViewKhoaHoc.UseVisualStyleBackColor = true;
             // 
             // AdminC
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1086, 592);
-            Controls.Add(buttonAdminC2);
-            Controls.Add(buttonAdminC1);
-            Controls.Add(labelAdminC2);
-            Controls.Add(labelAdminC1);
+            ClientSize = new Size(678, 398);
+            Controls.Add(gbKhoaLopHoc);
+            Controls.Add(gbDuyetDon);
             Name = "AdminC";
             Text = "Admin Quản Lý Chung";
-            WindowState = FormWindowState.Maximized;
+            gbDuyetDon.ResumeLayout(false);
+            gbDuyetDon.PerformLayout();
+            gbKhoaLopHoc.ResumeLayout(false);
+            gbKhoaLopHoc.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
+
         }
 
         #endregion
-
-        private Label labelAdminC1;
-        private Label labelAdminC2;
-        private Button buttonAdminC1;
-        private Button buttonAdminC2;
+        private GroupBox gbDuyetDon;
+        private GroupBox gbKhoaLopHoc;
+        private RadioButton rdoViewDuyetDon;
+        private RadioButton rdoViewKhoaHoc;
+        private Button btnOkDuyetDon;
+        private Button btnOkKhoaHoc;
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
     }
 }

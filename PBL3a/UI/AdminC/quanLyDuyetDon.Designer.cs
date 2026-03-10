@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             labelqlduyetdon1 = new Label();
-            listBoxduyetdon1 = new ListBox();
             buttonduyetdon1 = new Button();
             buttonduyetdon2 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // labelqlduyetdon1
@@ -41,25 +42,16 @@
             labelqlduyetdon1.BackColor = SystemColors.Info;
             labelqlduyetdon1.BorderStyle = BorderStyle.Fixed3D;
             labelqlduyetdon1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelqlduyetdon1.Location = new Point(364, 24);
+            labelqlduyetdon1.Location = new Point(392, 10);
             labelqlduyetdon1.Name = "labelqlduyetdon1";
             labelqlduyetdon1.Size = new Size(356, 23);
             labelqlduyetdon1.TabIndex = 0;
             labelqlduyetdon1.Text = "Quản Lý Duyệt Đơn - Trung Tâm Gia Sư";
             // 
-            // listBoxduyetdon1
-            // 
-            listBoxduyetdon1.Anchor = AnchorStyles.None;
-            listBoxduyetdon1.FormattingEnabled = true;
-            listBoxduyetdon1.Location = new Point(244, 90);
-            listBoxduyetdon1.Name = "listBoxduyetdon1";
-            listBoxduyetdon1.Size = new Size(589, 324);
-            listBoxduyetdon1.TabIndex = 1;
-            // 
             // buttonduyetdon1
             // 
             buttonduyetdon1.Anchor = AnchorStyles.None;
-            buttonduyetdon1.Location = new Point(626, 422);
+            buttonduyetdon1.Location = new Point(768, 494);
             buttonduyetdon1.Name = "buttonduyetdon1";
             buttonduyetdon1.Size = new Size(94, 29);
             buttonduyetdon1.TabIndex = 2;
@@ -69,25 +61,35 @@
             // buttonduyetdon2
             // 
             buttonduyetdon2.Anchor = AnchorStyles.None;
-            buttonduyetdon2.Location = new Point(739, 422);
+            buttonduyetdon2.Location = new Point(883, 494);
             buttonduyetdon2.Name = "buttonduyetdon2";
             buttonduyetdon2.Size = new Size(94, 29);
             buttonduyetdon2.TabIndex = 3;
             buttonduyetdon2.Text = "Từ chối";
             buttonduyetdon2.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(166, 66);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(811, 410);
+            dataGridView1.TabIndex = 4;
+            // 
             // quanLyDuyetDon
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1089, 574);
+            ClientSize = new Size(1144, 546);
+            Controls.Add(dataGridView1);
             Controls.Add(buttonduyetdon2);
             Controls.Add(buttonduyetdon1);
-            Controls.Add(listBoxduyetdon1);
             Controls.Add(labelqlduyetdon1);
             Name = "quanLyDuyetDon";
             Text = "Duyệt Đơn Đăng Ký";
-            WindowState = FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -95,8 +97,8 @@
         #endregion
 
         private Label labelqlduyetdon1;
-        private ListBox listBoxduyetdon1;
         private Button buttonduyetdon1;
         private Button buttonduyetdon2;
+        private DataGridView dataGridView1;
     }
 }
