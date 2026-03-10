@@ -2,5 +2,11 @@ PBL3a/.vs/
 PBL3a/bin/
 PBL3a/obj/
 PBL3a/*.user
-/.vs
-/.vs
+/.vs/
+/.vs/
+/.vs/
+.vs/PBL3a.slnx/v18/.suo
+*.json
+*.cache
+/PBL3a/obj/Debug/
+/.vs/
