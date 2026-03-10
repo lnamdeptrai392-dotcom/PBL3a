@@ -35,7 +35,6 @@
             label2 = new Label();
             comboBox2 = new ComboBox();
             label3 = new Label();
-            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -104,21 +103,11 @@
             label3.TabIndex = 7;
             label3.Text = "Thông tin:";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(514, 110);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 20);
-            label4.TabIndex = 8;
-            label4.Text = "label4";
-            // 
             // quanLyKhoaHoc
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 539);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(comboBox2);
             Controls.Add(label2);
@@ -142,6 +131,5 @@
         private Label label2;
         private ComboBox comboBox2;
         private Label label3;
-        private Label label4;
     }
 }
