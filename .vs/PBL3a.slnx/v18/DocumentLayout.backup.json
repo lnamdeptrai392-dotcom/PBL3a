@@ -1,36 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Github\\PBL3a\\",
+  "WorkspaceRootPath": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\",
+<<<<<<< Updated upstream
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\github\\pbl3a\\pbl3a\\ui\\admintc\\quanlychung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\admintc\\quanlychung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\users\\21024\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\pbl3a\\pbl3a\\ui\\student\\studentinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\student\\studentinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Github\\PBL3a\\pbl3a\\ui\\admintc\\luonggv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\admintc\\luonggv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\pbl3a\\ui\\student\\studentmaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\student\\studentmaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\github\\pbl3a\\pbl3a\\ui\\admintc\\loinhuan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\admintc\\loinhuan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\pbl3a\\ui\\student\\studentschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\student\\studentschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\github\\pbl3a\\pbl3a\\ui\\admintc\\khoanthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\admintc\\khoanthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|c:\\github\\pbl3a\\pbl3a\\ui\\admintc\\khoanchi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\admintc\\khoanchi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Github\\PBL3a\\pbl3a\\ui\\admintc\\hocphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\admintc\\hocphi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\pbl3a\\ui\\student\\studentall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FD2F841D-455C-FB7D-130C-5036F3003F81}|PBL3a\\PBL3a.csproj|solutionrelative:pbl3a\\ui\\student\\studentall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
+=======
+  "Documents": [],
+>>>>>>> Stashed changes
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+<<<<<<< Updated upstream
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -39,78 +36,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "QuanLyChung.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\QuanLyChung.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminTC\\QuanLyChung.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\QuanLyChung.cs [Design]",
-              "RelativeToolTip": "PBL3a\\UI\\AdminTC\\QuanLyChung.cs [Design]",
+              "Title": "StudentINFO.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentINFO.cs",
+              "RelativeDocumentMoniker": "PBL3a\\UI\\Student\\StudentINFO.cs",
+              "ToolTip": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentINFO.cs [Design]",
+              "RelativeToolTip": "PBL3a\\UI\\Student\\StudentINFO.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T14:42:02.67Z",
+              "WhenOpened": "2026-03-10T14:51:48.086Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LuongGV.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\LuongGV.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminTC\\LuongGV.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\LuongGV.cs [Design]",
-              "RelativeToolTip": "PBL3a\\UI\\AdminTC\\LuongGV.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T16:12:52.643Z",
-              "EditorCaption": " [Design]"
+              "Title": "StudentMaterial.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentMaterial.cs",
+              "RelativeDocumentMoniker": "PBL3a\\UI\\Student\\StudentMaterial.cs",
+              "ToolTip": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentMaterial.cs [Design]",
+              "RelativeToolTip": "PBL3a\\UI\\Student\\StudentMaterial.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2026-03-10T14:51:48.134Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LoiNhuan.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\LoiNhuan.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminTC\\LoiNhuan.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\LoiNhuan.cs [Design]",
-              "RelativeToolTip": "PBL3a\\UI\\AdminTC\\LoiNhuan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T14:41:59.837Z",
-              "EditorCaption": " [Design]"
+              "Title": "StudentSchedule.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentSchedule.cs",
+              "RelativeDocumentMoniker": "PBL3a\\UI\\Student\\StudentSchedule.cs",
+              "ToolTip": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentSchedule.cs [Design]",
+              "RelativeToolTip": "PBL3a\\UI\\Student\\StudentSchedule.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2026-03-10T14:51:48.137Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "KhoanThu.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\KhoanThu.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminTC\\KhoanThu.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\KhoanThu.cs [Design]",
-              "RelativeToolTip": "PBL3a\\UI\\AdminTC\\KhoanThu.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T14:41:58.441Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "KhoanChi.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\KhoanChi.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminTC\\KhoanChi.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\KhoanChi.cs [Design]",
-              "RelativeToolTip": "PBL3a\\UI\\AdminTC\\KhoanChi.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T14:41:56.868Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HocPhi.cs [Design]",
-              "DocumentMoniker": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\HocPhi.cs",
-              "RelativeDocumentMoniker": "PBL3a\\UI\\AdminTC\\HocPhi.cs",
-              "ToolTip": "C:\\Github\\PBL3a\\PBL3a\\UI\\AdminTC\\HocPhi.cs [Design]",
-              "RelativeToolTip": "PBL3a\\UI\\AdminTC\\HocPhi.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T16:12:43.262Z",
-              "EditorCaption": " [Design]"
+              "Title": "StudentAll.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentAll.cs",
+              "RelativeDocumentMoniker": "PBL3a\\UI\\Student\\StudentAll.cs",
+              "ToolTip": "C:\\Users\\21024\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\PBL3a\\PBL3a\\UI\\Student\\StudentAll.cs [Design]",
+              "RelativeToolTip": "PBL3a\\UI\\Student\\StudentAll.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2026-03-10T14:51:48.138Z"
             }
           ]
         }
       ]
+=======
+      "DocumentGroups": []
+>>>>>>> Stashed changes
     }
   ]
 }
