@@ -1,6 +1,6 @@
-PBL3a/.vs/
-PBL3a/bin/
-PBL3a/obj/
-PBL3a/*.user
+.vs/
+bin/
+obj/
+*.user
 /PBL3a/obj
-/PBL3a/obj
+/PBL3a/bin
