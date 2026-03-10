@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace PBL3a.UI.Student
 {
-    public partial class StudentINFO : Form
+    public partial class StudentMaterial : Form
     {
-        public StudentINFO()
+        public StudentMaterial()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

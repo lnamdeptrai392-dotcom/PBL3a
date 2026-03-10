@@ -40,6 +40,10 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
+            dateTimePicker1 = new DateTimePicker();
+            comboBox1 = new ComboBox();
+            button2 = new Button();
+            button1 = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -132,6 +136,10 @@
             tableLayoutPanel1.Controls.Add(textBox2, 2, 4);
             tableLayoutPanel1.Controls.Add(textBox3, 2, 5);
             tableLayoutPanel1.Controls.Add(textBox4, 2, 6);
+            tableLayoutPanel1.Controls.Add(dateTimePicker1, 2, 2);
+            tableLayoutPanel1.Controls.Add(comboBox1, 2, 3);
+            tableLayoutPanel1.Controls.Add(button1, 1, 7);
+            tableLayoutPanel1.Controls.Add(button2, 2, 7);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -179,6 +187,44 @@
             textBox4.Size = new Size(364, 27);
             textBox4.TabIndex = 10;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Anchor = AnchorStyles.None;
+            dateTimePicker1.Location = new Point(227, 144);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(364, 27);
+            dateTimePicker1.TabIndex = 11;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Anchor = AnchorStyles.None;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(227, 186);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(364, 28);
+            comboBox1.TabIndex = 12;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Right;
+            button2.Location = new Point(497, 392);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 14;
+            button2.Text = "Hủy";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Right;
+            button1.Location = new Point(127, 392);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 15;
+            button1.Text = "Cập nhật";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // StudentINFO
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -206,5 +252,9 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
+        private DateTimePicker dateTimePicker1;
+        private ComboBox comboBox1;
+        private Button button2;
+        private Button button1;
     }
 }
