@@ -34,6 +34,12 @@
     <Compile Update="UI\AdminTC\QuanLyChung.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UI\AdminTC\QuanLyChungTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminTC\ThietLapHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UI\Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -116,3 +116,42 @@ JOIN accountList a ON jc.AccountID = a.Id
 JOIN Class c ON jc.classID = c.classID
 ORDER BY a.Id, c.classID;
 GO
+
+
+
+USE PBL3aDB;
+GO
+
+IF OBJECT_ID('dbo.Attendance', 'U') IS NOT NULL
+    DROP TABLE dbo.Attendance;
+GO
+
+CREATE TABLE Attendance
+(
+    AttendanceID INT IDENTITY(1,1) PRIMARY KEY,
+    AccountID NVARCHAR(20) NOT NULL,
+    ClassID INT NOT NULL,
+    AttendanceDate DATE NOT NULL,
+    Status NVARCHAR(20) NOT NULL,
+    Note NVARCHAR(255) NULL,
+
+    CONSTRAINT FK_Attendance_Account
+        FOREIGN KEY (AccountID) REFERENCES accountList(Id),
+
+    CONSTRAINT FK_Attendance_Class
+        FOREIGN KEY (ClassID) REFERENCES Class(classID),
+
+    CONSTRAINT UQ_Attendance UNIQUE (AccountID, ClassID, AttendanceDate)
+);
+GO
+
+INSERT INTO Attendance (AccountID, ClassID, AttendanceDate, Status, Note)
+VALUES
+('S001', 1, '2026-03-10', N'Có mặt', N''),
+('S002', 1, '2026-03-10', N'Vắng', N'Nghỉ có phép'),
+('S003', 2, '2026-03-10', N'Muộn', N'Đến trễ 10 phút'),
+('S001', 3, '2026-03-10', N'Có mặt', N'');
+GO
+
+SELECT * FROM Attendance;
+GO

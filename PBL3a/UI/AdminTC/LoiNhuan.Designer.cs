@@ -68,7 +68,7 @@
             LaLN.Name = "LaLN";
             LaLN.Size = new Size(1696, 304);
             LaLN.TabIndex = 1;
-            LaLN.Text = "QUẢN LÝ LƯƠNG GIẢNG VIÊN";
+            LaLN.Text = "QUẢN LÝ LỢI NHUẬN";
             LaLN.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btThu
@@ -81,6 +81,7 @@
             btThu.TabIndex = 2;
             btThu.Text = "Khoản Thu";
             btThu.UseVisualStyleBackColor = true;
+            btThu.Click += btThu_Click;
             // 
             // btChi
             // 
@@ -92,6 +93,7 @@
             btChi.TabIndex = 3;
             btChi.Text = "Khoản Chi";
             btChi.UseVisualStyleBackColor = true;
+            btChi.Click += btChi_Click;
             // 
             // btT
             // 
@@ -103,6 +105,7 @@
             btT.TabIndex = 4;
             btT.Text = "Thoát";
             btT.UseVisualStyleBackColor = true;
+            btT.Click += btT_Click;
             // 
             // LoiNhuan
             // 

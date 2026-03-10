@@ -14,5 +14,21 @@ namespace PBL3a.UI.AdminTC
         {
             InitializeComponent();
         }
+
+        private void btSetHP_Click(object sender, EventArgs e)
+        {
+            ThietLapHP thlap = new ThietLapHP();
+            this.Hide();
+            thlap.ShowDialog();
+            this.Show();
+        }
+
+        private void btT_Click(object sender, EventArgs e)
+        {
+            QuanLyChungTC mainTC = new QuanLyChungTC();
+            this.Hide();
+            mainTC.ShowDialog();
+            this.Show();
+        }
     }
 }

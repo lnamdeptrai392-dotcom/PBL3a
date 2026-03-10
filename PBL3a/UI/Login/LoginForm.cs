@@ -67,7 +67,7 @@ namespace PBL3a.UI.Login
             }
             else if (role == "AdminTC")
             {
-                nextForm = new PBL3a.UI.AdminTC.QuanLyChung();
+                nextForm = new PBL3a.UI.AdminTC.QuanLyChungTC();
             }
             else
             {

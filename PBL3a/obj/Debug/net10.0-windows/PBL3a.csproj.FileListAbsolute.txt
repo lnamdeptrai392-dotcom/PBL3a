@@ -68,3 +68,5 @@ C:\Github\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.AdminTC.LoiNhuan.resour
 C:\Github\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.AdminTC.LuongGV.resources
 C:\Github\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.AdminTC.QuanLyChung.resources
 C:\Github\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.csproj.Up2Date
+C:\Github\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.AdminTC.QuanLyChungTC.resources
+C:\Github\PBL3a\PBL3a\obj\Debug\net10.0-windows\PBL3a.UI.AdminTC.ThietLapHP.resources
