@@ -18,7 +18,7 @@ namespace PBL3a.UI.AdminTC
         private void btT_Click(object sender, EventArgs e)
         {
             QuanLyChungTC mainTC = new QuanLyChungTC();
-            this.Hide();
+            this.Close();
             mainTC.ShowDialog();
             this.Show();
         }
@@ -26,7 +26,7 @@ namespace PBL3a.UI.AdminTC
         private void btThu_Click(object sender, EventArgs e)
         {
             KhoanThu thu = new KhoanThu();
-            this.Hide();
+            this.Close();
             thu.ShowDialog();
             this.Show();
         }
@@ -34,7 +34,7 @@ namespace PBL3a.UI.AdminTC
         private void btChi_Click(object sender, EventArgs e)
         {
             KhoanChi chi = new KhoanChi();
-            this.Hide();
+            this.Close();
             chi.ShowDialog();
             this.Show();
         }

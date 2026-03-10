@@ -18,7 +18,7 @@ namespace PBL3a.UI.AdminTC
         private void btT_Click(object sender, EventArgs e)
         {
             QuanLyChungTC mainTC = new QuanLyChungTC();
-            this.Hide();
+            this.Close();
             mainTC.ShowDialog();
             this.Show();
         }

@@ -18,7 +18,7 @@ namespace PBL3a.UI.AdminTC
         private void btT_Click(object sender, EventArgs e)
         {
             HocPhi hocPhi = new HocPhi();
-            this.Hide();
+            this.Close();
             hocPhi.ShowDialog();
             this.Show();
         }
