@@ -14,7 +14,7 @@ namespace PBL3a.UI.Student
         {
             InitializeComponent();
         }
-
+//
         private void StudentAll_Load(object sender, EventArgs e)
         {
 
