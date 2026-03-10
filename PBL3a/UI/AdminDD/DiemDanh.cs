@@ -9,7 +9,9 @@ namespace PBL3a.UI.AdminDD
     public partial class Form1 : Form
     {
         DatabaseHelper db = new DatabaseHelper();
-
+/// <summary>
+///     
+/// </summary>
         public Form1()
         {
             InitializeComponent();
