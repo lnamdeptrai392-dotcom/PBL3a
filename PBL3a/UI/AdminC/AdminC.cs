@@ -15,21 +15,34 @@ namespace PBL3a.UI.AdminC
             InitializeComponent();
         }
 
-        private void buttonAdminC1_Click(object sender, EventArgs e)
+        private void btnOkDuyetDon_Click(object sender, EventArgs e)
         {
-            quanLyDuyetDon formMoi = new quanLyDuyetDon();
-            this.Hide();
-            formMoi.ShowDialog();
-            this.Show();
-
+            if (rdoViewDuyetDon.Checked == true)
+            {
+                quanLyDuyetDon newForm = new quanLyDuyetDon();
+                this.Hide();
+                newForm.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng click chọn 'View' trước khi nhấn OK!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void buttonAdminC2_Click(object sender, EventArgs e)
+        private void btnOkKhoaHoc_Click(object sender, EventArgs e)
         {
-            quanLyKhoaHoc formMoi = new quanLyKhoaHoc();
-            this.Hide();
-            formMoi.ShowDialog();
-            this.Show();
+            if (rdoViewKhoaHoc.Checked == true)
+            {
+                quanLyKhoaHoc newForm = new quanLyKhoaHoc();
+                this.Hide();
+                newForm.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng click chọn 'View' trước khi nhấn OK!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

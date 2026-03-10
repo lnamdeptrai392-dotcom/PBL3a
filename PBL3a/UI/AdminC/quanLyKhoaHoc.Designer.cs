@@ -128,7 +128,6 @@
             Controls.Add(labelqlduyetdon1);
             Name = "quanLyKhoaHoc";
             Text = "Khóa Học/ Lớp Học";
-            WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
