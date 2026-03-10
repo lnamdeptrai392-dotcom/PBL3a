@@ -30,7 +30,7 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
-            button1 = new Button();
+            btn_back = new Button();
             dataGridView1 = new DataGridView();
             label2 = new Label();
             comboBox1 = new ComboBox();
@@ -45,7 +45,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.47328F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 147F));
             tableLayoutPanel1.Controls.Add(label1, 1, 0);
-            tableLayoutPanel1.Controls.Add(button1, 1, 3);
+            tableLayoutPanel1.Controls.Add(btn_back, 1, 3);
             tableLayoutPanel1.Controls.Add(dataGridView1, 1, 2);
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
             tableLayoutPanel1.Controls.Add(comboBox1, 1, 1);
@@ -71,15 +71,16 @@
             label1.TabIndex = 0;
             label1.Text = "TÀI LIỆU";
             // 
-            // button1
+            // btn_back
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Location = new Point(349, 411);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Quay lại";
-            button1.UseVisualStyleBackColor = true;
+            btn_back.Anchor = AnchorStyles.None;
+            btn_back.Location = new Point(349, 411);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(94, 29);
+            btn_back.TabIndex = 1;
+            btn_back.Text = "Quay lại";
+            btn_back.UseVisualStyleBackColor = true;
+            btn_back.Click += btn_back_Click;
             // 
             // dataGridView1
             // 
@@ -106,7 +107,7 @@
             // 
             comboBox1.Anchor = AnchorStyles.Left;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(143, 51);
+            comboBox1.Location = new Point(143, 54);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 4;
@@ -129,7 +130,7 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
-        private Button button1;
+        private Button btn_back;
         private DataGridView dataGridView1;
         private Label label2;
         private ComboBox comboBox1;

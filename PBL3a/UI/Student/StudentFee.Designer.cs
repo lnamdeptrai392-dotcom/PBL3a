@@ -31,7 +31,7 @@
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             dataGridView1 = new DataGridView();
-            button1 = new Button();
+            btn_back = new Button();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -55,7 +55,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 155F));
             tableLayoutPanel1.Controls.Add(label1, 1, 0);
             tableLayoutPanel1.Controls.Add(dataGridView1, 1, 1);
-            tableLayoutPanel1.Controls.Add(button1, 1, 2);
+            tableLayoutPanel1.Controls.Add(btn_back, 1, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -76,15 +76,16 @@
             dataGridView1.Size = new Size(536, 302);
             dataGridView1.TabIndex = 1;
             // 
-            // button1
+            // btn_back
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Location = new Point(326, 409);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 2;
-            button1.Text = "Quay lại";
-            button1.UseVisualStyleBackColor = true;
+            btn_back.Anchor = AnchorStyles.None;
+            btn_back.Location = new Point(326, 409);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(94, 29);
+            btn_back.TabIndex = 2;
+            btn_back.Text = "Quay lại";
+            btn_back.UseVisualStyleBackColor = true;
+            btn_back.Click += btn_back_Click;
             // 
             // StudentFee
             // 
@@ -105,6 +106,6 @@
         private Label label1;
         private TableLayoutPanel tableLayoutPanel1;
         private DataGridView dataGridView1;
-        private Button button1;
+        private Button btn_back;
     }
 }

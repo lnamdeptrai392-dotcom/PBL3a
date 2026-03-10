@@ -17,9 +17,9 @@ namespace PBL3a.UI.Student
         private void btn_schedule_Click(object sender, EventArgs e)
         {
             StudentSchedule schedule = new StudentSchedule();
-            this.Hide();
+            this.Close();
             schedule.ShowDialog();
-            this.Show();
+            
         }
 
   
@@ -27,33 +27,33 @@ namespace PBL3a.UI.Student
         private void btn_info_Click(object sender, EventArgs e)
         {
             StudentINFO info = new StudentINFO();
-            this.Hide();
+            this.Close();
             info.ShowDialog();
-            this.Show();
+            
         }
 
         private void btn_score_Click(object sender, EventArgs e)
         {
             StudentScore score = new StudentScore();
-            this.Hide();
+            this.Close();
             score.ShowDialog();
-            this.Show();
+            
         }
 
         private void btn_fee_Click(object sender, EventArgs e)
         {
             StudentFee fee = new StudentFee();
-            this.Hide();
+            this.Close();
             fee.ShowDialog();
-            this.Show();
+            
         }
 
         private void btn_material_Click(object sender, EventArgs e)
         {
             StudentMaterial material = new StudentMaterial();
-            this.Hide();
+            this.Close();
             material.ShowDialog();
-            this.Show();
+            
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
