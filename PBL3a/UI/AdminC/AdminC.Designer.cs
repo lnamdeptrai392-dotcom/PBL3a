@@ -28,137 +28,122 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gbDuyetDon = new GroupBox();
-            radioButton1 = new RadioButton();
-            btnOkDuyetDon = new Button();
-            rdoViewDuyetDon = new RadioButton();
-            gbKhoaLopHoc = new GroupBox();
-            radioButton2 = new RadioButton();
-            btnOkKhoaHoc = new Button();
-            rdoViewKhoaHoc = new RadioButton();
-            gbDuyetDon.SuspendLayout();
-            gbKhoaLopHoc.SuspendLayout();
+            panel1 = new Panel();
+            label3 = new Label();
+            butExit = new Button();
+            butViewKhoaLop = new Button();
+            butViewDuyetDon = new Button();
+            label2 = new Label();
+            label1 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // gbDuyetDon
+            // panel1
             // 
-            gbDuyetDon.Anchor = AnchorStyles.None;
-            gbDuyetDon.BackColor = SystemColors.Info;
-            gbDuyetDon.Controls.Add(radioButton1);
-            gbDuyetDon.Controls.Add(btnOkDuyetDon);
-            gbDuyetDon.Controls.Add(rdoViewDuyetDon);
-            gbDuyetDon.Location = new Point(46, 113);
-            gbDuyetDon.Name = "gbDuyetDon";
-            gbDuyetDon.Size = new Size(285, 196);
-            gbDuyetDon.TabIndex = 3;
-            gbDuyetDon.TabStop = false;
-            gbDuyetDon.Text = "Quản Lý Duyệt Đơn";
+            panel1.Anchor = AnchorStyles.None;
+            panel1.BackColor = SystemColors.ButtonFace;
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(butExit);
+            panel1.Controls.Add(butViewKhoaLop);
+            panel1.Controls.Add(butViewDuyetDon);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(-38, 19);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(929, 430);
+            panel1.TabIndex = 0;
             // 
-            // radioButton1
+            // label3
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(110, 89);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(66, 24);
-            radioButton1.TabIndex = 6;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "None";
-            radioButton1.UseVisualStyleBackColor = true;
+            label3.AutoSize = true;
+            label3.BackColor = SystemColors.Info;
+            label3.BorderStyle = BorderStyle.Fixed3D;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(376, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(180, 30);
+            label3.TabIndex = 5;
+            label3.Text = "Trung Tâm Gia Sư";
             // 
-            // btnOkDuyetDon
+            // butExit
             // 
-            btnOkDuyetDon.BackColor = Color.FromArgb(255, 192, 192);
-            btnOkDuyetDon.Location = new Point(97, 133);
-            btnOkDuyetDon.Name = "btnOkDuyetDon";
-            btnOkDuyetDon.Size = new Size(94, 29);
-            btnOkDuyetDon.TabIndex = 5;
-            btnOkDuyetDon.Text = "OK";
-            btnOkDuyetDon.UseVisualStyleBackColor = false;
-            btnOkDuyetDon.Click += btnOkDuyetDon_Click;
+            butExit.Anchor = AnchorStyles.None;
+            butExit.Location = new Point(407, 344);
+            butExit.Name = "butExit";
+            butExit.Size = new Size(110, 43);
+            butExit.TabIndex = 4;
+            butExit.Text = "Thoát";
+            butExit.UseVisualStyleBackColor = true;
+            butExit.Click += butExit_Click;
             // 
-            // rdoViewDuyetDon
+            // butViewKhoaLop
             // 
-            rdoViewDuyetDon.AutoSize = true;
-            rdoViewDuyetDon.Location = new Point(110, 50);
-            rdoViewDuyetDon.Name = "rdoViewDuyetDon";
-            rdoViewDuyetDon.Size = new Size(62, 24);
-            rdoViewDuyetDon.TabIndex = 0;
-            rdoViewDuyetDon.TabStop = true;
-            rdoViewDuyetDon.Text = "View";
-            rdoViewDuyetDon.UseVisualStyleBackColor = true;
+            butViewKhoaLop.Anchor = AnchorStyles.None;
+            butViewKhoaLop.Location = new Point(565, 202);
+            butViewKhoaLop.Name = "butViewKhoaLop";
+            butViewKhoaLop.Size = new Size(110, 43);
+            butViewKhoaLop.TabIndex = 3;
+            butViewKhoaLop.Text = "View";
+            butViewKhoaLop.UseVisualStyleBackColor = true;
+            butViewKhoaLop.Click += butViewKhoaLop_Click;
             // 
-            // gbKhoaLopHoc
+            // butViewDuyetDon
             // 
-            gbKhoaLopHoc.Anchor = AnchorStyles.None;
-            gbKhoaLopHoc.BackColor = SystemColors.Info;
-            gbKhoaLopHoc.Controls.Add(radioButton2);
-            gbKhoaLopHoc.Controls.Add(btnOkKhoaHoc);
-            gbKhoaLopHoc.Controls.Add(rdoViewKhoaHoc);
-            gbKhoaLopHoc.Location = new Point(361, 113);
-            gbKhoaLopHoc.Name = "gbKhoaLopHoc";
-            gbKhoaLopHoc.Size = new Size(295, 196);
-            gbKhoaLopHoc.TabIndex = 4;
-            gbKhoaLopHoc.TabStop = false;
-            gbKhoaLopHoc.Text = "Quản Lý Khóa/ Lớp Học";
+            butViewDuyetDon.Anchor = AnchorStyles.None;
+            butViewDuyetDon.Location = new Point(254, 202);
+            butViewDuyetDon.Name = "butViewDuyetDon";
+            butViewDuyetDon.Size = new Size(110, 43);
+            butViewDuyetDon.TabIndex = 2;
+            butViewDuyetDon.Text = "View";
+            butViewDuyetDon.UseVisualStyleBackColor = true;
+            butViewDuyetDon.Click += butViewDuyetDon_Click;
             // 
-            // radioButton2
+            // label2
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(118, 89);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(66, 24);
-            radioButton2.TabIndex = 7;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "None";
-            radioButton2.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.Info;
+            label2.BorderStyle = BorderStyle.Fixed3D;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(527, 143);
+            label2.Name = "label2";
+            label2.Size = new Size(199, 30);
+            label2.TabIndex = 1;
+            label2.Text = "Quản Lý Duyệt Đơn";
             // 
-            // btnOkKhoaHoc
+            // label1
             // 
-            btnOkKhoaHoc.BackColor = Color.FromArgb(255, 192, 192);
-            btnOkKhoaHoc.Location = new Point(109, 133);
-            btnOkKhoaHoc.Name = "btnOkKhoaHoc";
-            btnOkKhoaHoc.Size = new Size(94, 29);
-            btnOkKhoaHoc.TabIndex = 2;
-            btnOkKhoaHoc.Text = "OK";
-            btnOkKhoaHoc.UseVisualStyleBackColor = false;
-            btnOkKhoaHoc.Click += btnOkKhoaHoc_Click;
-            // 
-            // rdoViewKhoaHoc
-            // 
-            rdoViewKhoaHoc.AutoSize = true;
-            rdoViewKhoaHoc.Location = new Point(118, 50);
-            rdoViewKhoaHoc.Name = "rdoViewKhoaHoc";
-            rdoViewKhoaHoc.Size = new Size(62, 24);
-            rdoViewKhoaHoc.TabIndex = 0;
-            rdoViewKhoaHoc.TabStop = true;
-            rdoViewKhoaHoc.Text = "View";
-            rdoViewKhoaHoc.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.Info;
+            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(202, 143);
+            label1.Name = "label1";
+            label1.Size = new Size(199, 30);
+            label1.TabIndex = 0;
+            label1.Text = "Quản Lý Duyệt Đơn";
             // 
             // AdminC
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(678, 398);
-            Controls.Add(gbKhoaLopHoc);
-            Controls.Add(gbDuyetDon);
+            ClientSize = new Size(853, 469);
+            Controls.Add(panel1);
             Name = "AdminC";
             Text = "Admin Quản Lý Chung";
-            gbDuyetDon.ResumeLayout(false);
-            gbDuyetDon.PerformLayout();
-            gbKhoaLopHoc.ResumeLayout(false);
-            gbKhoaLopHoc.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
 
         }
 
         #endregion
-        private GroupBox gbDuyetDon;
-        private GroupBox gbKhoaLopHoc;
-        private RadioButton rdoViewDuyetDon;
-        private RadioButton rdoViewKhoaHoc;
-        private Button btnOkDuyetDon;
-        private Button btnOkKhoaHoc;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+
+        private Panel panel1;
+        private Label label2;
+        private Label label1;
+        private Button butExit;
+        private Button butViewKhoaLop;
+        private Button butViewDuyetDon;
+        private Label label3;
     }
 }
