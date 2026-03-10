@@ -140,7 +140,7 @@ namespace PBL3a.UI.AdminDD
                     string status = row.Cells["Status"].Value?.ToString() ?? "Có mặt";
                     string note = row.Cells["Note"].Value?.ToString() ?? "";
 
-                    // kiểm tra tồn tại..
+                    // kiểm tra tồn tại
                     string check = @"SELECT COUNT(*) 
                                      FROM Attendance 
                                      WHERE AccountID=@acc 

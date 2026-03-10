@@ -33,7 +33,7 @@
             label2 = new Label();
             comboBox1 = new ComboBox();
             dataGridView1 = new DataGridView();
-            button1 = new Button();
+            btn_back = new Button();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -48,7 +48,7 @@
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
             tableLayoutPanel1.Controls.Add(comboBox1, 1, 1);
             tableLayoutPanel1.Controls.Add(dataGridView1, 1, 2);
-            tableLayoutPanel1.Controls.Add(button1, 1, 3);
+            tableLayoutPanel1.Controls.Add(btn_back, 1, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -86,7 +86,7 @@
             // 
             comboBox1.Anchor = AnchorStyles.Left;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(125, 68);
+            comboBox1.Location = new Point(125, 72);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 2;
@@ -101,15 +101,16 @@
             dataGridView1.Size = new Size(553, 282);
             dataGridView1.TabIndex = 3;
             // 
-            // button1
+            // btn_back
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Location = new Point(354, 409);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 4;
-            button1.Text = "Quay lại";
-            button1.UseVisualStyleBackColor = true;
+            btn_back.Anchor = AnchorStyles.None;
+            btn_back.Location = new Point(354, 409);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(94, 29);
+            btn_back.TabIndex = 4;
+            btn_back.Text = "Quay lại";
+            btn_back.UseVisualStyleBackColor = true;
+            btn_back.Click += btn_back_Click;
             // 
             // StudentSchedule
             // 
@@ -132,6 +133,6 @@
         private Label label2;
         private ComboBox comboBox1;
         private DataGridView dataGridView1;
-        private Button button1;
+        private Button btn_back;
     }
 }

@@ -15,9 +15,11 @@ namespace PBL3a.UI.Student
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_back_Click(object sender, EventArgs e)
         {
-
+            StudentAll student = new StudentAll();
+            student.Show();
+            this.Close();
         }
     }
 }

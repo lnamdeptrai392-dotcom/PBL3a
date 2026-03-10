@@ -31,8 +31,8 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
             dataGridView1 = new DataGridView();
-            button1 = new Button();
             button2 = new Button();
+            btn_back = new Button();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -47,7 +47,7 @@
             tableLayoutPanel1.Controls.Add(label1, 2, 0);
             tableLayoutPanel1.Controls.Add(dataGridView1, 2, 1);
             tableLayoutPanel1.Controls.Add(button2, 2, 3);
-            tableLayoutPanel1.Controls.Add(button1, 3, 3);
+            tableLayoutPanel1.Controls.Add(btn_back, 3, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -80,16 +80,6 @@
             dataGridView1.Size = new Size(556, 268);
             dataGridView1.TabIndex = 1;
             // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Left;
-            button1.Location = new Point(659, 404);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 2;
-            button1.Text = "Thoát";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             button2.Anchor = AnchorStyles.Left;
@@ -99,6 +89,17 @@
             button2.TabIndex = 3;
             button2.Text = "Xuất";
             button2.UseVisualStyleBackColor = true;
+            // 
+            // btn_back
+            // 
+            btn_back.Anchor = AnchorStyles.Left;
+            btn_back.Location = new Point(659, 404);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(94, 29);
+            btn_back.TabIndex = 2;
+            btn_back.Text = "Thoát";
+            btn_back.UseVisualStyleBackColor = true;
+            btn_back.Click += btn_back_Click;
             // 
             // StudentScore
             // 
@@ -119,7 +120,7 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
         private DataGridView dataGridView1;
-        private Button button1;
+        private Button btn_back;
         private Button button2;
     }
 }
