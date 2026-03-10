@@ -19,6 +19,7 @@ using System.Reflection;
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ced88f96fa12899ac5c19ecba5f18e084440bb1a")]
 >>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2614bd8e1402abdb53f68ede4e9b9aa7cfc4785")]
 [assembly: System.Reflection.AssemblyProductAttribute("PBL3a")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PBL3a")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
