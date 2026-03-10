@@ -1,9 +1,4 @@
-# Visual Studio
-PBL3a/.vs/
-
-# Build folders
-PBL3a/bin/
-PBL3a/obj/
-
-# User settings
+.vs/
+bin/
+obj/
 *.user
