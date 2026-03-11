@@ -200,6 +200,7 @@
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1570, 840);
             Controls.Add(tableLayoutPanel1);
             Name = "ThietLapHP";

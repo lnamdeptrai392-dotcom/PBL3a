@@ -34,9 +34,10 @@
             button1 = new Button();
             comboBox1 = new ComboBox();
             textBox1 = new TextBox();
-            listView1 = new ListView();
             label3 = new Label();
+            dataGridView1 = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -54,8 +55,8 @@
             tableLayoutPanel1.Controls.Add(button1, 5, 5);
             tableLayoutPanel1.Controls.Add(comboBox1, 2, 2);
             tableLayoutPanel1.Controls.Add(textBox1, 5, 2);
-            tableLayoutPanel1.Controls.Add(listView1, 1, 3);
             tableLayoutPanel1.Controls.Add(label3, 4, 2);
+            tableLayoutPanel1.Controls.Add(dataGridView1, 1, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -122,17 +123,6 @@
             textBox1.Size = new Size(351, 35);
             textBox1.TabIndex = 5;
             // 
-            // listView1
-            // 
-            tableLayoutPanel1.SetColumnSpan(listView1, 4);
-            listView1.Dock = DockStyle.Fill;
-            listView1.Location = new Point(65, 225);
-            listView1.Name = "listView1";
-            tableLayoutPanel1.SetRowSpan(listView1, 3);
-            listView1.Size = new Size(835, 489);
-            listView1.TabIndex = 6;
-            listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -143,16 +133,31 @@
             label3.TabIndex = 2;
             label3.Text = "Tên lớp học:";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tableLayoutPanel1.SetColumnSpan(dataGridView1, 4);
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(65, 225);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 72;
+            tableLayoutPanel1.SetRowSpan(dataGridView1, 3);
+            dataGridView1.Size = new Size(835, 489);
+            dataGridView1.TabIndex = 6;
+            // 
             // TKB
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1318, 750);
             Controls.Add(tableLayoutPanel1);
             Name = "TKB";
             Text = "TKB";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -164,7 +169,7 @@
         private Button button1;
         private ComboBox comboBox1;
         private TextBox textBox1;
-        private ListView listView1;
         private Label label3;
+        private DataGridView dataGridView1;
     }
 }

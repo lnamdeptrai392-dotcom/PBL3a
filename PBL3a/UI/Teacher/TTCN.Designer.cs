@@ -244,6 +244,7 @@
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1474, 785);
             Controls.Add(tableLayoutPanel1);
             Name = "TTCN";

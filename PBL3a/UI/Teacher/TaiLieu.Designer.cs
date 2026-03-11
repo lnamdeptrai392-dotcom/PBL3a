@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            listView1 = new ListView();
             tableLayoutPanel1 = new TableLayoutPanel();
             btT = new Button();
             btUpload = new Button();
+            dataGridView1 = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -48,19 +49,9 @@
             label1.TabIndex = 0;
             label1.Text = "TÀI LIỆU";
             // 
-            // listView1
-            // 
-            tableLayoutPanel1.SetColumnSpan(listView1, 4);
-            listView1.Dock = DockStyle.Fill;
-            listView1.Location = new Point(65, 117);
-            listView1.Name = "listView1";
-            tableLayoutPanel1.SetRowSpan(listView1, 5);
-            listView1.Size = new Size(959, 597);
-            listView1.TabIndex = 4;
-            listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackColor = Color.White;
             tableLayoutPanel1.ColumnCount = 7;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 62F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 163F));
@@ -71,8 +62,8 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(btT, 5, 5);
-            tableLayoutPanel1.Controls.Add(listView1, 1, 1);
             tableLayoutPanel1.Controls.Add(btUpload, 5, 4);
+            tableLayoutPanel1.Controls.Add(dataGridView1, 1, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -111,6 +102,20 @@
             btUpload.Text = "Tải lên";
             btUpload.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tableLayoutPanel1.SetColumnSpan(dataGridView1, 4);
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.GridColor = Color.Gray;
+            dataGridView1.Location = new Point(65, 117);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 72;
+            tableLayoutPanel1.SetRowSpan(dataGridView1, 5);
+            dataGridView1.Size = new Size(959, 597);
+            dataGridView1.TabIndex = 6;
+            // 
             // TaiLieu
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
@@ -121,6 +126,7 @@
             Text = "TaiLieu";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -129,7 +135,7 @@
         private Label label1;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btT;
-        private ListView listView1;
         private Button btUpload;
+        private DataGridView dataGridView1;
     }
 }

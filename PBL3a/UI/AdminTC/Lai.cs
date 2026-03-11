@@ -8,16 +8,16 @@ using System.Windows.Forms;
 
 namespace PBL3a.UI.AdminTC
 {
-    public partial class QuanLyChung : Form
+    public partial class Lai : Form
     {
-        public QuanLyChung()
+        public Lai()
         {
             InitializeComponent();
         }
 
-        private void QuanLyChung_Load(object sender, EventArgs e)
+        private void btT_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

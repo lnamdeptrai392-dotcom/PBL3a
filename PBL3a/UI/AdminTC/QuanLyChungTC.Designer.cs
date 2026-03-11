@@ -131,6 +131,7 @@
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1419, 770);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);

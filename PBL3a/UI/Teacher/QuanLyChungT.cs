@@ -58,10 +58,7 @@ namespace PBL3a.UI.Teacher
 
         private void button6_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
             this.Close();
-            loginForm.ShowDialog();
-            this.Show();
         }
     }
 }

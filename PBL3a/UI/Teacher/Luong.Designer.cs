@@ -31,8 +31,9 @@
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             button1 = new Button();
-            listView1 = new ListView();
+            dataGridView1 = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -59,7 +60,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(button1, 5, 5);
-            tableLayoutPanel1.Controls.Add(listView1, 1, 1);
+            tableLayoutPanel1.Controls.Add(dataGridView1, 1, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -87,27 +88,32 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // listView1
+            // dataGridView1
             // 
-            tableLayoutPanel1.SetColumnSpan(listView1, 4);
-            listView1.Dock = DockStyle.Fill;
-            listView1.Location = new Point(65, 117);
-            listView1.Name = "listView1";
-            tableLayoutPanel1.SetRowSpan(listView1, 5);
-            listView1.Size = new Size(959, 597);
-            listView1.TabIndex = 4;
-            listView1.UseCompatibleStateImageBehavior = false;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tableLayoutPanel1.SetColumnSpan(dataGridView1, 4);
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.GridColor = Color.DarkGray;
+            dataGridView1.Location = new Point(65, 117);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 72;
+            tableLayoutPanel1.SetRowSpan(dataGridView1, 5);
+            dataGridView1.Size = new Size(959, 597);
+            dataGridView1.TabIndex = 4;
             // 
             // Luong
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1343, 782);
             Controls.Add(tableLayoutPanel1);
             Name = "Luong";
             Text = "Luong";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -116,6 +122,6 @@
         private Label label1;
         private TableLayoutPanel tableLayoutPanel1;
         private Button button1;
-        private ListView listView1;
+        private DataGridView dataGridView1;
     }
 }

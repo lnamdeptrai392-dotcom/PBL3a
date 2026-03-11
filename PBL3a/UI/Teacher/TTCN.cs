@@ -18,10 +18,7 @@ namespace PBL3a.UI.Teacher
         private void btT_Click(object sender, EventArgs e)
         {
 
-            QuanLyChungT nextForm = new QuanLyChungT();
             this.Close();
-            nextForm.ShowDialog();
-            this.Show();
         }
     }
 }

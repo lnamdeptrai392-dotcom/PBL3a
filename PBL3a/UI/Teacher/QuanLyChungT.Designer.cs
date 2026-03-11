@@ -40,6 +40,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackColor = Color.White;
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50.6012039F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 49.3987961F));

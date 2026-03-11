@@ -35,9 +35,8 @@ namespace PBL3a.UI.AdminTC
         private void btT_Click(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
-            this.Hide();
-            login.ShowDialog();
-            this.Show();
+            this.Close();
+            
         }
 
         // Lương giáo viên
