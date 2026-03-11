@@ -1,4 +1,4 @@
-﻿namespace PBL3a.UI.AdminTC
+namespace PBL3a.UI.AdminTC
 {
     partial class KhoanChi
     {
@@ -106,9 +106,10 @@
             lbNam.AutoSize = true;
             lbNam.Dock = DockStyle.Right;
             lbNam.Font = new Font("Segoe UI", 12F);
-            lbNam.Location = new Point(681, 150);
+            lbNam.Location = new Point(451, 100);
+            lbNam.Margin = new Padding(2, 0, 2, 0);
             lbNam.Name = "lbNam";
-            lbNam.Size = new Size(82, 37);
+            lbNam.Size = new Size(58, 25);
             lbNam.TabIndex = 4;
             lbNam.Text = "Năm:";
             // 
@@ -162,6 +163,7 @@
             tableLayoutPanel1.SetRowSpan(dataGridView1, 3);
             dataGridView1.Size = new Size(1150, 486);
             dataGridView1.TabIndex = 8;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // tbNam
             // 

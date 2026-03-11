@@ -1,4 +1,4 @@
-﻿namespace PBL3a.UI.AdminTC
+namespace PBL3a.UI.AdminTC
 {
     partial class LuongGV
     {

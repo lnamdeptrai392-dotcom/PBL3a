@@ -32,8 +32,6 @@
             dataGridView1 = new DataGridView();
             comboBox1 = new ComboBox();
             label1 = new Label();
-            label2 = new Label();
-            comboBox2 = new ComboBox();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -53,6 +51,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(53, 110);
             dataGridView1.Name = "dataGridView1";
@@ -77,23 +76,6 @@
             label1.TabIndex = 4;
             label1.Text = "Chọn khóa học";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(428, 32);
-            label2.Name = "label2";
-            label2.Size = new Size(97, 20);
-            label2.TabIndex = 5;
-            label2.Text = "Chọn lớp học";
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(531, 29);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 6;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -107,10 +89,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(982, 539);
             Controls.Add(label3);
-            Controls.Add(comboBox2);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Controls.Add(dataGridView1);
@@ -128,8 +109,6 @@
         private DataGridView dataGridView1;
         private ComboBox comboBox1;
         private Label label1;
-        private Label label2;
-        private ComboBox comboBox2;
         private Label label3;
     }
 }
