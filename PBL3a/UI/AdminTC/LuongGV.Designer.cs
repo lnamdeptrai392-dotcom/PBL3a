@@ -53,7 +53,10 @@ namespace PBL3a.UI.AdminTC
             tableLayoutPanel1.ColumnCount = 8;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of e404351 (1)
 =======
 >>>>>>> parent of e404351 (1)
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
@@ -155,7 +158,10 @@ namespace PBL3a.UI.AdminTC
             laTGV.Font = new Font("Segoe UI", 12F);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of e404351 (1)
 =======
 >>>>>>> parent of e404351 (1)
             laTGV.Location = new Point(615, 131);
@@ -255,6 +261,7 @@ namespace PBL3a.UI.AdminTC
             btSetL.UseVisualStyleBackColor = true;
             btSetL.Click += btSetL_Click;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             // 
             // comboBox1
@@ -273,6 +280,8 @@ namespace PBL3a.UI.AdminTC
 >>>>>>> parent of 0d2331e (1)
             comboBox1.TabIndex = 9;
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of e404351 (1)
 =======
 >>>>>>> parent of e404351 (1)
             // 
