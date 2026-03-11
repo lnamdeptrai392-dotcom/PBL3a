@@ -1,5 +1,4 @@
-﻿using Microsoft.IdentityModel.Tokens;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,10 +10,6 @@ namespace PBL3a.UI.AdminTC
 {
     public partial class LoiNhuan : Form
     {
-        private void Loinhuan_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
         public LoiNhuan()
         {
             InitializeComponent();
@@ -22,13 +17,16 @@ namespace PBL3a.UI.AdminTC
 
         private void btT_Click(object sender, EventArgs e)
         {
+            QuanLyChungTC mainTC = new QuanLyChungTC();
             this.Close();
+            mainTC.ShowDialog();
+            this.Show();
         }
 
         private void btThu_Click(object sender, EventArgs e)
         {
             KhoanThu thu = new KhoanThu();
-            this.Hide();
+            this.Close();
             thu.ShowDialog();
             this.Show();
         }
@@ -36,16 +34,8 @@ namespace PBL3a.UI.AdminTC
         private void btChi_Click(object sender, EventArgs e)
         {
             KhoanChi chi = new KhoanChi();
-            this.Hide();
+            this.Close();
             chi.ShowDialog();
-            this.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Lai lai = new Lai();
-            this.Hide();
-            lai.ShowDialog();
             this.Show();
         }
     }

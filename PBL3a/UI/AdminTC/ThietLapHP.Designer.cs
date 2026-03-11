@@ -108,22 +108,22 @@
             laML.AutoSize = true;
             laML.Dock = DockStyle.Right;
             laML.Font = new Font("Segoe UI", 12F);
-            laML.Location = new Point(77, 232);
+            laML.Location = new Point(81, 232);
             laML.Name = "laML";
-            laML.Size = new Size(128, 108);
+            laML.Size = new Size(124, 108);
             laML.TabIndex = 1;
-            laML.Text = "Tên Lớp: ";
+            laML.Text = "Mã Lớp: ";
             // 
             // laTL
             // 
             laTL.AutoSize = true;
             laTL.Dock = DockStyle.Right;
             laTL.Font = new Font("Segoe UI", 12F);
-            laTL.Location = new Point(707, 232);
+            laTL.Location = new Point(703, 232);
             laTL.Name = "laTL";
-            laTL.Size = new Size(124, 108);
+            laTL.Size = new Size(128, 108);
             laTL.TabIndex = 2;
-            laTL.Text = "Mã Lớp: ";
+            laTL.Text = "Tên Lớp: ";
             // 
             // btT
             // 
@@ -200,7 +200,6 @@
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
             ClientSize = new Size(1570, 840);
             Controls.Add(tableLayoutPanel1);
             Name = "ThietLapHP";

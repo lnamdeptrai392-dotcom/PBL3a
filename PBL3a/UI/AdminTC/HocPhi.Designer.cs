@@ -29,21 +29,15 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            tbML = new TextBox();
+            tbTL = new TextBox();
             LaHP = new Label();
             laML = new Label();
             laTL = new Label();
             btT = new Button();
-<<<<<<< Updated upstream
-            comboBox1 = new ComboBox();
-            dataGridView1 = new DataGridView();
-            btSetHP = new Button();
-=======
             btCheckHP = new Button();
             btSetHP = new Button();
-            listView1 = new ListView();
-            cbTL = new ComboBox();
->>>>>>> Stashed changes
+            comboBox1 = new ComboBox();
+            dataGridView1 = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -51,70 +45,49 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 8;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 12F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.8125954F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.1874F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 182F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 417F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 41F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 255F));
-<<<<<<< Updated upstream
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 106F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 243F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 24F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 149F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 13F));
             tableLayoutPanel1.Controls.Add(tbTL, 4, 1);
-=======
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 22F));
-            tableLayoutPanel1.Controls.Add(tbML, 4, 1);
->>>>>>> Stashed changes
             tableLayoutPanel1.Controls.Add(LaHP, 1, 0);
             tableLayoutPanel1.Controls.Add(laML, 1, 1);
             tableLayoutPanel1.Controls.Add(laTL, 3, 1);
             tableLayoutPanel1.Controls.Add(btT, 6, 6);
-<<<<<<< Updated upstream
-            tableLayoutPanel1.Controls.Add(comboBox1, 2, 1);
-            tableLayoutPanel1.Controls.Add(dataGridView1, 2, 3);
-            tableLayoutPanel1.Controls.Add(btSetHP, 6, 5);
-=======
             tableLayoutPanel1.Controls.Add(btCheckHP, 6, 5);
             tableLayoutPanel1.Controls.Add(btSetHP, 6, 4);
-            tableLayoutPanel1.Controls.Add(listView1, 1, 3);
-            tableLayoutPanel1.Controls.Add(cbTL, 2, 1);
->>>>>>> Stashed changes
+            tableLayoutPanel1.Controls.Add(comboBox1, 2, 1);
+            tableLayoutPanel1.Controls.Add(dataGridView1, 2, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 8;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 69.3333359F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 30.666666F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 226F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 125F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 111F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 110F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1533, 800);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 113F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 71F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
+            tableLayoutPanel1.Size = new Size(894, 400);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // tbML
+            // tbTL
             // 
-<<<<<<< Updated upstream
             tableLayoutPanel1.SetColumnSpan(tbTL, 2);
             tbTL.Dock = DockStyle.Fill;
             tbTL.Enabled = false;
-            tbTL.Location = new Point(798, 127);
-            tbTL.Margin = new Padding(3, 4, 3, 4);
+            tbTL.Location = new Point(466, 63);
+            tbTL.Margin = new Padding(2);
             tbTL.Name = "tbTL";
-            tbTL.Size = new Size(452, 35);
+            tbTL.Size = new Size(263, 23);
             tbTL.TabIndex = 4;
-=======
-            tableLayoutPanel1.SetColumnSpan(tbML, 2);
-            tbML.Dock = DockStyle.Fill;
-            tbML.Enabled = false;
-            tbML.Location = new Point(800, 126);
-            tbML.Name = "tbML";
-            tbML.Size = new Size(452, 35);
-            tbML.TabIndex = 4;
->>>>>>> Stashed changes
             // 
             // LaHP
             // 
@@ -122,9 +95,10 @@
             tableLayoutPanel1.SetColumnSpan(LaHP, 6);
             LaHP.Dock = DockStyle.Fill;
             LaHP.Font = new Font("Segoe UI", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LaHP.Location = new Point(24, 0);
+            LaHP.Location = new Point(14, 0);
+            LaHP.Margin = new Padding(2, 0, 2, 0);
             LaHP.Name = "LaHP";
-            LaHP.Size = new Size(1481, 123);
+            LaHP.Size = new Size(864, 61);
             LaHP.TabIndex = 0;
             LaHP.Text = "QUẢN LÝ HỌC PHÍ";
             LaHP.TextAlign = ContentAlignment.MiddleCenter;
@@ -134,54 +108,71 @@
             laML.AutoSize = true;
             laML.Dock = DockStyle.Right;
             laML.Font = new Font("Segoe UI", 12F);
-<<<<<<< Updated upstream
-            laML.Location = new Point(31, 123);
+            laML.Location = new Point(15, 61);
+            laML.Margin = new Padding(2, 0, 2, 0);
             laML.Name = "laML";
-            laML.Size = new Size(116, 54);
-=======
-            laML.Location = new Point(33, 123);
-            laML.Name = "laML";
-            laML.Size = new Size(114, 54);
->>>>>>> Stashed changes
+            laML.Size = new Size(70, 27);
             laML.TabIndex = 1;
-            laML.Text = "Tên lớp:";
+            laML.Text = "Mã Lớp: ";
             // 
             // laTL
             // 
             laTL.AutoSize = true;
             laTL.Dock = DockStyle.Right;
             laTL.Font = new Font("Segoe UI", 12F);
-<<<<<<< Updated upstream
-            laTL.Location = new Point(664, 123);
-=======
-            laTL.Location = new Point(684, 123);
->>>>>>> Stashed changes
+            laTL.Location = new Point(391, 61);
+            laTL.Margin = new Padding(2, 0, 2, 0);
             laTL.Name = "laTL";
-            laTL.Size = new Size(110, 54);
+            laTL.Size = new Size(71, 27);
             laTL.TabIndex = 2;
-            laTL.Text = "Mã lớp:";
+            laTL.Text = "Tên Lớp: ";
             // 
             // btT
             // 
             btT.Dock = DockStyle.Bottom;
             btT.Font = new Font("Segoe UI", 9.857143F);
-            btT.Location = new Point(1256, 699);
-            btT.Margin = new Padding(3, 4, 3, 4);
+            btT.Location = new Point(733, 349);
+            btT.Margin = new Padding(2);
             btT.Name = "btT";
-            btT.Size = new Size(249, 76);
+            btT.Size = new Size(145, 38);
             btT.TabIndex = 7;
             btT.Text = "Thoát";
             btT.UseVisualStyleBackColor = true;
             btT.Click += btT_Click;
             // 
+            // btCheckHP
+            // 
+            btCheckHP.Dock = DockStyle.Bottom;
+            btCheckHP.Font = new Font("Segoe UI", 9.857143F);
+            btCheckHP.Location = new Point(733, 299);
+            btCheckHP.Margin = new Padding(2);
+            btCheckHP.Name = "btCheckHP";
+            btCheckHP.Size = new Size(145, 38);
+            btCheckHP.TabIndex = 6;
+            btCheckHP.Text = "Kiểm tra tình trạng";
+            btCheckHP.UseVisualStyleBackColor = true;
+            // 
+            // btSetHP
+            // 
+            btSetHP.Dock = DockStyle.Bottom;
+            btSetHP.Font = new Font("Segoe UI", 9.857143F);
+            btSetHP.Location = new Point(733, 247);
+            btSetHP.Margin = new Padding(2);
+            btSetHP.Name = "btSetHP";
+            btSetHP.Size = new Size(145, 38);
+            btSetHP.TabIndex = 5;
+            btSetHP.Text = "Thiết lập học phí";
+            btSetHP.UseVisualStyleBackColor = true;
+            btSetHP.Click += btSetHP_Click;
+            // 
             // comboBox1
             // 
             comboBox1.Dock = DockStyle.Fill;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(153, 127);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
+            comboBox1.Location = new Point(89, 63);
+            comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(457, 38);
+            comboBox1.Size = new Size(267, 23);
             comboBox1.TabIndex = 9;
             // 
             // dataGridView1
@@ -190,57 +181,19 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tableLayoutPanel1.SetColumnSpan(dataGridView1, 3);
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(155, 213);
-            dataGridView1.Margin = new Padding(5, 6, 5, 6);
+            dataGridView1.Location = new Point(90, 106);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 72;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 4);
-            dataGridView1.Size = new Size(1052, 560);
+            dataGridView1.Size = new Size(614, 280);
             dataGridView1.TabIndex = 10;
             // 
-            // btSetHP
-            // 
-            btSetHP.Dock = DockStyle.Bottom;
-            btSetHP.Font = new Font("Segoe UI", 9.857143F);
-            btSetHP.Location = new Point(1256, 589);
-            btSetHP.Margin = new Padding(3, 4, 3, 4);
-            btSetHP.Name = "btSetHP";
-            btSetHP.Size = new Size(249, 76);
-            btSetHP.TabIndex = 5;
-            btSetHP.Text = "Thiết lập học phí";
-            btSetHP.UseVisualStyleBackColor = true;
-            btSetHP.Click += btSetHP_Click;
-            // 
-<<<<<<< Updated upstream
-=======
-            // listView1
-            // 
-            tableLayoutPanel1.SetColumnSpan(listView1, 4);
-            listView1.Location = new Point(23, 210);
-            listView1.Name = "listView1";
-            tableLayoutPanel1.SetRowSpan(listView1, 4);
-            listView1.Size = new Size(1186, 564);
-            listView1.TabIndex = 8;
-            listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // cbTL
-            // 
-            cbTL.Dock = DockStyle.Fill;
-            cbTL.FormattingEnabled = true;
-            cbTL.Location = new Point(153, 126);
-            cbTL.Name = "cbTL";
-            cbTL.Size = new Size(459, 38);
-            cbTL.TabIndex = 9;
-            // 
->>>>>>> Stashed changes
             // HocPhi
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(1533, 800);
+            ClientSize = new Size(894, 400);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2);
             Name = "HocPhi";
             Text = "HocPhi";
             tableLayoutPanel1.ResumeLayout(false);
@@ -253,18 +206,13 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private Label LaHP;
-        private TextBox tbML;
+        private TextBox tbTL;
         private Label laML;
         private Label laTL;
         private Button btT;
-<<<<<<< Updated upstream
-        private ComboBox comboBox1;
-        private DataGridView dataGridView1;
-        private Button btSetHP;
-=======
         private Button btCheckHP;
         private Button btSetHP;
-        private ComboBox cbTL;
->>>>>>> Stashed changes
+        private ComboBox comboBox1;
+        private DataGridView dataGridView1;
     }
 }

@@ -44,39 +44,42 @@
             tableLayoutPanel1.SetColumnSpan(tbKT, 3);
             tbKT.Dock = DockStyle.Top;
             tbKT.Enabled = false;
-            tbKT.Location = new Point(235, 742);
+            tbKT.Location = new Point(155, 494);
+            tbKT.Margin = new Padding(2, 2, 2, 2);
             tbKT.Name = "tbKT";
-            tbKT.Size = new Size(1014, 35);
+            tbKT.Size = new Size(676, 27);
             tbKT.TabIndex = 11;
             // 
             // tbNam
             // 
             tbNam.Dock = DockStyle.Top;
-            tbNam.Location = new Point(811, 158);
+            tbNam.Location = new Point(539, 105);
+            tbNam.Margin = new Padding(2, 2, 2, 2);
             tbNam.Name = "tbNam";
-            tbNam.Size = new Size(438, 35);
+            tbNam.Size = new Size(292, 27);
             tbNam.TabIndex = 10;
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tableLayoutPanel1.SetColumnSpan(dataGridView1, 4);
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(53, 216);
+            dataGridView1.Location = new Point(35, 143);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 72;
+            dataGridView1.RowHeadersWidth = 51;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 3);
-            dataGridView1.Size = new Size(1196, 488);
+            dataGridView1.Size = new Size(796, 326);
             dataGridView1.TabIndex = 8;
             // 
             // btT
             // 
             btT.Dock = DockStyle.Bottom;
             btT.Font = new Font("Segoe UI", 12F);
-            btT.Location = new Point(1319, 630);
+            btT.Location = new Point(878, 420);
+            btT.Margin = new Padding(2, 2, 2, 2);
             btT.Name = "btT";
-            btT.Size = new Size(189, 74);
+            btT.Size = new Size(126, 49);
             btT.TabIndex = 7;
             btT.Text = "Thoát";
             btT.UseVisualStyleBackColor = true;
@@ -86,9 +89,10 @@
             // 
             btOK.Dock = DockStyle.Bottom;
             btOK.Font = new Font("Segoe UI", 12F);
-            btOK.Location = new Point(1319, 524);
+            btOK.Location = new Point(878, 349);
+            btOK.Margin = new Padding(2, 2, 2, 2);
             btOK.Name = "btOK";
-            btOK.Size = new Size(189, 74);
+            btOK.Size = new Size(126, 49);
             btOK.TabIndex = 6;
             btOK.Text = "OK";
             btOK.UseVisualStyleBackColor = true;
@@ -99,9 +103,10 @@
             lbTT.AutoSize = true;
             lbTT.Dock = DockStyle.Right;
             lbTT.Font = new Font("Segoe UI", 12F);
-            lbTT.Location = new Point(57, 739);
+            lbTT.Location = new Point(35, 492);
+            lbTT.Margin = new Padding(2, 0, 2, 0);
             lbTT.Name = "lbTT";
-            lbTT.Size = new Size(172, 58);
+            lbTT.Size = new Size(116, 39);
             lbTT.TabIndex = 5;
             lbTT.Text = "Tổng khoản thu:";
             // 
@@ -110,9 +115,10 @@
             lbNam.AutoSize = true;
             lbNam.Dock = DockStyle.Right;
             lbNam.Font = new Font("Segoe UI", 12F);
-            lbNam.Location = new Point(723, 155);
+            lbNam.Location = new Point(477, 103);
+            lbNam.Margin = new Padding(2, 0, 2, 0);
             lbNam.Name = "lbNam";
-            lbNam.Size = new Size(82, 38);
+            lbNam.Size = new Size(58, 25);
             lbNam.TabIndex = 4;
             lbNam.Text = "Năm:";
             // 
@@ -121,9 +127,10 @@
             lbThang.AutoSize = true;
             lbThang.Dock = DockStyle.Right;
             lbThang.Font = new Font("Segoe UI", 12F);
-            lbThang.Location = new Point(129, 155);
+            lbThang.Location = new Point(81, 103);
+            lbThang.Margin = new Padding(2, 0, 2, 0);
             lbThang.Name = "lbThang";
-            lbThang.Size = new Size(100, 38);
+            lbThang.Size = new Size(70, 25);
             lbThang.TabIndex = 3;
             lbThang.Text = "Tháng:";
             // 
@@ -133,9 +140,10 @@
             tableLayoutPanel1.SetColumnSpan(LaKT, 8);
             LaKT.Dock = DockStyle.Fill;
             LaKT.Font = new Font("Segoe UI", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LaKT.Location = new Point(3, 0);
+            LaKT.Location = new Point(2, 0);
+            LaKT.Margin = new Padding(2, 0, 2, 0);
             LaKT.Name = "LaKT";
-            LaKT.Size = new Size(1551, 155);
+            LaKT.Size = new Size(1034, 103);
             LaKT.TabIndex = 2;
             LaKT.Text = "QUẢN LÝ KHOẢN THU";
             LaKT.TextAlign = ContentAlignment.MiddleCenter;
@@ -145,12 +153,12 @@
             tableLayoutPanel1.ColumnCount = 8;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.4899712F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.510025F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 394F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 182F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 444F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 64F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 195F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 45F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 263F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 121F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 296F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 43F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 130F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 31F));
             tableLayoutPanel1.Controls.Add(LaKT, 0, 0);
             tableLayoutPanel1.Controls.Add(lbThang, 1, 1);
             tableLayoutPanel1.Controls.Add(lbNam, 3, 1);
@@ -163,18 +171,19 @@
             tableLayoutPanel1.Controls.Add(comboBox1, 2, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 9;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 262F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 126F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 106F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 58F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 28F));
-            tableLayoutPanel1.Size = new Size(1557, 826);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 13F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 175F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 84F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 71F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 39F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 19F));
+            tableLayoutPanel1.Size = new Size(1038, 551);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // comboBox1
@@ -182,18 +191,19 @@
             comboBox1.Dock = DockStyle.Fill;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" });
-            comboBox1.Location = new Point(235, 158);
+            comboBox1.Location = new Point(155, 105);
+            comboBox1.Margin = new Padding(2, 2, 2, 2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(388, 38);
+            comboBox1.Size = new Size(259, 28);
             comboBox1.TabIndex = 12;
             // 
             // KhoanThu
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(1557, 826);
+            ClientSize = new Size(1038, 551);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "KhoanThu";
             Text = "KhoanThu";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
