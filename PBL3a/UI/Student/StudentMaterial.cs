@@ -17,9 +17,11 @@ namespace PBL3a.UI.Student
 
         private void btn_back_Click(object sender, EventArgs e)
         {
+            this.Hide();
             StudentAll student = new StudentAll();
-            student.Show();
-            this.Close();
+           
+            student.ShowDialog();
+            
         }
     }
 }

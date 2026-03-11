@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using PBL3a.UI.Login;
+using PBL3a.UI.Student;
 
 namespace PBL3a
 {

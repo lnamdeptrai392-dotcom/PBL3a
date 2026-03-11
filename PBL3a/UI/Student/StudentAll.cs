@@ -17,9 +17,10 @@ namespace PBL3a.UI.Student
         private void btn_schedule_Click(object sender, EventArgs e)
         {
             StudentSchedule schedule = new StudentSchedule();
-            this.Close();
-            schedule.ShowDialog();
             
+            schedule.ShowDialog();
+            this.Hide();
+
         }
 
   
@@ -27,15 +28,15 @@ namespace PBL3a.UI.Student
         private void btn_info_Click(object sender, EventArgs e)
         {
             StudentINFO info = new StudentINFO();
-            this.Close();
-            info.ShowDialog();
             
+            info.ShowDialog();
+            this.Hide();
         }
 
         private void btn_score_Click(object sender, EventArgs e)
         {
             StudentScore score = new StudentScore();
-            this.Close();
+            this.Hide();
             score.ShowDialog();
             
         }
@@ -43,24 +44,24 @@ namespace PBL3a.UI.Student
         private void btn_fee_Click(object sender, EventArgs e)
         {
             StudentFee fee = new StudentFee();
-            this.Close();
             fee.ShowDialog();
-            
+            this.Hide();
         }
 
         private void btn_material_Click(object sender, EventArgs e)
         {
             StudentMaterial material = new StudentMaterial();
-            this.Close();
-            material.ShowDialog();
             
+            material.ShowDialog();
+            this.Hide();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
+            this.Hide();
             LoginForm f = new LoginForm();
-            f.Show();
-            this.Close();
+            f.ShowDialog();
+            
         }
     }
 }
