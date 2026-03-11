@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using PBL3a.services;
+using PBL3a.UI.Login;
 
 namespace PBL3a.UI.AdminDD
 {
@@ -192,6 +193,14 @@ namespace PBL3a.UI.AdminDD
 
                 MessageBox.Show("Lưu điểm danh thành công!");
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
+
         }
     }
 }

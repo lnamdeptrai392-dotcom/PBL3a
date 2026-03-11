@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             cboLopHoc = new ComboBox();
@@ -36,8 +36,7 @@
             btnTimKiem = new Button();
             dgvDiemDanh = new DataGridView();
             btnSave = new Button();
-            btnHistory = new Button();
-            btnExport = new Button();
+            btnExit = new Button();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvDiemDanh).BeginInit();
             SuspendLayout();
@@ -45,18 +44,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(65, 68);
+            label1.Location = new Point(74, 91);
             label1.Name = "label1";
-            label1.Size = new Size(56, 15);
+            label1.Size = new Size(69, 20);
             label1.TabIndex = 0;
             label1.Text = "Chọn lớp";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(229, 68);
+            label2.Location = new Point(262, 91);
             label2.Name = "label2";
-            label2.Size = new Size(35, 15);
+            label2.Size = new Size(44, 20);
             label2.TabIndex = 1;
             label2.Text = "Ngày";
             // 
@@ -64,28 +63,25 @@
             // 
             cboLopHoc.DropDownStyle = ComboBoxStyle.DropDownList;
             cboLopHoc.FormattingEnabled = true;
-            cboLopHoc.Location = new Point(130, 64);
-            cboLopHoc.Margin = new Padding(3, 2, 3, 2);
+            cboLopHoc.Location = new Point(149, 85);
             cboLopHoc.Name = "cboLopHoc";
-            cboLopHoc.Size = new Size(94, 23);
+            cboLopHoc.Size = new Size(107, 28);
             cboLopHoc.TabIndex = 2;
             // 
             // date
             // 
             date.Format = DateTimePickerFormat.Short;
-            date.Location = new Point(276, 64);
-            date.Margin = new Padding(3, 2, 3, 2);
+            date.Location = new Point(315, 85);
             date.Name = "date";
-            date.Size = new Size(123, 23);
+            date.Size = new Size(140, 27);
             date.TabIndex = 3;
             // 
             // btnTimKiem
             // 
             btnTimKiem.BackColor = Color.Azure;
-            btnTimKiem.Location = new Point(438, 63);
-            btnTimKiem.Margin = new Padding(3, 2, 3, 2);
+            btnTimKiem.Location = new Point(501, 84);
             btnTimKiem.Name = "btnTimKiem";
-            btnTimKiem.Size = new Size(100, 22);
+            btnTimKiem.Size = new Size(114, 29);
             btnTimKiem.TabIndex = 4;
             btnTimKiem.Text = "🔍Tìm kiếm";
             btnTimKiem.UseVisualStyleBackColor = false;
@@ -94,75 +90,60 @@
             // 
             dgvDiemDanh.AllowUserToAddRows = false;
             dgvDiemDanh.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.AliceBlue;
-            dgvDiemDanh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = Color.AliceBlue;
+            dgvDiemDanh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvDiemDanh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDiemDanh.BackgroundColor = Color.White;
             dgvDiemDanh.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDiemDanh.GridColor = Color.LightGray;
-            dgvDiemDanh.Location = new Point(68, 107);
-            dgvDiemDanh.Margin = new Padding(3, 2, 3, 2);
+            dgvDiemDanh.Location = new Point(78, 143);
             dgvDiemDanh.Name = "dgvDiemDanh";
             dgvDiemDanh.RowHeadersVisible = false;
             dgvDiemDanh.RowHeadersWidth = 51;
             dgvDiemDanh.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvDiemDanh.Size = new Size(470, 248);
+            dgvDiemDanh.Size = new Size(537, 331);
             dgvDiemDanh.TabIndex = 5;
             // 
             // btnSave
             // 
             btnSave.BackColor = Color.Honeydew;
             btnSave.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btnSave.Location = new Point(217, 373);
-            btnSave.Margin = new Padding(3, 2, 3, 2);
+            btnSave.Location = new Point(360, 497);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(117, 22);
+            btnSave.Size = new Size(134, 29);
             btnSave.TabIndex = 6;
             btnSave.Text = "Lưu điểm danh";
             btnSave.UseVisualStyleBackColor = false;
             // 
-            // btnHistory
+            // btnExit
             // 
-            btnHistory.BackColor = Color.LightYellow;
-            btnHistory.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btnHistory.Location = new Point(340, 373);
-            btnHistory.Margin = new Padding(3, 2, 3, 2);
-            btnHistory.Name = "btnHistory";
-            btnHistory.Size = new Size(91, 22);
-            btnHistory.TabIndex = 7;
-            btnHistory.Text = "Xem lịch sử";
-            btnHistory.UseVisualStyleBackColor = false;
-            // 
-            // btnExport
-            // 
-            btnExport.BackColor = Color.LavenderBlush;
-            btnExport.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btnExport.Location = new Point(436, 373);
-            btnExport.Margin = new Padding(3, 2, 3, 2);
-            btnExport.Name = "btnExport";
-            btnExport.Size = new Size(102, 22);
-            btnExport.TabIndex = 8;
-            btnExport.Text = "Xuất báo cáo";
-            btnExport.UseVisualStyleBackColor = false;
+            btnExit.BackColor = Color.LightYellow;
+            btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            btnExit.Location = new Point(511, 497);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(104, 29);
+            btnExit.TabIndex = 7;
+            btnExit.Text = "Thoát";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label3.Location = new Point(203, 24);
+            label3.Location = new Point(232, 32);
             label3.Name = "label3";
-            label3.Size = new Size(165, 20);
+            label3.Size = new Size(200, 25);
             label3.TabIndex = 9;
             label3.Text = "QUẢN LÝ ĐIỂM DANH";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(621, 415);
+            ClientSize = new Size(710, 553);
             Controls.Add(label3);
-            Controls.Add(btnExport);
-            Controls.Add(btnHistory);
+            Controls.Add(btnExit);
             Controls.Add(btnSave);
             Controls.Add(dgvDiemDanh);
             Controls.Add(btnTimKiem);
@@ -171,7 +152,6 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Cursor = Cursors.Hand;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Điểm danh";
@@ -190,8 +170,7 @@
         private Button btnTimKiem;
         private DataGridView dgvDiemDanh;
         private Button btnSave;
-        private Button btnHistory;
-        private Button btnExport;
+        private Button btnExit;
         private Label label3;
     }
 }
