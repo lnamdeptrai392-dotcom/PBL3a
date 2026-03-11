@@ -41,8 +41,13 @@
             // 
             tableLayoutPanel1.ColumnCount = 3;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 43.2972527F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 56.7027473F));
+=======
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 44.046627F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.953373F));
+>>>>>>> Stashed changes
 =======
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 44.046627F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.953373F));
@@ -84,9 +89,15 @@
             btThu.Dock = DockStyle.Bottom;
             btThu.Font = new Font("Segoe UI", 14.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             btThu.Location = new Point(523, 363);
             btThu.Name = "btThu";
             btThu.Size = new Size(675, 116);
+=======
+            btThu.Location = new Point(532, 363);
+            btThu.Name = "btThu";
+            btThu.Size = new Size(666, 116);
+>>>>>>> Stashed changes
 =======
             btThu.Location = new Point(532, 363);
             btThu.Name = "btThu";
@@ -102,9 +113,15 @@
             btChi.Dock = DockStyle.Bottom;
             btChi.Font = new Font("Segoe UI", 14.1428576F);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             btChi.Location = new Point(523, 522);
             btChi.Name = "btChi";
             btChi.Size = new Size(675, 116);
+=======
+            btChi.Location = new Point(532, 522);
+            btChi.Name = "btChi";
+            btChi.Size = new Size(666, 116);
+>>>>>>> Stashed changes
 =======
             btChi.Location = new Point(532, 522);
             btChi.Name = "btChi";
@@ -120,9 +137,15 @@
             btT.Dock = DockStyle.Bottom;
             btT.Font = new Font("Segoe UI", 14.1428576F);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             btT.Location = new Point(523, 675);
             btT.Name = "btT";
             btT.Size = new Size(675, 116);
+=======
+            btT.Location = new Point(532, 675);
+            btT.Name = "btT";
+            btT.Size = new Size(666, 116);
+>>>>>>> Stashed changes
 =======
             btT.Location = new Point(532, 675);
             btT.Name = "btT";
