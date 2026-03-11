@@ -38,5 +38,13 @@ namespace PBL3a.UI.AdminTC
             chi.ShowDialog();
             this.Show();
         }
+
+        private void btLN_Click(object sender, EventArgs e)
+        {
+            Lai lai = new Lai();
+            this.Hide();
+            lai.ShowDialog();
+            this.Show();
+        }
     }
 }
