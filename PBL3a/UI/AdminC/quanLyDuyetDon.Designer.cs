@@ -42,7 +42,7 @@
             labelqlduyetdon1.BackColor = SystemColors.Info;
             labelqlduyetdon1.BorderStyle = BorderStyle.Fixed3D;
             labelqlduyetdon1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelqlduyetdon1.Location = new Point(392, 10);
+            labelqlduyetdon1.Location = new Point(411, 29);
             labelqlduyetdon1.Name = "labelqlduyetdon1";
             labelqlduyetdon1.Size = new Size(356, 23);
             labelqlduyetdon1.TabIndex = 0;
@@ -51,9 +51,9 @@
             // buttonduyetdon1
             // 
             buttonduyetdon1.Anchor = AnchorStyles.None;
-            buttonduyetdon1.Location = new Point(768, 494);
+            buttonduyetdon1.Location = new Point(671, 484);
             buttonduyetdon1.Name = "buttonduyetdon1";
-            buttonduyetdon1.Size = new Size(94, 29);
+            buttonduyetdon1.Size = new Size(156, 48);
             buttonduyetdon1.TabIndex = 2;
             buttonduyetdon1.Text = "Đồng ý";
             buttonduyetdon1.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@
             // buttonduyetdon2
             // 
             buttonduyetdon2.Anchor = AnchorStyles.None;
-            buttonduyetdon2.Location = new Point(883, 494);
+            buttonduyetdon2.Location = new Point(852, 484);
             buttonduyetdon2.Name = "buttonduyetdon2";
-            buttonduyetdon2.Size = new Size(94, 29);
+            buttonduyetdon2.Size = new Size(156, 50);
             buttonduyetdon2.TabIndex = 3;
             buttonduyetdon2.Text = "Từ chối";
             buttonduyetdon2.UseVisualStyleBackColor = true;
@@ -71,8 +71,9 @@
             // dataGridView1
             // 
             dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(166, 66);
+            dataGridView1.Location = new Point(197, 68);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(811, 410);
@@ -82,6 +83,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1144, 546);
             Controls.Add(dataGridView1);
             Controls.Add(buttonduyetdon2);
