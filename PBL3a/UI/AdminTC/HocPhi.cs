@@ -2,10 +2,7 @@
 using PBL3a.services;
 using System;
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 =======
-=======
->>>>>>> Stashed changes
 using System.Collections.Generic;
 using System.ComponentModel;
 >>>>>>> Stashed changes
@@ -17,13 +14,9 @@ namespace PBL3a.UI.AdminTC
     public partial class HocPhi : Form
     {
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
         private DatabaseHelper db = new DatabaseHelper();
         private DataTable dtHocPhi = new DataTable();
 
-=======
-        DatabaseHelper db = new DatabaseHelper();
->>>>>>> Stashed changes
 =======
         DatabaseHelper db = new DatabaseHelper();
 >>>>>>> Stashed changes
@@ -211,25 +204,6 @@ namespace PBL3a.UI.AdminTC
         private void btT_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void LoadTenLop()
-        {
-            DataTable table = new DataTable();
-            using (SqlConnection conn = db.GetConnection())
-            {
-                conn.Open();
-                string query = "SELECT class_name, classID FROM Class";
-                SqlDataAdapter da = new SqlDataAdapter(query, conn);
-                da.Fill(table);
-
-                cbTL.DataSource = table;
-                cbTL.DisplayMember = "class_name";
-                cbTL.ValueMember = "classID";
-                cbTL.SelectedIndex = -1;
-
-                tbML.Text = cbTL.ValueMember;
-            }
         }
 
         private void LoadTenLop()

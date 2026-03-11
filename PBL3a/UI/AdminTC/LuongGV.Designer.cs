@@ -52,17 +52,14 @@ namespace PBL3a.UI.AdminTC
             // 
             tableLayoutPanel1.ColumnCount = 8;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of e404351 (1)
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.02892F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66.97108F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 274F));
-=======
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40.7749062F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 59.2250938F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 229F));
->>>>>>> Stashed changes
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 394F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 39F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 255F));
@@ -157,11 +154,11 @@ namespace PBL3a.UI.AdminTC
             laTGV.Dock = DockStyle.Right;
             laTGV.Font = new Font("Segoe UI", 12F);
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
-            laTGV.Location = new Point(615, 131);
 =======
-            laTGV.Location = new Point(628, 131);
->>>>>>> Stashed changes
+>>>>>>> parent of e404351 (1)
+            laTGV.Location = new Point(615, 131);
             laTGV.Name = "laTGV";
             laTGV.Size = new Size(205, 58);
 =======
@@ -256,8 +253,8 @@ namespace PBL3a.UI.AdminTC
             btSetL.TabIndex = 5;
             btSetL.Text = "Tính toán lương";
             btSetL.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
             btSetL.Click += btSetL_Click;
+<<<<<<< HEAD
 =======
             // 
             // comboBox1
@@ -276,6 +273,8 @@ namespace PBL3a.UI.AdminTC
 >>>>>>> parent of 0d2331e (1)
             comboBox1.TabIndex = 9;
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of e404351 (1)
             // 
             // LuongGV
             // 

@@ -43,9 +43,6 @@
             btSetHP = new Button();
             listView1 = new ListView();
             cbTL = new ComboBox();
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -62,13 +59,8 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 41F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 255F));
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 24F));
             tableLayoutPanel1.Controls.Add(tbTL, 4, 1);
-=======
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 22F));
-            tableLayoutPanel1.Controls.Add(tbML, 4, 1);
->>>>>>> Stashed changes
 =======
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 22F));
             tableLayoutPanel1.Controls.Add(tbML, 4, 1);
@@ -86,9 +78,6 @@
             tableLayoutPanel1.Controls.Add(btSetHP, 6, 4);
             tableLayoutPanel1.Controls.Add(listView1, 1, 3);
             tableLayoutPanel1.Controls.Add(cbTL, 2, 1);
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
@@ -109,7 +98,6 @@
             // tbML
             // 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             tableLayoutPanel1.SetColumnSpan(tbTL, 2);
             tbTL.Dock = DockStyle.Fill;
             tbTL.Enabled = false;
@@ -119,8 +107,6 @@
             tbTL.Size = new Size(452, 35);
             tbTL.TabIndex = 4;
 =======
-=======
->>>>>>> Stashed changes
             tableLayoutPanel1.SetColumnSpan(tbML, 2);
             tbML.Dock = DockStyle.Fill;
             tbML.Enabled = false;
@@ -128,9 +114,6 @@
             tbML.Name = "tbML";
             tbML.Size = new Size(452, 35);
             tbML.TabIndex = 4;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
             // 
             // LaHP
@@ -152,15 +135,9 @@
             laML.Dock = DockStyle.Right;
             laML.Font = new Font("Segoe UI", 12F);
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             laML.Location = new Point(31, 123);
             laML.Name = "laML";
             laML.Size = new Size(116, 54);
-=======
-            laML.Location = new Point(33, 123);
-            laML.Name = "laML";
-            laML.Size = new Size(114, 54);
->>>>>>> Stashed changes
 =======
             laML.Location = new Point(33, 123);
             laML.Name = "laML";
@@ -175,11 +152,7 @@
             laTL.Dock = DockStyle.Right;
             laTL.Font = new Font("Segoe UI", 12F);
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
             laTL.Location = new Point(664, 123);
-=======
-            laTL.Location = new Point(684, 123);
->>>>>>> Stashed changes
 =======
             laTL.Location = new Point(684, 123);
 >>>>>>> Stashed changes
@@ -292,9 +265,6 @@
         private Button btCheckHP;
         private Button btSetHP;
         private ComboBox cbTL;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
     }
 }
