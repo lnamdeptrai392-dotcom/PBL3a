@@ -99,7 +99,7 @@ namespace PBL3a.UI.AdminTC
 
         private void btT_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
     }
 }
