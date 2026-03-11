@@ -108,22 +108,22 @@
             laML.AutoSize = true;
             laML.Dock = DockStyle.Right;
             laML.Font = new Font("Segoe UI", 12F);
-            laML.Location = new Point(81, 232);
+            laML.Location = new Point(77, 232);
             laML.Name = "laML";
-            laML.Size = new Size(124, 108);
+            laML.Size = new Size(128, 108);
             laML.TabIndex = 1;
-            laML.Text = "Mã Lớp: ";
+            laML.Text = "Tên Lớp: ";
             // 
             // laTL
             // 
             laTL.AutoSize = true;
             laTL.Dock = DockStyle.Right;
             laTL.Font = new Font("Segoe UI", 12F);
-            laTL.Location = new Point(703, 232);
+            laTL.Location = new Point(707, 232);
             laTL.Name = "laTL";
-            laTL.Size = new Size(128, 108);
+            laTL.Size = new Size(124, 108);
             laTL.TabIndex = 2;
-            laTL.Text = "Tên Lớp: ";
+            laTL.Text = "Mã Lớp: ";
             // 
             // btT
             // 

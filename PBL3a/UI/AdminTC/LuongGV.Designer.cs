@@ -44,10 +44,17 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 8;
+<<<<<<< Updated upstream
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.02892F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66.97108F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 274F));
+=======
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40.7749062F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 59.2250938F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 229F));
+>>>>>>> Stashed changes
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 394F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 39F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 255F));
@@ -92,22 +99,26 @@
             laMGV.AutoSize = true;
             laMGV.Dock = DockStyle.Right;
             laMGV.Font = new Font("Segoe UI", 12F);
-            laMGV.Location = new Point(52, 131);
+            laMGV.Location = new Point(39, 131);
             laMGV.Name = "laMGV";
-            laMGV.Size = new Size(144, 58);
+            laMGV.Size = new Size(217, 58);
             laMGV.TabIndex = 1;
-            laMGV.Text = "Mã Giảng Viên: ";
+            laMGV.Text = "Tên Giảng Viên: ";
             // 
             // laTGV
             // 
             laTGV.AutoSize = true;
             laTGV.Dock = DockStyle.Right;
             laTGV.Font = new Font("Segoe UI", 12F);
+<<<<<<< Updated upstream
             laTGV.Location = new Point(615, 131);
+=======
+            laTGV.Location = new Point(628, 131);
+>>>>>>> Stashed changes
             laTGV.Name = "laTGV";
-            laTGV.Size = new Size(217, 58);
+            laTGV.Size = new Size(205, 58);
             laTGV.TabIndex = 2;
-            laTGV.Text = "Tên Giảng Viên: ";
+            laTGV.Text = "Mã Giảng Viên:";
             // 
             // dataGridView1
             // 
@@ -157,7 +168,19 @@
             btSetL.TabIndex = 5;
             btSetL.Text = "Tính toán lương";
             btSetL.UseVisualStyleBackColor = true;
+<<<<<<< Updated upstream
             btSetL.Click += btSetL_Click;
+=======
+            // 
+            // comboBox1
+            // 
+            comboBox1.Dock = DockStyle.Fill;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(262, 134);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(342, 38);
+            comboBox1.TabIndex = 9;
+>>>>>>> Stashed changes
             // 
             // LuongGV
             // 

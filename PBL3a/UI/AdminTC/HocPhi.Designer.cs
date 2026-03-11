@@ -29,14 +29,21 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            tbTL = new TextBox();
+            tbML = new TextBox();
             LaHP = new Label();
             laML = new Label();
             laTL = new Label();
             btT = new Button();
+<<<<<<< Updated upstream
             comboBox1 = new ComboBox();
             dataGridView1 = new DataGridView();
             btSetHP = new Button();
+=======
+            btCheckHP = new Button();
+            btSetHP = new Button();
+            listView1 = new ListView();
+            cbTL = new ComboBox();
+>>>>>>> Stashed changes
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -51,15 +58,27 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 417F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 41F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 255F));
+<<<<<<< Updated upstream
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 24F));
             tableLayoutPanel1.Controls.Add(tbTL, 4, 1);
+=======
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 22F));
+            tableLayoutPanel1.Controls.Add(tbML, 4, 1);
+>>>>>>> Stashed changes
             tableLayoutPanel1.Controls.Add(LaHP, 1, 0);
             tableLayoutPanel1.Controls.Add(laML, 1, 1);
             tableLayoutPanel1.Controls.Add(laTL, 3, 1);
             tableLayoutPanel1.Controls.Add(btT, 6, 6);
+<<<<<<< Updated upstream
             tableLayoutPanel1.Controls.Add(comboBox1, 2, 1);
             tableLayoutPanel1.Controls.Add(dataGridView1, 2, 3);
             tableLayoutPanel1.Controls.Add(btSetHP, 6, 5);
+=======
+            tableLayoutPanel1.Controls.Add(btCheckHP, 6, 5);
+            tableLayoutPanel1.Controls.Add(btSetHP, 6, 4);
+            tableLayoutPanel1.Controls.Add(listView1, 1, 3);
+            tableLayoutPanel1.Controls.Add(cbTL, 2, 1);
+>>>>>>> Stashed changes
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
@@ -76,8 +95,9 @@
             tableLayoutPanel1.Size = new Size(1533, 800);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // tbTL
+            // tbML
             // 
+<<<<<<< Updated upstream
             tableLayoutPanel1.SetColumnSpan(tbTL, 2);
             tbTL.Dock = DockStyle.Fill;
             tbTL.Enabled = false;
@@ -86,6 +106,15 @@
             tbTL.Name = "tbTL";
             tbTL.Size = new Size(452, 35);
             tbTL.TabIndex = 4;
+=======
+            tableLayoutPanel1.SetColumnSpan(tbML, 2);
+            tbML.Dock = DockStyle.Fill;
+            tbML.Enabled = false;
+            tbML.Location = new Point(800, 126);
+            tbML.Name = "tbML";
+            tbML.Size = new Size(452, 35);
+            tbML.TabIndex = 4;
+>>>>>>> Stashed changes
             // 
             // LaHP
             // 
@@ -105,22 +134,32 @@
             laML.AutoSize = true;
             laML.Dock = DockStyle.Right;
             laML.Font = new Font("Segoe UI", 12F);
+<<<<<<< Updated upstream
             laML.Location = new Point(31, 123);
             laML.Name = "laML";
             laML.Size = new Size(116, 54);
+=======
+            laML.Location = new Point(33, 123);
+            laML.Name = "laML";
+            laML.Size = new Size(114, 54);
+>>>>>>> Stashed changes
             laML.TabIndex = 1;
-            laML.Text = "Mã Lớp: ";
+            laML.Text = "Tên lớp:";
             // 
             // laTL
             // 
             laTL.AutoSize = true;
             laTL.Dock = DockStyle.Right;
             laTL.Font = new Font("Segoe UI", 12F);
+<<<<<<< Updated upstream
             laTL.Location = new Point(664, 123);
+=======
+            laTL.Location = new Point(684, 123);
+>>>>>>> Stashed changes
             laTL.Name = "laTL";
-            laTL.Size = new Size(128, 54);
+            laTL.Size = new Size(110, 54);
             laTL.TabIndex = 2;
-            laTL.Text = "Tên Lớp: ";
+            laTL.Text = "Mã lớp:";
             // 
             // btT
             // 
@@ -172,6 +211,28 @@
             btSetHP.UseVisualStyleBackColor = true;
             btSetHP.Click += btSetHP_Click;
             // 
+<<<<<<< Updated upstream
+=======
+            // listView1
+            // 
+            tableLayoutPanel1.SetColumnSpan(listView1, 4);
+            listView1.Location = new Point(23, 210);
+            listView1.Name = "listView1";
+            tableLayoutPanel1.SetRowSpan(listView1, 4);
+            listView1.Size = new Size(1186, 564);
+            listView1.TabIndex = 8;
+            listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // cbTL
+            // 
+            cbTL.Dock = DockStyle.Fill;
+            cbTL.FormattingEnabled = true;
+            cbTL.Location = new Point(153, 126);
+            cbTL.Name = "cbTL";
+            cbTL.Size = new Size(459, 38);
+            cbTL.TabIndex = 9;
+            // 
+>>>>>>> Stashed changes
             // HocPhi
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
@@ -192,12 +253,18 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private Label LaHP;
-        private TextBox tbTL;
+        private TextBox tbML;
         private Label laML;
         private Label laTL;
         private Button btT;
+<<<<<<< Updated upstream
         private ComboBox comboBox1;
         private DataGridView dataGridView1;
         private Button btSetHP;
+=======
+        private Button btCheckHP;
+        private Button btSetHP;
+        private ComboBox cbTL;
+>>>>>>> Stashed changes
     }
 }
