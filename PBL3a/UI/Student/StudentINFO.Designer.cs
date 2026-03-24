@@ -36,6 +36,7 @@
             label6 = new Label();
             label7 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
+<<<<<<< Updated upstream
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
@@ -44,6 +45,16 @@
             comboBox1 = new ComboBox();
             button2 = new Button();
             button1 = new Button();
+=======
+            txtHoTen = new TextBox();
+            txtEmail = new TextBox();
+            txtSDT = new TextBox();
+            txtDiaChi = new TextBox();
+            dtpNgaySinh = new DateTimePicker();
+            cboGioiTinh = new ComboBox();
+            btn_update = new Button();
+            btn_back = new Button();
+>>>>>>> Stashed changes
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -132,6 +143,7 @@
             tableLayoutPanel1.Controls.Add(label5, 1, 4);
             tableLayoutPanel1.Controls.Add(label6, 1, 5);
             tableLayoutPanel1.Controls.Add(label7, 1, 6);
+<<<<<<< Updated upstream
             tableLayoutPanel1.Controls.Add(textBox1, 2, 1);
             tableLayoutPanel1.Controls.Add(textBox2, 2, 4);
             tableLayoutPanel1.Controls.Add(textBox3, 2, 5);
@@ -140,6 +152,16 @@
             tableLayoutPanel1.Controls.Add(comboBox1, 2, 3);
             tableLayoutPanel1.Controls.Add(button1, 1, 7);
             tableLayoutPanel1.Controls.Add(button2, 2, 7);
+=======
+            tableLayoutPanel1.Controls.Add(txtHoTen, 2, 1);
+            tableLayoutPanel1.Controls.Add(txtEmail, 2, 4);
+            tableLayoutPanel1.Controls.Add(txtSDT, 2, 5);
+            tableLayoutPanel1.Controls.Add(txtDiaChi, 2, 6);
+            tableLayoutPanel1.Controls.Add(dtpNgaySinh, 2, 2);
+            tableLayoutPanel1.Controls.Add(cboGioiTinh, 2, 3);
+            tableLayoutPanel1.Controls.Add(btn_update, 1, 7);
+            tableLayoutPanel1.Controls.Add(btn_back, 2, 7);
+>>>>>>> Stashed changes
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -155,48 +177,57 @@
             tableLayoutPanel1.Size = new Size(800, 450);
             tableLayoutPanel1.TabIndex = 7;
             // 
-            // textBox1
+            // txtHoTen
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(227, 79);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(364, 27);
-            textBox1.TabIndex = 7;
+            txtHoTen.Anchor = AnchorStyles.None;
+            txtHoTen.Location = new Point(227, 79);
+            txtHoTen.Name = "txtHoTen";
+            txtHoTen.Size = new Size(364, 27);
+            txtHoTen.TabIndex = 7;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(227, 237);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(364, 27);
-            textBox2.TabIndex = 8;
+            txtEmail.Anchor = AnchorStyles.None;
+            txtEmail.Location = new Point(227, 237);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(364, 27);
+            txtEmail.TabIndex = 8;
             // 
-            // textBox3
+            // txtSDT
             // 
-            textBox3.Anchor = AnchorStyles.None;
-            textBox3.Location = new Point(227, 284);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(364, 27);
-            textBox3.TabIndex = 9;
+            txtSDT.Anchor = AnchorStyles.None;
+            txtSDT.Location = new Point(227, 284);
+            txtSDT.Name = "txtSDT";
+            txtSDT.Size = new Size(364, 27);
+            txtSDT.TabIndex = 9;
             // 
-            // textBox4
+            // txtDiaChi
             // 
-            textBox4.Anchor = AnchorStyles.None;
-            textBox4.Location = new Point(227, 330);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(364, 27);
-            textBox4.TabIndex = 10;
+            txtDiaChi.Anchor = AnchorStyles.None;
+            txtDiaChi.Location = new Point(227, 330);
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Size = new Size(364, 27);
+            txtDiaChi.TabIndex = 10;
             // 
-            // dateTimePicker1
+            // dtpNgaySinh
             // 
+<<<<<<< Updated upstream
             dateTimePicker1.Anchor = AnchorStyles.None;
             dateTimePicker1.Location = new Point(227, 144);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(364, 27);
             dateTimePicker1.TabIndex = 11;
+=======
+            dtpNgaySinh.Anchor = AnchorStyles.None;
+            dtpNgaySinh.Location = new Point(227, 135);
+            dtpNgaySinh.Name = "dtpNgaySinh";
+            dtpNgaySinh.Size = new Size(364, 27);
+            dtpNgaySinh.TabIndex = 11;
+>>>>>>> Stashed changes
             // 
-            // comboBox1
+            // cboGioiTinh
             // 
+<<<<<<< Updated upstream
             comboBox1.Anchor = AnchorStyles.None;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(227, 186);
@@ -216,14 +247,25 @@
             button2.Click += button2_Click;
             // 
             // button1
+=======
+            cboGioiTinh.Anchor = AnchorStyles.None;
+            cboGioiTinh.FormattingEnabled = true;
+            cboGioiTinh.Location = new Point(227, 189);
+            cboGioiTinh.Name = "cboGioiTinh";
+            cboGioiTinh.Size = new Size(364, 28);
+            cboGioiTinh.TabIndex = 12;
             // 
-            button1.Anchor = AnchorStyles.Right;
-            button1.Location = new Point(127, 392);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 15;
-            button1.Text = "Cập nhật";
-            button1.UseVisualStyleBackColor = true;
+            // btn_update
+>>>>>>> Stashed changes
+            // 
+            btn_update.Anchor = AnchorStyles.Right;
+            btn_update.Location = new Point(127, 392);
+            btn_update.Name = "btn_update";
+            btn_update.Size = new Size(94, 29);
+            btn_update.TabIndex = 15;
+            btn_update.Text = "Cập nhật";
+            btn_update.UseVisualStyleBackColor = true;
+            btn_update.Click += btn_update_Click;
             // 
             // StudentINFO
             // 
@@ -248,6 +290,7 @@
         private Label label6;
         private Label label7;
         private TableLayoutPanel tableLayoutPanel1;
+<<<<<<< Updated upstream
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
@@ -256,5 +299,15 @@
         private ComboBox comboBox1;
         private Button button2;
         private Button button1;
+=======
+        private TextBox txtHoTen;
+        private TextBox txtEmail;
+        private TextBox txtSDT;
+        private TextBox txtDiaChi;
+        private DateTimePicker dtpNgaySinh;
+        private ComboBox cboGioiTinh;
+        private Button btn_back;
+        private Button btn_update;
+>>>>>>> Stashed changes
     }
 }

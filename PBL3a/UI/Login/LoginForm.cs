@@ -25,7 +25,11 @@ namespace PBL3a.UI.Login
                 {
                     conn.Open();
 
+<<<<<<< Updated upstream
                     string query = "SELECT Role FROM accountList WHERE username = @u AND Password = @p";
+=======
+                    string query = "SELECT Id, Role FROM accountList WHERE Username = @u AND Password = @p";
+>>>>>>> Stashed changes
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@u", username);
@@ -38,12 +42,31 @@ namespace PBL3a.UI.Login
                         string role = reader["Role"].ToString();
                         MessageBox.Show("Đăng nhập thành công. Role: " + role);
 
+<<<<<<< Updated upstream
                         reader.Close();
                         OpenFormByRole(role);
                     }
                     else
                     {
                         MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+=======
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string? userId = reader["Id"].ToString();
+                                string? role = reader["Role"].ToString();
+                                MessageBox.Show("Đăng nhập thành công. Role: " + role);
+                                reader.Close();
+
+                                OpenFormByRole(role, userId);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                            }
+                        }
+>>>>>>> Stashed changes
                     }
                 }
                 catch (Exception ex)
@@ -53,9 +76,9 @@ namespace PBL3a.UI.Login
             }
         }
 
-        private void OpenFormByRole(string role)
+        private void OpenFormByRole(string role, string userId)
         {
-            Form nextForm = null;
+            Form? nextForm = null;
 
             if (role == "AdminC")
             {
@@ -67,7 +90,19 @@ namespace PBL3a.UI.Login
             }
             else if (role == "AdminTC")
             {
+<<<<<<< Updated upstream
                 nextForm = new PBL3a.UI.AdminTC.QuanLyChung();
+=======
+                nextForm = new PBL3a.UI.AdminTC.QuanLyChungTC();
+            }
+            else if (role == "Student")
+            {
+                nextForm = new PBL3a.UI.Student.StudentAll(userId);
+            }
+            else if (role == "Teacher")
+            {
+                nextForm = new PBL3a.UI.Teacher.QuanLyChungT();
+>>>>>>> Stashed changes
             }
             else
             {
