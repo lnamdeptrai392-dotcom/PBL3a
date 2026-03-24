@@ -43,7 +43,7 @@
             tbMD = new TextBox();
             tbMGV = new TextBox();
             cbbGT = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
+            dtNS = new DateTimePicker();
             btT = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -72,7 +72,7 @@
             tableLayoutPanel1.Controls.Add(tbMD, 5, 1);
             tableLayoutPanel1.Controls.Add(tbMGV, 5, 2);
             tableLayoutPanel1.Controls.Add(cbbGT, 2, 2);
-            tableLayoutPanel1.Controls.Add(dateTimePicker1, 2, 3);
+            tableLayoutPanel1.Controls.Add(dtNS, 2, 3);
             tableLayoutPanel1.Controls.Add(btT, 5, 5);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Segoe UI", 11.1428576F);
@@ -222,13 +222,13 @@
             cbbGT.Size = new Size(428, 44);
             cbbGT.TabIndex = 14;
             // 
-            // dateTimePicker1
+            // dtNS
             // 
-            dateTimePicker1.Dock = DockStyle.Fill;
-            dateTimePicker1.Location = new Point(340, 351);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(428, 42);
-            dateTimePicker1.TabIndex = 15;
+            dtNS.Dock = DockStyle.Fill;
+            dtNS.Location = new Point(340, 351);
+            dtNS.Name = "dtNS";
+            dtNS.Size = new Size(428, 42);
+            dtNS.TabIndex = 15;
             // 
             // btT
             // 
@@ -272,6 +272,6 @@
         private TextBox tbMD;
         private TextBox tbMGV;
         private ComboBox cbbGT;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtNS;
     }
 }

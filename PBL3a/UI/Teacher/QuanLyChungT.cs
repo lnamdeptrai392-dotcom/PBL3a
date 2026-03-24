@@ -11,6 +11,7 @@ namespace PBL3a.UI.Teacher
 {
     public partial class QuanLyChungT : Form
     {
+        private string currentTeacherID;
         public QuanLyChungT()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace PBL3a.UI.Teacher
         private void button1_Click(object sender, EventArgs e)
         {
             TTCN nextForm = new TTCN();
-            this.Close();
+            this.Hide();
             nextForm.ShowDialog();
             this.Show();
         }
@@ -27,7 +28,7 @@ namespace PBL3a.UI.Teacher
         private void button2_Click(object sender, EventArgs e)
         {
             TKB tKB = new TKB();
-            this.Close();
+            this.Hide();
             tKB.ShowDialog();
             this.Show();
         }
@@ -35,7 +36,7 @@ namespace PBL3a.UI.Teacher
         private void button3_Click(object sender, EventArgs e)
         {
             NhapDiem nhapDiem = new NhapDiem();
-            this.Close();
+            this.Hide();
             nhapDiem.ShowDialog();
             this.Show();
         }
@@ -43,7 +44,7 @@ namespace PBL3a.UI.Teacher
         private void button4_Click(object sender, EventArgs e)
         {
             TaiLieu tl = new TaiLieu();
-            this.Close();
+            this.Hide();
             tl.ShowDialog();
             this.Show();
         }
@@ -51,7 +52,7 @@ namespace PBL3a.UI.Teacher
         private void button5_Click(object sender, EventArgs e)
         {
             Luong luong = new Luong();
-            this.Close();
+            this.Hide();
             luong.ShowDialog();
             this.Show();
         }
