@@ -158,9 +158,9 @@
             label7.Font = new Font("Segoe UI", 11.1428576F);
             label7.Location = new Point(838, 137);
             label7.Name = "label7";
-            label7.Size = new Size(128, 37);
+            label7.Size = new Size(173, 37);
             label7.TabIndex = 6;
-            label7.Text = "Môn dạy:";
+            label7.Text = "Chuyên môn:";
             // 
             // label8
             // 
