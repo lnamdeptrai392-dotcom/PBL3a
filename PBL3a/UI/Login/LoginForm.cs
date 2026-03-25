@@ -30,8 +30,8 @@ namespace PBL3a.UI.Login
                 try
                 {
                     conn.Open();
-
-                    string query = "SELECT Role FROM accountList WHERE Username = @u AND Password = @p";
+                    // Lấy cả Id và Role
+                    string query = "SELECT Id, Role FROM accountList WHERE Username = @u AND Password = @p";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -42,11 +42,17 @@ namespace PBL3a.UI.Login
                         {
                             if (reader.Read())
                             {
-                                string role = reader["Role"].ToString();
-                                MessageBox.Show("Đăng nhập thành công. Role: " + role);
+                                // 1. Lấy dữ liệu an toàn
+                                string role = reader["Role"]?.ToString() ?? "";
+                                string userId = reader["Id"]?.ToString() ?? "";
+
+                                MessageBox.Show($"Đăng nhập thành công! Role: {role}");
+
+                                // 2. Đóng reader trước khi mở Form mới
                                 reader.Close();
 
-                                OpenFormByRole(role);
+                                // 3. Gọi hàm mở Form và truyền cả Role + Id
+                                OpenFormByRole(role, userId);
                             }
                             else
                             {
@@ -62,9 +68,10 @@ namespace PBL3a.UI.Login
             }
         }
 
-        private void OpenFormByRole(string role)
+        // Cập nhật hàm nhận 2 tham số: role và userId
+        private void OpenFormByRole(string role, string userId)
         {
-            Form nextForm = null;
+            Form? nextForm = null;
 
             if (role == "AdminC")
             {
@@ -80,7 +87,8 @@ namespace PBL3a.UI.Login
             }
             else if (role == "Student")
             {
-                nextForm = new PBL3a.UI.Student.StudentAll();
+                // TRUYỀN userId VÀO ĐÂY
+                nextForm = new PBL3a.UI.Student.StudentAll(userId);
             }
             else if (role == "Teacher")
             {
@@ -92,9 +100,12 @@ namespace PBL3a.UI.Login
                 return;
             }
 
-            this.Hide();              // Ẩn form login
-            nextForm.ShowDialog();    // Mở form mới theo kiểu modal
-            this.Close();             // Khi form kia đóng thì login cũng đóng luôn
+            if (nextForm != null)
+            {
+                this.Hide();
+                nextForm.ShowDialog();
+                this.Close();
+            }
         }
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)

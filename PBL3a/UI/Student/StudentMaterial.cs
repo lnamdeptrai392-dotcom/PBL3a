@@ -15,6 +15,7 @@ namespace PBL3a.UI.Student
             InitializeComponent();
         }
 
+
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -23,5 +24,6 @@ namespace PBL3a.UI.Student
             student.ShowDialog();
             
         }
+
     }
 }
