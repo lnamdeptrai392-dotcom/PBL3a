@@ -66,16 +66,16 @@ namespace PBL3a.UI.Student
         }
 
 
-        private void btn_back_Click(object sender, EventArgs e)
-        {
+        //private void btn_back_Click(object sender, EventArgs e)
+        //{
 
-            StudentAll? parent = this.ParentForm as StudentAll;
-            if (parent != null && parent.tableLayoutPanel1 != null)
-            {
-                parent.tableLayoutPanel1.Visible = true; 
-                this.Close(); 
-            }
-        }
+        //    StudentAll? parent = this.ParentForm as StudentAll;
+        //    if (parent != null && parent.tableLayoutPanel1 != null)
+        //    {
+        //        parent.tableLayoutPanel1.Visible = true; 
+        //        this.Close(); 
+        //    }
+        //}
         private void btn_update_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = db.GetConnection())
