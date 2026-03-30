@@ -9,8 +9,8 @@ namespace PBL3a.UI.Student
 {
     public partial class StudentAll : Form
     {
-        private Button currentButton;
-        private Form activeForm = null;
+        
+        private Form? activeForm = null;
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string StudentID { get; set; } = "";
@@ -55,7 +55,7 @@ namespace PBL3a.UI.Student
 
         private void btn_schedule_Click(object sender, EventArgs e)
         {
-            openChildForm(new StudentSchedule(), sender);
+            openChildForm(new StudentSchedule(StudentID), sender);
         }
 
         private void btn_fee_Click(object sender, EventArgs e)
