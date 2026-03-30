@@ -31,41 +31,45 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
             label2 = new Label();
-            comboBox1 = new ComboBox();
-            dataGridView1 = new DataGridView();
-            btn_back = new Button();
+            cbbWeekPick = new ComboBox();
+            dgvSchedule = new DataGridView();
+            btnChange = new Button();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSchedule).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackColor = Color.AliceBlue;
             tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 17.9562035F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 82.04379F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 118F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.4345551F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 87.5654449F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Controls.Add(label1, 1, 0);
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
-            tableLayoutPanel1.Controls.Add(comboBox1, 1, 1);
-            tableLayoutPanel1.Controls.Add(dataGridView1, 1, 2);
-            tableLayoutPanel1.Controls.Add(btn_back, 1, 3);
+            tableLayoutPanel1.Controls.Add(cbbWeekPick, 1, 1);
+            tableLayoutPanel1.Controls.Add(dgvSchedule, 1, 3);
+            tableLayoutPanel1.Controls.Add(btnChange, 1, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 4;
+            tableLayoutPanel1.RowCount = 5;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 56.363636F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 43.636364F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 288F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 51F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 38F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 281F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel1.Size = new Size(800, 450);
             tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.Location = new Point(305, 15);
+            label1.Location = new Point(333, 10);
             label1.Name = "label1";
             label1.Size = new Size(193, 31);
             label1.TabIndex = 0;
@@ -76,41 +80,41 @@
             label2.Anchor = AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label2.Location = new Point(72, 74);
+            label2.Location = new Point(34, 59);
             label2.Name = "label2";
-            label2.Size = new Size(47, 23);
+            label2.Size = new Size(58, 23);
             label2.TabIndex = 1;
-            label2.Text = "Tuần";
+            label2.Text = "Tháng";
             // 
-            // comboBox1
+            // cbbWeekPick
             // 
-            comboBox1.Anchor = AnchorStyles.Left;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(125, 72);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 2;
+            cbbWeekPick.Anchor = AnchorStyles.Left;
+            cbbWeekPick.FormattingEnabled = true;
+            cbbWeekPick.Location = new Point(98, 56);
+            cbbWeekPick.Name = "cbbWeekPick";
+            cbbWeekPick.Size = new Size(151, 28);
+            cbbWeekPick.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvSchedule
             // 
-            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(125, 113);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(553, 282);
-            dataGridView1.TabIndex = 3;
+            dgvSchedule.BackgroundColor = SystemColors.ButtonHighlight;
+            dgvSchedule.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSchedule.Dock = DockStyle.Fill;
+            dgvSchedule.Location = new Point(98, 131);
+            dgvSchedule.Name = "dgvSchedule";
+            dgvSchedule.RowHeadersWidth = 51;
+            dgvSchedule.Size = new Size(663, 275);
+            dgvSchedule.TabIndex = 3;
             // 
-            // btn_back
+            // btnChange
             // 
-            btn_back.Anchor = AnchorStyles.None;
-            btn_back.Location = new Point(354, 409);
-            btn_back.Name = "btn_back";
-            btn_back.Size = new Size(94, 29);
-            btn_back.TabIndex = 4;
-            btn_back.Text = "Quay lại";
-            btn_back.UseVisualStyleBackColor = true;
-            btn_back.Click += btn_back_Click;
+            btnChange.Location = new Point(98, 93);
+            btnChange.Name = "btnChange";
+            btnChange.Size = new Size(98, 29);
+            btnChange.TabIndex = 4;
+            btnChange.Text = "Tìm kiếm";
+            btnChange.UseVisualStyleBackColor = true;
+            btnChange.Click += btnChange_Click;
             // 
             // StudentSchedule
             // 
@@ -122,7 +126,7 @@
             Text = "StudentSchedule";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSchedule).EndInit();
             ResumeLayout(false);
         }
 
@@ -131,8 +135,8 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
         private Label label2;
-        private ComboBox comboBox1;
-        private DataGridView dataGridView1;
-        private Button btn_back;
+        private ComboBox cbbWeekPick;
+        private DataGridView dgvSchedule;
+        private Button btnChange;
     }
 }

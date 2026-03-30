@@ -97,6 +97,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackColor = Color.AliceBlue;
             tableLayoutPanel1.ColumnCount = 4;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
@@ -198,7 +199,6 @@
             btn_back.Size = new Size(96, 42);
             btn_back.TabIndex = 14;
             btn_back.Text = "Quay lại";
-            btn_back.Click += btn_back_Click;
             // 
             // StudentINFO
             // 
