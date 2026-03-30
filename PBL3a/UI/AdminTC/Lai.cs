@@ -19,5 +19,15 @@ namespace PBL3a.UI.AdminTC
         {
             this.Close();
         }
+
+        private void btT_MouseEnter(object sender, EventArgs e)
+        {
+            but_chform.bt_MouseEnter(sender, e);
+        }
+
+        private void btT_MouseLeave(object sender, EventArgs e)
+        {
+            but_chform.bt_MouseLeave(sender, e);
+        }
     }
 }

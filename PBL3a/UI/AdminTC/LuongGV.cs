@@ -225,9 +225,14 @@ namespace PBL3a.UI.AdminTC
             LoadLuongTheoGV(teacherID);
         }
 
-        private void btT_Click(object sender, EventArgs e)
+        private void btSetL_MouseEnter(object sender, EventArgs e)
         {
-            Close();
+            but_chform.bt_MouseEnter(sender, e);
+        }
+
+        private void btSetL_MouseLeave(object sender, EventArgs e)
+        {
+            but_chform.bt_MouseLeave(sender, e);
         }
     }
 }

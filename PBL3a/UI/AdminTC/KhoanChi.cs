@@ -97,7 +97,7 @@ namespace PBL3a.UI.AdminTC
             tbKT.Text = tong.ToString("N0") + " VNĐ";
         }
 
-        private void btT_Click(object sender, EventArgs e)
+        private void butT_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -105,6 +105,21 @@ namespace PBL3a.UI.AdminTC
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btOK_MouseEnter(object sender, EventArgs e)
+        {
+            but_chform.bt_MouseEnter(sender, e);
+        }
+
+        private void btOK_MouseLeave(object sender, EventArgs e)
+        {
+            but_chform.bt_MouseLeave(sender, e);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using PBL3a.UI.Login;
 using System;
+using System.Collections.Concurrent;
 using System.Windows.Forms;
 
 namespace PBL3a.UI.AdminTC
@@ -25,37 +26,35 @@ namespace PBL3a.UI.AdminTC
         // Học phí
         private void btHP_Click(object sender, EventArgs e)
         {
+            but_chform.ActivateButton(sender);
             HocPhi hocPhi = new HocPhi();
-            this.Hide();
-            hocPhi.ShowDialog();
-            this.Show();
+            but_chform.OpenChildForm(hocPhi, sender, paDesktop);
         }
 
         // Đăng xuất
         private void btT_Click(object sender, EventArgs e)
         {
+            but_chform.ActivateButton(sender);
             LoginForm login = new LoginForm();
             this.Hide();
             login.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         // Lương giáo viên
         private void btLGV_Click(object sender, EventArgs e)
         {
+            but_chform.ActivateButton(sender);
             LuongGV luong = new LuongGV();
-            this.Hide();
-            luong.ShowDialog();
-            this.Show();
+            but_chform.OpenChildForm(luong, sender, paDesktop);
         }
 
         // Lợi nhuận
         private void btLN_Click(object sender, EventArgs e)
         {
+            but_chform.ActivateButton(sender);
             LoiNhuan loinhuan = new LoiNhuan();
-            this.Hide();
-            loinhuan.ShowDialog();
-            this.Show();
+            but_chform.OpenChildForm(loinhuan, sender, paDesktop);
         }
     }
 }
