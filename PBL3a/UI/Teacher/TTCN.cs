@@ -1,11 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using PBL3a.services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace PBL3a.UI.Teacher
@@ -13,33 +8,29 @@ namespace PBL3a.UI.Teacher
     public partial class TTCN : Form
     {
         private DatabaseHelper db = new DatabaseHelper();
-        public TTCN()
+        private string currentTeacherID;
+
+        public TTCN(string teacherId)
         {
             InitializeComponent();
+            currentTeacherID = teacherId;
             this.Load += TTCN_Load;
         }
 
         private void TTCN_Load(object sender, EventArgs e)
         {
-            //  Lấy Username từ Form Login
-            Form loginForm = Application.OpenForms["LoginForm"];
-            if (loginForm == null)
+            if (string.IsNullOrEmpty(currentTeacherID))
             {
-                MessageBox.Show("Không tìm thấy phiên đăng nhập!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không tìm thấy mã giảng viên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            Control[] txtUsers = loginForm.Controls.Find("txtUsername", true);
-            string currentUsername = txtUsers.Length > 0 ? txtUsers[0].Text : "";
-
-            if (string.IsNullOrEmpty(currentUsername)) return;
 
             string query = @"
                 SELECT 
                     a.Id, a.name, a.sex, a.dateOfBirth, a.phone, t.subject
                 FROM accountList a
-                INNER JOIN Teacher t ON a.Id = t.Id
-                WHERE a.username = @Username"; 
+                INNER JOIN teacherInfo t ON a.Id = t.Id
+                WHERE a.Id = @TeacherId AND a.Role = 'Teacher'";
 
             try
             {
@@ -48,8 +39,7 @@ namespace PBL3a.UI.Teacher
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        // Truyền tham số vào câu lệnh SQL
-                        cmd.Parameters.AddWithValue("@Username", currentUsername);
+                        cmd.Parameters.AddWithValue("@TeacherId", currentTeacherID);
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
@@ -59,21 +49,22 @@ namespace PBL3a.UI.Teacher
                                 tbMGV.Text = reader["Id"].ToString();
                                 tbMD.Text = reader["subject"] != DBNull.Value ? reader["subject"].ToString() : "";
                                 tbSDT.Text = reader["phone"] != DBNull.Value ? reader["phone"].ToString() : "";
-
                                 cbbGT.Text = reader["sex"] != DBNull.Value ? reader["sex"].ToString() : "";
+
                                 if (reader["dateOfBirth"] != DBNull.Value)
                                 {
                                     dtNS.Value = Convert.ToDateTime(reader["dateOfBirth"]);
                                 }
+
                                 tbE.Text = "Chưa có dữ liệu";
 
-                                // Đặt các TextBox thành ReadOnly
                                 tbMGV.ReadOnly = true;
                                 tbMD.ReadOnly = true;
                             }
                             else
                             {
-                                MessageBox.Show("Không tìm thấy thông tin giảng viên trong hệ thống.", "Lỗi dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Không tìm thấy thông tin giảng viên trong hệ thống.",
+                                    "Lỗi dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
@@ -87,7 +78,6 @@ namespace PBL3a.UI.Teacher
 
         private void btT_Click(object sender, EventArgs e)
         {
-
             this.Close();
         }
     }

@@ -1,5 +1,6 @@
 ﻿using PBL3a.UI.Login;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PBL3a.UI.Teacher
@@ -8,12 +9,15 @@ namespace PBL3a.UI.Teacher
     {
         private string currentTeacherID;
         private Form currentChildForm;
+        private Button currentButton;
 
-        public QuanLyChungT()
+        public QuanLyChungT(string teacherId)
         {
             InitializeComponent();
+            currentTeacherID = teacherId;
+
             ActivateButton(button1);
-            OpenChildForm(new TTCN());
+            OpenChildForm(new TTCN(currentTeacherID));
         }
 
         private void OpenChildForm(Form childForm)
@@ -36,18 +40,12 @@ namespace PBL3a.UI.Teacher
             childForm.Show();
         }
 
-        private Button currentButton;
-
         private void ActivateButton(object senderBtn)
         {
             if (senderBtn != null)
             {
                 Button btn = (Button)senderBtn;
-                if (currentButton == btn)
-                {
-                    return;
-                }
-
+                if (currentButton == btn) return;
 
                 if (currentButton != null)
                 {
@@ -64,7 +62,7 @@ namespace PBL3a.UI.Teacher
         private void button1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new TTCN());
+            OpenChildForm(new TTCN(currentTeacherID));
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -88,11 +86,14 @@ namespace PBL3a.UI.Teacher
         private void button5_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new Luong());
+            OpenChildForm(new Luong(currentTeacherID));
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
             this.Close();
         }
     }

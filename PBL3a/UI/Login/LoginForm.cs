@@ -14,6 +14,7 @@ namespace PBL3a.UI.Login
         public LoginForm()
         {
             InitializeComponent();
+            this.AcceptButton = btnLogin;
             this.DoubleBuffered = true;
         }
 
@@ -54,7 +55,7 @@ namespace PBL3a.UI.Login
                                 string role = reader["Role"]?.ToString() ?? "";
                                 string userId = reader["Id"]?.ToString() ?? "";
 
-                                MessageBox.Show($"Đăng nhập thành công! Role: {role}");
+                                
 
                                 reader.Close();
                                 OpenFormByRole(role, userId);
@@ -74,29 +75,29 @@ namespace PBL3a.UI.Login
         }
 
         private void OpenFormByRole(string role, string userId)
-        {
-            Form nextForm = null;
+{
+    Form nextForm = null;
 
-            if (role == "AdminC")
-                nextForm = new PBL3a.UI.AdminC.AdminC();
-            else if (role == "AdminDD")
-                nextForm = new PBL3a.UI.AdminDD.Form1();
-            else if (role == "AdminTC")
-                nextForm = new PBL3a.UI.AdminTC.QuanLyChungTC();
-            else if (role == "Student")
-                nextForm = new PBL3a.UI.Student.StudentAll(userId);
-            else if (role == "Teacher")
-                nextForm = new PBL3a.UI.Teacher.QuanLyChungT();
-            else
-            {
-                MessageBox.Show("Role không hợp lệ");
-                return;
-            }
+    if (role == "AdminC")
+        nextForm = new PBL3a.UI.AdminC.AdminC();
+    else if (role == "AdminDD")
+        nextForm = new PBL3a.UI.AdminDD.Form1();
+    else if (role == "AdminTC")
+        nextForm = new PBL3a.UI.AdminTC.QuanLyChungTC();
+    else if (role == "Student")
+        nextForm = new PBL3a.UI.Student.StudentAll(userId);
+    else if (role == "Teacher")
+        nextForm = new PBL3a.UI.Teacher.QuanLyChungT(userId); // sửa chỗ này
+    else
+    {
+        MessageBox.Show("Role không hợp lệ");
+        return;
+    }
 
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
-        }
+    this.Hide();
+    nextForm.ShowDialog();
+    this.Close();
+}
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
