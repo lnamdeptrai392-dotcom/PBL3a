@@ -56,7 +56,7 @@
             panel_content.Location = new Point(3, 2);
             panel_content.Margin = new Padding(3, 2, 3, 2);
             panel_content.Name = "panel_content";
-            panel_content.Size = new Size(174, 458);
+            panel_content.Size = new Size(159, 458);
             panel_content.TabIndex = 11;
             // 
             // btn_exit
@@ -68,7 +68,7 @@
             btn_exit.Location = new Point(0, 347);
             btn_exit.Margin = new Padding(3, 2, 3, 2);
             btn_exit.Name = "btn_exit";
-            btn_exit.Size = new Size(174, 60);
+            btn_exit.Size = new Size(159, 60);
             btn_exit.TabIndex = 11;
             btn_exit.Text = "Đăng xuất";
             btn_exit.UseVisualStyleBackColor = false;
@@ -83,7 +83,7 @@
             btn_material.Location = new Point(0, 287);
             btn_material.Margin = new Padding(3, 2, 3, 2);
             btn_material.Name = "btn_material";
-            btn_material.Size = new Size(174, 60);
+            btn_material.Size = new Size(159, 60);
             btn_material.TabIndex = 10;
             btn_material.Text = "Tài liệu";
             btn_material.UseVisualStyleBackColor = false;
@@ -98,7 +98,7 @@
             btn_fee.Location = new Point(0, 227);
             btn_fee.Margin = new Padding(3, 2, 3, 2);
             btn_fee.Name = "btn_fee";
-            btn_fee.Size = new Size(174, 60);
+            btn_fee.Size = new Size(159, 60);
             btn_fee.TabIndex = 4;
             btn_fee.Text = "Học phí";
             btn_fee.UseVisualStyleBackColor = false;
@@ -113,7 +113,7 @@
             btn_score.Location = new Point(0, 167);
             btn_score.Margin = new Padding(3, 2, 3, 2);
             btn_score.Name = "btn_score";
-            btn_score.Size = new Size(174, 60);
+            btn_score.Size = new Size(159, 60);
             btn_score.TabIndex = 8;
             btn_score.Text = "Kết quả học tập";
             btn_score.UseVisualStyleBackColor = false;
@@ -129,7 +129,7 @@
             btn_schedule.Location = new Point(0, 107);
             btn_schedule.Margin = new Padding(3, 2, 3, 2);
             btn_schedule.Name = "btn_schedule";
-            btn_schedule.Size = new Size(174, 60);
+            btn_schedule.Size = new Size(159, 60);
             btn_schedule.TabIndex = 6;
             btn_schedule.Text = "Thời khóa biểu";
             btn_schedule.UseVisualStyleBackColor = false;
@@ -144,7 +144,7 @@
             btn_info.Location = new Point(0, 47);
             btn_info.Margin = new Padding(3, 2, 3, 2);
             btn_info.Name = "btn_info";
-            btn_info.Size = new Size(174, 60);
+            btn_info.Size = new Size(159, 60);
             btn_info.TabIndex = 7;
             btn_info.Text = "Thông tin cá nhân";
             btn_info.UseVisualStyleBackColor = false;
@@ -156,23 +156,23 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(174, 47);
+            panel1.Size = new Size(159, 47);
             panel1.TabIndex = 0;
             // 
             // panelChildBox
             // 
             panelChildBox.BackColor = Color.AliceBlue;
-            panelChildBox.Dock = DockStyle.Top;
-            panelChildBox.Location = new Point(183, 3);
+            panelChildBox.Dock = DockStyle.Fill;
+            panelChildBox.Location = new Point(168, 3);
             panelChildBox.Name = "panelChildBox";
-            panelChildBox.Size = new Size(654, 456);
+            panelChildBox.Size = new Size(669, 456);
             panelChildBox.TabIndex = 12;
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.4285717F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.57143F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 19.6428566F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80.35714F));
             tableLayoutPanel1.Controls.Add(panel_content, 0, 0);
             tableLayoutPanel1.Controls.Add(panelChildBox, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;

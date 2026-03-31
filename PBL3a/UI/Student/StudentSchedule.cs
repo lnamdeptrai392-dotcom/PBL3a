@@ -152,13 +152,6 @@ namespace PBL3a.UI.Student
                 DisplayMonthCalendar(selected.Month, selected.Year);
             }
         }
-
-        private void btn_back_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        // --- Classes bổ trợ ---
         public class MonthItem
         {
             public string Text { get; set; }
@@ -167,9 +160,6 @@ namespace PBL3a.UI.Student
             public override string ToString() => Text;
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

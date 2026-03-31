@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.Identity.Client;
+using PBL3a.services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,19 +13,49 @@ namespace PBL3a.UI.Student
 {
     public partial class StudentFee : Form
     {
-        public StudentFee()
+        private readonly DatabaseHelper db = new DatabaseHelper();
+        private readonly string currentID = "";
+
+        public StudentFee(string id)
         {
             InitializeComponent();
+            this.currentID = id;
+            //dang ky su kien cho studentFeeLoad
+            LoadHocPhiHocSinh();
         }
 
-
-        private void btn_back_Click(object sender, EventArgs e)
+        private void LoadHocPhiHocSinh()
         {
-            this.Hide();
-            StudentAll student = new StudentAll();
-            student.ShowDialog();
-            
+            using (SqlConnection con = db.GetConnection())
+            {
+                try
+                {
+                    con.Open();
+                    string query = @"SELECT ClassID, TuitionMonth, TuitionYear, SoTien, TrangThai, NgayDong, GhiChu 
+                                    FROM HocPhi WHERE AccountID = @id";
+                    using (SqlDataAdapter a = new SqlDataAdapter(query, con))
+                    {
+                        // Add the parameter with value
+                        a.SelectCommand.Parameters.AddWithValue("id", currentID);
+
+                        DataTable dt = new DataTable();
+                        a.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
+        private void StudentFee_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(currentID))
+            {
+                LoadHocPhiHocSinh();
+            }
+        }
     }
 }

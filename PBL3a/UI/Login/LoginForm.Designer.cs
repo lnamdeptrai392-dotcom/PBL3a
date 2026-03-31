@@ -28,8 +28,8 @@
             txtUsername = new TextBox();
             lblPassword = new Label();
             txtPassword = new TextBox();
-            chkShowPassword = new CheckBox();
             btnLogin = new Button();
+            chkShowPassword = new CheckBox();
             LoginTable1.SuspendLayout();
             SuspendLayout();
             // 
@@ -94,15 +94,6 @@
             txtPassword.TabIndex = 3;
             txtPassword.UseSystemPasswordChar = true;
             // 
-            // chkShowPassword
-            // 
-            chkShowPassword.Location = new Point(152, 131);
-            chkShowPassword.Name = "chkShowPassword";
-            chkShowPassword.Size = new Size(104, 24);
-            chkShowPassword.TabIndex = 4;
-            chkShowPassword.Text = "Show Password";
-            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
-            // 
             // btnLogin
             // 
             btnLogin.Anchor = AnchorStyles.Top;
@@ -112,6 +103,15 @@
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.Click += btnLogin_Click;
+            // 
+            // chkShowPassword
+            // 
+            chkShowPassword.Location = new Point(152, 131);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(104, 24);
+            chkShowPassword.TabIndex = 4;
+            chkShowPassword.Text = "Show Password";
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
             // 
             // LoginForm
             // 

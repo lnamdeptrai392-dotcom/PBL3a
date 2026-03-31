@@ -60,7 +60,7 @@ namespace PBL3a.UI.Student
 
         private void btn_fee_Click(object sender, EventArgs e)
         {
-            openChildForm(new StudentFee(), sender);
+            openChildForm(new StudentFee(StudentID), sender);
         }
 
         private void btn_material_Click(object sender, EventArgs e)

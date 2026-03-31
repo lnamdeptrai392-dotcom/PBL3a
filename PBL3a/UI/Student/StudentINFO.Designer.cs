@@ -32,7 +32,6 @@
             txtSDT = new TextBox();
             txtDiaChi = new TextBox();
             btn_update = new Button();
-            btn_back = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -117,7 +116,6 @@
             tableLayoutPanel1.Controls.Add(txtSDT, 2, 5);
             tableLayoutPanel1.Controls.Add(txtDiaChi, 2, 6);
             tableLayoutPanel1.Controls.Add(btn_update, 1, 7);
-            tableLayoutPanel1.Controls.Add(btn_back, 2, 7);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -191,15 +189,6 @@
             btn_update.Text = "Cập nhật";
             btn_update.Click += btn_update_Click;
             // 
-            // btn_back
-            // 
-            btn_back.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btn_back.Location = new Point(541, 353);
-            btn_back.Name = "btn_back";
-            btn_back.Size = new Size(96, 42);
-            btn_back.TabIndex = 14;
-            btn_back.Text = "Quay lại";
-            // 
             // StudentINFO
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -230,6 +219,5 @@
         private DateTimePicker dtpNgaySinh;
         private ComboBox cboGioiTinh;
         private Button btn_update;
-        private Button btn_back;
     }
 }
