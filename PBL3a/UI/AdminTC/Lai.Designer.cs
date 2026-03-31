@@ -38,6 +38,7 @@
             tbNam = new TextBox();
             tbKT = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
+            btOK = new Button();
             comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
@@ -159,6 +160,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 42F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 195F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 45F));
+            tableLayoutPanel1.Controls.Add(btOK, 6, 5);
             tableLayoutPanel1.Controls.Add(LaLS, 0, 0);
             tableLayoutPanel1.Controls.Add(lbThang, 1, 1);
             tableLayoutPanel1.Controls.Add(lbNam, 3, 1);
@@ -183,6 +185,20 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 19F));
             tableLayoutPanel1.Size = new Size(1690, 901);
             tableLayoutPanel1.TabIndex = 1;
+            // 
+            // btOK
+            // 
+            btOK.BackColor = Color.FromArgb(112, 146, 190);
+            btOK.Font = new Font("Segoe UI", 12F);
+            btOK.ForeColor = Color.White;
+            btOK.Location = new Point(1452, 679);
+            btOK.Margin = new Padding(3, 4, 3, 4);
+            btOK.Name = "btOK";
+            btOK.Size = new Size(189, 74);
+            btOK.TabIndex = 7;
+            btOK.Text = "OK";
+            btOK.UseVisualStyleBackColor = false;
+            btOK.Click += btOK_Click;
             // 
             // comboBox1
             // 
@@ -221,5 +237,6 @@
         private TextBox tbNam;
         private TextBox tbKT;
         private ComboBox comboBox1;
+        private Button btOK;
     }
 }

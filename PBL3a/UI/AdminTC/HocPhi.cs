@@ -59,13 +59,15 @@ namespace PBL3a.UI.AdminTC
         private void comboBox1_SelectedIndexChanged(object? sender, EventArgs e)
         {
             if (comboBox1.SelectedItem == null) return;
-
-            int classID = Convert.ToInt32(comboBox1.SelectedItem);
-            LoadTenLop(classID);
-            LoadHocPhiTheoLop(classID);
+            else
+            {
+                string classID = comboBox1.SelectedItem.ToString();
+                LoadTenLop(classID);
+                LoadHocPhiTheoLop(classID);
+            }
         }
 
-        private void LoadTenLop(int classID)
+        private void LoadTenLop(string classID)
         {
             using (SqlConnection conn = db.GetConnection())
             {
@@ -81,7 +83,7 @@ namespace PBL3a.UI.AdminTC
             }
         }
 
-        private void LoadHocPhiTheoLop(int classID)
+        private void LoadHocPhiTheoLop(string classID)
         {
             using (SqlConnection conn = db.GetConnection())
             {
@@ -89,7 +91,7 @@ namespace PBL3a.UI.AdminTC
 
                 string query = @"
                     SELECT 
-                        hp.HocPhiID,
+                        hp.HocPhiID AS [ID],
                         hp.AccountID AS [Mã HS],
                         a.name AS [Tên học sinh],
                         hp.TuitionMonth AS [Tháng],
@@ -128,82 +130,61 @@ namespace PBL3a.UI.AdminTC
                 dataGridView1.Columns["Năm"].ReadOnly = true;
         }
 
-        private void btCheckHP_Click(object sender, EventArgs e)
-        {
-            if (comboBox1.SelectedItem == null)
-            {
-                MessageBox.Show("Vui lòng chọn lớp.");
-                return;
-            }
-
-            int classID = Convert.ToInt32(comboBox1.SelectedItem);
-            LoadHocPhiTheoLop(classID);
-        }
-
-        public void ActivateButton(object sender)
-        {
-            if (sender != null && currentButton != (Button)sender)
-            {
-                if (currentButton != null)
-                {
-                    currentButton.BackColor = Color.FromArgb(112, 146, 190);
-                }
-                currentButton = (Button)sender;
-                currentButton.BackColor = Color.FromArgb(144, 188, 245);
-            }
-        }
-
         private void btSetHP_Click(object sender, EventArgs e)
         {
-            if (dtHocPhi == null || dtHocPhi.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có dữ liệu để lưu.");
-                return;
-            }
+            //if (dtHocPhi == null || dtHocPhi.Rows.Count == 0)
+            //{
+            //    MessageBox.Show("Không có dữ liệu để lưu.");
+            //    return;
+            //}
 
-            using (SqlConnection conn = db.GetConnection())
-            {
-                conn.Open();
+            //using (SqlConnection conn = db.GetConnection())
+            //{
+            //    conn.Open();
 
-                foreach (DataRow row in dtHocPhi.Rows)
-                {
-                    string query = @"
-                        UPDATE HocPhi
-                        SET 
-                            SoTien = @SoTien,
-                            TrangThai = @TrangThai,
-                            NgayDong = @NgayDong,
-                            GhiChu = @GhiChu
-                        WHERE HocPhiID = @HocPhiID";
+            //    foreach (DataRow row in dtHocPhi.Rows)
+            //    {
+            //        string query = @"
+            //            UPDATE HocPhi
+            //            SET 
+            //                SoTien = @SoTien,
+            //                TrangThai = @TrangThai,
+            //                NgayDong = @NgayDong,
+            //                GhiChu = @GhiChu
+            //            WHERE HocPhiID = @HocPhiID";
 
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@HocPhiID", Convert.ToInt32(row["HocPhiID"]));
-                        cmd.Parameters.AddWithValue("@SoTien", Convert.ToDecimal(row["Số tiền"]));
-                        cmd.Parameters.AddWithValue("@TrangThai", row["Trạng thái"]?.ToString() ?? "");
+            //        using (SqlCommand cmd = new SqlCommand(query, conn))
+            //        {
+            //            cmd.Parameters.AddWithValue("@HocPhiID", Convert.ToInt32(row["ID"]));
+            //            cmd.Parameters.AddWithValue("@SoTien", Convert.ToDecimal(row["Số tiền"]));
+            //            cmd.Parameters.AddWithValue("@TrangThai", row["Trạng thái"]?.ToString() ?? "");
 
-                        if (row["Ngày đóng"] == DBNull.Value || string.IsNullOrWhiteSpace(row["Ngày đóng"].ToString()))
-                            cmd.Parameters.AddWithValue("@NgayDong", DBNull.Value);
-                        else
-                            cmd.Parameters.AddWithValue("@NgayDong", Convert.ToDateTime(row["Ngày đóng"]));
+            //            if (row["Ngày đóng"] == DBNull.Value || string.IsNullOrWhiteSpace(row["Ngày đóng"].ToString()))
+            //                cmd.Parameters.AddWithValue("@NgayDong", DBNull.Value);
+            //            else
+            //                cmd.Parameters.AddWithValue("@NgayDong", Convert.ToDateTime(row["Ngày đóng"]));
 
-                        if (row["Ghi chú"] == DBNull.Value || string.IsNullOrWhiteSpace(row["Ghi chú"].ToString()))
-                            cmd.Parameters.AddWithValue("@GhiChu", DBNull.Value);
-                        else
-                            cmd.Parameters.AddWithValue("@GhiChu", row["Ghi chú"].ToString());
+            //            if (row["Ghi chú"] == DBNull.Value || string.IsNullOrWhiteSpace(row["Ghi chú"].ToString()))
+            //                cmd.Parameters.AddWithValue("@GhiChu", DBNull.Value);
+            //            else
+            //                cmd.Parameters.AddWithValue("@GhiChu", row["Ghi chú"].ToString());
 
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
+            //            cmd.ExecuteNonQuery();
+            //        }
+            //    }
+            //}
 
-            MessageBox.Show("Lưu thay đổi học phí thành công.");
+            //MessageBox.Show("Lưu thay đổi học phí thành công.");
 
-            if (comboBox1.SelectedItem != null)
-            {
-                int classID = Convert.ToInt32(comboBox1.SelectedItem);
-                LoadHocPhiTheoLop(classID);
-            }
+            //if (comboBox1.SelectedItem != null)
+            //{
+            //    string classID = comboBox1.SelectedItem.ToString();
+            //    LoadHocPhiTheoLop(classID);
+            //}
+            ThietLapHP thietLap = new ThietLapHP();
+            this.Hide();
+            thietLap.ShowDialog();
+            this.Show();
         }
 
         private void btSetHP_MouseEnter(object sender, EventArgs e)

@@ -52,7 +52,7 @@ namespace PBL3a.UI.AdminTC
             TinhTongKhoanChi();
         }
 
-        private void LoadKhoanChi(int month, int year)
+        public void LoadKhoanChi(int month, int year)
         {
             using (SqlConnection conn = db.GetConnection())
             {
