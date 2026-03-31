@@ -63,10 +63,7 @@ namespace PBL3a.UI.Student
             openChildForm(new StudentFee(StudentID), sender);
         }
 
-        private void btn_material_Click(object sender, EventArgs e)
-        {
-            openChildForm(new StudentMaterial(), sender);
-        }
+    
 
         private void btn_exit_Click(object sender, EventArgs e)
         {

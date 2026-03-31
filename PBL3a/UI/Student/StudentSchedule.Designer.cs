@@ -55,21 +55,20 @@
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 5;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 56.363636F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 43.636364F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 38F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 281F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 43.3333321F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 56.6666679F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 293F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel1.Size = new Size(800, 450);
             tableLayoutPanel1.TabIndex = 0;
-            
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.Location = new Point(333, 10);
+            label1.Location = new Point(333, 0);
             label1.Name = "label1";
             label1.Size = new Size(193, 31);
             label1.TabIndex = 0;
@@ -80,7 +79,7 @@
             label2.Anchor = AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label2.Location = new Point(34, 59);
+            label2.Location = new Point(34, 43);
             label2.Name = "label2";
             label2.Size = new Size(58, 23);
             label2.TabIndex = 1;
@@ -90,7 +89,7 @@
             // 
             cbbWeekPick.Anchor = AnchorStyles.Left;
             cbbWeekPick.FormattingEnabled = true;
-            cbbWeekPick.Location = new Point(98, 56);
+            cbbWeekPick.Location = new Point(98, 40);
             cbbWeekPick.Name = "cbbWeekPick";
             cbbWeekPick.Size = new Size(151, 28);
             cbbWeekPick.TabIndex = 2;
@@ -100,15 +99,15 @@
             dgvSchedule.BackgroundColor = SystemColors.ButtonHighlight;
             dgvSchedule.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSchedule.Dock = DockStyle.Fill;
-            dgvSchedule.Location = new Point(98, 131);
+            dgvSchedule.Location = new Point(98, 119);
             dgvSchedule.Name = "dgvSchedule";
             dgvSchedule.RowHeadersWidth = 51;
-            dgvSchedule.Size = new Size(663, 275);
+            dgvSchedule.Size = new Size(663, 287);
             dgvSchedule.TabIndex = 3;
             // 
             // btnChange
             // 
-            btnChange.Location = new Point(98, 93);
+            btnChange.Location = new Point(98, 79);
             btnChange.Name = "btnChange";
             btnChange.Size = new Size(98, 29);
             btnChange.TabIndex = 4;

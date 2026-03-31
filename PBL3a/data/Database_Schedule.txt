@@ -1,0 +1,155 @@
+﻿
+-- Dữ liệu mẫu ClassSchedule
+-- dayOfWeek: 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday, 5 = Friday, 6 = Saturday, 7 = Sunday
+INSERT INTO ClassSchedule (classID, dayOfWeek, startTime, endTime)
+VALUES
+-- ================= TOÁN (T01) =================
+-- T01.0426 (Lớp Toán 10A1) - 2 sessions per week
+('T01.0426', 2, '07:30:00', '09:30:00'),  -- Tuesday morning
+('T01.0426', 4, '07:30:00', '09:30:00'),  -- Thursday morning
+
+-- T01.0726 (Lớp Toán 10A2)
+('T01.0726', 2, '13:00:00', '15:00:00'),  -- Tuesday afternoon
+('T01.0726', 5, '13:00:00', '15:00:00'),  -- Friday afternoon
+
+-- T01.0125 (Lớp Toán 10A3)
+('T01.0125', 1, '07:30:00', '09:30:00'),  -- Monday morning
+('T01.0125', 3, '07:30:00', '09:30:00'),  -- Wednesday morning
+
+-- T01.0825 (Lớp Toán 11A1)
+('T01.0825', 3, '09:45:00', '11:45:00'),  -- Wednesday late morning
+('T01.0825', 5, '09:45:00', '11:45:00'),  -- Friday late morning
+
+-- T01.0126 (Lớp Toán 12A1)
+('T01.0126', 1, '13:00:00', '15:00:00'),  -- Monday afternoon
+('T01.0126', 4, '13:00:00', '15:00:00'),  -- Thursday afternoon
+
+-- T01.0926 (Lớp Toán 10B1)
+('T01.0926', 2, '15:15:00', '17:15:00'),  -- Tuesday late afternoon
+('T01.0926', 6, '08:00:00', '10:00:00'),  -- Saturday morning
+
+-- ================= VĂN (V01) =================
+-- V01.0225 (Lớp Văn 10A1)
+('V01.0225', 1, '09:45:00', '11:45:00'),  -- Monday late morning
+('V01.0225', 3, '09:45:00', '11:45:00'),  -- Wednesday late morning
+
+-- V01.0925 (Lớp Văn 11A1)
+('V01.0925', 2, '07:30:00', '09:30:00'),  -- Tuesday morning
+('V01.0925', 5, '07:30:00', '09:30:00'),  -- Friday morning
+
+-- V01.0326 (Lớp Văn 12A1)
+('V01.0326', 4, '13:00:00', '15:00:00'),  -- Thursday afternoon
+('V01.0326', 6, '10:15:00', '12:15:00'),  -- Saturday late morning
+
+-- V01.1026 (Lớp Văn 10B1)
+('V01.1026', 1, '15:15:00', '17:15:00'),  -- Monday late afternoon
+('V01.1026', 3, '15:15:00', '17:15:00'),  -- Wednesday late afternoon
+
+-- ================= HÓA (H01) =================
+-- H01.0325 (Lớp Hóa 10A1)
+('H01.0325', 2, '09:45:00', '11:45:00'),  -- Tuesday late morning
+('H01.0325', 4, '09:45:00', '11:45:00'),  -- Thursday late morning
+
+-- H01.1025 (Lớp Hóa 11A1)
+('H01.1025', 1, '07:30:00', '09:30:00'),  -- Monday morning
+('H01.1025', 3, '07:30:00', '09:30:00'),  -- Wednesday morning
+
+-- H01.0426 (Lớp Hóa 12A1)
+('H01.0426', 3, '13:00:00', '15:00:00'),  -- Wednesday afternoon
+('H01.0426', 5, '13:00:00', '15:00:00'),  -- Friday afternoon
+
+-- H01.1126 (Lớp Hóa 10B1)
+('H01.1126', 2, '15:15:00', '17:15:00'),  -- Tuesday late afternoon
+('H01.1126', 6, '13:00:00', '15:00:00'),  -- Saturday afternoon
+
+-- ================= LÝ (L01) =================
+-- L01.0425 (Lớp Lý 10A1)
+('L01.0425', 4, '07:30:00', '09:30:00'),  -- Thursday morning
+('L01.0425', 6, '07:30:00', '09:30:00'),  -- Saturday morning
+
+-- L01.0526 (Lớp Lý 11A1)
+('L01.0526', 1, '09:45:00', '11:45:00'),  -- Monday late morning
+('L01.0526', 5, '09:45:00', '11:45:00'),  -- Friday late morning
+
+-- L01.1125 (Lớp Lý 11A2)
+('L01.1125', 2, '13:00:00', '15:00:00'),  -- Tuesday afternoon
+('L01.1125', 4, '13:00:00', '15:00:00'),  -- Thursday afternoon
+
+-- L01.0626 (Lớp Lý 12A1)
+('L01.0626', 3, '15:15:00', '17:15:00'),  -- Wednesday late afternoon
+('L01.0626', 5, '15:15:00', '17:15:00'),  -- Friday late afternoon
+
+-- L01.1226 (Lớp Lý 10B1)
+('L01.1226', 1, '13:00:00', '15:00:00'),  -- Monday afternoon
+('L01.1226', 6, '15:15:00', '17:15:00'),  -- Saturday late afternoon
+
+-- ================= SINH (S01) =================
+-- S01.0525 (Lớp Sinh 10A1)
+('S01.0525', 2, '09:45:00', '11:45:00'),  -- Tuesday late morning
+('S01.0525', 5, '09:45:00', '11:45:00'),  -- Friday late morning
+
+-- S01.1225 (Lớp Sinh 11A1)
+('S01.1225', 3, '07:30:00', '09:30:00'),  -- Wednesday morning
+('S01.1225', 6, '10:15:00', '12:15:00'),  -- Saturday late morning
+
+-- S01.0726 (Lớp Sinh 12A1)
+('S01.0726', 1, '15:15:00', '17:15:00'),  -- Monday late afternoon
+('S01.0726', 4, '15:15:00', '17:15:00'),  -- Thursday late afternoon
+
+-- ================= TIẾNG ANH (NN01) =================
+-- NN01.0226 (Lớp Tiếng Anh 9A1)
+('NN01.0226', 2, '17:30:00', '19:30:00'),  -- Tuesday evening
+('NN01.0226', 4, '17:30:00', '19:30:00'),  -- Thursday evening
+
+-- NN01.0125 (Lớp Tiếng Anh 10A1)
+('NN01.0125', 1, '17:30:00', '19:30:00'),  -- Monday evening
+('NN01.0125', 3, '17:30:00', '19:30:00'),  -- Wednesday evening
+
+-- NN01.0625 (Lớp Tiếng Anh IELTS 1)
+('NN01.0625', 6, '13:00:00', '15:00:00'),  -- Saturday afternoon
+('NN01.0625', 7, '13:00:00', '15:00:00'),  -- Sunday afternoon
+
+-- NN01.0526 (Lớp Tiếng Anh 11A1)
+('NN01.0526', 3, '13:00:00', '15:00:00'),  -- Wednesday afternoon
+('NN01.0526', 5, '13:00:00', '15:00:00'),  -- Friday afternoon
+
+-- NN01.0826 (Lớp Tiếng Anh Giao Tiếp)
+('NN01.0826', 1, '19:45:00', '21:45:00'),  -- Monday evening
+('NN01.0826', 3, '19:45:00', '21:45:00'),  -- Wednesday evening
+
+-- ================= TIẾNG NHẬT (NN02) =================
+-- NN02.0225 (Lớp Tiếng Nhật N5)
+('NN02.0225', 4, '17:30:00', '19:30:00'),  -- Thursday evening
+('NN02.0225', 6, '08:00:00', '10:00:00'),  -- Saturday morning
+
+-- NN02.0725 (Lớp Tiếng Nhật N4)
+('NN02.0725', 2, '17:30:00', '19:30:00'),  -- Tuesday evening
+('NN02.0725', 5, '17:30:00', '19:30:00'),  -- Friday evening
+
+-- NN02.0326 (Lớp Tiếng Nhật N5 - K2)
+('NN02.0326', 1, '19:45:00', '21:45:00'),  -- Monday evening
+('NN02.0326', 4, '19:45:00', '21:45:00'),  -- Thursday evening
+
+-- NN02.0926 (Lớp Tiếng Nhật N3)
+('NN02.0926', 3, '17:30:00', '19:30:00'),  -- Wednesday evening
+('NN02.0926', 6, '10:15:00', '12:15:00'),  -- Saturday late morning
+
+-- ================= TIẾNG TRUNG (NN03) =================
+-- NN03.0325 (Lớp Tiếng Trung HSK1)
+('NN03.0325', 2, '19:45:00', '21:45:00'),  -- Tuesday evening
+('NN03.0325', 5, '19:45:00', '21:45:00'),  -- Friday evening
+
+-- NN03.0825 (Lớp Tiếng Trung HSK2)
+('NN03.0825', 3, '19:45:00', '21:45:00'),  -- Wednesday evening
+('NN03.0825', 6, '15:15:00', '17:15:00'),  -- Saturday late afternoon
+
+-- NN03.0426 (Lớp Tiếng Trung HSK3)
+('NN03.0426', 1, '17:30:00', '19:30:00'),  -- Monday evening
+('NN03.0426', 4, '17:30:00', '19:30:00'),  -- Thursday evening
+
+-- NN03.1026 (Lớp Tiếng Trung Giao Tiếp)
+('NN03.1026', 2, '17:30:00', '19:30:00'),  -- Tuesday evening
+('NN03.1026', 6, '13:00:00', '15:00:00');  -- Saturday afternoon
+GO
+USE PBL3aDB;
+GO
