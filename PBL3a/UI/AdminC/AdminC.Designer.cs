@@ -28,137 +28,176 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gbDuyetDon = new GroupBox();
-            radioButton1 = new RadioButton();
-            btnOkDuyetDon = new Button();
-            rdoViewDuyetDon = new RadioButton();
-            gbKhoaLopHoc = new GroupBox();
-            radioButton2 = new RadioButton();
-            btnOkKhoaHoc = new Button();
-            rdoViewKhoaHoc = new RadioButton();
-            gbDuyetDon.SuspendLayout();
-            gbKhoaLopHoc.SuspendLayout();
+            panelMenu = new Panel();
+            butOut = new Button();
+            btnTaoTK = new Button();
+            btnKhoaLop = new Button();
+            btnDaDuyet = new Button();
+            btnDuyetDon = new Button();
+            btnHome = new Button();
+            panelDesktop = new Panel();
+            panelMenu.SuspendLayout();
             SuspendLayout();
             // 
-            // gbDuyetDon
+            // panelMenu
             // 
-            gbDuyetDon.Anchor = AnchorStyles.None;
-            gbDuyetDon.BackColor = SystemColors.Info;
-            gbDuyetDon.Controls.Add(radioButton1);
-            gbDuyetDon.Controls.Add(btnOkDuyetDon);
-            gbDuyetDon.Controls.Add(rdoViewDuyetDon);
-            gbDuyetDon.Location = new Point(46, 113);
-            gbDuyetDon.Name = "gbDuyetDon";
-            gbDuyetDon.Size = new Size(285, 196);
-            gbDuyetDon.TabIndex = 3;
-            gbDuyetDon.TabStop = false;
-            gbDuyetDon.Text = "Quản Lý Duyệt Đơn";
+            panelMenu.BackColor = Color.FromArgb(112, 146, 190);
+            panelMenu.Controls.Add(butOut);
+            panelMenu.Controls.Add(btnTaoTK);
+            panelMenu.Controls.Add(btnKhoaLop);
+            panelMenu.Controls.Add(btnDaDuyet);
+            panelMenu.Controls.Add(btnDuyetDon);
+            panelMenu.Controls.Add(btnHome);
+            panelMenu.Dock = DockStyle.Left;
+            panelMenu.Location = new Point(0, 0);
+            panelMenu.Name = "panelMenu";
+            panelMenu.Size = new Size(238, 509);
+            panelMenu.TabIndex = 0;
             // 
-            // radioButton1
+            // butOut
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(110, 89);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(66, 24);
-            radioButton1.TabIndex = 6;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "None";
-            radioButton1.UseVisualStyleBackColor = true;
+            butOut.Dock = DockStyle.Top;
+            butOut.FlatAppearance.BorderSize = 0;
+            butOut.FlatStyle = FlatStyle.Flat;
+            butOut.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            butOut.Image = Properties.Resources.logout;
+            butOut.ImageAlign = ContentAlignment.MiddleLeft;
+            butOut.Location = new Point(0, 400);
+            butOut.Name = "butOut";
+            butOut.Padding = new Padding(20, 0, 0, 0);
+            butOut.Size = new Size(238, 80);
+            butOut.TabIndex = 6;
+            butOut.Text = "     Đăng Xuất";
+            butOut.TextAlign = ContentAlignment.MiddleLeft;
+            butOut.TextImageRelation = TextImageRelation.ImageBeforeText;
+            butOut.UseVisualStyleBackColor = true;
+            butOut.Click += butOut_Click;
             // 
-            // btnOkDuyetDon
+            // btnTaoTK
             // 
-            btnOkDuyetDon.BackColor = Color.FromArgb(255, 192, 192);
-            btnOkDuyetDon.Location = new Point(97, 133);
-            btnOkDuyetDon.Name = "btnOkDuyetDon";
-            btnOkDuyetDon.Size = new Size(94, 29);
-            btnOkDuyetDon.TabIndex = 5;
-            btnOkDuyetDon.Text = "OK";
-            btnOkDuyetDon.UseVisualStyleBackColor = false;
-            btnOkDuyetDon.Click += btnOkDuyetDon_Click;
+            btnTaoTK.Dock = DockStyle.Top;
+            btnTaoTK.FlatAppearance.BorderSize = 0;
+            btnTaoTK.FlatStyle = FlatStyle.Flat;
+            btnTaoTK.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            btnTaoTK.Image = Properties.Resources.pen_clip;
+            btnTaoTK.ImageAlign = ContentAlignment.MiddleLeft;
+            btnTaoTK.Location = new Point(0, 320);
+            btnTaoTK.Name = "btnTaoTK";
+            btnTaoTK.Padding = new Padding(20, 0, 0, 0);
+            btnTaoTK.Size = new Size(238, 80);
+            btnTaoTK.TabIndex = 5;
+            btnTaoTK.Text = "     Tạo Tài Khoản";
+            btnTaoTK.TextAlign = ContentAlignment.MiddleLeft;
+            btnTaoTK.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnTaoTK.UseVisualStyleBackColor = true;
+            btnTaoTK.Click += btnTaoTK_Click;
             // 
-            // rdoViewDuyetDon
+            // btnKhoaLop
             // 
-            rdoViewDuyetDon.AutoSize = true;
-            rdoViewDuyetDon.Location = new Point(110, 50);
-            rdoViewDuyetDon.Name = "rdoViewDuyetDon";
-            rdoViewDuyetDon.Size = new Size(62, 24);
-            rdoViewDuyetDon.TabIndex = 0;
-            rdoViewDuyetDon.TabStop = true;
-            rdoViewDuyetDon.Text = "View";
-            rdoViewDuyetDon.UseVisualStyleBackColor = true;
+            btnKhoaLop.Dock = DockStyle.Top;
+            btnKhoaLop.FlatAppearance.BorderSize = 0;
+            btnKhoaLop.FlatStyle = FlatStyle.Flat;
+            btnKhoaLop.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            btnKhoaLop.Image = Properties.Resources.workshop;
+            btnKhoaLop.ImageAlign = ContentAlignment.MiddleLeft;
+            btnKhoaLop.Location = new Point(0, 240);
+            btnKhoaLop.Name = "btnKhoaLop";
+            btnKhoaLop.Padding = new Padding(20, 0, 0, 0);
+            btnKhoaLop.Size = new Size(238, 80);
+            btnKhoaLop.TabIndex = 4;
+            btnKhoaLop.Text = "     Thông Tin Khóa/Lớp";
+            btnKhoaLop.TextAlign = ContentAlignment.MiddleLeft;
+            btnKhoaLop.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnKhoaLop.UseVisualStyleBackColor = true;
+            btnKhoaLop.Click += btnKhoaLop_Click;
             // 
-            // gbKhoaLopHoc
+            // btnDaDuyet
             // 
-            gbKhoaLopHoc.Anchor = AnchorStyles.None;
-            gbKhoaLopHoc.BackColor = SystemColors.Info;
-            gbKhoaLopHoc.Controls.Add(radioButton2);
-            gbKhoaLopHoc.Controls.Add(btnOkKhoaHoc);
-            gbKhoaLopHoc.Controls.Add(rdoViewKhoaHoc);
-            gbKhoaLopHoc.Location = new Point(361, 113);
-            gbKhoaLopHoc.Name = "gbKhoaLopHoc";
-            gbKhoaLopHoc.Size = new Size(295, 196);
-            gbKhoaLopHoc.TabIndex = 4;
-            gbKhoaLopHoc.TabStop = false;
-            gbKhoaLopHoc.Text = "Quản Lý Khóa/ Lớp Học";
+            btnDaDuyet.Dock = DockStyle.Top;
+            btnDaDuyet.FlatAppearance.BorderSize = 0;
+            btnDaDuyet.FlatStyle = FlatStyle.Flat;
+            btnDaDuyet.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDaDuyet.Image = Properties.Resources.task_checklist;
+            btnDaDuyet.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDaDuyet.Location = new Point(0, 160);
+            btnDaDuyet.Name = "btnDaDuyet";
+            btnDaDuyet.Padding = new Padding(20, 0, 0, 0);
+            btnDaDuyet.Size = new Size(238, 80);
+            btnDaDuyet.TabIndex = 2;
+            btnDaDuyet.Text = "     Đơn Đã Duyệt";
+            btnDaDuyet.TextAlign = ContentAlignment.MiddleLeft;
+            btnDaDuyet.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnDaDuyet.UseVisualStyleBackColor = true;
+            btnDaDuyet.Click += btnDaDuyet_Click;
             // 
-            // radioButton2
+            // btnDuyetDon
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(118, 89);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(66, 24);
-            radioButton2.TabIndex = 7;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "None";
-            radioButton2.UseVisualStyleBackColor = true;
+            btnDuyetDon.BackColor = Color.FromArgb(112, 146, 190);
+            btnDuyetDon.Dock = DockStyle.Top;
+            btnDuyetDon.FlatAppearance.BorderSize = 0;
+            btnDuyetDon.FlatStyle = FlatStyle.Flat;
+            btnDuyetDon.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDuyetDon.Image = Properties.Resources.form1;
+            btnDuyetDon.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDuyetDon.Location = new Point(0, 80);
+            btnDuyetDon.Name = "btnDuyetDon";
+            btnDuyetDon.Padding = new Padding(20, 0, 0, 0);
+            btnDuyetDon.Size = new Size(238, 80);
+            btnDuyetDon.TabIndex = 1;
+            btnDuyetDon.Text = "     Duyệt Đơn";
+            btnDuyetDon.TextAlign = ContentAlignment.MiddleLeft;
+            btnDuyetDon.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnDuyetDon.UseVisualStyleBackColor = false;
+            btnDuyetDon.Click += btnDuyetDon_Click;
             // 
-            // btnOkKhoaHoc
+            // btnHome
             // 
-            btnOkKhoaHoc.BackColor = Color.FromArgb(255, 192, 192);
-            btnOkKhoaHoc.Location = new Point(109, 133);
-            btnOkKhoaHoc.Name = "btnOkKhoaHoc";
-            btnOkKhoaHoc.Size = new Size(94, 29);
-            btnOkKhoaHoc.TabIndex = 2;
-            btnOkKhoaHoc.Text = "OK";
-            btnOkKhoaHoc.UseVisualStyleBackColor = false;
-            btnOkKhoaHoc.Click += btnOkKhoaHoc_Click;
+            btnHome.Dock = DockStyle.Top;
+            btnHome.FlatAppearance.BorderSize = 0;
+            btnHome.FlatStyle = FlatStyle.Flat;
+            btnHome.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHome.Image = Properties.Resources.house_chimney;
+            btnHome.Location = new Point(0, 0);
+            btnHome.Name = "btnHome";
+            btnHome.Padding = new Padding(0, 12, 0, 10);
+            btnHome.Size = new Size(238, 80);
+            btnHome.TabIndex = 0;
+            btnHome.TextAlign = ContentAlignment.BottomCenter;
+            btnHome.UseVisualStyleBackColor = true;
             // 
-            // rdoViewKhoaHoc
+            // panelDesktop
             // 
-            rdoViewKhoaHoc.AutoSize = true;
-            rdoViewKhoaHoc.Location = new Point(118, 50);
-            rdoViewKhoaHoc.Name = "rdoViewKhoaHoc";
-            rdoViewKhoaHoc.Size = new Size(62, 24);
-            rdoViewKhoaHoc.TabIndex = 0;
-            rdoViewKhoaHoc.TabStop = true;
-            rdoViewKhoaHoc.Text = "View";
-            rdoViewKhoaHoc.UseVisualStyleBackColor = true;
+            panelDesktop.Dock = DockStyle.Fill;
+            panelDesktop.Location = new Point(238, 0);
+            panelDesktop.Name = "panelDesktop";
+            panelDesktop.Size = new Size(799, 509);
+            panelDesktop.TabIndex = 2;
             // 
             // AdminC
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(678, 398);
-            Controls.Add(gbKhoaLopHoc);
-            Controls.Add(gbDuyetDon);
+            ClientSize = new Size(1037, 509);
+            Controls.Add(panelDesktop);
+            Controls.Add(panelMenu);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AdminC";
             Text = "Admin Quản Lý Chung";
-            gbDuyetDon.ResumeLayout(false);
-            gbDuyetDon.PerformLayout();
-            gbKhoaLopHoc.ResumeLayout(false);
-            gbKhoaLopHoc.PerformLayout();
+            WindowState = FormWindowState.Maximized;
+            panelMenu.ResumeLayout(false);
             ResumeLayout(false);
 
         }
 
         #endregion
-        private GroupBox gbDuyetDon;
-        private GroupBox gbKhoaLopHoc;
-        private RadioButton rdoViewDuyetDon;
-        private RadioButton rdoViewKhoaHoc;
-        private Button btnOkDuyetDon;
-        private Button btnOkKhoaHoc;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+
+        private Panel panelMenu;
+        private Button btnHome;
+        private Button btnDuyetDon;
+        private Button btnTaoTK;
+        private Button btnKhoaLop;
+        private Button btnDaDuyet;
+        private Panel panelDesktop;
+        private Button butOut;
     }
 }
