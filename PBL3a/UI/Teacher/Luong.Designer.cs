@@ -30,7 +30,6 @@
         {
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
-            button1 = new Button();
             dataGridView1 = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -42,51 +41,40 @@
             label1.AutoSize = true;
             tableLayoutPanel1.SetColumnSpan(label1, 7);
             label1.Font = new Font("Segoe UI", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(541, 24);
+            label1.Location = new Point(318, 10);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(261, 65);
+            label1.Size = new Size(147, 37);
             label1.TabIndex = 0;
             label1.Text = "THU NHẬP";
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 7;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 62F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 163F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 413F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 65F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 324F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 233F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 36F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 95F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 241F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 38F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 336F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 29F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Controls.Add(button1, 5, 5);
             tableLayoutPanel1.Controls.Add(dataGridView1, 1, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 114F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 34F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 294F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 153F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1343, 782);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 57F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 17F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 26F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 147F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 76F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 4F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
+            tableLayoutPanel1.Size = new Size(783, 391);
             tableLayoutPanel1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.Font = new Font("Segoe UI", 11.1428576F);
-            button1.Location = new Point(1059, 615);
-            button1.Name = "button1";
-            button1.Size = new Size(198, 99);
-            button1.TabIndex = 3;
-            button1.Text = "Thoát";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
@@ -95,20 +83,22 @@
             tableLayoutPanel1.SetColumnSpan(dataGridView1, 4);
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = Color.DarkGray;
-            dataGridView1.Location = new Point(65, 117);
+            dataGridView1.Location = new Point(38, 59);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 72;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 5);
-            dataGridView1.Size = new Size(959, 597);
+            dataGridView1.Size = new Size(706, 297);
             dataGridView1.TabIndex = 4;
             // 
             // Luong
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1343, 782);
+            ClientSize = new Size(783, 391);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Luong";
             Text = "Luong";
             tableLayoutPanel1.ResumeLayout(false);
@@ -121,7 +111,6 @@
 
         private Label label1;
         private TableLayoutPanel tableLayoutPanel1;
-        private Button button1;
         private DataGridView dataGridView1;
     }
 }
