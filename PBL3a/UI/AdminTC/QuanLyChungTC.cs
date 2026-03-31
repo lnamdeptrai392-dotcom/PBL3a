@@ -35,9 +35,6 @@ namespace PBL3a.UI.AdminTC
         private void btT_Click(object sender, EventArgs e)
         {
             but_chform.ActivateButton(sender);
-            LoginForm login = new LoginForm();
-            this.Hide();
-            login.ShowDialog();
             this.Close();
         }
 

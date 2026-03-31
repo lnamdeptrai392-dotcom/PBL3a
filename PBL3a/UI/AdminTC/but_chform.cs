@@ -26,7 +26,7 @@ namespace PBL3a.UI.AdminTC
             {
                 currentButton = (Button)sender;
                 currentButton.BackColor = Color.FromArgb(144, 188, 245);
-                
+
                 DisableButton();
             }
         }

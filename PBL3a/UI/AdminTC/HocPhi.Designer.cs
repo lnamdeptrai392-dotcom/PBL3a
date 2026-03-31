@@ -147,7 +147,7 @@
             btSetHP.TabIndex = 5;
             btSetHP.Text = "Thiết lập học phí";
             btSetHP.UseVisualStyleBackColor = false;
-            btSetHP.Click += btCheckHP_Click;
+            btSetHP.Click += btSetHP_Click;
             btSetHP.MouseEnter += btSetHP_MouseEnter;
             btSetHP.MouseLeave += btSetHP_MouseLeave;
             // 
@@ -169,7 +169,7 @@
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Window;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.ForeColor = Color.Coral;
             dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;

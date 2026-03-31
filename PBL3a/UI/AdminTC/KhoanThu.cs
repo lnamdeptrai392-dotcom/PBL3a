@@ -33,7 +33,7 @@ namespace PBL3a.UI.AdminTC
             dataGridView1.ReadOnly = true;
         }
 
-        private void LoadKhoanThu(int month, int year)
+        public void LoadKhoanThu(int month, int year)
         {
             using (SqlConnection conn = db.GetConnection())
             {
