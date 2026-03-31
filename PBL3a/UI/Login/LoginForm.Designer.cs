@@ -4,125 +4,164 @@
     {
         private System.ComponentModel.IContainer components = null;
 
-        private System.Windows.Forms.TableLayoutPanel LoginTable1;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.CheckBox chkShowPassword;
-        private System.Windows.Forms.Button btnLogin;
+        private Panel panelCard;
+        private TextBox txtUsername;
+        private Button btnLogin;
+        private CheckBox chkShowPassword;
+        private Label lblTitle;
+        private Label lblForgot;
+        private PictureBox picAvatar;
 
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         private void InitializeComponent()
         {
-            LoginTable1 = new TableLayoutPanel();
-            lblUsername = new Label();
-            txtUsername = new TextBox();
-            lblPassword = new Label();
+            panelCard = new Panel();
             txtPassword = new TextBox();
+            txtUsername = new TextBox();
             btnLogin = new Button();
+            lblTitle = new Label();
+            lblForgot = new Label();
             chkShowPassword = new CheckBox();
-            LoginTable1.SuspendLayout();
+            picAvatar = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
+            panelCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picAvatar).BeginInit();
             SuspendLayout();
             // 
-            // LoginTable1
+            // panelCard
             // 
-            LoginTable1.ColumnCount = 2;
-            LoginTable1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14.0065145F));
-            LoginTable1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85.9934845F));
-            LoginTable1.Controls.Add(lblUsername, 0, 0);
-            LoginTable1.Controls.Add(txtUsername, 1, 0);
-            LoginTable1.Controls.Add(lblPassword, 0, 1);
-            LoginTable1.Controls.Add(txtPassword, 1, 1);
-            LoginTable1.Controls.Add(btnLogin, 1, 3);
-            LoginTable1.Controls.Add(chkShowPassword, 1, 2);
-            LoginTable1.Dock = DockStyle.Fill;
-            LoginTable1.GrowStyle = TableLayoutPanelGrowStyle.FixedSize;
-            LoginTable1.Location = new Point(0, 0);
-            LoginTable1.Name = "LoginTable1";
-            LoginTable1.Padding = new Padding(20);
-            LoginTable1.RowCount = 4;
-            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
-            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
-            LoginTable1.RowStyles.Add(new RowStyle(SizeType.Absolute, 107F));
-            LoginTable1.Size = new Size(961, 525);
-            LoginTable1.TabIndex = 0;
-            // 
-            // lblUsername
-            // 
-            lblUsername.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(68, 20);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(78, 20);
-            lblUsername.TabIndex = 0;
-            lblUsername.Text = "Username:";
-            // 
-            // txtUsername
-            // 
-            txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtUsername.Location = new Point(152, 23);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(786, 27);
-            txtUsername.TabIndex = 1;
-            // 
-            // lblPassword
-            // 
-            lblPassword.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(73, 76);
-            lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(73, 20);
-            lblPassword.TabIndex = 2;
-            lblPassword.Text = "Password:";
+            panelCard.BackColor = Color.White;
+            panelCard.Controls.Add(label2);
+            panelCard.Controls.Add(label1);
+            panelCard.Controls.Add(txtPassword);
+            panelCard.Controls.Add(txtUsername);
+            panelCard.Controls.Add(btnLogin);
+            panelCard.Controls.Add(lblTitle);
+            panelCard.Controls.Add(lblForgot);
+            panelCard.Controls.Add(chkShowPassword);
+            panelCard.Controls.Add(picAvatar);
+            panelCard.Location = new Point(100, 75);
+            panelCard.Name = "panelCard";
+            panelCard.Size = new Size(700, 350);
+            panelCard.TabIndex = 0;
             // 
             // txtPassword
             // 
-            txtPassword.Dock = DockStyle.Fill;
-            txtPassword.Location = new Point(152, 79);
+            txtPassword.BackColor = Color.Gainsboro;
+            txtPassword.BorderStyle = BorderStyle.None;
+            txtPassword.Font = new Font("Segoe UI", 13F);
+            txtPassword.ForeColor = Color.DimGray;
+            txtPassword.Location = new Point(350, 149);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(786, 27);
-            txtPassword.TabIndex = 3;
-            txtPassword.UseSystemPasswordChar = true;
+            txtPassword.Size = new Size(250, 29);
+            txtPassword.TabIndex = 0;
+            txtPassword.TextChanged += txtPassword_TextChanged;
+            // 
+            // txtUsername
+            // 
+            txtUsername.BackColor = Color.Gainsboro;
+            txtUsername.BorderStyle = BorderStyle.None;
+            txtUsername.Font = new Font("Segoe UI", 13F);
+            txtUsername.ForeColor = Color.DimGray;
+            txtUsername.Location = new Point(350, 91);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(250, 29);
+            txtUsername.TabIndex = 0;
             // 
             // btnLogin
             // 
-            btnLogin.Anchor = AnchorStyles.Top;
-            btnLogin.Location = new Point(507, 183);
+            btnLogin.BackColor = Color.FromArgb(112, 146, 190);
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(350, 226);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(75, 45);
-            btnLogin.TabIndex = 5;
-            btnLogin.Text = "Login";
+            btnLogin.Size = new Size(250, 40);
+            btnLogin.TabIndex = 2;
+            btnLogin.Text = "LOGIN";
+            btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
+            // 
+            // lblTitle
+            // 
+            lblTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblTitle.Location = new Point(346, 22);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(224, 37);
+            lblTitle.TabIndex = 3;
+            lblTitle.Text = "Member Login";
+            // 
+            // lblForgot
+            // 
+            lblForgot.ForeColor = Color.Gray;
+            lblForgot.Location = new Point(350, 285);
+            lblForgot.Name = "lblForgot";
+            lblForgot.Size = new Size(220, 23);
+            lblForgot.TabIndex = 4;
+            lblForgot.Text = "Forgot Username / Password?";
+            lblForgot.Click += lblForgot_Click;
             // 
             // chkShowPassword
             // 
-            chkShowPassword.Location = new Point(152, 131);
+            chkShowPassword.Location = new Point(350, 196);
             chkShowPassword.Name = "chkShowPassword";
             chkShowPassword.Size = new Size(104, 24);
-            chkShowPassword.TabIndex = 4;
-            chkShowPassword.Text = "Show Password";
+            chkShowPassword.TabIndex = 6;
+            chkShowPassword.Text = "Show";
             chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
+            // 
+            // picAvatar
+            // 
+            picAvatar.BackColor = Color.Transparent;
+            picAvatar.Image = Properties.Resources.user_interface;
+            picAvatar.Location = new Point(70, 82);
+            picAvatar.Name = "picAvatar";
+            picAvatar.Size = new Size(184, 184);
+            picAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
+            picAvatar.TabIndex = 7;
+            picAvatar.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(346, 59);
+            label1.Name = "label1";
+            label1.Size = new Size(128, 23);
+            label1.TabIndex = 8;
+            label1.Text = "Tên đăng nhập:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(346, 123);
+            label2.Name = "label2";
+            label2.Size = new Size(86, 23);
+            label2.TabIndex = 9;
+            label2.Text = "Mật khẩu:";
             // 
             // LoginForm
             // 
-            ClientSize = new Size(961, 525);
-            Controls.Add(LoginTable1);
+            ClientSize = new Size(900, 500);
+            Controls.Add(panelCard);
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login";
-            LoginTable1.ResumeLayout(false);
-            LoginTable1.PerformLayout();
+            Load += LoginForm_Load;
+            panelCard.ResumeLayout(false);
+            panelCard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picAvatar).EndInit();
             ResumeLayout(false);
         }
+
+        private TextBox txtPassword;
+        private Label label2;
+        private Label label1;
     }
 }

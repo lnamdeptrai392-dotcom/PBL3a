@@ -57,7 +57,7 @@
             tableLayoutPanel1.Controls.Add(dataGridView1, 1, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
+            tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 57F));
@@ -99,7 +99,7 @@
             comboBox1.Dock = DockStyle.Fill;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(133, 73);
-            comboBox1.Margin = new Padding(2, 2, 2, 2);
+            comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(237, 23);
             comboBox1.TabIndex = 4;
@@ -109,7 +109,7 @@
             textBox1.Dock = DockStyle.Fill;
             textBox1.Enabled = false;
             textBox1.Location = new Point(508, 73);
-            textBox1.Margin = new Padding(2, 2, 2, 2);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(225, 23);
             textBox1.TabIndex = 5;
@@ -132,7 +132,7 @@
             tableLayoutPanel1.SetColumnSpan(dataGridView1, 5);
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(38, 113);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 72;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 3);
@@ -146,7 +146,7 @@
             BackColor = Color.White;
             ClientSize = new Size(769, 375);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "TKB";
             Text = "TKB";
             tableLayoutPanel1.ResumeLayout(false);

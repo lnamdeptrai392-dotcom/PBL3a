@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using PBL3a.services;
@@ -14,14 +12,13 @@ namespace PBL3a.UI.Login
         public LoginForm()
         {
             InitializeComponent();
+            this.AcceptButton = btnLogin;
             this.DoubleBuffered = true;
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = true;
-
-            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -54,8 +51,6 @@ namespace PBL3a.UI.Login
                                 string role = reader["Role"]?.ToString() ?? "";
                                 string userId = reader["Id"]?.ToString() ?? "";
 
-                                MessageBox.Show($"Đăng nhập thành công! Role: {role}");
-
                                 reader.Close();
                                 OpenFormByRole(role, userId);
                             }
@@ -86,7 +81,7 @@ namespace PBL3a.UI.Login
             else if (role == "Student")
                 nextForm = new PBL3a.UI.Student.StudentAll(userId);
             else if (role == "Teacher")
-                nextForm = new PBL3a.UI.Teacher.QuanLyChungT();
+                nextForm = new PBL3a.UI.Teacher.QuanLyChungT(userId);
             else
             {
                 MessageBox.Show("Role không hợp lệ");
@@ -103,27 +98,12 @@ namespace PBL3a.UI.Login
             txtPassword.UseSystemPasswordChar = !chkShowPassword.Checked;
         }
 
-      
-
-        private void SetRounded(Control c, int radius)
-        {
-            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
-            path.AddArc(0, 0, radius, radius, 180, 90);
-            path.AddArc(c.Width - radius, 0, radius, radius, 270, 90);
-            path.AddArc(c.Width - radius, c.Height - radius, radius, radius, 0, 90);
-            path.AddArc(0, c.Height - radius, radius, radius, 90, 90);
-            path.CloseAllFigures();
-            c.Region = new Region(path);
-        }
-
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void lblForgot_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
