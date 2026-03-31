@@ -33,25 +33,6 @@ namespace PBL3a.UI.AdminTC
             dataGridView1.ReadOnly = true;
         }
 
-        private void btOK_Click(object? sender, EventArgs e)
-        {
-            if (comboBox1.SelectedItem == null)
-            {
-                MessageBox.Show("Vui lòng chọn tháng.");
-                return;
-            }
-
-            if (!int.TryParse(tbNam.Text.Trim(), out int year))
-            {
-                MessageBox.Show("Năm không hợp lệ.");
-                return;
-            }
-
-            int month = Convert.ToInt32(comboBox1.SelectedItem);
-            LoadKhoanThu(month, year);
-            TinhTongKhoanThu();
-        }
-
         private void LoadKhoanThu(int month, int year)
         {
             using (SqlConnection conn = db.GetConnection())
@@ -97,9 +78,38 @@ namespace PBL3a.UI.AdminTC
             tbKT.Text = tong.ToString("N0") + " VNĐ";
         }
 
-        private void btT_Click(object sender, EventArgs e)
+        private void btOK_MouseEnter(object sender, EventArgs e)
+        {
+            but_chform.bt_MouseEnter(sender, e);
+        }
+
+        private void btOK_MouseLeave(object sender, EventArgs e)
+        {
+            but_chform.bt_MouseLeave(sender, e);
+        }
+
+        private void butT_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btOK_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn tháng.");
+                return;
+            }
+
+            if (!int.TryParse(tbNam.Text.Trim(), out int year))
+            {
+                MessageBox.Show("Năm không hợp lệ.");
+                return;
+            }
+
+            int month = Convert.ToInt32(comboBox1.SelectedItem);
+            LoadKhoanThu(month, year);
+            TinhTongKhoanThu();
         }
     }
 }

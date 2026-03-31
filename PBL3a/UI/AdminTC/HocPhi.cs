@@ -10,6 +10,7 @@ namespace PBL3a.UI.AdminTC
     {
         private DatabaseHelper db = new DatabaseHelper();
         private DataTable dtHocPhi = new DataTable();
+        private Button currentButton;
 
         public HocPhi()
         {
@@ -139,6 +140,19 @@ namespace PBL3a.UI.AdminTC
             LoadHocPhiTheoLop(classID);
         }
 
+        public void ActivateButton(object sender)
+        {
+            if (sender != null && currentButton != (Button)sender)
+            {
+                if (currentButton != null)
+                {
+                    currentButton.BackColor = Color.FromArgb(112, 146, 190);
+                }
+                currentButton = (Button)sender;
+                currentButton.BackColor = Color.FromArgb(144, 188, 245);
+            }
+        }
+
         private void btSetHP_Click(object sender, EventArgs e)
         {
             if (dtHocPhi == null || dtHocPhi.Rows.Count == 0)
@@ -192,9 +206,14 @@ namespace PBL3a.UI.AdminTC
             }
         }
 
-        private void btT_Click(object sender, EventArgs e)
+        private void btSetHP_MouseEnter(object sender, EventArgs e)
         {
-            Close();
+            but_chform.bt_MouseEnter(sender, e);
+        }
+
+        private void btSetHP_MouseLeave(object sender, EventArgs e)
+        {
+            but_chform.bt_MouseLeave(sender, e);
         }
     }
 }
