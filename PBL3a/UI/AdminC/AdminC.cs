@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3a.UI.Login;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,39 +11,86 @@ namespace PBL3a.UI.AdminC
 {
     public partial class AdminC : Form
     {
+        private Form activeForm;
+        private Color defaultColor = Color.FromArgb(112, 146, 190);
+        private Color activeColor = Color.FromArgb(70, 130, 180);
+
         public AdminC()
         {
             InitializeComponent();
         }
 
-        private void btnOkDuyetDon_Click(object sender, EventArgs e)
+        private void SetActiveMenu(Button clickedButton)
         {
-            if (rdoViewDuyetDon.Checked == true)
-            {
-                quanLyDuyetDon newForm = new quanLyDuyetDon();
-                this.Hide();
-                newForm.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng click chọn 'View' trước khi nhấn OK!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            // 1. Trả toàn bộ các nút menu về màu mặc định
+            // (Lưu ý: Thay đổi tên btn... dưới đây cho khớp với tên thật trong thẻ Properties của bạn)
+            btnDuyetDon.BackColor = defaultColor;
+            btnDaDuyet.BackColor = defaultColor;
+            btnKhoaLop.BackColor = defaultColor;
+            btnTaoTK.BackColor = defaultColor;
+
+            // 2. Đổi màu đậm cho riêng nút đang được click
+            clickedButton.BackColor = activeColor;
         }
 
-        private void btnOkKhoaHoc_Click(object sender, EventArgs e)
+        private void openChildForm(Form childForm, object sender)
         {
-            if (rdoViewKhoaHoc.Checked == true)
+            if (activeForm != null)
             {
-                quanLyKhoaHoc newForm = new quanLyKhoaHoc();
-                this.Hide();
-                newForm.ShowDialog();
-                this.Show();
+                activeForm.Close();
             }
-            else
-            {
-                MessageBox.Show("Vui lòng click chọn 'View' trước khi nhấn OK!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktop.Controls.Add(childForm);
+            this.panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btnDuyetDon_Click(object sender, EventArgs e)
+        {
+            SetActiveMenu(btnDuyetDon);
+            openChildForm(new Forms.Form1DuyetDon(), sender);
+
+        }
+
+        private void btnDaDuyet_Click(object sender, EventArgs e)
+        {
+            SetActiveMenu(btnDaDuyet);
+            openChildForm(new Forms.Form2DaDuyet(), sender);
+
+        }
+
+        /*private void btnTuChoi_Click(object sender, EventArgs e)
+        {
+            SetActiveMenu(btnTuChoi);
+            openChildForm(new Forms.Form3TuChoi(), sender);
+
+        }*/
+
+        private void btnKhoaLop_Click(object sender, EventArgs e)
+        {
+            SetActiveMenu(btnKhoaLop);
+            openChildForm(new Forms.Form4KhoaLop(), sender);
+
+        }
+
+        private void btnTaoTK_Click(object sender, EventArgs e)
+        {
+            SetActiveMenu(btnTaoTK);
+            openChildForm(new Forms.Form5TaoTK(), sender);
+
+        }
+
+        private void butOut_Click(object sender, EventArgs e)
+        {
+            LoginForm newForm = new LoginForm();
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
+   
         }
     }
 }
