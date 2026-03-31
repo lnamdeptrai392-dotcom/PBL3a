@@ -75,7 +75,7 @@
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Segoe UI", 11.1428576F);
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(2);
+            tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 68F));
@@ -183,7 +183,7 @@
             // 
             tbHVT.Dock = DockStyle.Fill;
             tbHVT.Location = new Point(198, 70);
-            tbHVT.Margin = new Padding(2);
+            tbHVT.Margin = new Padding(2, 2, 2, 2);
             tbHVT.Name = "tbHVT";
             tbHVT.Size = new Size(249, 27);
             tbHVT.TabIndex = 9;
@@ -192,7 +192,7 @@
             // 
             tbSDT.Dock = DockStyle.Fill;
             tbSDT.Location = new Point(198, 232);
-            tbSDT.Margin = new Padding(2);
+            tbSDT.Margin = new Padding(2, 2, 2, 2);
             tbSDT.Name = "tbSDT";
             tbSDT.Size = new Size(249, 27);
             tbSDT.TabIndex = 10;
@@ -201,7 +201,7 @@
             // 
             tbE.Dock = DockStyle.Fill;
             tbE.Location = new Point(198, 286);
-            tbE.Margin = new Padding(2);
+            tbE.Margin = new Padding(2, 2, 2, 2);
             tbE.Name = "tbE";
             tbE.Size = new Size(249, 27);
             tbE.TabIndex = 11;
@@ -210,7 +210,7 @@
             // 
             tbMD.Dock = DockStyle.Fill;
             tbMD.Location = new Point(613, 70);
-            tbMD.Margin = new Padding(2);
+            tbMD.Margin = new Padding(2, 2, 2, 2);
             tbMD.Name = "tbMD";
             tbMD.Size = new Size(222, 27);
             tbMD.TabIndex = 12;
@@ -219,7 +219,7 @@
             // 
             tbMGV.Dock = DockStyle.Fill;
             tbMGV.Location = new Point(613, 122);
-            tbMGV.Margin = new Padding(2);
+            tbMGV.Margin = new Padding(2, 2, 2, 2);
             tbMGV.Name = "tbMGV";
             tbMGV.Size = new Size(222, 27);
             tbMGV.TabIndex = 13;
@@ -230,7 +230,7 @@
             cbbGT.FormattingEnabled = true;
             cbbGT.Items.AddRange(new object[] { "Nam", "Nữ" });
             cbbGT.Location = new Point(198, 122);
-            cbbGT.Margin = new Padding(2);
+            cbbGT.Margin = new Padding(2, 2, 2, 2);
             cbbGT.Name = "cbbGT";
             cbbGT.Size = new Size(249, 28);
             cbbGT.TabIndex = 14;
@@ -239,7 +239,7 @@
             // 
             dtNS.Dock = DockStyle.Fill;
             dtNS.Location = new Point(198, 176);
-            dtNS.Margin = new Padding(2);
+            dtNS.Margin = new Padding(2, 2, 2, 2);
             dtNS.Name = "dtNS";
             dtNS.Size = new Size(249, 27);
             dtNS.TabIndex = 15;
@@ -251,7 +251,7 @@
             BackColor = Color.White;
             ClientSize = new Size(860, 392);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(2);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "TTCN";
             Text = "QuanLyChungT";
             tableLayoutPanel1.ResumeLayout(false);
