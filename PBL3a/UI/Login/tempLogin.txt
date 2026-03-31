@@ -1,6 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Drawing.Drawing2D;
+using System;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using PBL3a.services;
@@ -14,14 +12,6 @@ namespace PBL3a.UI.Login
         public LoginForm()
         {
             InitializeComponent();
-            this.DoubleBuffered = true;
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-            txtPassword.UseSystemPasswordChar = true;
-
-            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -40,6 +30,7 @@ namespace PBL3a.UI.Login
                 try
                 {
                     conn.Open();
+                    // Lấy cả Id và Role
                     string query = "SELECT Id, Role FROM accountList WHERE Username = @u AND Password = @p";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -51,12 +42,16 @@ namespace PBL3a.UI.Login
                         {
                             if (reader.Read())
                             {
+                                // 1. Lấy dữ liệu an toàn
                                 string role = reader["Role"]?.ToString() ?? "";
                                 string userId = reader["Id"]?.ToString() ?? "";
 
                                 MessageBox.Show($"Đăng nhập thành công! Role: {role}");
 
+                                // 2. Đóng reader trước khi mở Form mới
                                 reader.Close();
+
+                                // 3. Gọi hàm mở Form và truyền cả Role + Id
                                 OpenFormByRole(role, userId);
                             }
                             else
@@ -68,62 +63,54 @@ namespace PBL3a.UI.Login
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi SQL: " + ex.Message);
+                    MessageBox.Show("Lỗi kết nối SQL: " + ex.Message);
                 }
             }
         }
 
+        // Cập nhật hàm nhận 2 tham số: role và userId
         private void OpenFormByRole(string role, string userId)
         {
-            Form nextForm = null;
+            Form? nextForm = null;
 
             if (role == "AdminC")
+            {
                 nextForm = new PBL3a.UI.AdminC.AdminC();
+            }
             else if (role == "AdminDD")
+            {
                 nextForm = new PBL3a.UI.AdminDD.Form1();
+            }
             else if (role == "AdminTC")
+            {
                 nextForm = new PBL3a.UI.AdminTC.QuanLyChungTC();
+            }
             else if (role == "Student")
+            {
+                // TRUYỀN userId VÀO ĐÂY
                 nextForm = new PBL3a.UI.Student.StudentAll(userId);
+            }
             else if (role == "Teacher")
+            {
                 nextForm = new PBL3a.UI.Teacher.QuanLyChungT();
+            }
             else
             {
-                MessageBox.Show("Role không hợp lệ");
+                MessageBox.Show("Role không hợp lệ hoặc chưa có màn hình tương ứng");
                 return;
             }
 
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            if (nextForm != null)
+            {
+                this.Hide();
+                nextForm.ShowDialog();
+                this.Close();
+            }
         }
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = !chkShowPassword.Checked;
-        }
-
-      
-
-        private void SetRounded(Control c, int radius)
-        {
-            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
-            path.AddArc(0, 0, radius, radius, 180, 90);
-            path.AddArc(c.Width - radius, 0, radius, radius, 270, 90);
-            path.AddArc(c.Width - radius, c.Height - radius, radius, radius, 0, 90);
-            path.AddArc(0, c.Height - radius, radius, radius, 90, 90);
-            path.CloseAllFigures();
-            c.Region = new Region(path);
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblForgot_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

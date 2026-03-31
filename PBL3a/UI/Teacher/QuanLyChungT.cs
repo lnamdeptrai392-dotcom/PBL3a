@@ -1,10 +1,5 @@
 ﻿using PBL3a.UI.Login;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace PBL3a.UI.Teacher
@@ -12,49 +7,88 @@ namespace PBL3a.UI.Teacher
     public partial class QuanLyChungT : Form
     {
         private string currentTeacherID;
+        private Form currentChildForm;
+
         public QuanLyChungT()
         {
             InitializeComponent();
+            ActivateButton(button1);
+            OpenChildForm(new TTCN());
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private Button currentButton;
+
+        private void ActivateButton(object senderBtn)
+        {
+            if (senderBtn != null)
+            {
+                Button btn = (Button)senderBtn;
+                if (currentButton == btn)
+                {
+                    return;
+                }
+
+
+                if (currentButton != null)
+                {
+                    currentButton.BackColor = Color.FromArgb(112, 146, 190);
+                    currentButton.ForeColor = Color.White;
+                }
+
+                currentButton = btn;
+                currentButton.BackColor = Color.FromArgb(144, 188, 245);
+                currentButton.ForeColor = Color.White;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TTCN nextForm = new TTCN();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Show();
+            ActivateButton(sender);
+            OpenChildForm(new TTCN());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TKB tKB = new TKB();
-            this.Hide();
-            tKB.ShowDialog();
-            this.Show();
+            ActivateButton(sender);
+            OpenChildForm(new TKB());
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            NhapDiem nhapDiem = new NhapDiem();
-            this.Hide();
-            nhapDiem.ShowDialog();
-            this.Show();
+            ActivateButton(sender);
+            OpenChildForm(new NhapDiem());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            TaiLieu tl = new TaiLieu();
-            this.Hide();
-            tl.ShowDialog();
-            this.Show();
+            ActivateButton(sender);
+            OpenChildForm(new TaiLieu());
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Luong luong = new Luong();
-            this.Hide();
-            luong.ShowDialog();
-            this.Show();
+            ActivateButton(sender);
+            OpenChildForm(new Luong());
         }
 
         private void button6_Click(object sender, EventArgs e)

@@ -22,136 +22,177 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            tableLayoutPanel1 = new TableLayoutPanel();
+            panelMenu = new Panel();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            tableLayoutPanel1.SuspendLayout();
+            panelLogo = new Panel();
+            panelMain = new Panel();
+            panelMenu.SuspendLayout();
             SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // panelMenu
             // 
-            tableLayoutPanel1.BackColor = Color.White;
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50.6012039F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 49.3987961F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 491F));
-            tableLayoutPanel1.Controls.Add(button6, 2, 1);
-            tableLayoutPanel1.Controls.Add(button5, 1, 1);
-            tableLayoutPanel1.Controls.Add(button4, 0, 1);
-            tableLayoutPanel1.Controls.Add(button3, 2, 0);
-            tableLayoutPanel1.Controls.Add(button2, 1, 0);
-            tableLayoutPanel1.Controls.Add(button1, 0, 0);
-            tableLayoutPanel1.Font = new Font("Segoe UI", 11.1428576F);
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1490, 786);
-            tableLayoutPanel1.TabIndex = 0;
+            panelMenu.BackColor = Color.FromArgb(112, 146, 190);
+            panelMenu.Controls.Add(button6);
+            panelMenu.Controls.Add(button5);
+            panelMenu.Controls.Add(button4);
+            panelMenu.Controls.Add(button3);
+            panelMenu.Controls.Add(button2);
+            panelMenu.Controls.Add(button1);
+            panelMenu.Controls.Add(panelLogo);
+            panelMenu.Dock = DockStyle.Left;
+            panelMenu.Location = new Point(0, 0);
+            panelMenu.Margin = new Padding(3, 2, 3, 2);
+            panelMenu.Name = "panelMenu";
+            panelMenu.Size = new Size(152, 522);
+            panelMenu.TabIndex = 0;
             // 
             // button6
             // 
-            button6.Anchor = AnchorStyles.Left;
-            button6.Font = new Font("Segoe UI", 11.1428576F);
-            button6.Location = new Point(1001, 485);
+            button6.Dock = DockStyle.Top;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI", 10F);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(0, 285);
+            button6.Margin = new Padding(3, 2, 3, 2);
             button6.Name = "button6";
-            button6.Size = new Size(315, 208);
-            button6.TabIndex = 5;
-            button6.Text = "Thoát";
+            button6.Size = new Size(152, 45);
+            button6.TabIndex = 6;
+            button6.Text = "Đăng xuất";
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
             // button5
             // 
-            button5.Anchor = AnchorStyles.None;
-            button5.Font = new Font("Segoe UI", 11.1428576F);
-            button5.Location = new Point(585, 485);
+            button5.Dock = DockStyle.Top;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Segoe UI", 10F);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(0, 240);
+            button5.Margin = new Padding(3, 2, 3, 2);
             button5.Name = "button5";
-            button5.Size = new Size(332, 208);
-            button5.TabIndex = 4;
-            button5.Text = "Thu nhập";
+            button5.Size = new Size(152, 45);
+            button5.TabIndex = 5;
+            button5.Text = "Lương";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
             // button4
             // 
-            button4.Anchor = AnchorStyles.Right;
-            button4.Font = new Font("Segoe UI", 11.1428576F);
-            button4.Location = new Point(170, 485);
+            button4.Dock = DockStyle.Top;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Segoe UI", 10F);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(0, 195);
+            button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
-            button4.Size = new Size(332, 208);
-            button4.TabIndex = 3;
+            button4.Size = new Size(152, 45);
+            button4.TabIndex = 4;
             button4.Text = "Tài liệu";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
             // button3
             // 
-            button3.Anchor = AnchorStyles.Left;
-            button3.Font = new Font("Segoe UI", 11.1428576F);
-            button3.Location = new Point(1001, 92);
+            button3.Dock = DockStyle.Top;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 10F);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(0, 150);
+            button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
-            button3.Size = new Size(315, 208);
-            button3.TabIndex = 2;
-            button3.Text = "Nhập điểm và nhận xét";
+            button3.Size = new Size(152, 45);
+            button3.TabIndex = 3;
+            button3.Text = "Nhập điểm";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
             // button2
             // 
-            button2.Anchor = AnchorStyles.None;
-            button2.Font = new Font("Segoe UI", 11.1428576F);
-            button2.Location = new Point(585, 92);
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 10F);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(0, 105);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(332, 208);
-            button2.TabIndex = 1;
+            button2.Size = new Size(152, 45);
+            button2.TabIndex = 2;
             button2.Text = "Thời khóa biểu";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Right;
-            button1.Font = new Font("Segoe UI", 11.1428576F);
-            button1.Location = new Point(170, 92);
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 10F);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 60);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(332, 208);
-            button1.TabIndex = 0;
+            button1.Size = new Size(152, 45);
+            button1.TabIndex = 1;
             button1.Text = "Thông tin cá nhân";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // panelLogo
+            // 
+            panelLogo.BackColor = Color.FromArgb(112, 146, 190);
+            panelLogo.Dock = DockStyle.Top;
+            panelLogo.Location = new Point(0, 0);
+            panelLogo.Margin = new Padding(3, 2, 3, 2);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(152, 60);
+            panelLogo.TabIndex = 0;
+            // 
+            // panelMain
+            // 
+            panelMain.BackColor = Color.WhiteSmoke;
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(152, 0);
+            panelMain.Margin = new Padding(3, 2, 3, 2);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(910, 522);
+            panelMain.TabIndex = 1;
+            // 
             // QuanLyChungT
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1490, 786);
-            Controls.Add(tableLayoutPanel1);
+            ClientSize = new Size(1062, 522);
+            Controls.Add(panelMain);
+            Controls.Add(panelMenu);
+            Margin = new Padding(2);
             Name = "QuanLyChungT";
             Text = "QuanLyChungT";
-            tableLayoutPanel1.ResumeLayout(false);
+            panelMenu.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panelMenu;
+        private Panel panelLogo;
+        private Panel panelMain;
+        private Button button1;
         private Button button6;
         private Button button5;
         private Button button4;
         private Button button3;
         private Button button2;
-        private Button button1;
     }
 }

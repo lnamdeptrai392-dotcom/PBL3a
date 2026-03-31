@@ -31,7 +31,6 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
             comboBox1 = new ComboBox();
             textBox1 = new TextBox();
             label3 = new Label();
@@ -43,32 +42,32 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 7;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 62F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 163F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 413F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 65F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 357F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 36F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 95F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 241F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 38F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 96F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 229F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 34F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(label2, 1, 2);
-            tableLayoutPanel1.Controls.Add(button1, 5, 5);
             tableLayoutPanel1.Controls.Add(comboBox1, 2, 2);
             tableLayoutPanel1.Controls.Add(textBox1, 5, 2);
             tableLayoutPanel1.Controls.Add(label3, 4, 2);
             tableLayoutPanel1.Controls.Add(dataGridView1, 1, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 114F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 79F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 249F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 198F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel1.Size = new Size(1318, 750);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 57F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 14F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 124F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 99F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 4F));
+            tableLayoutPanel1.Size = new Size(769, 375);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -77,9 +76,10 @@
             label1.AutoSize = true;
             tableLayoutPanel1.SetColumnSpan(label1, 7);
             label1.Font = new Font("Segoe UI", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(458, 24);
+            label1.Location = new Point(272, 10);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(402, 65);
+            label1.Size = new Size(225, 37);
             label1.TabIndex = 0;
             label1.Text = "THỜI KHÓA BIỂU ";
             // 
@@ -87,49 +87,41 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.1428576F);
-            label2.Location = new Point(65, 143);
+            label2.Location = new Point(38, 71);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(157, 37);
+            label2.Size = new Size(91, 20);
             label2.TabIndex = 1;
             label2.Text = "Mã lớp học: ";
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.Font = new Font("Segoe UI", 11.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(1037, 615);
-            button1.Name = "button1";
-            button1.Size = new Size(220, 99);
-            button1.TabIndex = 3;
-            button1.Text = "Thoát";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // comboBox1
             // 
             comboBox1.Dock = DockStyle.Fill;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(228, 146);
+            comboBox1.Location = new Point(133, 73);
+            comboBox1.Margin = new Padding(2, 2, 2, 2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(407, 38);
+            comboBox1.Size = new Size(237, 23);
             comboBox1.TabIndex = 4;
             // 
             // textBox1
             // 
             textBox1.Dock = DockStyle.Fill;
             textBox1.Enabled = false;
-            textBox1.Location = new Point(906, 146);
+            textBox1.Location = new Point(508, 73);
+            textBox1.Margin = new Padding(2, 2, 2, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(351, 35);
+            textBox1.Size = new Size(225, 23);
             textBox1.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.1428576F);
-            label3.Location = new Point(706, 143);
+            label3.Location = new Point(412, 71);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(159, 37);
+            label3.Size = new Size(89, 20);
             label3.TabIndex = 2;
             label3.Text = "Tên lớp học:";
             // 
@@ -137,22 +129,24 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tableLayoutPanel1.SetColumnSpan(dataGridView1, 4);
+            tableLayoutPanel1.SetColumnSpan(dataGridView1, 5);
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(65, 225);
+            dataGridView1.Location = new Point(38, 113);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 72;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 3);
-            dataGridView1.Size = new Size(835, 489);
+            dataGridView1.Size = new Size(695, 243);
             dataGridView1.TabIndex = 6;
             // 
             // TKB
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1318, 750);
+            ClientSize = new Size(769, 375);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "TKB";
             Text = "TKB";
             tableLayoutPanel1.ResumeLayout(false);
@@ -166,7 +160,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
         private Label label2;
-        private Button button1;
         private ComboBox comboBox1;
         private TextBox textBox1;
         private Label label3;

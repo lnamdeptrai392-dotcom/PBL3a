@@ -30,7 +30,6 @@
         {
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
-            btT = new Button();
             btUpload = new Button();
             dataGridView1 = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
@@ -43,9 +42,10 @@
             label1.AutoSize = true;
             tableLayoutPanel1.SetColumnSpan(label1, 7);
             label1.Font = new Font("Segoe UI", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(549, 24);
+            label1.Location = new Point(322, 10);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(200, 65);
+            label1.Size = new Size(113, 37);
             label1.TabIndex = 0;
             label1.Text = "TÀI LIỆU";
             // 
@@ -53,51 +53,40 @@
             // 
             tableLayoutPanel1.BackColor = Color.White;
             tableLayoutPanel1.ColumnCount = 7;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 62F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 163F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 413F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 65F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 324F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 233F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 36F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 95F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 241F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 38F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 189F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 136F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Controls.Add(btT, 5, 5);
-            tableLayoutPanel1.Controls.Add(btUpload, 5, 4);
             tableLayoutPanel1.Controls.Add(dataGridView1, 1, 1);
+            tableLayoutPanel1.Controls.Add(btUpload, 5, 5);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 114F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 34F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 294F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 153F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1299, 744);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 57F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 17F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 26F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 147F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 76F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 4F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
+            tableLayoutPanel1.Size = new Size(758, 372);
             tableLayoutPanel1.TabIndex = 3;
-            // 
-            // btT
-            // 
-            btT.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btT.Font = new Font("Segoe UI", 11.1428576F);
-            btT.Location = new Point(1059, 615);
-            btT.Name = "btT";
-            btT.Size = new Size(198, 99);
-            btT.TabIndex = 3;
-            btT.Text = "Thoát";
-            btT.UseVisualStyleBackColor = true;
-            btT.Click += btT_Click;
             // 
             // btUpload
             // 
             btUpload.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btUpload.Font = new Font("Segoe UI", 11.1428576F);
-            btUpload.Location = new Point(1059, 462);
+            btUpload.Location = new Point(618, 306);
+            btUpload.Margin = new Padding(2, 2, 2, 2);
             btUpload.Name = "btUpload";
-            btUpload.Size = new Size(198, 99);
+            btUpload.Size = new Size(115, 50);
             btUpload.TabIndex = 5;
             btUpload.Text = "Tải lên";
             btUpload.UseVisualStyleBackColor = true;
@@ -109,19 +98,21 @@
             tableLayoutPanel1.SetColumnSpan(dataGridView1, 4);
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = Color.Gray;
-            dataGridView1.Location = new Point(65, 117);
+            dataGridView1.Location = new Point(38, 59);
+            dataGridView1.Margin = new Padding(2, 2, 2, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 72;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 5);
-            dataGridView1.Size = new Size(959, 597);
+            dataGridView1.Size = new Size(559, 297);
             dataGridView1.TabIndex = 6;
             // 
             // TaiLieu
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1299, 744);
+            ClientSize = new Size(758, 372);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "TaiLieu";
             Text = "TaiLieu";
             tableLayoutPanel1.ResumeLayout(false);
@@ -134,7 +125,6 @@
 
         private Label label1;
         private TableLayoutPanel tableLayoutPanel1;
-        private Button btT;
         private Button btUpload;
         private DataGridView dataGridView1;
     }
