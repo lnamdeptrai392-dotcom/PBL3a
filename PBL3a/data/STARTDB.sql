@@ -1119,3 +1119,67 @@ VALUES
 ('T002', N'Văn'),
 ('T003', N'Anh');
 GO
+
+
+
+IF OBJECT_ID('dbo.Registration', 'U') IS NOT NULL DROP TABLE dbo.Registration;
+GO
+
+CREATE TABLE Registration
+(
+    RegistrationID INT IDENTITY(1,1) PRIMARY KEY,
+    AccountID NVARCHAR(20) NOT NULL,
+    ClassID NVARCHAR(20) NOT NULL, -- Chú ý: Phải là NVARCHAR(20) để khớp với bảng Class
+    RegistrationDate DATE NOT NULL,
+    Status NVARCHAR(50) DEFAULT N'Chờ duyệt', -- Trạng thái mặc định
+    Note NVARCHAR(255) NULL,
+
+    CONSTRAINT FK_Registration_Account FOREIGN KEY (AccountID) REFERENCES accountList(Id),
+    CONSTRAINT FK_Registration_Class FOREIGN KEY (ClassID) REFERENCES Class(classID),
+    CONSTRAINT UQ_Registration UNIQUE (AccountID, ClassID) -- Chống spam: 1 HS không thể gửi 2 đơn chờ duyệt cho cùng 1 lớp
+);
+GO
+
+-- Thêm 15 đơn đăng ký mẫu (Tất cả đều "Chờ duyệt" và Note đã được đồng bộ)
+INSERT INTO Registration (AccountID, ClassID, RegistrationDate, Status, Note)
+VALUES
+-- Khóa 2009 (Học sinh lớp 11, 12)
+('10109003', 'T01.0126', '2026-03-20', N'Chờ duyệt', N'Xin đăng ký vào lớp Toán 12A1'),
+('10209004', 'L01.0626', '2026-03-21', N'Chờ duyệt', N'Xin đăng ký vào lớp Lý 12A1'),
+('10109005', 'NN01.0625', '2026-03-21', N'Chờ duyệt', N'Xin đăng ký vào lớp Tiếng Anh IELTS 1'),
+
+-- Khóa 2010 (Học sinh lớp 10, 11)
+('10110001', 'T01.0825', '2026-03-22', N'Chờ duyệt', N'Xin đăng ký vào lớp Toán 11A1'),
+('10210002', 'V01.0925', '2026-03-23', N'Chờ duyệt', N'Xin đăng ký vào lớp Văn 11A1'),
+('10110003', 'H01.1025', '2026-03-24', N'Chờ duyệt', N'Xin đăng ký vào lớp Hóa 11A1'),
+
+-- Khóa 2011 (Học sinh lớp 9, 10)
+('10111001', 'T01.0426', '2026-03-25', N'Chờ duyệt', N'Xin đăng ký vào lớp Toán 10A1'),
+('10211002', 'V01.1026', '2026-03-25', N'Chờ duyệt', N'Xin đăng ký vào lớp Văn 10B1'),
+('10111003', 'H01.0325', '2026-03-26', N'Chờ duyệt', N'Xin đăng ký vào lớp Hóa 10A1'),
+
+-- Khóa 2012 (Học sinh lớp 8, 9 hoặc ngoại ngữ cơ bản)
+('10112001', 'NN01.0226', '2026-03-27', N'Chờ duyệt', N'Xin đăng ký vào lớp Tiếng Anh 9A1'),
+('10212002', 'NN01.0226', '2026-03-27', N'Chờ duyệt', N'Xin đăng ký vào lớp Tiếng Anh 9A1'),
+('10112003', 'NN02.0225', '2026-03-28', N'Chờ duyệt', N'Xin đăng ký vào lớp Tiếng Nhật N5'),
+
+-- Khóa 2013 (Học sinh lớp 7, 8 - Tập trung học ngoại ngữ)
+('10113001', 'NN03.0325', '2026-03-29', N'Chờ duyệt', N'Xin đăng ký vào lớp Tiếng Trung HSK1'),
+('10213002', 'NN01.0826', '2026-03-30', N'Chờ duyệt', N'Xin đăng ký vào lớp Tiếng Anh Giao Tiếp'),
+('10113003', 'NN02.0326', '2026-03-31', N'Chờ duyệt', N'Xin đăng ký vào lớp Tiếng Nhật N5 - K2');
+GO
+
+-- Kiểm tra lại bảng Đơn Đăng Ký
+SELECT 
+    r.RegistrationID,
+    r.AccountID,
+    a.name AS [Tên Học Sinh],
+    c.classID AS [Mã Lớp],
+    c.class_name AS [Tên Lớp],
+    r.RegistrationDate AS [Ngày Gửi],
+    r.Status AS [Trạng Thái],
+    r.Note AS [Ghi Chú]
+FROM Registration r
+INNER JOIN accountList a ON r.AccountID = a.Id
+INNER JOIN Class c ON r.ClassID = c.classID;
+GO
