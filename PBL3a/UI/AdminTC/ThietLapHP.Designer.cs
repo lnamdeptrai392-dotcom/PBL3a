@@ -147,7 +147,7 @@
             textBox1.Location = new Point(144, 258);
             textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(257, 23);
+            textBox1.Size = new Size(304, 23);
             textBox1.TabIndex = 9;
             // 
             // laTT
