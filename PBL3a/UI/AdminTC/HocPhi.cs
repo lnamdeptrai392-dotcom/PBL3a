@@ -132,55 +132,6 @@ namespace PBL3a.UI.AdminTC
 
         private void btSetHP_Click(object sender, EventArgs e)
         {
-            //if (dtHocPhi == null || dtHocPhi.Rows.Count == 0)
-            //{
-            //    MessageBox.Show("Không có dữ liệu để lưu.");
-            //    return;
-            //}
-
-            //using (SqlConnection conn = db.GetConnection())
-            //{
-            //    conn.Open();
-
-            //    foreach (DataRow row in dtHocPhi.Rows)
-            //    {
-            //        string query = @"
-            //            UPDATE HocPhi
-            //            SET 
-            //                SoTien = @SoTien,
-            //                TrangThai = @TrangThai,
-            //                NgayDong = @NgayDong,
-            //                GhiChu = @GhiChu
-            //            WHERE HocPhiID = @HocPhiID";
-
-            //        using (SqlCommand cmd = new SqlCommand(query, conn))
-            //        {
-            //            cmd.Parameters.AddWithValue("@HocPhiID", Convert.ToInt32(row["ID"]));
-            //            cmd.Parameters.AddWithValue("@SoTien", Convert.ToDecimal(row["Số tiền"]));
-            //            cmd.Parameters.AddWithValue("@TrangThai", row["Trạng thái"]?.ToString() ?? "");
-
-            //            if (row["Ngày đóng"] == DBNull.Value || string.IsNullOrWhiteSpace(row["Ngày đóng"].ToString()))
-            //                cmd.Parameters.AddWithValue("@NgayDong", DBNull.Value);
-            //            else
-            //                cmd.Parameters.AddWithValue("@NgayDong", Convert.ToDateTime(row["Ngày đóng"]));
-
-            //            if (row["Ghi chú"] == DBNull.Value || string.IsNullOrWhiteSpace(row["Ghi chú"].ToString()))
-            //                cmd.Parameters.AddWithValue("@GhiChu", DBNull.Value);
-            //            else
-            //                cmd.Parameters.AddWithValue("@GhiChu", row["Ghi chú"].ToString());
-
-            //            cmd.ExecuteNonQuery();
-            //        }
-            //    }
-            //}
-
-            //MessageBox.Show("Lưu thay đổi học phí thành công.");
-
-            //if (comboBox1.SelectedItem != null)
-            //{
-            //    string classID = comboBox1.SelectedItem.ToString();
-            //    LoadHocPhiTheoLop(classID);
-            //}
             ThietLapHP thietLap = new ThietLapHP();
             this.Hide();
             thietLap.ShowDialog();

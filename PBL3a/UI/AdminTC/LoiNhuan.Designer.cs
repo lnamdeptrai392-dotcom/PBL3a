@@ -42,22 +42,23 @@
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 29.9277611F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70.07224F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 323F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 189F));
             tableLayoutPanel1.Controls.Add(LaLN, 0, 0);
             tableLayoutPanel1.Controls.Add(btThu, 1, 2);
             tableLayoutPanel1.Controls.Add(btChi, 1, 3);
             tableLayoutPanel1.Controls.Add(btLN, 1, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 6;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 62.9629631F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 128F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 64F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 37.0370369F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 134F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 66F));
-            tableLayoutPanel1.Size = new Size(1293, 752);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 78F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 39F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            tableLayoutPanel1.Size = new Size(864, 412);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // LaLN
@@ -67,9 +68,10 @@
             LaLN.Dock = DockStyle.Fill;
             LaLN.Font = new Font("Segoe UI", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LaLN.ForeColor = Color.Black;
-            LaLN.Location = new Point(3, 0);
+            LaLN.Location = new Point(2, 0);
+            LaLN.Margin = new Padding(2, 0, 2, 0);
             LaLN.Name = "LaLN";
-            LaLN.Size = new Size(1287, 204);
+            LaLN.Size = new Size(860, 124);
             LaLN.TabIndex = 1;
             LaLN.Text = "QUẢN LÝ LỢI NHUẬN";
             LaLN.TextAlign = ContentAlignment.MiddleCenter;
@@ -80,9 +82,10 @@
             btThu.Dock = DockStyle.Bottom;
             btThu.Font = new Font("Segoe UI", 14.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btThu.ForeColor = Color.White;
-            btThu.Location = new Point(293, 335);
+            btThu.Location = new Point(204, 203);
+            btThu.Margin = new Padding(2);
             btThu.Name = "btThu";
-            btThu.Size = new Size(673, 114);
+            btThu.Size = new Size(468, 56);
             btThu.TabIndex = 2;
             btThu.Text = "Khoản Thu";
             btThu.UseVisualStyleBackColor = false;
@@ -94,9 +97,10 @@
             btChi.Dock = DockStyle.Bottom;
             btChi.Font = new Font("Segoe UI", 14.1428576F);
             btChi.ForeColor = Color.White;
-            btChi.Location = new Point(293, 467);
+            btChi.Location = new Point(204, 279);
+            btChi.Margin = new Padding(2);
             btChi.Name = "btChi";
-            btChi.Size = new Size(673, 116);
+            btChi.Size = new Size(468, 58);
             btChi.TabIndex = 3;
             btChi.Text = "Khoản Chi";
             btChi.UseVisualStyleBackColor = false;
@@ -108,9 +112,10 @@
             btLN.Dock = DockStyle.Bottom;
             btLN.Font = new Font("Segoe UI", 14.1428576F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btLN.ForeColor = Color.White;
-            btLN.Location = new Point(293, 213);
+            btLN.Location = new Point(204, 128);
+            btLN.Margin = new Padding(2);
             btLN.Name = "btLN";
-            btLN.Size = new Size(673, 116);
+            btLN.Size = new Size(468, 58);
             btLN.TabIndex = 5;
             btLN.Text = "Lợi Nhuận";
             btLN.UseVisualStyleBackColor = false;
@@ -118,11 +123,13 @@
             // 
             // LoiNhuan
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1293, 752);
+            ClientSize = new Size(864, 412);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             Name = "LoiNhuan";
             Text = "LoiNhuan";
             tableLayoutPanel1.ResumeLayout(false);
@@ -133,9 +140,9 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Label LaLN;
         private Button btThu;
         private Button btChi;
         private Button btLN;
+        private Label LaLN;
     }
 }
