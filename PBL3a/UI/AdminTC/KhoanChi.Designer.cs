@@ -46,12 +46,12 @@ namespace PBL3a.UI.AdminTC
             tableLayoutPanel1.ColumnCount = 8;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 23.783783F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 76.21622F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 418F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 182F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 444F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 62F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 201F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 244F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 106F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 259F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 36F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 117F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30F));
             tableLayoutPanel1.Controls.Add(LaKC, 0, 0);
             tableLayoutPanel1.Controls.Add(lbThang, 1, 1);
             tableLayoutPanel1.Controls.Add(lbNam, 3, 1);
@@ -64,19 +64,19 @@ namespace PBL3a.UI.AdminTC
             tableLayoutPanel1.Controls.Add(butT, 6, 7);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 9;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 262F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 126F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 106F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 91F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel1.Size = new Size(1690, 901);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 131F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 63F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 53F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 46F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 4F));
+            tableLayoutPanel1.Size = new Size(986, 450);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -87,9 +87,10 @@ namespace PBL3a.UI.AdminTC
             LaKC.Dock = DockStyle.Fill;
             LaKC.Font = new Font("Segoe UI", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LaKC.ForeColor = Color.Black;
-            LaKC.Location = new Point(3, 0);
+            LaKC.Location = new Point(2, 0);
+            LaKC.Margin = new Padding(2, 0, 2, 0);
             LaKC.Name = "LaKC";
-            LaKC.Size = new Size(1684, 214);
+            LaKC.Size = new Size(982, 106);
             LaKC.TabIndex = 2;
             LaKC.Text = "QUẢN LÝ KHOẢN CHI";
             LaKC.TextAlign = ContentAlignment.MiddleCenter;
@@ -100,9 +101,10 @@ namespace PBL3a.UI.AdminTC
             lbThang.Dock = DockStyle.Right;
             lbThang.Font = new Font("Segoe UI", 12F);
             lbThang.ForeColor = Color.Black;
-            lbThang.Location = new Point(229, 214);
+            lbThang.Location = new Point(135, 106);
+            lbThang.Margin = new Padding(2, 0, 2, 0);
             lbThang.Name = "lbThang";
-            lbThang.Size = new Size(100, 53);
+            lbThang.Size = new Size(56, 26);
             lbThang.TabIndex = 3;
             lbThang.Text = "Tháng:";
             // 
@@ -112,9 +114,10 @@ namespace PBL3a.UI.AdminTC
             lbNam.Dock = DockStyle.Right;
             lbNam.Font = new Font("Segoe UI", 12F);
             lbNam.ForeColor = Color.Black;
-            lbNam.Location = new Point(847, 214);
+            lbNam.Location = new Point(494, 106);
+            lbNam.Margin = new Padding(2, 0, 2, 0);
             lbNam.Name = "lbNam";
-            lbNam.Size = new Size(82, 53);
+            lbNam.Size = new Size(47, 26);
             lbNam.TabIndex = 4;
             lbNam.Text = "Năm:";
             // 
@@ -124,9 +127,10 @@ namespace PBL3a.UI.AdminTC
             lbTT.Dock = DockStyle.Right;
             lbTT.Font = new Font("Segoe UI", 12F);
             lbTT.ForeColor = Color.Black;
-            lbTT.Location = new Point(115, 801);
+            lbTT.Location = new Point(72, 399);
+            lbTT.Margin = new Padding(2, 0, 2, 0);
             lbTT.Name = "lbTT";
-            lbTT.Size = new Size(214, 91);
+            lbTT.Size = new Size(119, 46);
             lbTT.TabIndex = 5;
             lbTT.Text = "Tổng khoản chi:";
             // 
@@ -144,22 +148,22 @@ namespace PBL3a.UI.AdminTC
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(82, 291);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(48, 144);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 3);
-            dataGridView1.Size = new Size(1291, 486);
+            dataGridView1.Size = new Size(752, 243);
             dataGridView1.TabIndex = 8;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // tbNam
             // 
             tbNam.Dock = DockStyle.Top;
-            tbNam.Location = new Point(935, 218);
-            tbNam.Margin = new Padding(3, 4, 3, 4);
+            tbNam.Location = new Point(545, 108);
+            tbNam.Margin = new Padding(2);
             tbNam.Name = "tbNam";
-            tbNam.Size = new Size(438, 35);
+            tbNam.Size = new Size(255, 23);
             tbNam.TabIndex = 10;
             // 
             // tbKT
@@ -167,10 +171,10 @@ namespace PBL3a.UI.AdminTC
             tableLayoutPanel1.SetColumnSpan(tbKT, 3);
             tbKT.Dock = DockStyle.Top;
             tbKT.Enabled = false;
-            tbKT.Location = new Point(335, 805);
-            tbKT.Margin = new Padding(3, 4, 3, 4);
+            tbKT.Location = new Point(195, 401);
+            tbKT.Margin = new Padding(2);
             tbKT.Name = "tbKT";
-            tbKT.Size = new Size(1038, 35);
+            tbKT.Size = new Size(605, 23);
             tbKT.TabIndex = 11;
             // 
             // comboBox1
@@ -178,10 +182,10 @@ namespace PBL3a.UI.AdminTC
             comboBox1.Dock = DockStyle.Fill;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" });
-            comboBox1.Location = new Point(335, 218);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
+            comboBox1.Location = new Point(195, 108);
+            comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(412, 38);
+            comboBox1.Size = new Size(240, 23);
             comboBox1.TabIndex = 12;
             // 
             // btOK
@@ -190,10 +194,10 @@ namespace PBL3a.UI.AdminTC
             btOK.Dock = DockStyle.Bottom;
             btOK.Font = new Font("Segoe UI", 12F);
             btOK.ForeColor = Color.White;
-            btOK.Location = new Point(1441, 703);
-            btOK.Margin = new Padding(3, 4, 3, 4);
+            btOK.Location = new Point(840, 350);
+            btOK.Margin = new Padding(2);
             btOK.Name = "btOK";
-            btOK.Size = new Size(195, 74);
+            btOK.Size = new Size(113, 37);
             btOK.TabIndex = 6;
             btOK.Text = "OK";
             btOK.UseVisualStyleBackColor = false;
@@ -206,10 +210,10 @@ namespace PBL3a.UI.AdminTC
             butT.BackColor = Color.FromArgb(112, 146, 190);
             butT.Font = new Font("Segoe UI", 12F);
             butT.ForeColor = Color.White;
-            butT.Location = new Point(1441, 805);
-            butT.Margin = new Padding(3, 4, 3, 4);
+            butT.Location = new Point(840, 401);
+            butT.Margin = new Padding(2);
             butT.Name = "butT";
-            butT.Size = new Size(195, 74);
+            butT.Size = new Size(113, 37);
             butT.TabIndex = 13;
             butT.Text = "Thoát";
             butT.UseVisualStyleBackColor = false;
@@ -219,12 +223,12 @@ namespace PBL3a.UI.AdminTC
             // 
             // KhoanChi
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1690, 901);
+            ClientSize = new Size(986, 450);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2);
             Name = "KhoanChi";
             Text = "KhoanChi";
             tableLayoutPanel1.ResumeLayout(false);
@@ -236,7 +240,6 @@ namespace PBL3a.UI.AdminTC
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Label LaKC;
         private Label lbThang;
         private Label lbNam;
         private Label lbTT;
@@ -246,5 +249,6 @@ namespace PBL3a.UI.AdminTC
         private TextBox tbKT;
         private ComboBox comboBox1;
         private Button butT;
+        private Label LaKC;
     }
 }

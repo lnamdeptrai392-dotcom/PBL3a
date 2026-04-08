@@ -1,6 +1,10 @@
 ﻿using PBL3a.UI.Login;
 using System;
-using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
 namespace PBL3a.UI.AdminTC
@@ -12,30 +16,11 @@ namespace PBL3a.UI.AdminTC
             InitializeComponent();
         }
 
-        private void QuanLyChungTC_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        // Khi đóng form -> thoát toàn bộ chương trình
-        private void QuanLyChungTC_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        // Học phí
         private void btHP_Click(object sender, EventArgs e)
         {
             but_chform.ActivateButton(sender);
-            HocPhi hocPhi = new HocPhi();
-            but_chform.OpenChildForm(hocPhi, sender, paDesktop);
-        }
-
-        // Đăng xuất
-        private void btT_Click(object sender, EventArgs e)
-        {
-            but_chform.ActivateButton(sender);
-            this.Close();
+            HocPhi hocphi = new HocPhi();
+            but_chform.OpenChildForm(hocphi, sender, paDesktop);
         }
 
         // Lương giáo viên
@@ -52,6 +37,16 @@ namespace PBL3a.UI.AdminTC
             but_chform.ActivateButton(sender);
             LoiNhuan loinhuan = new LoiNhuan();
             but_chform.OpenChildForm(loinhuan, sender, paDesktop);
+        }
+
+
+        // Đăng xuất
+        private void btDX_Click(object sender, EventArgs e)
+        {
+            LoginForm newForm = new LoginForm();
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
         }
     }
 }
