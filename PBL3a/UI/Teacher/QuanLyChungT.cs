@@ -68,7 +68,7 @@ namespace PBL3a.UI.Teacher
         private void button2_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new TKB());
+            OpenChildForm(new TKB(currentTeacherID));
         }
 
         private void button3_Click(object sender, EventArgs e)
