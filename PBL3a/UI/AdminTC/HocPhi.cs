@@ -50,6 +50,7 @@ namespace PBL3a.UI.AdminTC
                         comboBox1.Items.Add(reader["classID"].ToString());
                     }
                 }
+                conn.Close();
             }
 
             if (comboBox1.Items.Count > 0)

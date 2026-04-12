@@ -34,11 +34,14 @@
             laML = new Label();
             laTL = new Label();
             lbHP = new Label();
-            textBox1 = new TextBox();
+            txtTienTrenNg = new TextBox();
             laTT = new Label();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
+            txtTongT = new TextBox();
+            cbbMaLop = new ComboBox();
             btLuu = new Button();
+            butTT = new Button();
+            label1 = new Label();
+            txtSS = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,11 +62,14 @@
             tableLayoutPanel1.Controls.Add(laML, 1, 1);
             tableLayoutPanel1.Controls.Add(laTL, 3, 1);
             tableLayoutPanel1.Controls.Add(lbHP, 1, 3);
-            tableLayoutPanel1.Controls.Add(textBox1, 2, 3);
+            tableLayoutPanel1.Controls.Add(txtTienTrenNg, 2, 3);
             tableLayoutPanel1.Controls.Add(laTT, 3, 3);
-            tableLayoutPanel1.Controls.Add(textBox2, 4, 3);
-            tableLayoutPanel1.Controls.Add(comboBox1, 2, 1);
+            tableLayoutPanel1.Controls.Add(txtTongT, 4, 3);
+            tableLayoutPanel1.Controls.Add(cbbMaLop, 2, 1);
             tableLayoutPanel1.Controls.Add(btLuu, 6, 6);
+            tableLayoutPanel1.Controls.Add(butTT, 6, 5);
+            tableLayoutPanel1.Controls.Add(label1, 1, 5);
+            tableLayoutPanel1.Controls.Add(txtSS, 2, 5);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(2);
@@ -142,13 +148,13 @@
             lbHP.TabIndex = 8;
             lbHP.Text = "Số tiền / người";
             // 
-            // textBox1
+            // txtTienTrenNg
             // 
-            textBox1.Location = new Point(144, 258);
-            textBox1.Margin = new Padding(2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(304, 23);
-            textBox1.TabIndex = 9;
+            txtTienTrenNg.Location = new Point(144, 258);
+            txtTienTrenNg.Margin = new Padding(2);
+            txtTienTrenNg.Name = "txtTienTrenNg";
+            txtTienTrenNg.Size = new Size(304, 23);
+            txtTienTrenNg.TabIndex = 9;
             // 
             // laTT
             // 
@@ -163,25 +169,26 @@
             laTT.Text = "Tổng tiền";
             laTT.TextAlign = ContentAlignment.TopRight;
             // 
-            // textBox2
+            // txtTongT
             // 
-            tableLayoutPanel1.SetColumnSpan(textBox2, 2);
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(558, 258);
-            textBox2.Margin = new Padding(2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(263, 23);
-            textBox2.TabIndex = 11;
+            tableLayoutPanel1.SetColumnSpan(txtTongT, 2);
+            txtTongT.Enabled = false;
+            txtTongT.Location = new Point(558, 258);
+            txtTongT.Margin = new Padding(2);
+            txtTongT.Name = "txtTongT";
+            txtTongT.Size = new Size(263, 23);
+            txtTongT.TabIndex = 11;
             // 
-            // comboBox1
+            // cbbMaLop
             // 
-            comboBox1.Dock = DockStyle.Fill;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(144, 138);
-            comboBox1.Margin = new Padding(2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(304, 23);
-            comboBox1.TabIndex = 12;
+            cbbMaLop.Dock = DockStyle.Fill;
+            cbbMaLop.FormattingEnabled = true;
+            cbbMaLop.Location = new Point(144, 138);
+            cbbMaLop.Margin = new Padding(2);
+            cbbMaLop.Name = "cbbMaLop";
+            cbbMaLop.Size = new Size(304, 23);
+            cbbMaLop.TabIndex = 12;
+            cbbMaLop.SelectedIndexChanged += cbbMaLop_SelectedIndexChanged;
             // 
             // btLuu
             // 
@@ -198,6 +205,40 @@
             btLuu.Click += btLuu_Click;
             btLuu.MouseEnter += btLuu_MouseEnter;
             btLuu.MouseLeave += btLuu_MouseLeave;
+            // 
+            // butTT
+            // 
+            butTT.BackColor = Color.FromArgb(112, 146, 190);
+            butTT.Font = new Font("Segoe UI", 9.857143F);
+            butTT.ForeColor = Color.White;
+            butTT.Location = new Point(825, 339);
+            butTT.Margin = new Padding(2);
+            butTT.Name = "butTT";
+            butTT.Size = new Size(145, 38);
+            butTT.TabIndex = 13;
+            butTT.Text = "Tổng tiền";
+            butTT.UseVisualStyleBackColor = false;
+            butTT.Click += butTT_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Right;
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(97, 337);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(43, 52);
+            label1.TabIndex = 14;
+            label1.Text = "Sĩ số";
+            // 
+            // txtSS
+            // 
+            txtSS.Dock = DockStyle.Fill;
+            txtSS.Location = new Point(145, 340);
+            txtSS.Name = "txtSS";
+            txtSS.Size = new Size(302, 23);
+            txtSS.TabIndex = 15;
             // 
             // ThietLapHP
             // 
@@ -224,8 +265,11 @@
         private Button btLuu;
         private Label lbHP;
         private Label laTT;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
+        private TextBox txtTongT;
+        private TextBox txtTienTrenNg;
+        private ComboBox cbbMaLop;
+        private Button butTT;
+        private Label label1;
+        private TextBox txtSS;
     }
 }
