@@ -15,45 +15,54 @@ namespace PBL3a.UI.AdminTC
     public partial class ThietLapHP : Form
     {
         private DatabaseHelper db = new DatabaseHelper();
-        public ThietLapHP()
+        private string MaLop;
+        public ThietLapHP(string m)
         {
             InitializeComponent();
+            MaLop = m;
+            setGUI();
         }
 
         public void setGUI()
         {
-            cbbMaLop.Items.Clear();
+            cbbMaLop.Text = MaLop;
             using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT classID FROM Class ORDER BY classID";
-
+                string query = @"select class_name from Class where classID = @id";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
-                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
-                    {
-                        cbbMaLop.Items.Add(reader["classID"].ToString());
-                    }
+                    cmd.Parameters.AddWithValue("@id", MaLop);
+                    object result = cmd.ExecuteScalar();
+                    string tenlop = result.ToString();
+                    tbTL.Text = tenlop;
                 }
             }
-            if (cbbMaLop.Items.Count > 0)
-                cbbMaLop.SelectedIndex = -1;
         }
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-            using(SqlConnection conn = db.GetConnection())
+            using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
-                string query = @"update HocPhi set SoTien = @tienTrenNg where ClassID = @id and TrangThai = 'Chưa đóng'";
-                using(SqlCommand cmd = new SqlCommand(query, conn))
+                string query = @"update HocPhi set SoTien = @tienTrenNg where ClassID = @id and TrangThai = N'Chưa đóng'";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@tienTrenNg", Convert.ToDecimal(txtTienTrenNg.Text));
-                    cmd.Parameters.AddWithValue("@id",cbbMaLop.Text);
+                    cmd.Parameters.AddWithValue("@id", MaLop);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Cập nhật học phí thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có dữ liệu nào được cập nhật. Vui lòng kiểm tra lại trạng thái lớp.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-            } 
-                
+            }
+
             this.Close();
         }
 
@@ -88,8 +97,9 @@ namespace PBL3a.UI.AdminTC
             if (cbbMaLop.SelectedItem == null) return;
             else
             {
-                string classID = cbbMaLop.SelectedItem.ToString();
-                LoadTenLop(classID);
+                string selectedClassID = cbbMaLop.SelectedItem.ToString();
+                MaLop = selectedClassID;
+                LoadTenLop(MaLop);
             }
         }
 
@@ -116,8 +126,7 @@ namespace PBL3a.UI.AdminTC
 
         public decimal SetHP(decimal hphi)
         {
-            string idlop = cbbMaLop.SelectedItem.ToString();
-            int cap = capapcity_cl(idlop);
+            int cap = capapcity_cl(MaLop);
             txtSS.Text = cap.ToString();
             return cap * hphi;
         }
@@ -131,6 +140,11 @@ namespace PBL3a.UI.AdminTC
                 decimal tongTien = SetHP(hphi1);
                 txtTongT.Text = tongTien.ToString();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

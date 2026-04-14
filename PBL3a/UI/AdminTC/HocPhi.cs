@@ -16,7 +16,7 @@ namespace PBL3a.UI.AdminTC
         {
             InitializeComponent();
             Load += HocPhi_Load;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cbbML.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         }
 
         private void HocPhi_Load(object? sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace PBL3a.UI.AdminTC
 
         private void LoadDanhSachLop()
         {
-            comboBox1.Items.Clear();
+            cbbML.Items.Clear();
 
             using (SqlConnection conn = db.GetConnection())
             {
@@ -47,22 +47,22 @@ namespace PBL3a.UI.AdminTC
                 {
                     while (reader.Read())
                     {
-                        comboBox1.Items.Add(reader["classID"].ToString());
+                        cbbML.Items.Add(reader["classID"].ToString());
                     }
                 }
                 conn.Close();
             }
 
-            if (comboBox1.Items.Count > 0)
-                comboBox1.SelectedIndex = 0;
+            if (cbbML.Items.Count > 0)
+                cbbML.SelectedIndex = 0;
         }
 
         private void comboBox1_SelectedIndexChanged(object? sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == null) return;
+            if (cbbML.SelectedItem == null) return;
             else
             {
-                string classID = comboBox1.SelectedItem.ToString();
+                string classID = cbbML.SelectedItem.ToString();
                 LoadTenLop(classID);
                 LoadHocPhiTheoLop(classID);
             }
@@ -133,10 +133,12 @@ namespace PBL3a.UI.AdminTC
 
         private void btSetHP_Click(object sender, EventArgs e)
         {
-            ThietLapHP thietLap = new ThietLapHP();
+            string malop = cbbML.Text;
+            ThietLapHP thietLap = new ThietLapHP(malop);
             this.Hide();
             thietLap.ShowDialog();
             this.Show();
+            LoadHocPhiTheoLop(malop);
         }
 
         private void btSetHP_MouseEnter(object sender, EventArgs e)
