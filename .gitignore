@@ -6,3 +6,4 @@ obj/
 /PBL3a/bin
 
 PBL3a/services
+PBL3a/services/databaseHelper.cs
