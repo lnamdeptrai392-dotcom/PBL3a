@@ -38,10 +38,10 @@
             laTT = new Label();
             txtTongT = new TextBox();
             cbbMaLop = new ComboBox();
-            btLuu = new Button();
-            butTT = new Button();
             label1 = new Label();
             txtSS = new TextBox();
+            butTT = new Button();
+            btLuu = new Button();
             button1 = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -67,11 +67,11 @@
             tableLayoutPanel1.Controls.Add(laTT, 3, 3);
             tableLayoutPanel1.Controls.Add(txtTongT, 4, 3);
             tableLayoutPanel1.Controls.Add(cbbMaLop, 2, 1);
-            tableLayoutPanel1.Controls.Add(label1, 1, 5);
-            tableLayoutPanel1.Controls.Add(txtSS, 2, 5);
             tableLayoutPanel1.Controls.Add(butTT, 6, 4);
             tableLayoutPanel1.Controls.Add(btLuu, 6, 5);
             tableLayoutPanel1.Controls.Add(button1, 6, 6);
+            tableLayoutPanel1.Controls.Add(label1, 1, 4);
+            tableLayoutPanel1.Controls.Add(txtSS, 2, 4);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
@@ -79,8 +79,8 @@
             tableLayoutPanel1.RowCount = 8;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 68.1415939F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 31.858408F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 112F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 71F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 162F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 97F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 98F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 100F));
@@ -140,15 +140,15 @@
             lbHP.AutoSize = true;
             lbHP.Dock = DockStyle.Right;
             lbHP.Font = new Font("Segoe UI", 12F);
-            lbHP.Location = new Point(39, 513);
+            lbHP.Location = new Point(39, 422);
             lbHP.Name = "lbHP";
-            lbHP.Size = new Size(202, 71);
+            lbHP.Size = new Size(202, 162);
             lbHP.TabIndex = 8;
             lbHP.Text = "Số tiền / người";
             // 
             // txtTienTrenNg
             // 
-            txtTienTrenNg.Location = new Point(247, 517);
+            txtTienTrenNg.Location = new Point(247, 426);
             txtTienTrenNg.Margin = new Padding(3, 4, 3, 4);
             txtTienTrenNg.Name = "txtTienTrenNg";
             txtTienTrenNg.Size = new Size(518, 35);
@@ -159,9 +159,9 @@
             laTT.AutoSize = true;
             laTT.Dock = DockStyle.Right;
             laTT.Font = new Font("Segoe UI", 12F);
-            laTT.Location = new Point(814, 513);
+            laTT.Location = new Point(814, 422);
             laTT.Name = "laTT";
-            laTT.Size = new Size(135, 71);
+            laTT.Size = new Size(135, 162);
             laTT.TabIndex = 10;
             laTT.Text = "Tổng tiền";
             laTT.TextAlign = ContentAlignment.TopRight;
@@ -169,11 +169,12 @@
             // txtTongT
             // 
             tableLayoutPanel1.SetColumnSpan(txtTongT, 2);
+            txtTongT.Dock = DockStyle.Fill;
             txtTongT.Enabled = false;
-            txtTongT.Location = new Point(955, 517);
+            txtTongT.Location = new Point(955, 426);
             txtTongT.Margin = new Padding(3, 4, 3, 4);
             txtTongT.Name = "txtTongT";
-            txtTongT.Size = new Size(448, 35);
+            txtTongT.Size = new Size(452, 35);
             txtTongT.TabIndex = 11;
             // 
             // cbbMaLop
@@ -186,6 +187,40 @@
             cbbMaLop.Size = new Size(520, 38);
             cbbMaLop.TabIndex = 12;
             cbbMaLop.SelectedIndexChanged += cbbMaLop_SelectedIndexChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Right;
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(166, 584);
+            label1.Name = "label1";
+            label1.Size = new Size(75, 97);
+            label1.TabIndex = 14;
+            label1.Text = "Sĩ số";
+            // 
+            // txtSS
+            // 
+            txtSS.Dock = DockStyle.Fill;
+            txtSS.Location = new Point(249, 590);
+            txtSS.Margin = new Padding(5, 6, 5, 6);
+            txtSS.Name = "txtSS";
+            txtSS.Size = new Size(516, 35);
+            txtSS.TabIndex = 15;
+            // 
+            // butTT
+            // 
+            butTT.BackColor = Color.FromArgb(112, 146, 190);
+            butTT.Font = new Font("Segoe UI", 9.857143F);
+            butTT.ForeColor = Color.White;
+            butTT.Location = new Point(1413, 588);
+            butTT.Margin = new Padding(3, 4, 3, 4);
+            butTT.Name = "butTT";
+            butTT.Size = new Size(249, 76);
+            butTT.TabIndex = 13;
+            butTT.Text = "Tổng tiền";
+            butTT.UseVisualStyleBackColor = false;
+            butTT.Click += butTT_Click;
             // 
             // btLuu
             // 
@@ -202,40 +237,6 @@
             btLuu.Click += btLuu_Click;
             btLuu.MouseEnter += btLuu_MouseEnter;
             btLuu.MouseLeave += btLuu_MouseLeave;
-            // 
-            // butTT
-            // 
-            butTT.BackColor = Color.FromArgb(112, 146, 190);
-            butTT.Font = new Font("Segoe UI", 9.857143F);
-            butTT.ForeColor = Color.White;
-            butTT.Location = new Point(1413, 588);
-            butTT.Margin = new Padding(3, 4, 3, 4);
-            butTT.Name = "butTT";
-            butTT.Size = new Size(249, 76);
-            butTT.TabIndex = 13;
-            butTT.Text = "Tổng tiền";
-            butTT.UseVisualStyleBackColor = false;
-            butTT.Click += butTT_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Right;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(166, 681);
-            label1.Name = "label1";
-            label1.Size = new Size(75, 98);
-            label1.TabIndex = 14;
-            label1.Text = "Sĩ số";
-            // 
-            // txtSS
-            // 
-            txtSS.Dock = DockStyle.Fill;
-            txtSS.Location = new Point(249, 687);
-            txtSS.Margin = new Padding(5, 6, 5, 6);
-            txtSS.Name = "txtSS";
-            txtSS.Size = new Size(516, 35);
-            txtSS.TabIndex = 15;
             // 
             // button1
             // 
