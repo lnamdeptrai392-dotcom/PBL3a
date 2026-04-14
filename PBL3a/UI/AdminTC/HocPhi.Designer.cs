@@ -38,8 +38,6 @@
             cbbML = new ComboBox();
             btSetHP = new Button();
             dataGridView1 = new DataGridView();
-            label1 = new Label();
-            textBox1 = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -49,12 +47,12 @@
             tableLayoutPanel1.BackColor = Color.AliceBlue;
             tableLayoutPanel1.ColumnCount = 10;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 118F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 214F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 37.5F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 62.5F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 117F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 382F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 9F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.2780571F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 77.72195F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 164F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 411F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 19F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 218F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 33F));
@@ -64,8 +62,6 @@
             tableLayoutPanel1.Controls.Add(cbbML, 4, 1);
             tableLayoutPanel1.Controls.Add(btSetHP, 8, 6);
             tableLayoutPanel1.Controls.Add(dataGridView1, 1, 2);
-            tableLayoutPanel1.Controls.Add(label1, 1, 1);
-            tableLayoutPanel1.Controls.Add(textBox1, 2, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.ForeColor = Color.Coral;
             tableLayoutPanel1.Location = new Point(0, 0);
@@ -87,10 +83,10 @@
             // 
             tbTL.Dock = DockStyle.Fill;
             tbTL.Enabled = false;
-            tbTL.Location = new Point(831, 86);
+            tbTL.Location = new Point(802, 86);
             tbTL.Margin = new Padding(3, 4, 3, 4);
             tbTL.Name = "tbTL";
-            tbTL.Size = new Size(376, 35);
+            tbTL.Size = new Size(405, 35);
             tbTL.TabIndex = 4;
             // 
             // laML
@@ -98,7 +94,7 @@
             laML.Dock = DockStyle.Right;
             laML.Font = new Font("Segoe UI", 9.857143F);
             laML.ForeColor = Color.Black;
-            laML.Location = new Point(381, 82);
+            laML.Location = new Point(65, 82);
             laML.Name = "laML";
             laML.Size = new Size(103, 119);
             laML.TabIndex = 1;
@@ -109,7 +105,7 @@
             laTL.Dock = DockStyle.Right;
             laTL.Font = new Font("Segoe UI", 9.857143F);
             laTL.ForeColor = Color.Black;
-            laTL.Location = new Point(715, 82);
+            laTL.Location = new Point(686, 82);
             laTL.Name = "laTL";
             laTL.Size = new Size(110, 119);
             laTL.TabIndex = 2;
@@ -119,11 +115,12 @@
             // 
             cbbML.Dock = DockStyle.Fill;
             cbbML.FormattingEnabled = true;
-            cbbML.Location = new Point(490, 86);
+            cbbML.Location = new Point(174, 86);
             cbbML.Margin = new Padding(3, 4, 3, 4);
             cbbML.Name = "cbbML";
-            cbbML.Size = new Size(218, 38);
+            cbbML.Size = new Size(458, 38);
             cbbML.TabIndex = 9;
+            cbbML.TextUpdate += cbbML_TextUpdate;
             // 
             // btSetHP
             // 
@@ -173,26 +170,6 @@
             dataGridView1.Size = new Size(1179, 590);
             dataGridView1.TabIndex = 10;
             // 
-            // label1
-            // 
-            label1.Font = new Font("Segoe UI", 9.857143F);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(24, 82);
-            label1.Name = "label1";
-            label1.Size = new Size(103, 118);
-            label1.TabIndex = 11;
-            label1.Text = "Khóa: ";
-            // 
-            // textBox1
-            // 
-            textBox1.Dock = DockStyle.Fill;
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(142, 86);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(208, 35);
-            textBox1.TabIndex = 12;
-            // 
             // HocPhi
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
@@ -219,7 +196,5 @@
         private Button btSetHP;
         private ComboBox cbbML;
         private DataGridView dataGridView1;
-        private Label label1;
-        private TextBox textBox1;
     }
 }

@@ -21,7 +21,7 @@ namespace PBL3a.UI.AdminTC
 
         private void HocPhi_Load(object? sender, EventArgs e)
         {
-            LoadDanhSachLop();
+            LoadDanhSachLop(cbbML.Text);
             SetupDataGridView();
         }
 
@@ -33,24 +33,26 @@ namespace PBL3a.UI.AdminTC
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void LoadDanhSachLop()
+        private void LoadDanhSachLop(string text)
         {
             cbbML.Items.Clear();
 
             using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT classID FROM Class ORDER BY classID";
+                string query = "SELECT classID FROM Class WHERE classID LIKE @text ORDER BY classID";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
-                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    cmd.Parameters.AddWithValue("@text", "%" + text + "%");
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        cbbML.Items.Add(reader["classID"].ToString());
+                        while (reader.Read())
+                        {
+                            cbbML.Items.Add(reader["classID"].ToString());
+                        }
                     }
                 }
-                conn.Close();
             }
 
             if (cbbML.Items.Count > 0)
@@ -149,6 +151,28 @@ namespace PBL3a.UI.AdminTC
         private void btSetHP_MouseLeave(object sender, EventArgs e)
         {
             but_chform.bt_MouseLeave(sender, e);
+        }
+
+        private void cbbML_TextUpdate(object sender, EventArgs e)
+        {
+            string keyword = cbbML.Text;
+            int cursorPosition = cbbML.SelectionStart;
+            cbbML.SelectedIndexChanged -= comboBox1_SelectedIndexChanged;
+            LoadDanhSachLop(keyword);
+
+            cbbML.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cbbML.Text = keyword;
+            cbbML.SelectionStart = cursorPosition;
+
+            if (cbbML.Items.Count > 0)
+            {
+                cbbML.DroppedDown = true;
+                Cursor.Current = Cursors.Default;
+            }
+            else
+            {
+                cbbML.DroppedDown = false;
+            }
         }
     }
 }
