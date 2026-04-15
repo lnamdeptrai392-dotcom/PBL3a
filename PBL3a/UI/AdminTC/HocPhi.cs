@@ -16,12 +16,12 @@ namespace PBL3a.UI.AdminTC
         {
             InitializeComponent();
             Load += HocPhi_Load;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cbbML.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         }
 
         private void HocPhi_Load(object? sender, EventArgs e)
         {
-            LoadDanhSachLop();
+            LoadDanhSachLop(cbbML.Text);
             SetupDataGridView();
         }
 
@@ -33,35 +33,38 @@ namespace PBL3a.UI.AdminTC
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void LoadDanhSachLop()
+        private void LoadDanhSachLop(string text)
         {
-            comboBox1.Items.Clear();
+            cbbML.Items.Clear();
 
             using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT classID FROM Class ORDER BY classID";
+                string query = "SELECT classID FROM Class WHERE classID LIKE @text ORDER BY classID";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
-                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    cmd.Parameters.AddWithValue("@text", "%" + text + "%");
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        comboBox1.Items.Add(reader["classID"].ToString());
+                        while (reader.Read())
+                        {
+                            cbbML.Items.Add(reader["classID"].ToString());
+                        }
                     }
                 }
             }
 
-            if (comboBox1.Items.Count > 0)
-                comboBox1.SelectedIndex = 0;
+            if (cbbML.Items.Count > 0)
+                cbbML.SelectedIndex = 0;
         }
 
         private void comboBox1_SelectedIndexChanged(object? sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == null) return;
+            if (cbbML.SelectedItem == null) return;
             else
             {
-                string classID = comboBox1.SelectedItem.ToString();
+                string classID = cbbML.SelectedItem.ToString();
                 LoadTenLop(classID);
                 LoadHocPhiTheoLop(classID);
             }
@@ -132,10 +135,12 @@ namespace PBL3a.UI.AdminTC
 
         private void btSetHP_Click(object sender, EventArgs e)
         {
-            ThietLapHP thietLap = new ThietLapHP();
+            string malop = cbbML.Text;
+            ThietLapHP thietLap = new ThietLapHP(malop);
             this.Hide();
             thietLap.ShowDialog();
             this.Show();
+            LoadHocPhiTheoLop(malop);
         }
 
         private void btSetHP_MouseEnter(object sender, EventArgs e)
@@ -146,6 +151,28 @@ namespace PBL3a.UI.AdminTC
         private void btSetHP_MouseLeave(object sender, EventArgs e)
         {
             but_chform.bt_MouseLeave(sender, e);
+        }
+
+        private void cbbML_TextUpdate(object sender, EventArgs e)
+        {
+            string keyword = cbbML.Text;
+            int cursorPosition = cbbML.SelectionStart;
+            cbbML.SelectedIndexChanged -= comboBox1_SelectedIndexChanged;
+            LoadDanhSachLop(keyword);
+
+            cbbML.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cbbML.Text = keyword;
+            cbbML.SelectionStart = cursorPosition;
+
+            if (cbbML.Items.Count > 0)
+            {
+                cbbML.DroppedDown = true;
+                Cursor.Current = Cursors.Default;
+            }
+            else
+            {
+                cbbML.DroppedDown = false;
+            }
         }
     }
 }

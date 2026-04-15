@@ -15,13 +15,13 @@ namespace PBL3a.UI.AdminTC
         {
             InitializeComponent();
             Load += LuongGV_Load;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cbbMGV.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         }
 
         private void LuongGV_Load(object? sender, EventArgs e)
         {
             SetupDataGridView();
-            LoadDanhSachGiangVien();
+            LoadDanhSachGiangVien(cbbMGV.Text);
         }
 
         private void SetupDataGridView()
@@ -32,34 +32,37 @@ namespace PBL3a.UI.AdminTC
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void LoadDanhSachGiangVien()
+        private void LoadDanhSachGiangVien(string text)
         {
-            comboBox1.Items.Clear();
+            cbbMGV.Items.Clear();
 
             using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT Id FROM accountList WHERE Role = 'Teacher' ORDER BY Id";
+                string query = "SELECT Id FROM accountList WHERE Role = 'Teacher' AND Id LIKE @text ORDER BY Id";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
-                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    cmd.Parameters.AddWithValue("@text", "%" + text + "%");
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        comboBox1.Items.Add(reader["Id"].ToString());
+                        while (reader.Read())
+                        {
+                            cbbMGV.Items.Add(reader["Id"].ToString());
+                        }
                     }
                 }
             }
 
-            if (comboBox1.Items.Count > 0)
-                comboBox1.SelectedIndex = 0;
+            if (cbbMGV.Items.Count > 0)
+                cbbMGV.SelectedIndex = 0;
         }
 
         private void comboBox1_SelectedIndexChanged(object? sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == null) return;
+            if (cbbMGV.SelectedItem == null) return;
 
-            string teacherID = comboBox1.SelectedItem.ToString();
+            string teacherID = cbbMGV.SelectedItem.ToString();
             LoadTenGiangVien(teacherID);
             LoadLuongTheoGV(teacherID);
         }
@@ -138,25 +141,25 @@ namespace PBL3a.UI.AdminTC
 
         private void btCheckL_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == null)
+            if (cbbMGV.SelectedItem == null)
             {
                 MessageBox.Show("Vui lòng chọn giảng viên.");
                 return;
             }
 
-            string teacherID = comboBox1.SelectedItem.ToString();
+            string teacherID = cbbMGV.SelectedItem.ToString();
             LoadLuongTheoGV(teacherID);
         }
 
         private void btSetL_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == null)
+            if (cbbMGV.SelectedItem == null)
             {
                 MessageBox.Show("Vui lòng chọn giảng viên.");
                 return;
             }
 
-            string teacherID = comboBox1.SelectedItem.ToString();
+            string teacherID = cbbMGV.SelectedItem.ToString();
             int month = DateTime.Now.Month;
             int year = DateTime.Now.Year;
 
@@ -233,6 +236,30 @@ namespace PBL3a.UI.AdminTC
         private void btSetL_MouseLeave(object sender, EventArgs e)
         {
             but_chform.bt_MouseLeave(sender, e);
+        }
+
+        private void comboBox1_TextUpdate(object sender, EventArgs e)
+        {
+            string keyword = cbbMGV.Text;
+            int cursorPosition = cbbMGV.SelectionStart;
+
+            cbbMGV.SelectedIndexChanged -= comboBox1_SelectedIndexChanged;
+            LoadDanhSachGiangVien(keyword);
+
+            cbbMGV.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+
+            cbbMGV.Text = keyword;
+            cbbMGV.SelectionStart = cursorPosition;
+
+            if (cbbMGV.Items.Count > 0)
+            {
+                cbbMGV.DroppedDown = true;
+                Cursor.Current = Cursors.Default;
+            }
+            else
+            {
+                cbbMGV.DroppedDown = false;
+            }
         }
     }
 }
