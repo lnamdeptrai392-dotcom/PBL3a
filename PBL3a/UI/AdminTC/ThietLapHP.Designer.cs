@@ -38,11 +38,11 @@
             laTT = new Label();
             txtTongT = new TextBox();
             cbbMaLop = new ComboBox();
-            label1 = new Label();
-            txtSS = new TextBox();
             butTT = new Button();
             btLuu = new Button();
             button1 = new Button();
+            label1 = new Label();
+            txtSS = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -188,26 +188,6 @@
             cbbMaLop.TabIndex = 12;
             cbbMaLop.SelectedIndexChanged += cbbMaLop_SelectedIndexChanged;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Right;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(166, 584);
-            label1.Name = "label1";
-            label1.Size = new Size(75, 97);
-            label1.TabIndex = 14;
-            label1.Text = "Sĩ số";
-            // 
-            // txtSS
-            // 
-            txtSS.Dock = DockStyle.Fill;
-            txtSS.Location = new Point(249, 590);
-            txtSS.Margin = new Padding(5, 6, 5, 6);
-            txtSS.Name = "txtSS";
-            txtSS.Size = new Size(516, 35);
-            txtSS.TabIndex = 15;
-            // 
             // butTT
             // 
             butTT.BackColor = Color.FromArgb(112, 146, 190);
@@ -251,6 +231,26 @@
             button1.Text = "Thoát";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Right;
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(166, 584);
+            label1.Name = "label1";
+            label1.Size = new Size(75, 97);
+            label1.TabIndex = 14;
+            label1.Text = "Sĩ số";
+            // 
+            // txtSS
+            // 
+            txtSS.Dock = DockStyle.Fill;
+            txtSS.Location = new Point(249, 590);
+            txtSS.Margin = new Padding(5, 6, 5, 6);
+            txtSS.Name = "txtSS";
+            txtSS.Size = new Size(516, 35);
+            txtSS.TabIndex = 15;
             // 
             // ThietLapHP
             // 

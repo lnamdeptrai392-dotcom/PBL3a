@@ -105,11 +105,11 @@ namespace PBL3a.UI.AdminTC
 
         public int capapcity_cl(string idlop)
         {
-            int cap;
+            int cap = 0;
             using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
-                string query = @"select capacity from Class where classID = @id";
+                string query = @"SELECT COUNT(AccountID) FROM HocPhi WHERE ClassID = @id AND TrangThai = N'Chưa đóng'";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", idlop);
@@ -118,7 +118,6 @@ namespace PBL3a.UI.AdminTC
                     {
                         cap = Convert.ToInt32(result);
                     }
-                    else { cap = 0; }
                 }
             }
             return cap;
