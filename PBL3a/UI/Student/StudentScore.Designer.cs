@@ -30,32 +30,37 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
-            button2 = new Button();
+            btnExport = new Button();
+            dgvScore = new DataGridView();
+            panel1 = new Panel();
+            btnShowData = new Button();
+            cboSemester = new ComboBox();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvScore).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.BackColor = Color.AliceBlue;
-            tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 17.5035877F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 82.4964142F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 588F));
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 4.28015566F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95.71984F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 28F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 53F));
-            tableLayoutPanel1.Controls.Add(label1, 2, 0);
-            tableLayoutPanel1.Controls.Add(dataGridView1, 2, 1);
-            tableLayoutPanel1.Controls.Add(button2, 2, 3);
+            tableLayoutPanel1.Controls.Add(label1, 1, 0);
+            tableLayoutPanel1.Controls.Add(btnExport, 1, 3);
+            tableLayoutPanel1.Controls.Add(dgvScore, 1, 2);
+            tableLayoutPanel1.Controls.Add(panel1, 1, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20.5513783F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 79.44862F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 42F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 62F));
-            tableLayoutPanel1.Size = new Size(800, 450);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 48.1481476F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 51.8518524F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 353F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 44F));
+            tableLayoutPanel1.Size = new Size(914, 495);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -63,43 +68,78 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.Location = new Point(345, 20);
+            label1.Location = new Point(354, 8);
             label1.Name = "label1";
             label1.Size = new Size(214, 31);
             label1.TabIndex = 0;
             label1.Text = "KẾT QUẢ HỌC TẬP";
             // 
-            // dataGridView1
+            // btnExport
             // 
-            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(161, 74);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(556, 268);
-            dataGridView1.TabIndex = 1;
+            btnExport.Anchor = AnchorStyles.None;
+            btnExport.Location = new Point(414, 458);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(94, 29);
+            btnExport.TabIndex = 3;
+            btnExport.Text = "Xuất";
+            btnExport.UseVisualStyleBackColor = true;
+            btnExport.Click += btnExport_Click;
             // 
-            // button2
+            // dgvScore
             // 
-            button2.Anchor = AnchorStyles.Left;
-            button2.Location = new Point(161, 404);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 3;
-            button2.Text = "Xuất";
-            button2.UseVisualStyleBackColor = true;
+            dgvScore.BackgroundColor = SystemColors.ButtonHighlight;
+            dgvScore.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvScore.Dock = DockStyle.Fill;
+            dgvScore.Location = new Point(40, 100);
+            dgvScore.Name = "dgvScore";
+            dgvScore.RowHeadersWidth = 51;
+            dgvScore.Size = new Size(842, 347);
+            dgvScore.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(btnShowData);
+            panel1.Controls.Add(cboSemester);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(40, 50);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(842, 44);
+            panel1.TabIndex = 4;
+            // 
+            // btnShowData
+            // 
+            btnShowData.Anchor = AnchorStyles.None;
+            btnShowData.Location = new Point(237, 8);
+            btnShowData.Name = "btnShowData";
+            btnShowData.Size = new Size(94, 29);
+            btnShowData.TabIndex = 3;
+            btnShowData.Text = "Dữ liệu";
+            btnShowData.UseVisualStyleBackColor = true;
+            btnShowData.Click += btnShowData_Click;
+            // 
+            // cboSemester
+            // 
+            cboSemester.Anchor = AnchorStyles.Left;
+            cboSemester.FormattingEnabled = true;
+            cboSemester.Location = new Point(15, 8);
+            cboSemester.Name = "cboSemester";
+            cboSemester.Size = new Size(158, 28);
+            cboSemester.TabIndex = 2;
+            cboSemester.SelectedIndexChanged += cboSemester_SelectedIndexChanged;
             // 
             // StudentScore
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 495);
             Controls.Add(tableLayoutPanel1);
             Name = "StudentScore";
             Text = "Form1";
+            Load += StudentScore_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvScore).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -107,7 +147,10 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
-        private DataGridView dataGridView1;
-        private Button button2;
+        private DataGridView dgvScore;
+        private Button btnExport;
+        private Panel panel1;
+        private ComboBox cboSemester;
+        private Button btnShowData;
     }
 }

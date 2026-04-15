@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using PBL3a.services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,18 +12,72 @@ namespace PBL3a.UI.Student
 {
     public partial class StudentScore : Form
     {
-        public StudentScore()
+        private readonly DatabaseHelper db = new DatabaseHelper();
+        private string currentID = "";
+        public StudentScore(string id)
         {
             InitializeComponent();
+            this.currentID = id;
+            LoadScoreData();
         }
-
-        private void btn_back_Click(object sender, EventArgs e)
+        private void StudentScore_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            StudentAll student = new StudentAll();
-            student.ShowDialog();
+            if (!string.IsNullOrEmpty(currentID))
+            {
+                LoadScoreData();
+            }
+        }
+        private void LoadScoreData()
+        {
             
+            using (SqlConnection con = db.GetConnection())
+            {
+                try
+                {
+                    con.Open();
+                    //
+                    string query = @"select 
+                                d.ClassID, 
+                                cl.class_name, 
+                                d.Diem, 
+                                d.NhanXet
+                            from JoinClass jc
+                            inner join Diem d on d.ClassID = jc.classID AND d.AccountID = jc.AccountID
+                            inner join Class cl on cl.classID = jc.classID
+                            where jc.AccountID = @id";
+                    using (SqlDataAdapter a = new SqlDataAdapter(query, con))
+                    {
+                        a.SelectCommand.Parameters.AddWithValue("id", currentID);
+
+                        DataTable dt = new DataTable();
+                        a.Fill(dt);
+                        dt.Columns["ClassID"].ColumnName = "Mã môn";
+                        dt.Columns["class_name"].ColumnName = "Tên lớp học";
+                        dt.Columns["Diem"].ColumnName = "Điểm học tập";
+                        dt.Columns["NhanXet"].ColumnName = "Nhận xét";
+
+                        dgvScore.DataSource = dt;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            //xuat file excel
         }
 
+        private void btnShowData_Click(object sender, EventArgs e)
+        {
+            //show du lieu theo ki hoc, nam hoc
+        }
+
+        private void cboSemester_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -50,7 +50,7 @@ namespace PBL3a.UI.Student
 
         private void btn_score_Click(object sender, EventArgs e)
         {
-            openChildForm(new StudentScore(), sender);
+            openChildForm(new StudentScore(StudentID), sender);
         }
 
         private void btn_schedule_Click(object sender, EventArgs e)

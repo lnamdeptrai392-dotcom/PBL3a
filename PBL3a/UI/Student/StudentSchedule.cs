@@ -160,6 +160,9 @@ namespace PBL3a.UI.Student
             public override string ToString() => Text;
         }
 
-        
+        private void dgvSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

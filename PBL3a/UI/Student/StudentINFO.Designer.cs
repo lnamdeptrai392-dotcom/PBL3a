@@ -40,7 +40,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.Location = new Point(336, 9);
+            label1.Location = new Point(352, 9);
             label1.Name = "label1";
             label1.Size = new Size(208, 31);
             label1.TabIndex = 0;
@@ -48,7 +48,9 @@
             // 
             // label2
             // 
-            label2.Location = new Point(83, 50);
+            label2.Anchor = AnchorStyles.None;
+            label2.Font = new Font("Segoe UI", 10.8F);
+            label2.Location = new Point(72, 74);
             label2.Name = "label2";
             label2.Size = new Size(100, 23);
             label2.TabIndex = 1;
@@ -56,7 +58,9 @@
             // 
             // label3
             // 
-            label3.Location = new Point(83, 100);
+            label3.Anchor = AnchorStyles.None;
+            label3.Font = new Font("Segoe UI", 10.8F);
+            label3.Location = new Point(72, 136);
             label3.Name = "label3";
             label3.Size = new Size(100, 23);
             label3.TabIndex = 2;
@@ -64,7 +68,9 @@
             // 
             // label4
             // 
-            label4.Location = new Point(83, 150);
+            label4.Anchor = AnchorStyles.None;
+            label4.Font = new Font("Segoe UI", 10.8F);
+            label4.Location = new Point(72, 188);
             label4.Name = "label4";
             label4.Size = new Size(100, 23);
             label4.TabIndex = 3;
@@ -72,7 +78,9 @@
             // 
             // label5
             // 
-            label5.Location = new Point(83, 200);
+            label5.Anchor = AnchorStyles.None;
+            label5.Font = new Font("Segoe UI", 10.8F);
+            label5.Location = new Point(72, 238);
             label5.Name = "label5";
             label5.Size = new Size(100, 23);
             label5.TabIndex = 4;
@@ -80,7 +88,9 @@
             // 
             // label6
             // 
-            label6.Location = new Point(83, 250);
+            label6.Anchor = AnchorStyles.None;
+            label6.Font = new Font("Segoe UI", 10.8F);
+            label6.Location = new Point(72, 285);
             label6.Name = "label6";
             label6.Size = new Size(100, 23);
             label6.TabIndex = 5;
@@ -88,7 +98,9 @@
             // 
             // label7
             // 
-            label7.Location = new Point(83, 300);
+            label7.Anchor = AnchorStyles.None;
+            label7.Font = new Font("Segoe UI", 10.8F);
+            label7.Location = new Point(72, 339);
             label7.Name = "label7";
             label7.Size = new Size(100, 23);
             label7.TabIndex = 6;
@@ -96,12 +108,13 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel1.BackColor = Color.AliceBlue;
             tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 6.875F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.75F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66.875F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.5F));
             tableLayoutPanel1.Controls.Add(label1, 2, 0);
             tableLayoutPanel1.Controls.Add(label2, 1, 1);
             tableLayoutPanel1.Controls.Add(label3, 1, 2);
@@ -116,17 +129,16 @@
             tableLayoutPanel1.Controls.Add(txtSDT, 2, 5);
             tableLayoutPanel1.Controls.Add(txtDiaChi, 2, 6);
             tableLayoutPanel1.Controls.Add(btn_update, 2, 7);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 8;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 72F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 51F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 46F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 47F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 61F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Size = new Size(800, 450);
@@ -134,56 +146,56 @@
             // 
             // txtHoTen
             // 
-            txtHoTen.Dock = DockStyle.Fill;
-            txtHoTen.Location = new Point(243, 53);
+            txtHoTen.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtHoTen.Location = new Point(192, 72);
             txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(394, 27);
+            txtHoTen.Size = new Size(529, 27);
             txtHoTen.TabIndex = 7;
             // 
             // dtpNgaySinh
             // 
-            dtpNgaySinh.Dock = DockStyle.Fill;
-            dtpNgaySinh.Location = new Point(243, 103);
+            dtpNgaySinh.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            dtpNgaySinh.Location = new Point(192, 134);
             dtpNgaySinh.Name = "dtpNgaySinh";
-            dtpNgaySinh.Size = new Size(394, 27);
+            dtpNgaySinh.Size = new Size(529, 27);
             dtpNgaySinh.TabIndex = 8;
             // 
             // cboGioiTinh
             // 
-            cboGioiTinh.Dock = DockStyle.Fill;
-            cboGioiTinh.Location = new Point(243, 153);
+            cboGioiTinh.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cboGioiTinh.Location = new Point(192, 186);
             cboGioiTinh.Name = "cboGioiTinh";
-            cboGioiTinh.Size = new Size(394, 28);
+            cboGioiTinh.Size = new Size(529, 28);
             cboGioiTinh.TabIndex = 9;
             // 
             // txtEmail
             // 
-            txtEmail.Dock = DockStyle.Fill;
-            txtEmail.Location = new Point(243, 203);
+            txtEmail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtEmail.Location = new Point(192, 236);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(394, 27);
+            txtEmail.Size = new Size(529, 27);
             txtEmail.TabIndex = 10;
             // 
             // txtSDT
             // 
-            txtSDT.Dock = DockStyle.Fill;
-            txtSDT.Location = new Point(243, 253);
+            txtSDT.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtSDT.Location = new Point(192, 283);
             txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(394, 27);
+            txtSDT.Size = new Size(529, 27);
             txtSDT.TabIndex = 11;
             // 
             // txtDiaChi
             // 
-            txtDiaChi.Dock = DockStyle.Fill;
-            txtDiaChi.Location = new Point(243, 303);
+            txtDiaChi.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtDiaChi.Location = new Point(192, 337);
             txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(394, 27);
+            txtDiaChi.Size = new Size(529, 27);
             txtDiaChi.TabIndex = 12;
             // 
             // btn_update
             // 
             btn_update.Anchor = AnchorStyles.Top;
-            btn_update.Location = new Point(380, 353);
+            btn_update.Location = new Point(397, 384);
             btn_update.Name = "btn_update";
             btn_update.Size = new Size(119, 42);
             btn_update.TabIndex = 13;

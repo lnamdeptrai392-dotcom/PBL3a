@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.MinimumSize = new Size(800, 500);
+
             panel_content = new Panel();
             btn_exit = new Button();
             btn_fee = new Button();
@@ -50,7 +52,8 @@
             panel_content.Controls.Add(btn_schedule);
             panel_content.Controls.Add(btn_info);
             panel_content.Controls.Add(panel1);
-            panel_content.Dock = DockStyle.Fill;
+            panel_content.Dock = DockStyle.Left;
+            panel_content.Width = 220;
             panel_content.Location = new Point(0, 0);
             panel_content.Margin = new Padding(0);
             panel_content.Name = "panel_content";
