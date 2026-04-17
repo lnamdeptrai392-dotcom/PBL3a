@@ -41,7 +41,7 @@
             // dgvData
             // 
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Location = new Point(35, 70);
+            dgvData.Location = new Point(31, 119);
             dgvData.Name = "dgvData";
             dgvData.RowHeadersWidth = 51;
             dgvData.Size = new Size(725, 339);
@@ -55,11 +55,12 @@
             lbTitle.Size = new Size(283, 20);
             lbTitle.TabIndex = 1;
             lbTitle.Text = "Các Đơn Xin Tham Gia Lớp Học Đã Duyệt";
+            lbTitle.Click += lbTitle_Click;
             // 
             // cbbKhoa
             // 
             cbbKhoa.FormattingEnabled = true;
-            cbbKhoa.Location = new Point(158, 36);
+            cbbKhoa.Location = new Point(137, 59);
             cbbKhoa.Name = "cbbKhoa";
             cbbKhoa.Size = new Size(137, 28);
             cbbKhoa.TabIndex = 2;
@@ -68,7 +69,7 @@
             // lbKhoa
             // 
             lbKhoa.AutoSize = true;
-            lbKhoa.Location = new Point(71, 36);
+            lbKhoa.Location = new Point(50, 59);
             lbKhoa.Name = "lbKhoa";
             lbKhoa.Size = new Size(81, 20);
             lbKhoa.TabIndex = 3;
@@ -76,7 +77,7 @@
             // 
             // btnView
             // 
-            btnView.Location = new Point(640, 32);
+            btnView.Location = new Point(619, 55);
             btnView.Name = "btnView";
             btnView.Size = new Size(94, 29);
             btnView.TabIndex = 4;
@@ -87,7 +88,7 @@
             // lbLop
             // 
             lbLop.AutoSize = true;
-            lbLop.Location = new Point(324, 36);
+            lbLop.Location = new Point(303, 59);
             lbLop.Name = "lbLop";
             lbLop.Size = new Size(72, 20);
             lbLop.TabIndex = 5;
@@ -96,7 +97,7 @@
             // cbbLop
             // 
             cbbLop.FormattingEnabled = true;
-            cbbLop.Location = new Point(402, 33);
+            cbbLop.Location = new Point(381, 56);
             cbbLop.Name = "cbbLop";
             cbbLop.Size = new Size(137, 28);
             cbbLop.TabIndex = 6;
@@ -105,7 +106,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 500);
             Controls.Add(cbbLop);
             Controls.Add(lbLop);
             Controls.Add(btnView);
@@ -113,6 +114,7 @@
             Controls.Add(cbbKhoa);
             Controls.Add(lbTitle);
             Controls.Add(dgvData);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form2DaDuyet";
             Text = "Form2DaDuyet";
             Load += Form2DaDuyet_Load;

@@ -55,7 +55,7 @@ namespace PBL3a.UI.Student
                         dt.Columns["class_name"].ColumnName = "Tên lớp học";
                         dt.Columns["Diem"].ColumnName = "Điểm học tập";
                         dt.Columns["NhanXet"].ColumnName = "Nhận xét";
-
+                        
                         dgvScore.DataSource = dt;
                     }
                 }

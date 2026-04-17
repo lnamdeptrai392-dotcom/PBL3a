@@ -55,66 +55,73 @@
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1483, 63);
+            panel2.Size = new Size(1000, 84);
             panel2.TabIndex = 1;
             // 
             // panel5
             // 
+            panel5.BackColor = Color.FromArgb(44, 78, 98);
             panel5.Controls.Add(panel6);
             panel5.Controls.Add(panel4);
             panel5.Location = new Point(0, 0);
+            panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1483, 63);
+            panel5.Size = new Size(1695, 84);
             panel5.TabIndex = 0;
             // 
             // panel6
             // 
             panel6.Controls.Add(label1);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(236, 0);
+            panel6.Location = new Point(200, 0);
+            panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1247, 63);
+            panel6.Size = new Size(733, 84);
             panel6.TabIndex = 2;
+            panel6.Paint += panel6_Paint;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 163);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(549, 9);
+            label1.Location = new Point(229, 21);
             label1.Name = "label1";
-            label1.Size = new Size(295, 47);
+            label1.Size = new Size(297, 46);
             label1.TabIndex = 0;
             label1.Text = "Quản Lý Tài Chính";
             // 
             // panel4
             // 
+            panel4.BackColor = Color.FromArgb(44, 78, 98);
             panel4.Dock = DockStyle.Left;
             panel4.Location = new Point(0, 0);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(236, 63);
+            panel4.Size = new Size(200, 84);
             panel4.TabIndex = 1;
             // 
             // paDesktop
             // 
-            paDesktop.Location = new Point(239, 69);
+            paDesktop.Location = new Point(200, 84);
+            paDesktop.Margin = new Padding(3, 4, 3, 4);
             paDesktop.Name = "paDesktop";
-            paDesktop.Size = new Size(864, 412);
+            paDesktop.Size = new Size(800, 416);
             paDesktop.TabIndex = 0;
             // 
             // panel3
             // 
-            panel3.BackColor = Color.AliceBlue;
+            panel3.BackColor = Color.White;
             panel3.Controls.Add(paDesktop);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1483, 641);
+            panel3.Size = new Size(1000, 500);
             panel3.TabIndex = 2;
             // 
             // btHP
             // 
+            btHP.BackColor = Color.FromArgb(44, 78, 98);
             btHP.Dock = DockStyle.Top;
             btHP.FlatAppearance.BorderSize = 0;
             btHP.FlatStyle = FlatStyle.Flat;
@@ -123,85 +130,89 @@
             btHP.Location = new Point(0, 0);
             btHP.Margin = new Padding(0);
             btHP.Name = "btHP";
-            btHP.Size = new Size(236, 72);
+            btHP.Size = new Size(200, 60);
             btHP.TabIndex = 1;
             btHP.Text = "Học Phí";
-            btHP.UseVisualStyleBackColor = true;
+            btHP.UseVisualStyleBackColor = false;
             btHP.Click += btHP_Click;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(112, 146, 190);
+            panel1.BackColor = Color.FromArgb(44, 78, 98);
             panel1.Controls.Add(btDX);
             panel1.Controls.Add(btLN);
             panel1.Controls.Add(btLGV);
             panel1.Controls.Add(btHP);
             panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 63);
+            panel1.Location = new Point(0, 84);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(236, 578);
+            panel1.Size = new Size(200, 416);
             panel1.TabIndex = 0;
             // 
             // btDX
             // 
+            btDX.BackColor = Color.FromArgb(44, 78, 98);
             btDX.Dock = DockStyle.Top;
             btDX.FlatAppearance.BorderSize = 0;
             btDX.FlatStyle = FlatStyle.Flat;
             btDX.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btDX.ForeColor = Color.White;
-            btDX.Location = new Point(0, 216);
+            btDX.Location = new Point(0, 180);
             btDX.Margin = new Padding(0);
             btDX.Name = "btDX";
-            btDX.Size = new Size(236, 72);
+            btDX.Size = new Size(200, 60);
             btDX.TabIndex = 4;
             btDX.Text = "Đăng Xuất";
-            btDX.UseVisualStyleBackColor = true;
+            btDX.UseVisualStyleBackColor = false;
             btDX.Click += btDX_Click;
             // 
             // btLN
             // 
+            btLN.BackColor = Color.FromArgb(44, 78, 98);
             btLN.Dock = DockStyle.Top;
             btLN.FlatAppearance.BorderSize = 0;
             btLN.FlatStyle = FlatStyle.Flat;
             btLN.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btLN.ForeColor = Color.White;
-            btLN.Location = new Point(0, 144);
+            btLN.Location = new Point(0, 120);
             btLN.Margin = new Padding(0);
             btLN.Name = "btLN";
-            btLN.Size = new Size(236, 72);
+            btLN.Size = new Size(200, 60);
             btLN.TabIndex = 3;
             btLN.Text = "Lợi Nhuận";
-            btLN.UseVisualStyleBackColor = true;
+            btLN.UseVisualStyleBackColor = false;
             btLN.Click += btLN_Click;
             // 
             // btLGV
             // 
+            btLGV.BackColor = Color.FromArgb(44, 78, 98);
             btLGV.Dock = DockStyle.Top;
             btLGV.FlatAppearance.BorderSize = 0;
             btLGV.FlatStyle = FlatStyle.Flat;
             btLGV.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btLGV.ForeColor = Color.White;
-            btLGV.Location = new Point(0, 72);
+            btLGV.Location = new Point(0, 60);
             btLGV.Margin = new Padding(0);
             btLGV.Name = "btLGV";
-            btLGV.Size = new Size(236, 72);
+            btLGV.Size = new Size(200, 60);
             btLGV.TabIndex = 2;
             btLGV.Text = "Lương Giáo Viên";
-            btLGV.UseVisualStyleBackColor = true;
+            btLGV.UseVisualStyleBackColor = false;
             btLGV.Click += btLGV_Click;
             // 
             // QuanLyChungTC
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1483, 641);
+            AutoScaleMode = AutoScaleMode.Inherit;
+            ClientSize = new Size(1000, 500);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Controls.Add(panel3);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "QuanLyChungTC";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "QuanLyChungTC";
-            WindowState = FormWindowState.Maximized;
             panel2.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel6.ResumeLayout(false);
@@ -222,7 +233,7 @@
         private Button btLGV;
         private Panel panel5;
         private Panel panel6;
-        private Panel panel4;
         private Panel paDesktop;
+        private Panel panel4;
     }
 }

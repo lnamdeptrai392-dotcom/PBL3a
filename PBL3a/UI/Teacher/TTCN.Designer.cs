@@ -50,13 +50,14 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 7;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 94F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 102F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 253F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 37F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 125F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 226F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 113F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 290F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 137F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 349F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 26F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(label2, 1, 1);
             tableLayoutPanel1.Controls.Add(label3, 1, 2);
@@ -75,17 +76,17 @@
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Segoe UI", 11.1428576F);
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(2);
+            tableLayoutPanel1.Margin = new Padding(2, 3, 2, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 68F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 47F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 44F));
-            tableLayoutPanel1.Size = new Size(860, 392);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 91F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 69F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 72F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 72F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 63F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 59F));
+            tableLayoutPanel1.Size = new Size(800, 500);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -97,7 +98,7 @@
             label1.Location = new Point(2, 0);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(856, 68);
+            label1.Size = new Size(978, 91);
             label1.TabIndex = 0;
             label1.Text = "THÔNG TIN CÁ NHÂN";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -106,10 +107,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.1428576F);
-            label2.Location = new Point(96, 68);
+            label2.Location = new Point(39, 91);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(76, 20);
+            label2.Size = new Size(96, 25);
             label2.TabIndex = 1;
             label2.Text = "Họ và tên:";
             // 
@@ -117,10 +118,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.1428576F);
-            label3.Location = new Point(96, 120);
+            label3.Location = new Point(39, 160);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(68, 20);
+            label3.Size = new Size(88, 25);
             label3.TabIndex = 2;
             label3.Text = "Giới tính:";
             // 
@@ -128,10 +129,10 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.1428576F);
-            label4.Location = new Point(96, 174);
+            label4.Location = new Point(39, 232);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(81, 20);
+            label4.Size = new Size(105, 25);
             label4.TabIndex = 3;
             label4.Text = "Ngày sinh: ";
             // 
@@ -139,10 +140,10 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.1428576F);
-            label5.Location = new Point(96, 230);
+            label5.Location = new Point(39, 307);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(39, 20);
+            label5.Size = new Size(49, 25);
             label5.TabIndex = 4;
             label5.Text = "SĐT:";
             // 
@@ -150,10 +151,10 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.1428576F);
-            label6.Location = new Point(96, 284);
+            label6.Location = new Point(39, 379);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(49, 20);
+            label6.Size = new Size(62, 25);
             label6.TabIndex = 5;
             label6.Text = "Email:";
             // 
@@ -161,10 +162,10 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11.1428576F);
-            label7.Location = new Point(488, 68);
+            label7.Location = new Point(472, 91);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(94, 20);
+            label7.Size = new Size(123, 25);
             label7.TabIndex = 6;
             label7.Text = "Chuyên môn:";
             // 
@@ -172,56 +173,56 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11.1428576F);
-            label8.Location = new Point(488, 120);
+            label8.Location = new Point(472, 160);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(106, 20);
+            label8.Size = new Size(97, 50);
             label8.TabIndex = 7;
             label8.Text = "Mã giảng viên:";
             // 
             // tbHVT
             // 
             tbHVT.Dock = DockStyle.Fill;
-            tbHVT.Location = new Point(198, 70);
-            tbHVT.Margin = new Padding(2);
+            tbHVT.Location = new Point(152, 94);
+            tbHVT.Margin = new Padding(2, 3, 2, 3);
             tbHVT.Name = "tbHVT";
-            tbHVT.Size = new Size(249, 27);
+            tbHVT.Size = new Size(286, 32);
             tbHVT.TabIndex = 9;
             // 
             // tbSDT
             // 
             tbSDT.Dock = DockStyle.Fill;
-            tbSDT.Location = new Point(198, 232);
-            tbSDT.Margin = new Padding(2);
+            tbSDT.Location = new Point(152, 310);
+            tbSDT.Margin = new Padding(2, 3, 2, 3);
             tbSDT.Name = "tbSDT";
-            tbSDT.Size = new Size(249, 27);
+            tbSDT.Size = new Size(286, 32);
             tbSDT.TabIndex = 10;
             // 
             // tbE
             // 
             tbE.Dock = DockStyle.Fill;
-            tbE.Location = new Point(198, 286);
-            tbE.Margin = new Padding(2);
+            tbE.Location = new Point(152, 382);
+            tbE.Margin = new Padding(2, 3, 2, 3);
             tbE.Name = "tbE";
-            tbE.Size = new Size(249, 27);
+            tbE.Size = new Size(286, 32);
             tbE.TabIndex = 11;
             // 
             // tbMD
             // 
             tbMD.Dock = DockStyle.Fill;
-            tbMD.Location = new Point(613, 70);
-            tbMD.Margin = new Padding(2);
+            tbMD.Location = new Point(609, 94);
+            tbMD.Margin = new Padding(2, 3, 2, 3);
             tbMD.Name = "tbMD";
-            tbMD.Size = new Size(222, 27);
+            tbMD.Size = new Size(345, 32);
             tbMD.TabIndex = 12;
             // 
             // tbMGV
             // 
             tbMGV.Dock = DockStyle.Fill;
-            tbMGV.Location = new Point(613, 122);
-            tbMGV.Margin = new Padding(2);
+            tbMGV.Location = new Point(609, 163);
+            tbMGV.Margin = new Padding(2, 3, 2, 3);
             tbMGV.Name = "tbMGV";
-            tbMGV.Size = new Size(222, 27);
+            tbMGV.Size = new Size(345, 32);
             tbMGV.TabIndex = 13;
             // 
             // cbbGT
@@ -229,29 +230,30 @@
             cbbGT.Dock = DockStyle.Fill;
             cbbGT.FormattingEnabled = true;
             cbbGT.Items.AddRange(new object[] { "Nam", "Nữ" });
-            cbbGT.Location = new Point(198, 122);
-            cbbGT.Margin = new Padding(2);
+            cbbGT.Location = new Point(152, 163);
+            cbbGT.Margin = new Padding(2, 3, 2, 3);
             cbbGT.Name = "cbbGT";
-            cbbGT.Size = new Size(249, 28);
+            cbbGT.Size = new Size(286, 33);
             cbbGT.TabIndex = 14;
             // 
             // dtNS
             // 
             dtNS.Dock = DockStyle.Fill;
-            dtNS.Location = new Point(198, 176);
-            dtNS.Margin = new Padding(2);
+            dtNS.Location = new Point(152, 235);
+            dtNS.Margin = new Padding(2, 3, 2, 3);
             dtNS.Name = "dtNS";
-            dtNS.Size = new Size(249, 27);
+            dtNS.Size = new Size(286, 32);
             dtNS.TabIndex = 15;
             // 
             // TTCN
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(860, 392);
+            ClientSize = new Size(800, 500);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(2);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 3, 2, 3);
             Name = "TTCN";
             Text = "QuanLyChungT";
             tableLayoutPanel1.ResumeLayout(false);

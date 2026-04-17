@@ -4,14 +4,6 @@
     {
         private System.ComponentModel.IContainer components = null;
 
-        private Panel panelCard;
-        private TextBox txtUsername;
-        private Button btnLogin;
-        private CheckBox chkShowPassword;
-        private Label lblTitle;
-        private Label lblForgot;
-        private PictureBox picAvatar;
-
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,19 +13,123 @@
 
         private void InitializeComponent()
         {
-            panelCard = new Panel();
-            txtPassword = new TextBox();
-            txtUsername = new TextBox();
-            btnLogin = new Button();
-            lblTitle = new Label();
-            lblForgot = new Label();
             chkShowPassword = new CheckBox();
-            picAvatar = new PictureBox();
+            lblForgot = new Label();
+            lblTitle = new Label();
+            btnLogin = new Button();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            panelCard.SuspendLayout();
+            picAvatar = new PictureBox();
+            panelCard = new Panel();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)picAvatar).BeginInit();
+            panelCard.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // chkShowPassword
+            // 
+            chkShowPassword.ForeColor = Color.FromArgb(26, 47, 58);
+            chkShowPassword.Location = new Point(475, 322);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(104, 24);
+            chkShowPassword.TabIndex = 6;
+            chkShowPassword.Text = "Hiển thị";
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
+            // 
+            // lblForgot
+            // 
+            lblForgot.ForeColor = Color.Gray;
+            lblForgot.Location = new Point(731, 323);
+            lblForgot.Name = "lblForgot";
+            lblForgot.Size = new Size(124, 23);
+            lblForgot.TabIndex = 4;
+            lblForgot.Text = "Quên mật khẩu?";
+            lblForgot.Click += lblForgot_Click;
+            // 
+            // lblTitle
+            // 
+            lblTitle.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            lblTitle.ForeColor = Color.FromArgb(26, 47, 58);
+            lblTitle.Location = new Point(463, 84);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(296, 78);
+            lblTitle.TabIndex = 3;
+            lblTitle.Text = "Đăng nhập";
+            // 
+            // btnLogin
+            // 
+            btnLogin.BackColor = Color.FromArgb(93, 156, 179);
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(556, 370);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(212, 40);
+            btnLogin.TabIndex = 2;
+            btnLogin.Text = "Đăng nhập";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
+            // 
+            // txtUsername
+            // 
+            txtUsername.BackColor = Color.White;
+            txtUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtUsername.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            txtUsername.ForeColor = Color.DimGray;
+            txtUsername.Location = new Point(471, 199);
+            txtUsername.Name = "txtUsername";
+            txtUsername.PlaceholderText = " abc@123";
+            txtUsername.Size = new Size(370, 31);
+            txtUsername.TabIndex = 0;
+            // 
+            // txtPassword
+            // 
+            txtPassword.BackColor = Color.White;
+            txtPassword.BorderStyle = BorderStyle.FixedSingle;
+            txtPassword.Font = new Font("Segoe UI", 13F);
+            txtPassword.ForeColor = Color.DimGray;
+            txtPassword.Location = new Point(471, 272);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PlaceholderText = " ********";
+            txtPassword.Size = new Size(370, 36);
+            txtPassword.TabIndex = 0;
+            txtPassword.TextChanged += txtPassword_TextChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            label1.ForeColor = Color.FromArgb(26, 47, 58);
+            label1.Location = new Point(471, 162);
+            label1.Name = "label1";
+            label1.Size = new Size(128, 23);
+            label1.TabIndex = 8;
+            label1.Text = "Tên đăng nhập:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            label2.ForeColor = Color.FromArgb(26, 47, 58);
+            label2.Location = new Point(470, 241);
+            label2.Name = "label2";
+            label2.Size = new Size(88, 23);
+            label2.TabIndex = 9;
+            label2.Text = "Mật khẩu:";
+            // 
+            // picAvatar
+            // 
+            picAvatar.BackColor = Color.Transparent;
+            picAvatar.Image = Properties.Resources._2026;
+            picAvatar.Location = new Point(77, 62);
+            picAvatar.Name = "picAvatar";
+            picAvatar.Size = new Size(187, 169);
+            picAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
+            picAvatar.TabIndex = 7;
+            picAvatar.TabStop = false;
             // 
             // panelCard
             // 
@@ -46,122 +142,51 @@
             panelCard.Controls.Add(lblTitle);
             panelCard.Controls.Add(lblForgot);
             panelCard.Controls.Add(chkShowPassword);
-            panelCard.Controls.Add(picAvatar);
-            panelCard.Location = new Point(100, 75);
+            panelCard.Dock = DockStyle.Fill;
+            panelCard.Location = new Point(0, 0);
             panelCard.Name = "panelCard";
-            panelCard.Size = new Size(700, 350);
+            panelCard.Size = new Size(1000, 500);
             panelCard.TabIndex = 0;
+            panelCard.Paint += panelCard_Paint;
             // 
-            // txtPassword
+            // panel1
             // 
-            txtPassword.BackColor = Color.Gainsboro;
-            txtPassword.BorderStyle = BorderStyle.None;
-            txtPassword.Font = new Font("Segoe UI", 13F);
-            txtPassword.ForeColor = Color.DimGray;
-            txtPassword.Location = new Point(350, 149);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(250, 29);
-            txtPassword.TabIndex = 0;
-            txtPassword.TextChanged += txtPassword_TextChanged;
-            // 
-            // txtUsername
-            // 
-            txtUsername.BackColor = Color.Gainsboro;
-            txtUsername.BorderStyle = BorderStyle.None;
-            txtUsername.Font = new Font("Segoe UI", 13F);
-            txtUsername.ForeColor = Color.DimGray;
-            txtUsername.Location = new Point(350, 91);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(250, 29);
-            txtUsername.TabIndex = 0;
-            // 
-            // btnLogin
-            // 
-            btnLogin.BackColor = Color.FromArgb(112, 146, 190);
-            btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(350, 226);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(250, 40);
-            btnLogin.TabIndex = 2;
-            btnLogin.Text = "LOGIN";
-            btnLogin.UseVisualStyleBackColor = false;
-            btnLogin.Click += btnLogin_Click;
-            // 
-            // lblTitle
-            // 
-            lblTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblTitle.Location = new Point(346, 22);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(224, 37);
-            lblTitle.TabIndex = 3;
-            lblTitle.Text = "Member Login";
-            // 
-            // lblForgot
-            // 
-            lblForgot.ForeColor = Color.Gray;
-            lblForgot.Location = new Point(350, 285);
-            lblForgot.Name = "lblForgot";
-            lblForgot.Size = new Size(220, 23);
-            lblForgot.TabIndex = 4;
-            lblForgot.Text = "Forgot Username / Password?";
-            lblForgot.Click += lblForgot_Click;
-            // 
-            // chkShowPassword
-            // 
-            chkShowPassword.Location = new Point(350, 196);
-            chkShowPassword.Name = "chkShowPassword";
-            chkShowPassword.Size = new Size(104, 24);
-            chkShowPassword.TabIndex = 6;
-            chkShowPassword.Text = "Show";
-            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
-            // 
-            // picAvatar
-            // 
-            picAvatar.BackColor = Color.Transparent;
-            picAvatar.Image = Properties.Resources.user_interface;
-            picAvatar.Location = new Point(70, 82);
-            picAvatar.Name = "picAvatar";
-            picAvatar.Size = new Size(184, 184);
-            picAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
-            picAvatar.TabIndex = 7;
-            picAvatar.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(346, 59);
-            label1.Name = "label1";
-            label1.Size = new Size(128, 23);
-            label1.TabIndex = 8;
-            label1.Text = "Tên đăng nhập:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(346, 123);
-            label2.Name = "label2";
-            label2.Size = new Size(86, 23);
-            label2.TabIndex = 9;
-            label2.Text = "Mật khẩu:";
+            panel1.BackColor = Color.FromArgb(44, 78, 98);
+            panel1.Controls.Add(picAvatar);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(350, 500);
+            panel1.TabIndex = 1;
             // 
             // LoginForm
             // 
-            ClientSize = new Size(900, 500);
+            BackColor = Color.FromArgb(244, 247, 246);
+            ClientSize = new Size(1000, 500);
+            Controls.Add(panel1);
             Controls.Add(panelCard);
+            FormBorderStyle = FormBorderStyle.None;
+            MaximumSize = new Size(1000, 500);
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Load += LoginForm_Load;
+            ((System.ComponentModel.ISupportInitialize)picAvatar).EndInit();
             panelCard.ResumeLayout(false);
             panelCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picAvatar).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
+        private CheckBox chkShowPassword;
+        private Label lblForgot;
+        private Label lblTitle;
+        private Button btnLogin;
+        private TextBox txtUsername;
         private TextBox txtPassword;
-        private Label label2;
         private Label label1;
+        private Label label2;
+        private PictureBox picAvatar;
+        private Panel panelCard;
+        private Panel panel1;
     }
 }

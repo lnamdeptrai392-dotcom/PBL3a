@@ -167,5 +167,10 @@ namespace PBL3a.UI.AdminC.Forms
                 }
             }
         }
+
+        private void lbTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

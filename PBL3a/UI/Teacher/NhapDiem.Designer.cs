@@ -48,8 +48,8 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 275F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 63F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 133F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 219F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 31F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 103F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 147F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(label2, 1, 2);
             tableLayoutPanel1.Controls.Add(comboBox1, 2, 2);
@@ -69,7 +69,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 196F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 101F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 5F));
-            tableLayoutPanel1.Size = new Size(871, 501);
+            tableLayoutPanel1.Size = new Size(800, 500);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -114,7 +114,7 @@
             textBox1.Location = new Point(623, 102);
             textBox1.Margin = new Padding(2, 3, 2, 3);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(215, 27);
+            textBox1.Size = new Size(99, 27);
             textBox1.TabIndex = 5;
             // 
             // label3
@@ -147,10 +147,10 @@
             // 
             button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button2.Font = new Font("Segoe UI", 11.1428576F);
-            button2.Location = new Point(692, 408);
+            button2.Location = new Point(623, 408);
             button2.Margin = new Padding(2, 3, 2, 3);
             button2.Name = "button2";
-            button2.Size = new Size(146, 67);
+            button2.Size = new Size(99, 67);
             button2.TabIndex = 7;
             button2.Text = "Chỉnh sửa";
             button2.UseVisualStyleBackColor = true;
@@ -160,8 +160,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(871, 501);
+            ClientSize = new Size(800, 500);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2, 3, 2, 3);
             Name = "NhapDiem";
             Text = "NhapDiem";

@@ -41,17 +41,17 @@
             // dgvData
             // 
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Location = new Point(24, 107);
+            dgvData.Location = new Point(37, 107);
             dgvData.Margin = new Padding(3, 4, 3, 4);
             dgvData.Name = "dgvData";
             dgvData.RowHeadersWidth = 51;
-            dgvData.Size = new Size(894, 489);
+            dgvData.Size = new Size(701, 308);
             dgvData.TabIndex = 0;
             // 
             // lbChinh
             // 
             lbChinh.AutoSize = true;
-            lbChinh.Location = new Point(346, 12);
+            lbChinh.Location = new Point(279, 9);
             lbChinh.Name = "lbChinh";
             lbChinh.Size = new Size(144, 20);
             lbChinh.TabIndex = 1;
@@ -60,7 +60,7 @@
             // cbbKhoa
             // 
             cbbKhoa.FormattingEnabled = true;
-            cbbKhoa.Location = new Point(179, 56);
+            cbbKhoa.Location = new Point(112, 53);
             cbbKhoa.Margin = new Padding(3, 4, 3, 4);
             cbbKhoa.Name = "cbbKhoa";
             cbbKhoa.Size = new Size(138, 28);
@@ -70,7 +70,7 @@
             // cbbLop
             // 
             cbbLop.FormattingEnabled = true;
-            cbbLop.Location = new Point(502, 56);
+            cbbLop.Location = new Point(435, 53);
             cbbLop.Margin = new Padding(3, 4, 3, 4);
             cbbLop.Name = "cbbLop";
             cbbLop.Size = new Size(138, 28);
@@ -79,7 +79,7 @@
             // lbChonKhoa
             // 
             lbChonKhoa.AutoSize = true;
-            lbChonKhoa.Location = new Point(91, 60);
+            lbChonKhoa.Location = new Point(24, 57);
             lbChonKhoa.Name = "lbChonKhoa";
             lbChonKhoa.Size = new Size(81, 20);
             lbChonKhoa.TabIndex = 4;
@@ -88,7 +88,7 @@
             // lbChonLop
             // 
             lbChonLop.AutoSize = true;
-            lbChonLop.Location = new Point(413, 60);
+            lbChonLop.Location = new Point(346, 57);
             lbChonLop.Name = "lbChonLop";
             lbChonLop.Size = new Size(72, 20);
             lbChonLop.TabIndex = 5;
@@ -96,7 +96,7 @@
             // 
             // btnView
             // 
-            btnView.Location = new Point(719, 56);
+            btnView.Location = new Point(652, 53);
             btnView.Margin = new Padding(3, 4, 3, 4);
             btnView.Name = "btnView";
             btnView.Size = new Size(86, 31);
@@ -109,7 +109,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(823, 600);
+            ClientSize = new Size(782, 453);
             Controls.Add(btnView);
             Controls.Add(lbChonLop);
             Controls.Add(lbChonKhoa);
@@ -117,6 +117,7 @@
             Controls.Add(cbbKhoa);
             Controls.Add(lbChinh);
             Controls.Add(dgvData);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form4KhoaLop";
             Text = "Form4TTKhoaLop";
