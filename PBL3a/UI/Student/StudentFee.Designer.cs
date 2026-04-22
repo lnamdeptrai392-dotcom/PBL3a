@@ -39,17 +39,17 @@
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 163);
             label1.ForeColor = Color.MidnightBlue;
-            label1.Location = new Point(350, 21);
+            label1.Location = new Point(324, 18);
             label1.Name = "label1";
-            label1.Size = new Size(108, 31);
+            label1.Size = new Size(160, 46);
             label1.TabIndex = 0;
             label1.Text = "HỌC PHÍ";
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.BackColor = Color.AliceBlue;
+            tableLayoutPanel1.BackColor = Color.White;
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10.5782795F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 89.42172F));
@@ -63,7 +63,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 18.6398F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 81.3602F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
-            tableLayoutPanel1.Size = new Size(800, 450);
+            tableLayoutPanel1.Size = new Size(800, 500);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -71,18 +71,19 @@
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(80, 77);
+            dataGridView1.Location = new Point(80, 86);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(648, 317);
+            dataGridView1.Size = new Size(648, 358);
             dataGridView1.TabIndex = 1;
             // 
             // StudentFee
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 500);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "StudentFee";
             Text = "StudentFee";
             Load += StudentFee_Load;

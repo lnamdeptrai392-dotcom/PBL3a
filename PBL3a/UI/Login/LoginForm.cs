@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using PBL3a.services;
@@ -104,6 +105,13 @@ namespace PBL3a.UI.Login
 
         private void lblForgot_Click(object sender, EventArgs e)
         {
+        }
+
+        private void panelCard_Paint(object sender, PaintEventArgs e)
+        {
+            //Graphics path = new GraphicsPath();
+            //int radius = 100;
+            //path.AddArc(0,0,radius,radius,180,)
         }
     }
 }

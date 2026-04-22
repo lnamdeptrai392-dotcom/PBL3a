@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MinimumSize = new Size(800, 500);
-
             panel_content = new Panel();
             btn_exit = new Button();
             btn_fee = new Button();
@@ -39,13 +37,16 @@
             panel1 = new Panel();
             panelChildBox = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
+            pictureBox1 = new PictureBox();
             panel_content.SuspendLayout();
+            panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel_content
             // 
-            panel_content.BackColor = Color.FromArgb(112, 146, 190);
+            panel_content.BackColor = Color.FromArgb(44, 78, 98);
             panel_content.Controls.Add(btn_exit);
             panel_content.Controls.Add(btn_fee);
             panel_content.Controls.Add(btn_score);
@@ -53,25 +54,24 @@
             panel_content.Controls.Add(btn_info);
             panel_content.Controls.Add(panel1);
             panel_content.Dock = DockStyle.Left;
-            panel_content.Width = 220;
             panel_content.Location = new Point(0, 0);
             panel_content.Margin = new Padding(0);
             panel_content.Name = "panel_content";
-            panel_content.Size = new Size(206, 560);
+            panel_content.Size = new Size(196, 500);
             panel_content.TabIndex = 11;
             // 
             // btn_exit
             // 
-            btn_exit.BackColor = Color.FromArgb(112, 146, 190);
+            btn_exit.BackColor = Color.FromArgb(44, 78, 98);
             btn_exit.Dock = DockStyle.Top;
             btn_exit.FlatAppearance.BorderSize = 0;
             btn_exit.FlatStyle = FlatStyle.Flat;
-            btn_exit.Font = new Font("Segoe UI", 10F);
+            btn_exit.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             btn_exit.ForeColor = SystemColors.ButtonHighlight;
-            btn_exit.Location = new Point(0, 287);
+            btn_exit.Location = new Point(0, 377);
             btn_exit.Margin = new Padding(3, 2, 3, 2);
             btn_exit.Name = "btn_exit";
-            btn_exit.Size = new Size(206, 60);
+            btn_exit.Size = new Size(196, 60);
             btn_exit.TabIndex = 11;
             btn_exit.Text = "Đăng xuất";
             btn_exit.UseVisualStyleBackColor = false;
@@ -79,16 +79,16 @@
             // 
             // btn_fee
             // 
-            btn_fee.BackColor = Color.FromArgb(112, 146, 190);
+            btn_fee.BackColor = Color.FromArgb(44, 78, 98);
             btn_fee.Dock = DockStyle.Top;
             btn_fee.FlatAppearance.BorderSize = 0;
             btn_fee.FlatStyle = FlatStyle.Flat;
-            btn_fee.Font = new Font("Segoe UI", 10F);
+            btn_fee.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             btn_fee.ForeColor = SystemColors.ButtonHighlight;
-            btn_fee.Location = new Point(0, 227);
+            btn_fee.Location = new Point(0, 317);
             btn_fee.Margin = new Padding(3, 2, 3, 2);
             btn_fee.Name = "btn_fee";
-            btn_fee.Size = new Size(206, 60);
+            btn_fee.Size = new Size(196, 60);
             btn_fee.TabIndex = 4;
             btn_fee.Text = "Học phí";
             btn_fee.UseVisualStyleBackColor = false;
@@ -96,16 +96,16 @@
             // 
             // btn_score
             // 
-            btn_score.BackColor = Color.FromArgb(112, 146, 190);
+            btn_score.BackColor = Color.FromArgb(44, 78, 98);
             btn_score.Dock = DockStyle.Top;
             btn_score.FlatAppearance.BorderSize = 0;
             btn_score.FlatStyle = FlatStyle.Flat;
-            btn_score.Font = new Font("Segoe UI", 10F);
+            btn_score.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             btn_score.ForeColor = SystemColors.ButtonHighlight;
-            btn_score.Location = new Point(0, 167);
+            btn_score.Location = new Point(0, 257);
             btn_score.Margin = new Padding(3, 2, 3, 2);
             btn_score.Name = "btn_score";
-            btn_score.Size = new Size(206, 60);
+            btn_score.Size = new Size(196, 60);
             btn_score.TabIndex = 8;
             btn_score.Text = "Kết quả học tập";
             btn_score.UseVisualStyleBackColor = false;
@@ -114,16 +114,16 @@
             // btn_schedule
             // 
             btn_schedule.AutoSize = true;
-            btn_schedule.BackColor = Color.FromArgb(112, 146, 190);
+            btn_schedule.BackColor = Color.FromArgb(44, 78, 98);
             btn_schedule.Dock = DockStyle.Top;
             btn_schedule.FlatAppearance.BorderSize = 0;
             btn_schedule.FlatStyle = FlatStyle.Flat;
-            btn_schedule.Font = new Font("Segoe UI", 10F);
+            btn_schedule.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             btn_schedule.ForeColor = SystemColors.ControlLightLight;
-            btn_schedule.Location = new Point(0, 107);
+            btn_schedule.Location = new Point(0, 197);
             btn_schedule.Margin = new Padding(0);
             btn_schedule.Name = "btn_schedule";
-            btn_schedule.Size = new Size(206, 60);
+            btn_schedule.Size = new Size(196, 60);
             btn_schedule.TabIndex = 6;
             btn_schedule.Text = "Thời khóa biểu";
             btn_schedule.UseVisualStyleBackColor = false;
@@ -131,16 +131,16 @@
             // 
             // btn_info
             // 
-            btn_info.BackColor = Color.FromArgb(112, 146, 190);
+            btn_info.BackColor = Color.FromArgb(44, 78, 98);
             btn_info.Dock = DockStyle.Top;
             btn_info.FlatAppearance.BorderSize = 0;
             btn_info.FlatStyle = FlatStyle.Flat;
-            btn_info.Font = new Font("Segoe UI", 10F);
+            btn_info.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold);
             btn_info.ForeColor = SystemColors.ButtonHighlight;
-            btn_info.Location = new Point(0, 47);
+            btn_info.Location = new Point(0, 137);
             btn_info.Margin = new Padding(0);
             btn_info.Name = "btn_info";
-            btn_info.Size = new Size(206, 60);
+            btn_info.Size = new Size(196, 60);
             btn_info.TabIndex = 7;
             btn_info.Text = "Thông tin cá nhân";
             btn_info.UseVisualStyleBackColor = false;
@@ -148,21 +148,22 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(206, 47);
+            panel1.Size = new Size(196, 137);
             panel1.TabIndex = 0;
             // 
             // panelChildBox
             // 
-            panelChildBox.BackColor = Color.AliceBlue;
+            panelChildBox.BackColor = Color.White;
             panelChildBox.Dock = DockStyle.Fill;
-            panelChildBox.Location = new Point(206, 0);
+            panelChildBox.Location = new Point(196, 0);
             panelChildBox.Margin = new Padding(0);
             panelChildBox.Name = "panelChildBox";
-            panelChildBox.Size = new Size(847, 560);
+            panelChildBox.Size = new Size(804, 500);
             panelChildBox.TabIndex = 12;
             // 
             // tableLayoutPanel1
@@ -178,22 +179,35 @@
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1053, 560);
+            tableLayoutPanel1.Size = new Size(1000, 500);
             tableLayoutPanel1.TabIndex = 13;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources._2026;
+            pictureBox1.Location = new Point(49, 21);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(102, 99);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // StudentAll
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(1053, 560);
+            ClientSize = new Size(1000, 500);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "StudentAll";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Sinh viên Dashboard";
             panel_content.ResumeLayout(false);
             panel_content.PerformLayout();
+            panel1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
 
 
@@ -210,5 +224,6 @@
         private Panel panel1;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panelChildBox;
+        private PictureBox pictureBox1;
     }
 }

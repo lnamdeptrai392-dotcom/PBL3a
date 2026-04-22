@@ -42,7 +42,7 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.BackColor = Color.AliceBlue;
+            tableLayoutPanel1.BackColor = Color.White;
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 4.28015566F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 95.71984F));
@@ -60,7 +60,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 51.8518524F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 353F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 44F));
-            tableLayoutPanel1.Size = new Size(914, 495);
+            tableLayoutPanel1.Size = new Size(804, 500);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -68,7 +68,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.Location = new Point(354, 8);
+            label1.Location = new Point(297, 9);
             label1.Name = "label1";
             label1.Size = new Size(214, 31);
             label1.TabIndex = 0;
@@ -77,7 +77,7 @@
             // btnExport
             // 
             btnExport.Anchor = AnchorStyles.None;
-            btnExport.Location = new Point(414, 458);
+            btnExport.Location = new Point(357, 463);
             btnExport.Name = "btnExport";
             btnExport.Size = new Size(94, 29);
             btnExport.TabIndex = 3;
@@ -90,10 +90,10 @@
             dgvScore.BackgroundColor = SystemColors.ButtonHighlight;
             dgvScore.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvScore.Dock = DockStyle.Fill;
-            dgvScore.Location = new Point(40, 100);
+            dgvScore.Location = new Point(36, 105);
             dgvScore.Name = "dgvScore";
             dgvScore.RowHeadersWidth = 51;
-            dgvScore.Size = new Size(842, 347);
+            dgvScore.Size = new Size(736, 347);
             dgvScore.TabIndex = 1;
             // 
             // panel1
@@ -101,15 +101,15 @@
             panel1.Controls.Add(btnShowData);
             panel1.Controls.Add(cboSemester);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(40, 50);
+            panel1.Location = new Point(36, 52);
             panel1.Name = "panel1";
-            panel1.Size = new Size(842, 44);
+            panel1.Size = new Size(736, 47);
             panel1.TabIndex = 4;
             // 
             // btnShowData
             // 
-            btnShowData.Anchor = AnchorStyles.None;
-            btnShowData.Location = new Point(237, 8);
+            btnShowData.Anchor = AnchorStyles.Bottom;
+            btnShowData.Location = new Point(148, 9);
             btnShowData.Name = "btnShowData";
             btnShowData.Size = new Size(94, 29);
             btnShowData.TabIndex = 3;
@@ -119,9 +119,9 @@
             // 
             // cboSemester
             // 
-            cboSemester.Anchor = AnchorStyles.Left;
+            cboSemester.Anchor = AnchorStyles.Bottom;
             cboSemester.FormattingEnabled = true;
-            cboSemester.Location = new Point(15, 8);
+            cboSemester.Location = new Point(-38, 11);
             cboSemester.Name = "cboSemester";
             cboSemester.Size = new Size(158, 28);
             cboSemester.TabIndex = 2;
@@ -131,8 +131,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 495);
+            ClientSize = new Size(804, 500);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "StudentScore";
             Text = "Form1";
             Load += StudentScore_Load;

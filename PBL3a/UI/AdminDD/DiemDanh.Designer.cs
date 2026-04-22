@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             cboLopHoc = new ComboBox();
@@ -50,7 +50,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(41, 9);
+            label1.Location = new Point(17, 14);
             label1.Name = "label1";
             label1.Size = new Size(69, 20);
             label1.TabIndex = 0;
@@ -59,7 +59,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(254, 9);
+            label2.Location = new Point(231, 17);
             label2.Name = "label2";
             label2.Size = new Size(44, 20);
             label2.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             cboLopHoc.DropDownStyle = ComboBoxStyle.DropDownList;
             cboLopHoc.FormattingEnabled = true;
-            cboLopHoc.Location = new Point(130, 6);
+            cboLopHoc.Location = new Point(109, 11);
             cboLopHoc.Name = "cboLopHoc";
             cboLopHoc.Size = new Size(107, 28);
             cboLopHoc.TabIndex = 2;
@@ -77,7 +77,7 @@
             // date
             // 
             date.Format = DateTimePickerFormat.Short;
-            date.Location = new Point(304, 9);
+            date.Location = new Point(309, 12);
             date.Name = "date";
             date.Size = new Size(140, 27);
             date.TabIndex = 3;
@@ -85,7 +85,7 @@
             // btnTimKiem
             // 
             btnTimKiem.BackColor = Color.Azure;
-            btnTimKiem.Location = new Point(499, 7);
+            btnTimKiem.Location = new Point(488, 9);
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.Size = new Size(114, 29);
             btnTimKiem.TabIndex = 4;
@@ -96,26 +96,26 @@
             // 
             dgvDiemDanh.AllowUserToAddRows = false;
             dgvDiemDanh.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = Color.AliceBlue;
-            dgvDiemDanh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = Color.AliceBlue;
+            dgvDiemDanh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvDiemDanh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDiemDanh.BackgroundColor = Color.White;
             dgvDiemDanh.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDiemDanh.Dock = DockStyle.Fill;
             dgvDiemDanh.GridColor = Color.LightGray;
-            dgvDiemDanh.Location = new Point(19, 120);
+            dgvDiemDanh.Location = new Point(76, 132);
             dgvDiemDanh.Name = "dgvDiemDanh";
             dgvDiemDanh.RowHeadersVisible = false;
             dgvDiemDanh.RowHeadersWidth = 51;
             dgvDiemDanh.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvDiemDanh.Size = new Size(729, 375);
+            dgvDiemDanh.Size = new Size(653, 285);
             dgvDiemDanh.TabIndex = 5;
             // 
             // btnSave
             // 
             btnSave.BackColor = Color.Honeydew;
             btnSave.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btnSave.Location = new Point(173, 11);
+            btnSave.Location = new Point(97, 16);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(151, 29);
             btnSave.TabIndex = 6;
@@ -126,7 +126,7 @@
             // 
             btnExit.BackColor = Color.LightYellow;
             btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btnExit.Location = new Point(435, 11);
+            btnExit.Location = new Point(409, 16);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(104, 29);
             btnExit.TabIndex = 7;
@@ -139,7 +139,7 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label3.Location = new Point(273, 16);
+            label3.Location = new Point(292, 19);
             label3.Name = "label3";
             label3.Size = new Size(221, 28);
             label3.TabIndex = 9;
@@ -147,24 +147,24 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.BackColor = Color.AliceBlue;
+            tableLayoutPanel1.BackColor = Color.White;
             tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.13903737F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 97.86096F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.972677F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 90.02732F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 67F));
             tableLayoutPanel1.Controls.Add(label3, 1, 0);
-            tableLayoutPanel1.Controls.Add(dgvDiemDanh, 1, 2);
             tableLayoutPanel1.Controls.Add(panel1, 1, 1);
             tableLayoutPanel1.Controls.Add(panel2, 1, 3);
+            tableLayoutPanel1.Controls.Add(dgvDiemDanh, 1, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 52.205883F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 47.794117F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 381F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 59F));
-            tableLayoutPanel1.Size = new Size(766, 558);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 291F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 79F));
+            tableLayoutPanel1.Size = new Size(800, 500);
             tableLayoutPanel1.TabIndex = 10;
             // 
             // panel1
@@ -175,9 +175,9 @@
             panel1.Controls.Add(cboLopHoc);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(19, 64);
+            panel1.Location = new Point(76, 70);
             panel1.Name = "panel1";
-            panel1.Size = new Size(729, 50);
+            panel1.Size = new Size(653, 56);
             panel1.TabIndex = 10;
             // 
             // panel2
@@ -185,18 +185,19 @@
             panel2.Controls.Add(btnExit);
             panel2.Controls.Add(btnSave);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(19, 501);
+            panel2.Location = new Point(76, 423);
             panel2.Name = "panel2";
-            panel2.Size = new Size(729, 54);
+            panel2.Size = new Size(653, 74);
             panel2.TabIndex = 11;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(766, 558);
+            ClientSize = new Size(800, 500);
             Controls.Add(tableLayoutPanel1);
             Cursor = Cursors.Hand;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Điểm danh";

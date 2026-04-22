@@ -48,5 +48,10 @@ namespace PBL3a.UI.AdminTC
             newForm.ShowDialog();
             this.Close();
         }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

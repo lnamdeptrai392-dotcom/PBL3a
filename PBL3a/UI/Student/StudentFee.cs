@@ -40,6 +40,14 @@ namespace PBL3a.UI.Student
 
                         DataTable dt = new DataTable();
                         a.Fill(dt);
+                        dt.Columns["ClassID"].ColumnName = "Mã lớp học";
+                        dt.Columns["TuitionMonth"].ColumnName = "Tháng học";
+                        dt.Columns["TuitionYear"].ColumnName = "Năm học";
+                        dt.Columns["SoTien"].ColumnName = "Số tiền";
+                        dt.Columns["TrangThai"].ColumnName = "Trạng thái";
+                        dt.Columns["NgayDong"].ColumnName = "Ngày đóng";
+                        dt.Columns["GhiChu"].ColumnName = "Ghi chú";
+                        
                         dataGridView1.DataSource = dt;
                     }
                 }

@@ -50,9 +50,9 @@
             // lbChon
             // 
             lbChon.AutoSize = true;
-            lbChon.Location = new Point(73, 14);
+            lbChon.Location = new Point(61, 20);
             lbChon.Name = "lbChon";
-            lbChon.Size = new Size(110, 15);
+            lbChon.Size = new Size(135, 20);
             lbChon.TabIndex = 0;
             lbChon.Text = "Tạo Tài Khoản Cho:";
             // 
@@ -64,78 +64,73 @@
             // cbbRole
             // 
             cbbRole.FormattingEnabled = true;
-            cbbRole.Location = new Point(217, 9);
-            cbbRole.Margin = new Padding(3, 2, 3, 2);
+            cbbRole.Location = new Point(226, 13);
             cbbRole.Name = "cbbRole";
-            cbbRole.Size = new Size(133, 23);
+            cbbRole.Size = new Size(151, 28);
             cbbRole.TabIndex = 1;
             // 
             // txtFullName
             // 
-            txtFullName.Location = new Point(217, 42);
-            txtFullName.Margin = new Padding(3, 2, 3, 2);
+            txtFullName.Location = new Point(226, 57);
             txtFullName.Name = "txtFullName";
-            txtFullName.Size = new Size(266, 23);
+            txtFullName.Size = new Size(303, 27);
             txtFullName.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(73, 47);
+            label1.Location = new Point(61, 64);
             label1.Name = "label1";
-            label1.Size = new Size(61, 15);
+            label1.Size = new Size(76, 20);
             label1.TabIndex = 4;
             label1.Text = "Họ và tên:";
             // 
             // dtpDOB
             // 
-            dtpDOB.Location = new Point(217, 75);
-            dtpDOB.Margin = new Padding(3, 2, 3, 2);
+            dtpDOB.Location = new Point(226, 101);
             dtpDOB.Name = "dtpDOB";
-            dtpDOB.Size = new Size(219, 23);
+            dtpDOB.Size = new Size(250, 27);
             dtpDOB.TabIndex = 5;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(73, 80);
+            label2.Location = new Point(61, 108);
             label2.Name = "label2";
-            label2.Size = new Size(63, 15);
+            label2.Size = new Size(77, 20);
             label2.TabIndex = 6;
             label2.Text = "Ngày sinh:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(73, 112);
+            label3.Location = new Point(61, 150);
             label3.Name = "label3";
-            label3.Size = new Size(79, 15);
+            label3.Size = new Size(100, 20);
             label3.TabIndex = 7;
             label3.Text = "Số điện thoại:";
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(217, 110);
-            txtPhone.Margin = new Padding(3, 2, 3, 2);
+            txtPhone.Location = new Point(226, 148);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(266, 23);
+            txtPhone.Size = new Size(303, 27);
             txtPhone.TabIndex = 8;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(547, 30);
+            label4.Location = new Point(603, 41);
             label4.Name = "label4";
-            label4.Size = new Size(55, 15);
+            label4.Size = new Size(68, 20);
             label4.TabIndex = 10;
             label4.Text = "Giới tính:";
             // 
             // btnTao
             // 
-            btnTao.Location = new Point(388, 157);
-            btnTao.Margin = new Padding(3, 2, 3, 2);
+            btnTao.Location = new Point(400, 187);
             btnTao.Name = "btnTao";
-            btnTao.Size = new Size(114, 22);
+            btnTao.Size = new Size(130, 29);
             btnTao.TabIndex = 12;
             btnTao.Text = "Tạo";
             btnTao.UseVisualStyleBackColor = true;
@@ -143,10 +138,9 @@
             // 
             // btnRefresh
             // 
-            btnRefresh.Location = new Point(519, 157);
-            btnRefresh.Margin = new Padding(3, 2, 3, 2);
+            btnRefresh.Location = new Point(550, 187);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(114, 22);
+            btnRefresh.Size = new Size(130, 29);
             btnRefresh.TabIndex = 13;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
@@ -154,20 +148,19 @@
             // 
             // dgvData
             // 
+            dgvData.BackgroundColor = Color.White;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Location = new Point(12, 193);
-            dgvData.Margin = new Padding(3, 2, 3, 2);
+            dgvData.Location = new Point(32, 234);
             dgvData.Name = "dgvData";
             dgvData.RowHeadersWidth = 51;
-            dgvData.Size = new Size(1198, 70);
+            dgvData.Size = new Size(732, 154);
             dgvData.TabIndex = 14;
             // 
             // btnThemDB
             // 
-            btnThemDB.Location = new Point(455, 289);
-            btnThemDB.Margin = new Padding(3, 2, 3, 2);
+            btnThemDB.Location = new Point(277, 403);
             btnThemDB.Name = "btnThemDB";
-            btnThemDB.Size = new Size(202, 22);
+            btnThemDB.Size = new Size(231, 29);
             btnThemDB.TabIndex = 15;
             btnThemDB.Text = "Thêm Vào Database";
             btnThemDB.UseVisualStyleBackColor = true;
@@ -176,10 +169,9 @@
             // rdoNam
             // 
             rdoNam.AutoSize = true;
-            rdoNam.Location = new Point(530, 47);
-            rdoNam.Margin = new Padding(3, 2, 3, 2);
+            rdoNam.Location = new Point(584, 64);
             rdoNam.Name = "rdoNam";
-            rdoNam.Size = new Size(51, 19);
+            rdoNam.Size = new Size(62, 24);
             rdoNam.TabIndex = 16;
             rdoNam.TabStop = true;
             rdoNam.Text = "Nam";
@@ -188,10 +180,9 @@
             // rdoNu
             // 
             rdoNu.AutoSize = true;
-            rdoNu.Location = new Point(603, 47);
-            rdoNu.Margin = new Padding(3, 2, 3, 2);
+            rdoNu.Location = new Point(667, 64);
             rdoNu.Name = "rdoNu";
-            rdoNu.Size = new Size(41, 19);
+            rdoNu.Size = new Size(50, 24);
             rdoNu.TabIndex = 17;
             rdoNu.TabStop = true;
             rdoNu.Text = "Nữ";
@@ -199,9 +190,10 @@
             // 
             // Form5TaoTK
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(967, 474);
+            BackColor = Color.White;
+            ClientSize = new Size(800, 500);
             Controls.Add(rdoNu);
             Controls.Add(rdoNam);
             Controls.Add(btnThemDB);
@@ -217,7 +209,7 @@
             Controls.Add(txtFullName);
             Controls.Add(cbbRole);
             Controls.Add(lbChon);
-            Margin = new Padding(3, 2, 3, 2);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form5TaoTK";
             Text = "Form5TaoTK";
             Load += Form5TaoTK_Load;

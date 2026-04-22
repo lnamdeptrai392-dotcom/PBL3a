@@ -37,18 +37,21 @@
             // 
             // dgvData
             // 
+            dgvData.BackgroundColor = SystemColors.ControlLightLight;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Location = new Point(10, 21);
+            dgvData.Location = new Point(50, 26);
+            dgvData.Margin = new Padding(3, 4, 3, 4);
             dgvData.Name = "dgvData";
             dgvData.RowHeadersWidth = 51;
-            dgvData.Size = new Size(1254, 433);
+            dgvData.Size = new Size(700, 400);
             dgvData.TabIndex = 0;
             // 
             // btnDongY
             // 
-            btnDongY.Location = new Point(520, 460);
+            btnDongY.Location = new Point(204, 443);
+            btnDongY.Margin = new Padding(3, 4, 3, 4);
             btnDongY.Name = "btnDongY";
-            btnDongY.Size = new Size(75, 23);
+            btnDongY.Size = new Size(86, 31);
             btnDongY.TabIndex = 1;
             btnDongY.Text = "Đồng ý";
             btnDongY.UseVisualStyleBackColor = true;
@@ -56,9 +59,10 @@
             // 
             // btnTuChoi
             // 
-            btnTuChoi.Location = new Point(619, 460);
+            btnTuChoi.Location = new Point(317, 443);
+            btnTuChoi.Margin = new Padding(3, 4, 3, 4);
             btnTuChoi.Name = "btnTuChoi";
-            btnTuChoi.Size = new Size(75, 23);
+            btnTuChoi.Size = new Size(86, 31);
             btnTuChoi.TabIndex = 2;
             btnTuChoi.Text = "Từ Chối";
             btnTuChoi.UseVisualStyleBackColor = true;
@@ -66,22 +70,25 @@
             // 
             // btnLuuY
             // 
-            btnLuuY.Location = new Point(721, 460);
+            btnLuuY.Location = new Point(434, 443);
+            btnLuuY.Margin = new Padding(3, 4, 3, 4);
             btnLuuY.Name = "btnLuuY";
-            btnLuuY.Size = new Size(75, 23);
+            btnLuuY.Size = new Size(86, 31);
             btnLuuY.TabIndex = 3;
             btnLuuY.Text = "* Lưu ý *";
             btnLuuY.UseVisualStyleBackColor = true;
             // 
             // Form1DuyetDon
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(977, 506);
+            ClientSize = new Size(800, 500);
             Controls.Add(btnLuuY);
             Controls.Add(btnTuChoi);
             Controls.Add(btnDongY);
             Controls.Add(dgvData);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1DuyetDon";
             Text = "Form1DuyetDon";
             Load += Form1DuyetDon_Load;
