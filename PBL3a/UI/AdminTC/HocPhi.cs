@@ -10,7 +10,7 @@ namespace PBL3a.UI.AdminTC
     {
         private DatabaseHelper db = new DatabaseHelper();
         private DataTable dtHocPhi = new DataTable();
-        private Button currentButton;
+        
 
         public HocPhi()
         {

@@ -37,10 +37,10 @@ namespace PBL3a.UI.Student
                     con.Open();
                     //
                     string query = @"select 
-                                d.ClassID, 
-                                cl.class_name, 
-                                d.Diem, 
-                                d.NhanXet
+                                d.ClassID AS [Mã môn], 
+                                cl.class_name AS [Tên lớp học], 
+                                d.Diem AS [Điểm học tập], 
+                                d.NhanXet AS [Nhận xét]
                             from JoinClass jc
                             inner join Diem d on d.ClassID = jc.classID AND d.AccountID = jc.AccountID
                             inner join Class cl on cl.classID = jc.classID
@@ -48,14 +48,8 @@ namespace PBL3a.UI.Student
                     using (SqlDataAdapter a = new SqlDataAdapter(query, con))
                     {
                         a.SelectCommand.Parameters.AddWithValue("id", currentID);
-
                         DataTable dt = new DataTable();
                         a.Fill(dt);
-                        dt.Columns["ClassID"].ColumnName = "Mã môn";
-                        dt.Columns["class_name"].ColumnName = "Tên lớp học";
-                        dt.Columns["Diem"].ColumnName = "Điểm học tập";
-                        dt.Columns["NhanXet"].ColumnName = "Nhận xét";
-                        
                         dgvScore.DataSource = dt;
                     }
                 }

@@ -12,27 +12,14 @@ namespace PBL3a.UI.AdminC
     public partial class AdminC : Form
     {
         private Form activeForm;
-        private Color defaultColor = Color.FromArgb(112, 146, 190);
-        private Color activeColor = Color.FromArgb(70, 130, 180);
+        
 
         public AdminC()
         {
             InitializeComponent();
         }
 
-        private void SetActiveMenu(Button clickedButton)
-        {
-            // 1. Trả toàn bộ các nút menu về màu mặc định
-            // (Lưu ý: Thay đổi tên btn... dưới đây cho khớp với tên thật trong thẻ Properties của bạn)
-            btnDuyetDon.BackColor = defaultColor;
-            btnDaDuyet.BackColor = defaultColor;
-            btnKhoaLop.BackColor = defaultColor;
-            btnTaoTK.BackColor = defaultColor;
-
-            // 2. Đổi màu đậm cho riêng nút đang được click
-            clickedButton.BackColor = activeColor;
-        }
-
+        
         private void openChildForm(Form childForm, object sender)
         {
             if (activeForm != null)
@@ -51,35 +38,30 @@ namespace PBL3a.UI.AdminC
 
         private void btnDuyetDon_Click(object sender, EventArgs e)
         {
-            SetActiveMenu(btnDuyetDon);
+            
             openChildForm(new Forms.Form1DuyetDon(), sender);
 
         }
 
         private void btnDaDuyet_Click(object sender, EventArgs e)
         {
-            SetActiveMenu(btnDaDuyet);
+            
             openChildForm(new Forms.Form2DaDuyet(), sender);
 
         }
 
-        /*private void btnTuChoi_Click(object sender, EventArgs e)
-        {
-            SetActiveMenu(btnTuChoi);
-            openChildForm(new Forms.Form3TuChoi(), sender);
-
-        }*/
+        
 
         private void btnKhoaLop_Click(object sender, EventArgs e)
         {
-            SetActiveMenu(btnKhoaLop);
+           
             openChildForm(new Forms.Form4KhoaLop(), sender);
 
         }
 
         private void btnTaoTK_Click(object sender, EventArgs e)
         {
-            SetActiveMenu(btnTaoTK);
+            
             openChildForm(new Forms.Form5TaoTK(), sender);
 
         }

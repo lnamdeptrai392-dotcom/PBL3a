@@ -31,23 +31,20 @@ namespace PBL3a.UI.Student
                 try
                 {
                     con.Open();
-                    string query = @"SELECT ClassID, TuitionMonth, TuitionYear, SoTien, TrangThai, NgayDong, GhiChu 
+                    string query = @"SELECT ClassID AS [Mã lớp học],
+                                    TuitionMonth AS [Tháng học], 
+                                    TuitionYear AS [Năm học], 
+                                    SoTien AS [Số tiền], 
+                                    TrangThai AS [Trạng thái], 
+                                    NgayDong AS [Ngày đóng], 
+                                    GhiChu  AS [Ghi chú]
                                     FROM HocPhi WHERE AccountID = @id";
                     using (SqlDataAdapter a = new SqlDataAdapter(query, con))
                     {
                         // Add the parameter with value
                         a.SelectCommand.Parameters.AddWithValue("id", currentID);
-
                         DataTable dt = new DataTable();
                         a.Fill(dt);
-                        dt.Columns["ClassID"].ColumnName = "Mã lớp học";
-                        dt.Columns["TuitionMonth"].ColumnName = "Tháng học";
-                        dt.Columns["TuitionYear"].ColumnName = "Năm học";
-                        dt.Columns["SoTien"].ColumnName = "Số tiền";
-                        dt.Columns["TrangThai"].ColumnName = "Trạng thái";
-                        dt.Columns["NgayDong"].ColumnName = "Ngày đóng";
-                        dt.Columns["GhiChu"].ColumnName = "Ghi chú";
-                        
                         dataGridView1.DataSource = dt;
                     }
                 }

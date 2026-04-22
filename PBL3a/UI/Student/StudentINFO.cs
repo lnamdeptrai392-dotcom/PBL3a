@@ -57,6 +57,7 @@ namespace PBL3a.UI.Student
                         txtDiaChi.Text = "Chua cap nhat";
                     }
                     reader.Close();
+                    con.Close();
                 }
                 catch (Exception ex)
                 {
@@ -88,6 +89,7 @@ namespace PBL3a.UI.Student
                     {
                         MessageBox.Show("Cập nhật thông tin thành công!");
                     }
+                    conn.Close();
                 }
                 catch (Exception ex)
                 {

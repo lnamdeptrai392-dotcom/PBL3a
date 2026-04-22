@@ -39,6 +39,7 @@ namespace PBL3a.UI.Student
             this.panelChildBox.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+            
 
         }
 

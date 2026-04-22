@@ -114,6 +114,7 @@ namespace PBL3a.UI.AdminDD
                         reader["Note"].ToString()
                     );
                 }
+                conn.Close();
             }
         }
 
