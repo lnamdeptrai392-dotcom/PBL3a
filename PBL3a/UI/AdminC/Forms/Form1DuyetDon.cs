@@ -26,7 +26,7 @@ namespace PBL3a.UI.AdminC.Forms
         {
             string query = @"
                 SELECT 
-                    r.RegistrationID,
+                    
                     r.AccountID AS [Mã HS],
                     a.name AS [Tên Học Sinh],
                     r.ClassID AS [Mã Lớp],
@@ -45,15 +45,7 @@ namespace PBL3a.UI.AdminC.Forms
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-                    dgvData.DataSource = dt;
-
-                    // Ẩn cột RegistrationID đi
-                    if (dgvData.Columns["RegistrationID"] != null)
-                    {
-                        dgvData.Columns["RegistrationID"].Visible = false;
-                    }
-
-                    // Chỉnh UI cho DataGridView
+                    dgvData.DataSource = dt;  
                     dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dgvData.AllowUserToAddRows = false;
                     dgvData.ReadOnly = true;
@@ -76,7 +68,7 @@ namespace PBL3a.UI.AdminC.Forms
             }
 
             // Lấy dữ liệu từ dòng đang chọn
-            int regID = Convert.ToInt32(dgvData.CurrentRow.Cells["RegistrationID"].Value);
+      
             string accountID = dgvData.CurrentRow.Cells["Mã HS"].Value.ToString();
             string classID = dgvData.CurrentRow.Cells["Mã Lớp"].Value.ToString();
 
@@ -89,10 +81,10 @@ namespace PBL3a.UI.AdminC.Forms
                     try
                     {
                         // 1. Cập nhật trạng thái thành Đã duyệt
-                        string updateQuery = "UPDATE Registration SET Status = N'Đã duyệt' WHERE RegistrationID = @regID";
+                        string updateQuery = "UPDATE Registration SET Status = N'Đã duyệt' WHERE AccountID = @accountID";
                         using (SqlCommand cmdUpdate = new SqlCommand(updateQuery, conn, transaction))
                         {
-                            cmdUpdate.Parameters.AddWithValue("@regID", regID);
+                            cmdUpdate.Parameters.AddWithValue("@accountID", accountID);
                             cmdUpdate.ExecuteNonQuery();
                         }
 
@@ -142,9 +134,7 @@ namespace PBL3a.UI.AdminC.Forms
                 MessageBox.Show("Vui lòng chọn một đơn để từ chối!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            int regID = Convert.ToInt32(dgvData.CurrentRow.Cells["RegistrationID"].Value);
-
+            string accountID = dgvData.CurrentRow.Cells["Mã HS"].Value.ToString();
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn TỪ CHỐI đơn đăng ký này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
@@ -153,10 +143,10 @@ namespace PBL3a.UI.AdminC.Forms
                     try
                     {
                         conn.Open();
-                        string updateQuery = "UPDATE Registration SET Status = N'Từ chối' WHERE RegistrationID = @regID";
+                        string updateQuery = "UPDATE Registration SET Status = N'Từ chối' WHERE AccountID = @accountID";
                         using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
                         {
-                            cmd.Parameters.AddWithValue("@regID", regID);
+                            cmd.Parameters.AddWithValue("@accountID", accountID);
                             cmd.ExecuteNonQuery();
                         }
 

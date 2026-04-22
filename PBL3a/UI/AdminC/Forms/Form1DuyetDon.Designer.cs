@@ -31,7 +31,6 @@
             dgvData = new DataGridView();
             btnDongY = new Button();
             btnTuChoi = new Button();
-            btnLuuY = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +47,7 @@
             // 
             // btnDongY
             // 
-            btnDongY.Location = new Point(204, 443);
+            btnDongY.Location = new Point(284, 443);
             btnDongY.Margin = new Padding(3, 4, 3, 4);
             btnDongY.Name = "btnDongY";
             btnDongY.Size = new Size(86, 31);
@@ -59,7 +58,7 @@
             // 
             // btnTuChoi
             // 
-            btnTuChoi.Location = new Point(317, 443);
+            btnTuChoi.Location = new Point(456, 443);
             btnTuChoi.Margin = new Padding(3, 4, 3, 4);
             btnTuChoi.Name = "btnTuChoi";
             btnTuChoi.Size = new Size(86, 31);
@@ -68,22 +67,11 @@
             btnTuChoi.UseVisualStyleBackColor = true;
             btnTuChoi.Click += btnTuChoi_Click;
             // 
-            // btnLuuY
-            // 
-            btnLuuY.Location = new Point(434, 443);
-            btnLuuY.Margin = new Padding(3, 4, 3, 4);
-            btnLuuY.Name = "btnLuuY";
-            btnLuuY.Size = new Size(86, 31);
-            btnLuuY.TabIndex = 3;
-            btnLuuY.Text = "* Lưu ý *";
-            btnLuuY.UseVisualStyleBackColor = true;
-            // 
             // Form1DuyetDon
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 500);
-            Controls.Add(btnLuuY);
             Controls.Add(btnTuChoi);
             Controls.Add(btnDongY);
             Controls.Add(dgvData);
@@ -101,6 +89,5 @@
         private DataGridView dgvData;
         private Button btnDongY;
         private Button btnTuChoi;
-        private Button btnLuuY;
     }
 }
