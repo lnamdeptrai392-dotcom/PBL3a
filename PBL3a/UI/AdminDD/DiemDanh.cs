@@ -31,17 +31,28 @@ namespace PBL3a.UI.AdminDD
             using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
+                int dayOfWeek = (int)date.Value.DayOfWeek;
+                if (dayOfWeek == 0) dayOfWeek = 7;
+                string query = @"
+                                SELECT DISTINCT c.classID, c.class_name 
+                                FROM Class c
+                                JOIN ClassSchedule cs ON c.classID = cs.classID
+                                WHERE cs.dayOfWeek = @dayOfWeek";
 
-                string query = "SELECT classID, class_name FROM Class";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@dayOfWeek", dayOfWeek);
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
 
-                SqlDataAdapter da = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                cboLopHoc.DataSource = dt;
-                cboLopHoc.DisplayMember = "class_name";
-                cboLopHoc.ValueMember = "classID";
-                cboLopHoc.SelectedIndex = -1;
+                        cboLopHoc.DataSource = dt;
+                        cboLopHoc.DisplayMember = "class_name";
+                        cboLopHoc.ValueMember = "classID";
+                        cboLopHoc.SelectedIndex = -1;
+                    }
+                }
             }
         }
 
@@ -201,7 +212,11 @@ namespace PBL3a.UI.AdminDD
             this.Hide();
             LoginForm login = new LoginForm();
             login.ShowDialog();
+        }
 
+        private void date_ValueChanged(object sender, EventArgs e)
+        {
+            LoadClass();
         }
     }
 }
