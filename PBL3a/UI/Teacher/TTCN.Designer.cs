@@ -44,6 +44,7 @@
             tbMGV = new TextBox();
             cbbGT = new ComboBox();
             dtNS = new DateTimePicker();
+            btnUpdate = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,6 +74,7 @@
             tableLayoutPanel1.Controls.Add(tbMGV, 5, 2);
             tableLayoutPanel1.Controls.Add(cbbGT, 2, 2);
             tableLayoutPanel1.Controls.Add(dtNS, 2, 3);
+            tableLayoutPanel1.Controls.Add(btnUpdate, 2, 6);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Segoe UI", 11.1428576F);
             tableLayoutPanel1.Location = new Point(0, 0);
@@ -245,6 +247,18 @@
             dtNS.Size = new Size(286, 32);
             dtNS.TabIndex = 15;
             // 
+            // btnUpdate
+            // 
+            btnUpdate.Anchor = AnchorStyles.Right;
+            btnUpdate.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            btnUpdate.Location = new Point(343, 457);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.TabIndex = 16;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
             // TTCN
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -279,5 +293,6 @@
         private TextBox tbMGV;
         private ComboBox cbbGT;
         private DateTimePicker dtNS;
+        private Button btnUpdate;
     }
 }

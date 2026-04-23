@@ -47,45 +47,38 @@ namespace PBL3a.UI.Teacher
                 Button btn = (Button)senderBtn;
                 if (currentButton == btn) return;
 
-                if (currentButton != null)
-                {
-                    currentButton.BackColor = Color.FromArgb(112, 146, 190);
-                    currentButton.ForeColor = Color.White;
-                }
-
                 currentButton = btn;
-                currentButton.BackColor = Color.FromArgb(144, 188, 245);
-                currentButton.ForeColor = Color.White;
+                
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            
             OpenChildForm(new TTCN(currentTeacherID));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            
             OpenChildForm(new TKB(currentTeacherID));
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            
             OpenChildForm(new NhapDiem());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            
             OpenChildForm(new TaiLieu());
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            
             OpenChildForm(new Luong(currentTeacherID));
         }
 

@@ -80,5 +80,10 @@ namespace PBL3a.UI.Teacher
         {
             this.Close();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            //update cho thong tin cua giao viens
+        }
     }
 }
