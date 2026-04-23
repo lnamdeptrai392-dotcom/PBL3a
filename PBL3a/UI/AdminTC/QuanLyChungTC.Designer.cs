@@ -35,11 +35,11 @@
             panel4 = new Panel();
             paDesktop = new Panel();
             panel3 = new Panel();
-            btHP = new Button();
+            btnFee = new Button();
             panel1 = new Panel();
-            btDX = new Button();
-            btLN = new Button();
-            btLGV = new Button();
+            btnExit = new Button();
+            btnProfit = new Button();
+            btnSalary = new Button();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
@@ -77,7 +77,7 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(733, 84);
             panel6.TabIndex = 2;
-            panel6.Paint += panel6_Paint;
+            
             // 
             // label1
             // 
@@ -119,30 +119,30 @@
             panel3.Size = new Size(1000, 500);
             panel3.TabIndex = 2;
             // 
-            // btHP
+            // btnFee
             // 
-            btHP.BackColor = Color.FromArgb(44, 78, 98);
-            btHP.Dock = DockStyle.Top;
-            btHP.FlatAppearance.BorderSize = 0;
-            btHP.FlatStyle = FlatStyle.Flat;
-            btHP.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btHP.ForeColor = Color.White;
-            btHP.Location = new Point(0, 0);
-            btHP.Margin = new Padding(0);
-            btHP.Name = "btHP";
-            btHP.Size = new Size(200, 60);
-            btHP.TabIndex = 1;
-            btHP.Text = "Học Phí";
-            btHP.UseVisualStyleBackColor = false;
-            btHP.Click += btHP_Click;
+            btnFee.BackColor = Color.FromArgb(44, 78, 98);
+            btnFee.Dock = DockStyle.Top;
+            btnFee.FlatAppearance.BorderSize = 0;
+            btnFee.FlatStyle = FlatStyle.Flat;
+            btnFee.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnFee.ForeColor = Color.White;
+            btnFee.Location = new Point(0, 0);
+            btnFee.Margin = new Padding(0);
+            btnFee.Name = "btnFee";
+            btnFee.Size = new Size(200, 60);
+            btnFee.TabIndex = 1;
+            btnFee.Text = "Học Phí";
+            btnFee.UseVisualStyleBackColor = false;
+            btnFee.Click += btnFee_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(44, 78, 98);
-            panel1.Controls.Add(btDX);
-            panel1.Controls.Add(btLN);
-            panel1.Controls.Add(btLGV);
-            panel1.Controls.Add(btHP);
+            panel1.Controls.Add(btnExit);
+            panel1.Controls.Add(btnProfit);
+            panel1.Controls.Add(btnSalary);
+            panel1.Controls.Add(btnFee);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 84);
             panel1.Margin = new Padding(0);
@@ -150,56 +150,56 @@
             panel1.Size = new Size(200, 416);
             panel1.TabIndex = 0;
             // 
-            // btDX
+            // btnExit
             // 
-            btDX.BackColor = Color.FromArgb(44, 78, 98);
-            btDX.Dock = DockStyle.Top;
-            btDX.FlatAppearance.BorderSize = 0;
-            btDX.FlatStyle = FlatStyle.Flat;
-            btDX.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btDX.ForeColor = Color.White;
-            btDX.Location = new Point(0, 180);
-            btDX.Margin = new Padding(0);
-            btDX.Name = "btDX";
-            btDX.Size = new Size(200, 60);
-            btDX.TabIndex = 4;
-            btDX.Text = "Đăng Xuất";
-            btDX.UseVisualStyleBackColor = false;
-            btDX.Click += btDX_Click;
+            btnExit.BackColor = Color.FromArgb(44, 78, 98);
+            btnExit.Dock = DockStyle.Top;
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnExit.ForeColor = Color.White;
+            btnExit.Location = new Point(0, 180);
+            btnExit.Margin = new Padding(0);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(200, 60);
+            btnExit.TabIndex = 4;
+            btnExit.Text = "Đăng Xuất";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
-            // btLN
+            // btnProfit
             // 
-            btLN.BackColor = Color.FromArgb(44, 78, 98);
-            btLN.Dock = DockStyle.Top;
-            btLN.FlatAppearance.BorderSize = 0;
-            btLN.FlatStyle = FlatStyle.Flat;
-            btLN.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btLN.ForeColor = Color.White;
-            btLN.Location = new Point(0, 120);
-            btLN.Margin = new Padding(0);
-            btLN.Name = "btLN";
-            btLN.Size = new Size(200, 60);
-            btLN.TabIndex = 3;
-            btLN.Text = "Lợi Nhuận";
-            btLN.UseVisualStyleBackColor = false;
-            btLN.Click += btLN_Click;
+            btnProfit.BackColor = Color.FromArgb(44, 78, 98);
+            btnProfit.Dock = DockStyle.Top;
+            btnProfit.FlatAppearance.BorderSize = 0;
+            btnProfit.FlatStyle = FlatStyle.Flat;
+            btnProfit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnProfit.ForeColor = Color.White;
+            btnProfit.Location = new Point(0, 120);
+            btnProfit.Margin = new Padding(0);
+            btnProfit.Name = "btnProfit";
+            btnProfit.Size = new Size(200, 60);
+            btnProfit.TabIndex = 3;
+            btnProfit.Text = "Lợi Nhuận";
+            btnProfit.UseVisualStyleBackColor = false;
+            btnProfit.Click += btnProfit_Click;
             // 
-            // btLGV
+            // btnSalary
             // 
-            btLGV.BackColor = Color.FromArgb(44, 78, 98);
-            btLGV.Dock = DockStyle.Top;
-            btLGV.FlatAppearance.BorderSize = 0;
-            btLGV.FlatStyle = FlatStyle.Flat;
-            btLGV.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btLGV.ForeColor = Color.White;
-            btLGV.Location = new Point(0, 60);
-            btLGV.Margin = new Padding(0);
-            btLGV.Name = "btLGV";
-            btLGV.Size = new Size(200, 60);
-            btLGV.TabIndex = 2;
-            btLGV.Text = "Lương Giáo Viên";
-            btLGV.UseVisualStyleBackColor = false;
-            btLGV.Click += btLGV_Click;
+            btnSalary.BackColor = Color.FromArgb(44, 78, 98);
+            btnSalary.Dock = DockStyle.Top;
+            btnSalary.FlatAppearance.BorderSize = 0;
+            btnSalary.FlatStyle = FlatStyle.Flat;
+            btnSalary.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalary.ForeColor = Color.White;
+            btnSalary.Location = new Point(0, 60);
+            btnSalary.Margin = new Padding(0);
+            btnSalary.Name = "btnSalary";
+            btnSalary.Size = new Size(200, 60);
+            btnSalary.TabIndex = 2;
+            btnSalary.Text = "Lương Giáo Viên";
+            btnSalary.UseVisualStyleBackColor = false;
+            btnSalary.Click += btnSalary_Click;
             // 
             // QuanLyChungTC
             // 
@@ -226,11 +226,11 @@
         private Panel panel2; 
         private Panel panel3;
         private Label label1;
-        private Button btHP;
+        private Button btnFee;
         private Panel panel1;
-        private Button btDX;
-        private Button btLN;
-        private Button btLGV;
+        private Button btnExit;
+        private Button btnProfit;
+        private Button btnSalary;
         private Panel panel5;
         private Panel panel6;
         private Panel paDesktop;

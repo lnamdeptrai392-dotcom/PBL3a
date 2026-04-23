@@ -15,10 +15,6 @@ namespace PBL3a.UI.Student
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string StudentID { get; set; } = "";
 
-        public StudentAll()
-        {
-            InitializeComponent();
-        }
 
         public StudentAll(string id)
         {
@@ -39,8 +35,6 @@ namespace PBL3a.UI.Student
             this.panelChildBox.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            
-
         }
 
         private void btn_info_Click_1(object sender, EventArgs e)
@@ -63,9 +57,6 @@ namespace PBL3a.UI.Student
         {
             openChildForm(new StudentFee(StudentID), sender);
         }
-
-    
-
         private void btn_exit_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

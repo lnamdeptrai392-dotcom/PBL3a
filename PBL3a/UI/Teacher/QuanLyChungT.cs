@@ -48,10 +48,8 @@ namespace PBL3a.UI.Teacher
                 if (currentButton == btn) return;
 
                 currentButton = btn;
-
             }
         }
-
         private void btnInfo_Click(object sender, EventArgs e)
         {
             OpenChildForm(new TTCN(currentTeacherID));

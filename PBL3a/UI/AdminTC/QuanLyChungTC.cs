@@ -16,42 +16,30 @@ namespace PBL3a.UI.AdminTC
             InitializeComponent();
         }
 
-        private void btHP_Click(object sender, EventArgs e)
+        private void btnFee_Click(object sender, EventArgs e)
         {
-            but_chform.ActivateButton(sender);
             HocPhi hocphi = new HocPhi();
             but_chform.OpenChildForm(hocphi, sender, paDesktop);
         }
 
-        // Lương giáo viên
-        private void btLGV_Click(object sender, EventArgs e)
+        private void btnSalary_Click(object sender, EventArgs e)
         {
-            but_chform.ActivateButton(sender);
             LuongGV luong = new LuongGV();
             but_chform.OpenChildForm(luong, sender, paDesktop);
         }
 
-        // Lợi nhuận
-        private void btLN_Click(object sender, EventArgs e)
+        private void btnProfit_Click(object sender, EventArgs e)
         {
-            but_chform.ActivateButton(sender);
             LoiNhuan loinhuan = new LoiNhuan();
             but_chform.OpenChildForm(loinhuan, sender, paDesktop);
         }
 
-
-        // Đăng xuất
-        private void btDX_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             LoginForm newForm = new LoginForm();
             this.Hide();
             newForm.ShowDialog();
             this.Close();
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
