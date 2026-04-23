@@ -61,12 +61,13 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._2026;
-            pictureBox1.Location = new Point(49, 19);
+            pictureBox1.Location = new Point(49, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(109, 88);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // butOut
             // 

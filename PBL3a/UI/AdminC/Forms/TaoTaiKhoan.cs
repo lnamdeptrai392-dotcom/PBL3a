@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace PBL3a.UI.AdminC.Forms
 {
-    public partial class Form5TaoTK : Form
+    public partial class TaoTaiKhoan : Form
     {
         DatabaseHelper dbHelper = new DatabaseHelper();
 
         // Tạo một bảng ảo để chứa dữ liệu xem trước
         DataTable dtPreview = new DataTable();
-        public Form5TaoTK()
+        public TaoTaiKhoan()
         {
             InitializeComponent();
         }

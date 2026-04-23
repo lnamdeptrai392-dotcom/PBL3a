@@ -25,12 +25,11 @@
         private void InitializeComponent()
         {
             panelMenu = new Panel();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnExit = new Button();
+            btnSalary = new Button();
+            btnScore = new Button();
+            btnSchedule = new Button();
+            btnInfo = new Button();
             panelLogo = new Panel();
             pictureBox1 = new PictureBox();
             panelMain = new Panel();
@@ -42,12 +41,11 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(44, 78, 98);
-            panelMenu.Controls.Add(button6);
-            panelMenu.Controls.Add(button5);
-            panelMenu.Controls.Add(button4);
-            panelMenu.Controls.Add(button3);
-            panelMenu.Controls.Add(button2);
-            panelMenu.Controls.Add(button1);
+            panelMenu.Controls.Add(btnExit);
+            panelMenu.Controls.Add(btnSalary);
+            panelMenu.Controls.Add(btnScore);
+            panelMenu.Controls.Add(btnSchedule);
+            panelMenu.Controls.Add(btnInfo);
             panelMenu.Controls.Add(panelLogo);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
@@ -55,100 +53,84 @@
             panelMenu.Size = new Size(200, 500);
             panelMenu.TabIndex = 0;
             // 
-            // button6
+            // btnExit
             // 
-            button6.Dock = DockStyle.Top;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 10F);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(0, 395);
-            button6.Name = "button6";
-            button6.Size = new Size(200, 55);
-            button6.TabIndex = 6;
-            button6.Text = "Đăng xuất";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
+            btnExit.Dock = DockStyle.Top;
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Segoe UI", 10F);
+            btnExit.ForeColor = Color.White;
+            btnExit.Location = new Point(0, 340);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(200, 55);
+            btnExit.TabIndex = 6;
+            btnExit.Text = "Đăng xuất";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
-            // button5
+            // btnSalary
             // 
-            button5.BackColor = Color.FromArgb(44, 78, 98);
-            button5.Dock = DockStyle.Top;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI", 10F);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(0, 340);
-            button5.Name = "button5";
-            button5.Size = new Size(200, 55);
-            button5.TabIndex = 5;
-            button5.Text = "Lương";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            btnSalary.BackColor = Color.FromArgb(44, 78, 98);
+            btnSalary.Dock = DockStyle.Top;
+            btnSalary.FlatAppearance.BorderSize = 0;
+            btnSalary.FlatStyle = FlatStyle.Flat;
+            btnSalary.Font = new Font("Segoe UI", 10F);
+            btnSalary.ForeColor = Color.White;
+            btnSalary.Location = new Point(0, 285);
+            btnSalary.Name = "btnSalary";
+            btnSalary.Size = new Size(200, 55);
+            btnSalary.TabIndex = 5;
+            btnSalary.Text = "Lương";
+            btnSalary.UseVisualStyleBackColor = false;
+            btnSalary.Click += btnSalary_Click;
             // 
-            // button4
+            // btnScore
             // 
-            button4.BackColor = Color.FromArgb(44, 78, 98);
-            button4.Dock = DockStyle.Top;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 10F);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(0, 285);
-            button4.Name = "button4";
-            button4.Size = new Size(200, 55);
-            button4.TabIndex = 4;
-            button4.Text = "Tài liệu";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            btnScore.BackColor = Color.FromArgb(44, 78, 98);
+            btnScore.Dock = DockStyle.Top;
+            btnScore.FlatAppearance.BorderSize = 0;
+            btnScore.FlatStyle = FlatStyle.Flat;
+            btnScore.Font = new Font("Segoe UI", 10F);
+            btnScore.ForeColor = Color.White;
+            btnScore.Location = new Point(0, 230);
+            btnScore.Name = "btnScore";
+            btnScore.Size = new Size(200, 55);
+            btnScore.TabIndex = 3;
+            btnScore.Text = "Nhập điểm";
+            btnScore.UseVisualStyleBackColor = false;
+            btnScore.Click += btnScore_Click;
             // 
-            // button3
+            // btnSchedule
             // 
-            button3.BackColor = Color.FromArgb(44, 78, 98);
-            button3.Dock = DockStyle.Top;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 10F);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(0, 230);
-            button3.Name = "button3";
-            button3.Size = new Size(200, 55);
-            button3.TabIndex = 3;
-            button3.Text = "Nhập điểm";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            btnSchedule.BackColor = Color.FromArgb(44, 78, 98);
+            btnSchedule.Dock = DockStyle.Top;
+            btnSchedule.FlatAppearance.BorderSize = 0;
+            btnSchedule.FlatStyle = FlatStyle.Flat;
+            btnSchedule.Font = new Font("Segoe UI", 10F);
+            btnSchedule.ForeColor = Color.White;
+            btnSchedule.Location = new Point(0, 175);
+            btnSchedule.Name = "btnSchedule";
+            btnSchedule.Size = new Size(200, 55);
+            btnSchedule.TabIndex = 2;
+            btnSchedule.Text = "Thời khóa biểu";
+            btnSchedule.UseVisualStyleBackColor = false;
+            btnSchedule.Click += btnSchedule_Click;
             // 
-            // button2
+            // btnInfo
             // 
-            button2.BackColor = Color.FromArgb(44, 78, 98);
-            button2.Dock = DockStyle.Top;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 10F);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(0, 175);
-            button2.Name = "button2";
-            button2.Size = new Size(200, 55);
-            button2.TabIndex = 2;
-            button2.Text = "Thời khóa biểu";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(44, 78, 98);
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 10F);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 120);
-            button1.Name = "button1";
-            button1.Size = new Size(200, 55);
-            button1.TabIndex = 1;
-            button1.Text = "Thông tin cá nhân";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnInfo.BackColor = Color.FromArgb(44, 78, 98);
+            btnInfo.Dock = DockStyle.Top;
+            btnInfo.FlatAppearance.BorderSize = 0;
+            btnInfo.FlatStyle = FlatStyle.Flat;
+            btnInfo.Font = new Font("Segoe UI", 10F);
+            btnInfo.ForeColor = Color.White;
+            btnInfo.Location = new Point(0, 120);
+            btnInfo.Name = "btnInfo";
+            btnInfo.Size = new Size(200, 55);
+            btnInfo.TabIndex = 1;
+            btnInfo.Text = "Thông tin cá nhân";
+            btnInfo.UseVisualStyleBackColor = false;
+            btnInfo.Click += btnInfo_Click;
             // 
             // panelLogo
             // 
@@ -202,12 +184,11 @@
         private Panel panelMenu;
         private Panel panelLogo;
         private Panel panelMain;
-        private Button button1;
-        private Button button6;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button btnInfo;
+        private Button btnExit;
+        private Button btnSalary;
+        private Button btnScore;
+        private Button btnSchedule;
         private PictureBox pictureBox1;
     }
 }

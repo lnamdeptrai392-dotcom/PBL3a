@@ -1,6 +1,6 @@
 ﻿namespace PBL3a.UI.AdminC.Forms
 {
-    partial class Form3TuChoi
+    partial class TuChoi
     {
         /// <summary>
         /// Required designer variable.

@@ -12,14 +12,14 @@ namespace PBL3a.UI.AdminC
     public partial class AdminC : Form
     {
         private Form activeForm;
-        
+
 
         public AdminC()
         {
             InitializeComponent();
         }
 
-        
+
         private void openChildForm(Form childForm, object sender)
         {
             if (activeForm != null)
@@ -38,31 +38,31 @@ namespace PBL3a.UI.AdminC
 
         private void btnDuyetDon_Click(object sender, EventArgs e)
         {
-            
-            openChildForm(new Forms.Form1DuyetDon(), sender);
+
+            openChildForm(new Forms.DuyetDon(), sender);
 
         }
 
         private void btnDaDuyet_Click(object sender, EventArgs e)
         {
-            
-            openChildForm(new Forms.Form2DaDuyet(), sender);
+
+            openChildForm(new Forms.DonDaDuyet(), sender);
 
         }
 
-        
+
 
         private void btnKhoaLop_Click(object sender, EventArgs e)
         {
-           
-            openChildForm(new Forms.Form4KhoaLop(), sender);
+
+            openChildForm(new Forms.KhoaLop(), sender);
 
         }
 
         private void btnTaoTK_Click(object sender, EventArgs e)
         {
-            
-            openChildForm(new Forms.Form5TaoTK(), sender);
+
+            openChildForm(new Forms.TaoTaiKhoan(), sender);
 
         }
 
@@ -72,7 +72,12 @@ namespace PBL3a.UI.AdminC
             this.Hide();
             newForm.ShowDialog();
             this.Close();
-   
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

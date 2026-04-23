@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace PBL3a.UI.AdminC.Forms
 {
-    public partial class Form3TuChoi : Form
+    public partial class TuChoi : Form
     {
-        public Form3TuChoi()
+        public TuChoi()
         {
             InitializeComponent();
         }

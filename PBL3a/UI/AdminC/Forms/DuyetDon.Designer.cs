@@ -1,6 +1,6 @@
 ﻿namespace PBL3a.UI.AdminC.Forms
 {
-    partial class Form1DuyetDon
+    partial class DuyetDon
     {
         /// <summary>
         /// Required designer variable.
@@ -67,17 +67,18 @@
             btnTuChoi.UseVisualStyleBackColor = true;
             btnTuChoi.Click += btnTuChoi_Click;
             // 
-            // Form1DuyetDon
+            // DuyetDon
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(800, 500);
             Controls.Add(btnTuChoi);
             Controls.Add(btnDongY);
             Controls.Add(dgvData);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Form1DuyetDon";
+            Name = "DuyetDon";
             Text = "Form1DuyetDon";
             Load += Form1DuyetDon_Load;
             ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();

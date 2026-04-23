@@ -1,6 +1,6 @@
 ﻿namespace PBL3a.UI.AdminC.Forms
 {
-    partial class Form2DaDuyet
+    partial class KhoaLop
     {
         /// <summary>
         /// Required designer variable.
@@ -29,95 +29,101 @@
         private void InitializeComponent()
         {
             dgvData = new DataGridView();
-            lbTitle = new Label();
+            lbChinh = new Label();
             cbbKhoa = new ComboBox();
-            lbKhoa = new Label();
-            btnView = new Button();
-            lbLop = new Label();
             cbbLop = new ComboBox();
+            lbChonKhoa = new Label();
+            lbChonLop = new Label();
+            btnView = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
             // dgvData
             // 
+            dgvData.BackgroundColor = Color.White;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Location = new Point(31, 119);
+            dgvData.Location = new Point(37, 107);
+            dgvData.Margin = new Padding(3, 4, 3, 4);
             dgvData.Name = "dgvData";
             dgvData.RowHeadersWidth = 51;
-            dgvData.Size = new Size(725, 339);
+            dgvData.Size = new Size(701, 308);
             dgvData.TabIndex = 0;
             // 
-            // lbTitle
+            // lbChinh
             // 
-            lbTitle.AutoSize = true;
-            lbTitle.Location = new Point(231, 9);
-            lbTitle.Name = "lbTitle";
-            lbTitle.Size = new Size(283, 20);
-            lbTitle.TabIndex = 1;
-            lbTitle.Text = "Các Đơn Xin Tham Gia Lớp Học Đã Duyệt";
-            lbTitle.Click += lbTitle_Click;
+            lbChinh.AutoSize = true;
+            lbChinh.Location = new Point(279, 9);
+            lbChinh.Name = "lbChinh";
+            lbChinh.Size = new Size(144, 20);
+            lbChinh.TabIndex = 1;
+            lbChinh.Text = "Thông Tin Khóa/Lớp";
             // 
             // cbbKhoa
             // 
             cbbKhoa.FormattingEnabled = true;
-            cbbKhoa.Location = new Point(137, 59);
+            cbbKhoa.Location = new Point(144, 55);
+            cbbKhoa.Margin = new Padding(3, 4, 3, 4);
             cbbKhoa.Name = "cbbKhoa";
-            cbbKhoa.Size = new Size(137, 28);
+            cbbKhoa.Size = new Size(138, 28);
             cbbKhoa.TabIndex = 2;
             cbbKhoa.SelectedIndexChanged += cbbKhoa_SelectedIndexChanged;
-            // 
-            // lbKhoa
-            // 
-            lbKhoa.AutoSize = true;
-            lbKhoa.Location = new Point(50, 59);
-            lbKhoa.Name = "lbKhoa";
-            lbKhoa.Size = new Size(81, 20);
-            lbKhoa.TabIndex = 3;
-            lbKhoa.Text = "Chọn Khóa";
-            // 
-            // btnView
-            // 
-            btnView.Location = new Point(619, 55);
-            btnView.Name = "btnView";
-            btnView.Size = new Size(94, 29);
-            btnView.TabIndex = 4;
-            btnView.Text = "View";
-            btnView.UseVisualStyleBackColor = true;
-            btnView.Click += btnView_Click;
-            // 
-            // lbLop
-            // 
-            lbLop.AutoSize = true;
-            lbLop.Location = new Point(303, 59);
-            lbLop.Name = "lbLop";
-            lbLop.Size = new Size(72, 20);
-            lbLop.TabIndex = 5;
-            lbLop.Text = "Chọn Lớp";
             // 
             // cbbLop
             // 
             cbbLop.FormattingEnabled = true;
-            cbbLop.Location = new Point(381, 56);
+            cbbLop.Location = new Point(396, 55);
+            cbbLop.Margin = new Padding(3, 4, 3, 4);
             cbbLop.Name = "cbbLop";
-            cbbLop.Size = new Size(137, 28);
-            cbbLop.TabIndex = 6;
+            cbbLop.Size = new Size(138, 28);
+            cbbLop.TabIndex = 3;
             // 
-            // Form2DaDuyet
+            // lbChonKhoa
+            // 
+            lbChonKhoa.AutoSize = true;
+            lbChonKhoa.Location = new Point(37, 57);
+            lbChonKhoa.Name = "lbChonKhoa";
+            lbChonKhoa.Size = new Size(81, 20);
+            lbChonKhoa.TabIndex = 4;
+            lbChonKhoa.Text = "Chọn Khóa";
+            // 
+            // lbChonLop
+            // 
+            lbChonLop.AutoSize = true;
+            lbChonLop.Location = new Point(318, 58);
+            lbChonLop.Name = "lbChonLop";
+            lbChonLop.Size = new Size(72, 20);
+            lbChonLop.TabIndex = 5;
+            lbChonLop.Text = "Chọn Lớp";
+            // 
+            // btnView
+            // 
+            btnView.Location = new Point(560, 52);
+            btnView.Margin = new Padding(3, 4, 3, 4);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(86, 31);
+            btnView.TabIndex = 6;
+            btnView.Text = "View";
+            btnView.UseVisualStyleBackColor = true;
+            btnView.Click += btnView_Click;
+            // 
+            // KhoaLop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 500);
-            Controls.Add(cbbLop);
-            Controls.Add(lbLop);
+            BackColor = Color.White;
+            ClientSize = new Size(782, 453);
             Controls.Add(btnView);
-            Controls.Add(lbKhoa);
+            Controls.Add(lbChonLop);
+            Controls.Add(lbChonKhoa);
+            Controls.Add(cbbLop);
             Controls.Add(cbbKhoa);
-            Controls.Add(lbTitle);
+            Controls.Add(lbChinh);
             Controls.Add(dgvData);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form2DaDuyet";
-            Text = "Form2DaDuyet";
-            Load += Form2DaDuyet_Load;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "KhoaLop";
+            Text = "Form4TTKhoaLop";
+            Load += Form4KhoaLop_Load;
             ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -126,11 +132,11 @@
         #endregion
 
         private DataGridView dgvData;
-        private Label lbTitle;
+        private Label lbChinh;
         private ComboBox cbbKhoa;
-        private Label lbKhoa;
-        private Button btnView;
-        private Label lbLop;
         private ComboBox cbbLop;
+        private Label lbChonKhoa;
+        private Label lbChonLop;
+        private Button btnView;
     }
 }

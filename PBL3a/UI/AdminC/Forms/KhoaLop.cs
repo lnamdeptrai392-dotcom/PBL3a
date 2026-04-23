@@ -10,10 +10,10 @@ using PBL3a.services;
 
 namespace PBL3a.UI.AdminC.Forms
 {
-    public partial class Form4KhoaLop : Form
+    public partial class KhoaLop : Form
     {
         private DatabaseHelper dbHelper = new DatabaseHelper();
-        public Form4KhoaLop()
+        public KhoaLop()
         {
             InitializeComponent();
         }

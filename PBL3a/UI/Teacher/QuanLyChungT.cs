@@ -16,7 +16,7 @@ namespace PBL3a.UI.Teacher
             InitializeComponent();
             currentTeacherID = teacherId;
 
-            ActivateButton(button1);
+            ActivateButton(btnInfo);
             OpenChildForm(new TTCN(currentTeacherID));
         }
 
@@ -48,41 +48,31 @@ namespace PBL3a.UI.Teacher
                 if (currentButton == btn) return;
 
                 currentButton = btn;
-                
+
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnInfo_Click(object sender, EventArgs e)
         {
-            
             OpenChildForm(new TTCN(currentTeacherID));
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSchedule_Click(object sender, EventArgs e)
         {
-            
             OpenChildForm(new TKB(currentTeacherID));
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnScore_Click(object sender, EventArgs e)
         {
-            
             OpenChildForm(new NhapDiem());
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnSalary_Click(object sender, EventArgs e)
         {
-            
-            OpenChildForm(new TaiLieu());
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            
             OpenChildForm(new Luong(currentTeacherID));
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Hide();
             LoginForm loginForm = new LoginForm();

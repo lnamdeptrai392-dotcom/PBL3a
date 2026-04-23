@@ -1,6 +1,6 @@
 ﻿namespace PBL3a.UI.AdminC.Forms
 {
-    partial class Form5TaoTK
+    partial class TaoTaiKhoan
     {
         /// <summary>
         /// Required designer variable.

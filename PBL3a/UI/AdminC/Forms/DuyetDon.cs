@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace PBL3a.UI.AdminC.Forms
 {
-    public partial class Form1DuyetDon : Form
+    public partial class DuyetDon : Form
     {
         private DatabaseHelper dbHelper = new DatabaseHelper();
-        public Form1DuyetDon()
+        public DuyetDon()
         {
             InitializeComponent();
         }
