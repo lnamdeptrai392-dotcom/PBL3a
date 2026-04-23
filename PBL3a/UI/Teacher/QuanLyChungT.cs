@@ -49,7 +49,7 @@ namespace PBL3a.UI.Teacher
 
                 if (currentButton != null)
                 {
-                    currentButton.BackColor = Color.FromArgb(112, 146, 190);
+                    currentButton.BackColor = Color.FromArgb(44, 78, 98);
                     currentButton.ForeColor = Color.White;
                 }
 
