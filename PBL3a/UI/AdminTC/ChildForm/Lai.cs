@@ -17,6 +17,22 @@ namespace PBL3a.UI.AdminTC
         public Lai()
         {
             InitializeComponent();
+            Load += Lai_Load;
+        }
+
+        private void Lai_Load(object? sender, EventArgs e)
+        {
+            SetupDataGridView();
+            comboBox1.SelectedIndex = -1;
+            tbNam.Text = DateTime.Now.Year.ToString();
+        }
+        private void SetupDataGridView()
+        {
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ReadOnly = true;
         }
 
         private void btT_Click(object sender, EventArgs e)
@@ -32,6 +48,23 @@ namespace PBL3a.UI.AdminTC
         private void btT_MouseLeave(object sender, EventArgs e)
         {
             but_chform.bt_MouseLeave(sender, e);
+        }
+
+        private void TinhTongKhoan()
+        {
+            decimal tong = 0;
+            foreach (DataRow row in thuchi.Rows)
+            {
+                if (row["Số tiền"] != DBNull.Value)
+                {
+                    string loai = row["Loại Giao Dịch"].ToString();
+                    if (loai == "Thu") { tong += Convert.ToDecimal(row["Số tiền"]); }
+                    else if (loai == "Chi") { tong -= Convert.ToDecimal(row["Số tiền"]); }
+                    else { MessageBox.Show("Loai giao dich tren khong hop le!!!"); }
+                }
+            }
+
+            tbT.Text = tong.ToString("N0") + " VNĐ";
         }
 
         private void btOK_Click(object sender, EventArgs e)
@@ -60,7 +93,8 @@ namespace PBL3a.UI.AdminTC
                         NoiDung AS [Nội dung],
                         SoTien AS [Số tiền],
                         NgayThu AS [Ngày thu],
-                        GhiChu AS [Ghi chú]
+                        GhiChu AS [Ghi chú],
+                        'Thu' AS [Loại Giao Dịch]
                     FROM KhoanThu 
                     WHERE ThuMonth = @month AND ThuYear = @year
                     UNION ALL
@@ -70,7 +104,8 @@ namespace PBL3a.UI.AdminTC
                         NoiDung AS [Nội dung],
                         SoTien AS [Số tiền],
                         NgayChi AS [Ngày chi],
-                        GhiChu AS [Ghi chú]
+                        GhiChu AS [Ghi chú],
+                        'Chi' AS [Loại Giao Dịch]
                     FROM KhoanChi
                     WHERE ChiMonth = @month AND ChiYear = @year";
                 try
@@ -84,6 +119,7 @@ namespace PBL3a.UI.AdminTC
                         adapter.Fill(thuchi);
                         dataGridView1.DataSource = thuchi;
                     }
+                    TinhTongKhoan();
                 }
                 catch (Exception ex)
                 {

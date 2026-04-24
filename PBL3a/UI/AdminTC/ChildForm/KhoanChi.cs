@@ -20,7 +20,7 @@ namespace PBL3a.UI.AdminTC
         private void KhoanChi_Load(object? sender, EventArgs e)
         {
             SetupDataGridView();
-            comboBox1.SelectedIndex = 0;
+            comboBox1.SelectedIndex = -1;
             tbNam.Text = DateTime.Now.Year.ToString();
         }
 
@@ -123,3 +123,4 @@ namespace PBL3a.UI.AdminTC
         }
     }
 }
+

@@ -15,8 +15,8 @@ namespace PBL3a.UI.AdminTC
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             tbTL = new TextBox();
             laMGV = new Label();
@@ -36,14 +36,14 @@ namespace PBL3a.UI.AdminTC
             // 
             tableLayoutPanel1.BackColor = Color.White;
             tableLayoutPanel1.ColumnCount = 8;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.104023F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 74.89598F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 141F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 260F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 138F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 212F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 390F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 207F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 27F));
             tableLayoutPanel1.Controls.Add(tbTL, 4, 1);
             tableLayoutPanel1.Controls.Add(laMGV, 1, 1);
             tableLayoutPanel1.Controls.Add(laTGV, 3, 1);
@@ -57,30 +57,30 @@ namespace PBL3a.UI.AdminTC
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Microsoft Sans Serif", 9F);
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(2, 3, 2, 3);
+            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 10;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 32.83582F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 67.16418F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 28F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 42F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 458F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 305F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 7F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 49F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 13F));
-            tableLayoutPanel1.Size = new Size(987, 549);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 26F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(1480, 824);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // tbTL
             // 
             tbTL.Dock = DockStyle.Fill;
             tbTL.Enabled = false;
-            tbTL.Location = new Point(562, 31);
-            tbTL.Margin = new Padding(2, 3, 2, 3);
+            tbTL.Location = new Point(842, 46);
+            tbTL.Margin = new Padding(3, 4, 3, 4);
             tbTL.Name = "tbTL";
-            tbTL.Size = new Size(256, 24);
+            tbTL.Size = new Size(384, 31);
             tbTL.TabIndex = 4;
             // 
             // laMGV
@@ -89,10 +89,9 @@ namespace PBL3a.UI.AdminTC
             laMGV.Dock = DockStyle.Right;
             laMGV.Font = new Font("Microsoft Sans Serif", 9F);
             laMGV.ForeColor = Color.Black;
-            laMGV.Location = new Point(37, 28);
-            laMGV.Margin = new Padding(2, 0, 2, 0);
+            laMGV.Location = new Point(59, 42);
             laMGV.Name = "laMGV";
-            laMGV.Size = new Size(76, 57);
+            laMGV.Size = new Size(111, 86);
             laMGV.TabIndex = 1;
             laMGV.Text = "Mã Giảng Viên: ";
             // 
@@ -102,42 +101,41 @@ namespace PBL3a.UI.AdminTC
             laTGV.Dock = DockStyle.Right;
             laTGV.Font = new Font("Microsoft Sans Serif", 9F);
             laTGV.ForeColor = Color.Black;
-            laTGV.Location = new Point(442, 28);
-            laTGV.Margin = new Padding(2, 0, 2, 0);
+            laTGV.Location = new Point(663, 42);
             laTGV.Name = "laTGV";
-            laTGV.Size = new Size(116, 57);
+            laTGV.Size = new Size(173, 86);
             laTGV.TabIndex = 2;
             laTGV.Text = "Tên Giảng Viên: ";
             // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = Color.White;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tableLayoutPanel1.SetColumnSpan(dataGridView1, 4);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = Color.Gray;
-            dataGridView1.Location = new Point(16, 126);
-            dataGridView1.Margin = new Padding(2, 3, 2, 3);
+            dataGridView1.Location = new Point(24, 189);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 5);
-            dataGridView1.Size = new Size(802, 406);
+            dataGridView1.Size = new Size(1202, 610);
             dataGridView1.TabIndex = 8;
             dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
             // 
@@ -145,10 +143,10 @@ namespace PBL3a.UI.AdminTC
             // 
             cbbMGV.Dock = DockStyle.Fill;
             cbbMGV.FormattingEnabled = true;
-            cbbMGV.Location = new Point(117, 31);
-            cbbMGV.Margin = new Padding(2, 3, 2, 3);
+            cbbMGV.Location = new Point(176, 46);
+            cbbMGV.Margin = new Padding(3, 4, 3, 4);
             cbbMGV.Name = "cbbMGV";
-            cbbMGV.Size = new Size(300, 26);
+            cbbMGV.Size = new Size(448, 33);
             cbbMGV.TabIndex = 9;
             cbbMGV.TextUpdate += comboBox1_TextUpdate;
             // 
@@ -157,10 +155,10 @@ namespace PBL3a.UI.AdminTC
             btSetL.BackColor = Color.FromArgb(93, 156, 179);
             btSetL.Font = new Font("Segoe UI", 9.857143F);
             btSetL.ForeColor = Color.White;
-            btSetL.Location = new Point(833, 489);
-            btSetL.Margin = new Padding(2, 3, 2, 3);
+            btSetL.Location = new Point(1248, 707);
+            btSetL.Margin = new Padding(3, 4, 3, 4);
             btSetL.Name = "btSetL";
-            btSetL.Size = new Size(134, 41);
+            btSetL.Size = new Size(201, 74);
             btSetL.TabIndex = 5;
             btSetL.Text = "Tính toán lương";
             btSetL.UseVisualStyleBackColor = false;
@@ -174,10 +172,9 @@ namespace PBL3a.UI.AdminTC
             laThang.Dock = DockStyle.Right;
             laThang.Font = new Font("Microsoft Sans Serif", 9F);
             laThang.ForeColor = Color.Black;
-            laThang.Location = new Point(60, 85);
-            laThang.Margin = new Padding(2, 0, 2, 0);
+            laThang.Location = new Point(91, 128);
             laThang.Name = "laThang";
-            laThang.Size = new Size(53, 28);
+            laThang.Size = new Size(79, 42);
             laThang.TabIndex = 10;
             laThang.Text = "Tháng:";
             // 
@@ -187,10 +184,9 @@ namespace PBL3a.UI.AdminTC
             laNam.Dock = DockStyle.Right;
             laNam.Font = new Font("Microsoft Sans Serif", 9F);
             laNam.ForeColor = Color.Black;
-            laNam.Location = new Point(514, 85);
-            laNam.Margin = new Padding(2, 0, 2, 0);
+            laNam.Location = new Point(774, 128);
             laNam.Name = "laNam";
-            laNam.Size = new Size(44, 28);
+            laNam.Size = new Size(62, 42);
             laNam.TabIndex = 11;
             laNam.Text = "Năm:";
             // 
@@ -200,30 +196,30 @@ namespace PBL3a.UI.AdminTC
             cbbThang.Dock = DockStyle.Fill;
             cbbThang.FormattingEnabled = true;
             cbbThang.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" });
-            cbbThang.Location = new Point(118, 89);
-            cbbThang.Margin = new Padding(3, 4, 3, 4);
+            cbbThang.Location = new Point(177, 134);
+            cbbThang.Margin = new Padding(4, 6, 4, 6);
             cbbThang.Name = "cbbThang";
-            cbbThang.Size = new Size(298, 26);
+            cbbThang.Size = new Size(446, 33);
             cbbThang.TabIndex = 12;
             // 
             // txtNam
             // 
             txtNam.Dock = DockStyle.Fill;
-            txtNam.Location = new Point(563, 89);
-            txtNam.Margin = new Padding(3, 4, 3, 4);
+            txtNam.Location = new Point(843, 134);
+            txtNam.Margin = new Padding(4, 6, 4, 6);
             txtNam.Name = "txtNam";
-            txtNam.Size = new Size(254, 24);
+            txtNam.Size = new Size(382, 31);
             txtNam.TabIndex = 13;
             // 
             // LuongGV
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(987, 549);
+            ClientSize = new Size(1480, 824);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 3, 2, 3);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LuongGV";
             Text = "LuongGV";
             tableLayoutPanel1.ResumeLayout(false);
