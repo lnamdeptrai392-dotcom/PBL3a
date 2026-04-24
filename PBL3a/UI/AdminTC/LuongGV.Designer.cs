@@ -61,8 +61,6 @@ namespace PBL3a.UI.AdminTC
             tableLayoutPanel1.RowCount = 9;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 32.83582F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 67.16418F));
-<<<<<<< Updated upstream
-=======
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 42F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 457F));
@@ -70,7 +68,6 @@ namespace PBL3a.UI.AdminTC
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 9F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 116F));
->>>>>>> Stashed changes
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 19F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 203F));
@@ -165,17 +162,10 @@ namespace PBL3a.UI.AdminTC
             btSetL.BackColor = Color.FromArgb(112, 146, 190);
             btSetL.Font = new Font("Segoe UI", 9.857143F);
             btSetL.ForeColor = Color.White;
-<<<<<<< Updated upstream
-            btSetL.Location = new Point(726, 353);
-            btSetL.Margin = new Padding(2);
-            btSetL.Name = "btSetL";
-            btSetL.Size = new Size(119, 38);
-=======
             btSetL.Location = new Point(1252, 691);
             btSetL.Margin = new Padding(3, 4, 3, 4);
             btSetL.Name = "btSetL";
             btSetL.Size = new Size(201, 86);
->>>>>>> Stashed changes
             btSetL.TabIndex = 5;
             btSetL.Text = "Tính toán lương";
             btSetL.UseVisualStyleBackColor = false;
