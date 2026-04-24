@@ -36,7 +36,7 @@ namespace PBL3a.UI.AdminTC
         {
             if (currentButton != null)
             {
-                currentButton.BackColor = Color.FromArgb(112, 146, 190);
+                currentButton.BackColor = Color.FromArgb(44, 78, 98);
             }
         }
 
@@ -61,13 +61,13 @@ namespace PBL3a.UI.AdminTC
         public static void bt_MouseEnter(object sender, EventArgs e)
         {
             Button bt = (Button)sender;
-            bt.BackColor = Color.FromArgb(144, 188, 245);
+            bt.BackColor = Color.FromArgb(44, 78, 98);
         }
 
         public static void bt_MouseLeave(object sender, EventArgs e)
         {
             Button bt = (Button)sender;
-            bt.BackColor = Color.FromArgb(112, 146, 190);
+            bt.BackColor = Color.FromArgb(44, 78, 98);
         }
     }
 }
