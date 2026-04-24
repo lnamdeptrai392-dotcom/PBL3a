@@ -34,16 +34,16 @@ namespace PBL3a.UI.AdminTC
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.BackColor = Color.AliceBlue;
+            tableLayoutPanel1.BackColor = Color.White;
             tableLayoutPanel1.ColumnCount = 8;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.104023F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 74.89598F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 211F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 390F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 207F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 24F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 141F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 260F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 11F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 138F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
             tableLayoutPanel1.Controls.Add(tbTL, 4, 1);
             tableLayoutPanel1.Controls.Add(laMGV, 1, 1);
             tableLayoutPanel1.Controls.Add(laTGV, 3, 1);
@@ -57,30 +57,30 @@ namespace PBL3a.UI.AdminTC
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Font = new Font("Microsoft Sans Serif", 9F);
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel1.Margin = new Padding(2, 3, 2, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 10;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 32.83582F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 67.16418F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 42F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 457F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 11F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 73F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1481, 824);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 28F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 305F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 7F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 49F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 13F));
+            tableLayoutPanel1.Size = new Size(987, 549);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // tbTL
             // 
             tbTL.Dock = DockStyle.Fill;
             tbTL.Enabled = false;
-            tbTL.Location = new Point(846, 46);
-            tbTL.Margin = new Padding(3, 4, 3, 4);
+            tbTL.Location = new Point(562, 31);
+            tbTL.Margin = new Padding(2, 3, 2, 3);
             tbTL.Name = "tbTL";
-            tbTL.Size = new Size(384, 31);
+            tbTL.Size = new Size(256, 24);
             tbTL.TabIndex = 4;
             // 
             // laMGV
@@ -89,9 +89,10 @@ namespace PBL3a.UI.AdminTC
             laMGV.Dock = DockStyle.Right;
             laMGV.Font = new Font("Microsoft Sans Serif", 9F);
             laMGV.ForeColor = Color.Black;
-            laMGV.Location = new Point(60, 42);
+            laMGV.Location = new Point(37, 28);
+            laMGV.Margin = new Padding(2, 0, 2, 0);
             laMGV.Name = "laMGV";
-            laMGV.Size = new Size(111, 87);
+            laMGV.Size = new Size(76, 57);
             laMGV.TabIndex = 1;
             laMGV.Text = "Mã Giảng Viên: ";
             // 
@@ -101,9 +102,10 @@ namespace PBL3a.UI.AdminTC
             laTGV.Dock = DockStyle.Right;
             laTGV.Font = new Font("Microsoft Sans Serif", 9F);
             laTGV.ForeColor = Color.Black;
-            laTGV.Location = new Point(667, 42);
+            laTGV.Location = new Point(442, 28);
+            laTGV.Margin = new Padding(2, 0, 2, 0);
             laTGV.Name = "laTGV";
-            laTGV.Size = new Size(173, 87);
+            laTGV.Size = new Size(116, 57);
             laTGV.TabIndex = 2;
             laTGV.Text = "Tên Giảng Viên: ";
             // 
@@ -130,12 +132,12 @@ namespace PBL3a.UI.AdminTC
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = Color.Gray;
-            dataGridView1.Location = new Point(24, 190);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(16, 126);
+            dataGridView1.Margin = new Padding(2, 3, 2, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 5);
-            dataGridView1.Size = new Size(1206, 609);
+            dataGridView1.Size = new Size(802, 406);
             dataGridView1.TabIndex = 8;
             dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
             // 
@@ -143,22 +145,22 @@ namespace PBL3a.UI.AdminTC
             // 
             cbbMGV.Dock = DockStyle.Fill;
             cbbMGV.FormattingEnabled = true;
-            cbbMGV.Location = new Point(177, 46);
-            cbbMGV.Margin = new Padding(3, 4, 3, 4);
+            cbbMGV.Location = new Point(117, 31);
+            cbbMGV.Margin = new Padding(2, 3, 2, 3);
             cbbMGV.Name = "cbbMGV";
-            cbbMGV.Size = new Size(452, 33);
+            cbbMGV.Size = new Size(300, 26);
             cbbMGV.TabIndex = 9;
             cbbMGV.TextUpdate += comboBox1_TextUpdate;
             // 
             // btSetL
             // 
-            btSetL.BackColor = Color.FromArgb(112, 146, 190);
+            btSetL.BackColor = Color.FromArgb(93, 156, 179);
             btSetL.Font = new Font("Segoe UI", 9.857143F);
             btSetL.ForeColor = Color.White;
-            btSetL.Location = new Point(1252, 734);
-            btSetL.Margin = new Padding(3, 4, 3, 4);
+            btSetL.Location = new Point(833, 489);
+            btSetL.Margin = new Padding(2, 3, 2, 3);
             btSetL.Name = "btSetL";
-            btSetL.Size = new Size(201, 61);
+            btSetL.Size = new Size(134, 41);
             btSetL.TabIndex = 5;
             btSetL.Text = "Tính toán lương";
             btSetL.UseVisualStyleBackColor = false;
@@ -172,9 +174,10 @@ namespace PBL3a.UI.AdminTC
             laThang.Dock = DockStyle.Right;
             laThang.Font = new Font("Microsoft Sans Serif", 9F);
             laThang.ForeColor = Color.Black;
-            laThang.Location = new Point(92, 129);
+            laThang.Location = new Point(60, 85);
+            laThang.Margin = new Padding(2, 0, 2, 0);
             laThang.Name = "laThang";
-            laThang.Size = new Size(79, 42);
+            laThang.Size = new Size(53, 28);
             laThang.TabIndex = 10;
             laThang.Text = "Tháng:";
             // 
@@ -184,9 +187,10 @@ namespace PBL3a.UI.AdminTC
             laNam.Dock = DockStyle.Right;
             laNam.Font = new Font("Microsoft Sans Serif", 9F);
             laNam.ForeColor = Color.Black;
-            laNam.Location = new Point(778, 129);
+            laNam.Location = new Point(514, 85);
+            laNam.Margin = new Padding(2, 0, 2, 0);
             laNam.Name = "laNam";
-            laNam.Size = new Size(62, 42);
+            laNam.Size = new Size(44, 28);
             laNam.TabIndex = 11;
             laNam.Text = "Năm:";
             // 
@@ -196,30 +200,30 @@ namespace PBL3a.UI.AdminTC
             cbbThang.Dock = DockStyle.Fill;
             cbbThang.FormattingEnabled = true;
             cbbThang.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" });
-            cbbThang.Location = new Point(179, 135);
-            cbbThang.Margin = new Padding(5, 6, 5, 6);
+            cbbThang.Location = new Point(118, 89);
+            cbbThang.Margin = new Padding(3, 4, 3, 4);
             cbbThang.Name = "cbbThang";
-            cbbThang.Size = new Size(448, 33);
+            cbbThang.Size = new Size(298, 26);
             cbbThang.TabIndex = 12;
             // 
             // txtNam
             // 
             txtNam.Dock = DockStyle.Fill;
-            txtNam.Location = new Point(848, 135);
-            txtNam.Margin = new Padding(5, 6, 5, 6);
+            txtNam.Location = new Point(563, 89);
+            txtNam.Margin = new Padding(3, 4, 3, 4);
             txtNam.Name = "txtNam";
-            txtNam.Size = new Size(380, 31);
+            txtNam.Size = new Size(254, 24);
             txtNam.TabIndex = 13;
             // 
             // LuongGV
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1481, 824);
+            ClientSize = new Size(987, 549);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "LuongGV";
             Text = "LuongGV";
             tableLayoutPanel1.ResumeLayout(false);
