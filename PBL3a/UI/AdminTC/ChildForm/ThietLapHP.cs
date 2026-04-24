@@ -42,6 +42,13 @@ namespace PBL3a.UI.AdminTC
 
         private void btLuu_Click(object sender, EventArgs e)
         {
+            if (!decimal.TryParse(txtTienTrenNg.Text, out decimal soTien))
+            {
+                MessageBox.Show("Vui lòng nhập số tiền học phí hợp lệ (chỉ nhập số)!",
+                                "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTienTrenNg.Focus(); 
+                return; 
+            }
             using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
