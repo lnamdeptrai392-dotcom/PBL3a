@@ -30,8 +30,8 @@ namespace PBL3a.UI.AdminTC
 
         private void btnProfit_Click(object sender, EventArgs e)
         {
-            LoiNhuan loinhuan = new LoiNhuan();
-            but_chform.OpenChildForm(loinhuan, sender, paDesktop);
+            Lai lai = new Lai();
+            but_chform.OpenChildForm(lai, sender, paDesktop);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -40,6 +40,18 @@ namespace PBL3a.UI.AdminTC
             this.Hide();
             newForm.ShowDialog();
             this.Close();
+        }
+
+        private void btKT_Click(object sender, EventArgs e)
+        {
+            KhoanThu khoanThu = new KhoanThu();
+            but_chform.OpenChildForm(khoanThu, sender, paDesktop);
+        }
+
+        private void btKC_Click(object sender, EventArgs e)
+        {
+            KhoanChi khoanChi = new KhoanChi();
+            but_chform.OpenChildForm(khoanChi, sender, paDesktop);
         }
     }
 }

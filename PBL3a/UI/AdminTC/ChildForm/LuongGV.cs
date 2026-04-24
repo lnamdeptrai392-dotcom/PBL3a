@@ -56,7 +56,7 @@ namespace PBL3a.UI.AdminTC
             }
 
             if (cbbMGV.Items.Count > 0)
-                cbbMGV.SelectedIndex = 0;
+                cbbMGV.SelectedIndex = -1;
         }
 
         private void comboBox1_SelectedIndexChanged(object? sender, EventArgs e)

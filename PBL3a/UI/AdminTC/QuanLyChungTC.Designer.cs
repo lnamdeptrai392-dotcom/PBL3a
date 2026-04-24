@@ -38,6 +38,8 @@
             btnFee = new Button();
             panel1 = new Panel();
             btnExit = new Button();
+            btKC = new Button();
+            btKT = new Button();
             btnProfit = new Button();
             btnSalary = new Button();
             panel2.SuspendLayout();
@@ -77,7 +79,6 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(733, 84);
             panel6.TabIndex = 2;
-            
             // 
             // label1
             // 
@@ -86,7 +87,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(229, 21);
             label1.Name = "label1";
-            label1.Size = new Size(297, 46);
+            label1.Size = new Size(406, 62);
             label1.TabIndex = 0;
             label1.Text = "Quản Lý Tài Chính";
             // 
@@ -140,6 +141,8 @@
             // 
             panel1.BackColor = Color.FromArgb(44, 78, 98);
             panel1.Controls.Add(btnExit);
+            panel1.Controls.Add(btKC);
+            panel1.Controls.Add(btKT);
             panel1.Controls.Add(btnProfit);
             panel1.Controls.Add(btnSalary);
             panel1.Controls.Add(btnFee);
@@ -158,7 +161,7 @@
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(0, 180);
+            btnExit.Location = new Point(0, 300);
             btnExit.Margin = new Padding(0);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(200, 60);
@@ -166,6 +169,40 @@
             btnExit.Text = "Đăng Xuất";
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
+            // 
+            // btKC
+            // 
+            btKC.BackColor = Color.FromArgb(44, 78, 98);
+            btKC.Dock = DockStyle.Top;
+            btKC.FlatAppearance.BorderSize = 0;
+            btKC.FlatStyle = FlatStyle.Flat;
+            btKC.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btKC.ForeColor = Color.White;
+            btKC.Location = new Point(0, 240);
+            btKC.Margin = new Padding(0);
+            btKC.Name = "btKC";
+            btKC.Size = new Size(200, 60);
+            btKC.TabIndex = 6;
+            btKC.Text = "Khoản Chi";
+            btKC.UseVisualStyleBackColor = false;
+            btKC.Click += btKC_Click;
+            // 
+            // btKT
+            // 
+            btKT.BackColor = Color.FromArgb(44, 78, 98);
+            btKT.Dock = DockStyle.Top;
+            btKT.FlatAppearance.BorderSize = 0;
+            btKT.FlatStyle = FlatStyle.Flat;
+            btKT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btKT.ForeColor = Color.White;
+            btKT.Location = new Point(0, 180);
+            btKT.Margin = new Padding(0);
+            btKT.Name = "btKT";
+            btKT.Size = new Size(200, 60);
+            btKT.TabIndex = 5;
+            btKT.Text = "Khoản Thu";
+            btKT.UseVisualStyleBackColor = false;
+            btKT.Click += btKT_Click;
             // 
             // btnProfit
             // 
@@ -235,5 +272,7 @@
         private Panel panel6;
         private Panel paDesktop;
         private Panel panel4;
+        private Button btKC;
+        private Button btKT;
     }
 }
