@@ -35,8 +35,8 @@ namespace PBL3a.UI.AdminTC
         private void btLN_Click(object sender, EventArgs e)
         {
             but_chform.ActivateButton(sender);
-            LoiNhuan loinhuan = new LoiNhuan();
-            but_chform.OpenChildForm(loinhuan, sender, paDesktop);
+            Lai lai = new Lai();
+            but_chform.OpenChildForm(lai, sender, paDesktop);
         }
 
 
@@ -48,5 +48,27 @@ namespace PBL3a.UI.AdminTC
             newForm.ShowDialog();
             this.Close();
         }
+<<<<<<< Updated upstream
+=======
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btKT_Click(object sender, EventArgs e)
+        {
+            but_chform.ActivateButton(sender);
+            KhoanThu khoanThu = new KhoanThu();
+            but_chform.OpenChildForm(khoanThu, sender, paDesktop);
+        }
+
+        private void btKC_Click(object sender, EventArgs e)
+        {
+            but_chform.ActivateButton(sender);
+            KhoanChi khoanChi = new KhoanChi();
+            but_chform.OpenChildForm(khoanChi, sender, paDesktop);
+        }
+>>>>>>> Stashed changes
     }
 }

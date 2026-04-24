@@ -38,6 +38,8 @@
             btHP = new Button();
             panel1 = new Panel();
             btDX = new Button();
+            btKC = new Button();
+            btKT = new Button();
             btLN = new Button();
             btLGV = new Button();
             panel2.SuspendLayout();
@@ -83,7 +85,11 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(549, 9);
             label1.Name = "label1";
+<<<<<<< Updated upstream
             label1.Size = new Size(295, 47);
+=======
+            label1.Size = new Size(406, 62);
+>>>>>>> Stashed changes
             label1.TabIndex = 0;
             label1.Text = "Quản Lý Tài Chính";
             // 
@@ -133,6 +139,8 @@
             // 
             panel1.BackColor = Color.FromArgb(112, 146, 190);
             panel1.Controls.Add(btDX);
+            panel1.Controls.Add(btKC);
+            panel1.Controls.Add(btKT);
             panel1.Controls.Add(btLN);
             panel1.Controls.Add(btLGV);
             panel1.Controls.Add(btHP);
@@ -150,7 +158,11 @@
             btDX.FlatStyle = FlatStyle.Flat;
             btDX.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btDX.ForeColor = Color.White;
+<<<<<<< Updated upstream
             btDX.Location = new Point(0, 216);
+=======
+            btDX.Location = new Point(0, 300);
+>>>>>>> Stashed changes
             btDX.Margin = new Padding(0);
             btDX.Name = "btDX";
             btDX.Size = new Size(236, 72);
@@ -158,6 +170,40 @@
             btDX.Text = "Đăng Xuất";
             btDX.UseVisualStyleBackColor = true;
             btDX.Click += btDX_Click;
+            // 
+            // btKC
+            // 
+            btKC.BackColor = Color.FromArgb(44, 78, 98);
+            btKC.Dock = DockStyle.Top;
+            btKC.FlatAppearance.BorderSize = 0;
+            btKC.FlatStyle = FlatStyle.Flat;
+            btKC.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btKC.ForeColor = Color.White;
+            btKC.Location = new Point(0, 240);
+            btKC.Margin = new Padding(0);
+            btKC.Name = "btKC";
+            btKC.Size = new Size(200, 60);
+            btKC.TabIndex = 6;
+            btKC.Text = "Khoản Chi";
+            btKC.UseVisualStyleBackColor = false;
+            btKC.Click += btKC_Click;
+            // 
+            // btKT
+            // 
+            btKT.BackColor = Color.FromArgb(44, 78, 98);
+            btKT.Dock = DockStyle.Top;
+            btKT.FlatAppearance.BorderSize = 0;
+            btKT.FlatStyle = FlatStyle.Flat;
+            btKT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btKT.ForeColor = Color.White;
+            btKT.Location = new Point(0, 180);
+            btKT.Margin = new Padding(0);
+            btKT.Name = "btKT";
+            btKT.Size = new Size(200, 60);
+            btKT.TabIndex = 5;
+            btKT.Text = "Khoản Thu";
+            btKT.UseVisualStyleBackColor = false;
+            btKT.Click += btKT_Click;
             // 
             // btLN
             // 
@@ -223,6 +269,11 @@
         private Panel panel5;
         private Panel panel6;
         private Panel panel4;
+<<<<<<< Updated upstream
         private Panel paDesktop;
+=======
+        private Button btKC;
+        private Button btKT;
+>>>>>>> Stashed changes
     }
 }

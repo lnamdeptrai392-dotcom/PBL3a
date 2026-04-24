@@ -42,6 +42,18 @@ namespace PBL3a.UI.AdminTC
 
         private void btLuu_Click(object sender, EventArgs e)
         {
+            if (!decimal.TryParse(txtTienTrenNg.Text, out decimal tienTrenNg))
+            {
+                MessageBox.Show("Số tiền không hợp lệ. Vui lòng kiểm tra lại!", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTienTrenNg.Focus(); 
+                return;
+            }
+
+            if (tienTrenNg < 0)
+            {
+                MessageBox.Show("Số tiền không được là số âm!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
@@ -132,12 +144,21 @@ namespace PBL3a.UI.AdminTC
 
         private void butTT_Click(object sender, EventArgs e)
         {
-            decimal hphi1 = Convert.ToDecimal(txtTienTrenNg.Text.ToString());
-            if (hphi1 < 0) { MessageBox.Show("So tien khong hop le!!"); }
+            if (decimal.TryParse(txtTienTrenNg.Text, out decimal hphi1))
+            {
+                if (hphi1 < 0)
+                {
+                    MessageBox.Show("Số tiền không hợp lệ!!");
+                }
+                else
+                {
+                    decimal tongTien = SetHP(hphi1);
+                    txtTongT.Text = tongTien.ToString("N0") + "VND"; 
+                }
+            }
             else
             {
-                decimal tongTien = SetHP(hphi1);
-                txtTongT.Text = tongTien.ToString();
+                MessageBox.Show("Vui lòng nhập một con số hợp lệ cho học phí!");
             }
         }
 
