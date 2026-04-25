@@ -1,6 +1,6 @@
 ﻿namespace PBL3a.UI.AdminDD
 {
-    partial class Form1
+    partial class AttendanceForm
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(231, 17);
+            label2.Location = new Point(330, 14);
             label2.Name = "label2";
             label2.Size = new Size(44, 20);
             label2.TabIndex = 1;
@@ -71,13 +71,13 @@
             cboLopHoc.FormattingEnabled = true;
             cboLopHoc.Location = new Point(109, 11);
             cboLopHoc.Name = "cboLopHoc";
-            cboLopHoc.Size = new Size(107, 28);
+            cboLopHoc.Size = new Size(180, 28);
             cboLopHoc.TabIndex = 2;
             // 
             // date
             // 
             date.Format = DateTimePickerFormat.Short;
-            date.Location = new Point(309, 12);
+            date.Location = new Point(401, 9);
             date.Name = "date";
             date.Size = new Size(140, 27);
             date.TabIndex = 3;
@@ -85,7 +85,7 @@
             // btnTimKiem
             // 
             btnTimKiem.BackColor = Color.Azure;
-            btnTimKiem.Location = new Point(488, 9);
+            btnTimKiem.Location = new Point(584, 9);
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.Size = new Size(114, 29);
             btnTimKiem.TabIndex = 4;
@@ -103,32 +103,34 @@
             dgvDiemDanh.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDiemDanh.Dock = DockStyle.Fill;
             dgvDiemDanh.GridColor = Color.LightGray;
-            dgvDiemDanh.Location = new Point(76, 132);
+            dgvDiemDanh.Location = new Point(96, 124);
             dgvDiemDanh.Name = "dgvDiemDanh";
             dgvDiemDanh.RowHeadersVisible = false;
             dgvDiemDanh.RowHeadersWidth = 51;
             dgvDiemDanh.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvDiemDanh.Size = new Size(653, 285);
+            dgvDiemDanh.Size = new Size(833, 304);
             dgvDiemDanh.TabIndex = 5;
             // 
             // btnSave
             // 
-            btnSave.BackColor = Color.Honeydew;
+            btnSave.BackColor = Color.FromArgb(93, 156, 179);
             btnSave.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btnSave.Location = new Point(97, 16);
+            btnSave.ForeColor = SystemColors.ButtonHighlight;
+            btnSave.Location = new Point(226, 12);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(151, 29);
+            btnSave.Size = new Size(177, 40);
             btnSave.TabIndex = 6;
             btnSave.Text = "Lưu điểm danh";
             btnSave.UseVisualStyleBackColor = false;
             // 
             // btnExit
             // 
-            btnExit.BackColor = Color.LightYellow;
+            btnExit.BackColor = Color.FromArgb(93, 156, 179);
             btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btnExit.Location = new Point(409, 16);
+            btnExit.ForeColor = SystemColors.ButtonHighlight;
+            btnExit.Location = new Point(538, 12);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(104, 29);
+            btnExit.Size = new Size(130, 40);
             btnExit.TabIndex = 7;
             btnExit.Text = "Thoát";
             btnExit.UseVisualStyleBackColor = false;
@@ -139,7 +141,7 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label3.Location = new Point(292, 19);
+            label3.Location = new Point(402, 17);
             label3.Name = "label3";
             label3.Size = new Size(221, 28);
             label3.TabIndex = 9;
@@ -162,9 +164,9 @@
             tableLayoutPanel1.RowCount = 4;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 52.205883F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 47.794117F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 291F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 79F));
-            tableLayoutPanel1.Size = new Size(800, 500);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 310F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 68F));
+            tableLayoutPanel1.Size = new Size(1000, 500);
             tableLayoutPanel1.TabIndex = 10;
             // 
             // panel1
@@ -175,9 +177,9 @@
             panel1.Controls.Add(cboLopHoc);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(76, 70);
+            panel1.Location = new Point(96, 66);
             panel1.Name = "panel1";
-            panel1.Size = new Size(653, 56);
+            panel1.Size = new Size(833, 52);
             panel1.TabIndex = 10;
             // 
             // panel2
@@ -185,20 +187,20 @@
             panel2.Controls.Add(btnExit);
             panel2.Controls.Add(btnSave);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(76, 423);
+            panel2.Location = new Point(96, 434);
             panel2.Name = "panel2";
-            panel2.Size = new Size(653, 74);
+            panel2.Size = new Size(833, 63);
             panel2.TabIndex = 11;
             // 
-            // Form1
+            // AttendanceForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 500);
+            ClientSize = new Size(1000, 500);
             Controls.Add(tableLayoutPanel1);
             Cursor = Cursors.Hand;
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "AttendanceForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Điểm danh";
             Load += Form1_Load;

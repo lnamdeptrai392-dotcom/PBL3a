@@ -7,11 +7,11 @@ using PBL3a.UI.Login;
 
 namespace PBL3a.UI.AdminDD
 {
-    public partial class Form1 : Form
+    public partial class AttendanceForm : Form
     {
         DatabaseHelper db = new DatabaseHelper();
 
-        public Form1()
+        public AttendanceForm()
         {
             InitializeComponent();
         }
@@ -60,7 +60,7 @@ namespace PBL3a.UI.AdminDD
                         cboLopHoc.DisplayMember = "class_name";
                         cboLopHoc.ValueMember = "classID";
                         cboLopHoc.SelectedIndex = -1;
-                        MessageBox.Show("test");
+                       
                     }
                 }
             }

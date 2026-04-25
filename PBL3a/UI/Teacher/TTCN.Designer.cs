@@ -250,13 +250,15 @@
             // btnUpdate
             // 
             btnUpdate.Anchor = AnchorStyles.Right;
+            btnUpdate.BackColor = Color.FromArgb(93, 156, 179);
             btnUpdate.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 163);
+            btnUpdate.ForeColor = Color.White;
             btnUpdate.Location = new Point(320, 449);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(117, 44);
             btnUpdate.TabIndex = 16;
-            btnUpdate.Text = "Update";
-            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Text = "Cập nhật";
+            btnUpdate.UseVisualStyleBackColor = false;
             btnUpdate.Click += btnUpdate_Click;
             // 
             // TTCN

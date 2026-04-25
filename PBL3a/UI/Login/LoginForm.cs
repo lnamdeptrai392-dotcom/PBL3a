@@ -76,7 +76,7 @@ namespace PBL3a.UI.Login
             if (role == "AdminC")
                 nextForm = new PBL3a.UI.AdminC.AdminC();
             else if (role == "AdminDD")
-                nextForm = new PBL3a.UI.AdminDD.Form1();
+                nextForm = new PBL3a.UI.AdminDD.AttendanceForm();
             else if (role == "AdminTC")
                 nextForm = new PBL3a.UI.AdminTC.QuanLyChungTC();
             else if (role == "Student")
