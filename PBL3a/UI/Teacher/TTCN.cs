@@ -83,7 +83,34 @@ namespace PBL3a.UI.Teacher
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //update cho thong tin cua giao viens
+            using (SqlConnection con = db.GetConnection())
+            {
+                try
+                {
+                    con.Open();
+                    string query = @"Update accountList
+                                SET name = @name, dateOfBirth = @dob, sex = @sex, phone =@phone
+                                WHERE Id = @id";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@name", tbHVT.Text);
+                    cmd.Parameters.AddWithValue("@dob", dtNS.Value);
+                    cmd.Parameters.AddWithValue("@sex", cbbGT.Text);
+                    cmd.Parameters.AddWithValue("@phone", tbSDT.Text);
+                    cmd.Parameters.AddWithValue("@id", currentTeacherID);
+
+                    int result = cmd.ExecuteNonQuery();
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Cap nhat thong tin thanh cong");
+
+                    }
+                    con.Close();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Loi cap nhat: " + ex.Message);
+                }
+            }
         }
     }
 }
