@@ -64,11 +64,11 @@ namespace PBL3a.UI.AdminTC
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 67.16418F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 42F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 458F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 457F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 11F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 26F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 9F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 116F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Size = new Size(1480, 824);
             tableLayoutPanel1.TabIndex = 1;
@@ -155,10 +155,10 @@ namespace PBL3a.UI.AdminTC
             btSetL.BackColor = Color.FromArgb(93, 156, 179);
             btSetL.Font = new Font("Segoe UI", 9.857143F);
             btSetL.ForeColor = Color.White;
-            btSetL.Location = new Point(1248, 707);
+            btSetL.Location = new Point(1252, 691);
             btSetL.Margin = new Padding(3, 4, 3, 4);
             btSetL.Name = "btSetL";
-            btSetL.Size = new Size(201, 74);
+            btSetL.Size = new Size(201, 86);
             btSetL.TabIndex = 5;
             btSetL.Text = "Tính toán lương";
             btSetL.UseVisualStyleBackColor = false;

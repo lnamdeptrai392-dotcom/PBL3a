@@ -72,7 +72,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 28F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 84F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel1.Size = new Size(1480, 824);
+            tableLayoutPanel1.Size = new Size(1457, 760);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // lbThang
@@ -81,9 +81,9 @@
             lbThang.Dock = DockStyle.Right;
             lbThang.Font = new Font("Segoe UI", 9.857143F);
             lbThang.ForeColor = Color.Black;
-            lbThang.Location = new Point(143, 43);
+            lbThang.Location = new Point(120, 22);
             lbThang.Name = "lbThang";
-            lbThang.Size = new Size(86, 88);
+            lbThang.Size = new Size(86, 45);
             lbThang.TabIndex = 3;
             lbThang.Text = "Tháng:";
             // 
@@ -93,9 +93,9 @@
             lbNam.Dock = DockStyle.Right;
             lbNam.Font = new Font("Segoe UI", 9.857143F);
             lbNam.ForeColor = Color.Black;
-            lbNam.Location = new Point(643, 43);
+            lbNam.Location = new Point(620, 22);
             lbNam.Name = "lbNam";
-            lbNam.Size = new Size(70, 88);
+            lbNam.Size = new Size(70, 45);
             lbNam.TabIndex = 4;
             lbNam.Text = "Năm:";
             // 
@@ -105,7 +105,7 @@
             lbTT.Dock = DockStyle.Right;
             lbTT.Font = new Font("Segoe UI", 9.857143F);
             lbTT.ForeColor = Color.Black;
-            lbTT.Location = new Point(155, 731);
+            lbTT.Location = new Point(132, 667);
             lbTT.Name = "lbTT";
             lbTT.Size = new Size(74, 84);
             lbTT.TabIndex = 5;
@@ -125,18 +125,18 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tableLayoutPanel1.SetColumnSpan(dataGridView1, 4);
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(58, 143);
+            dataGridView1.Location = new Point(52, 79);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 3);
-            dataGridView1.Size = new Size(1151, 556);
+            dataGridView1.Size = new Size(1134, 556);
             dataGridView1.TabIndex = 8;
             // 
             // tbNam
             // 
             tbNam.Dock = DockStyle.Top;
-            tbNam.Location = new Point(719, 47);
+            tbNam.Location = new Point(696, 26);
             tbNam.Margin = new Padding(3, 4, 3, 4);
             tbNam.Name = "tbNam";
             tbNam.Size = new Size(490, 35);
@@ -147,7 +147,7 @@
             tableLayoutPanel1.SetColumnSpan(tbKT, 3);
             tbKT.Dock = DockStyle.Top;
             tbKT.Enabled = false;
-            tbKT.Location = new Point(235, 735);
+            tbKT.Location = new Point(212, 671);
             tbKT.Margin = new Padding(3, 4, 3, 4);
             tbKT.Name = "tbKT";
             tbKT.Size = new Size(974, 35);
@@ -158,7 +158,7 @@
             comboBox1.Dock = DockStyle.Fill;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" });
-            comboBox1.Location = new Point(235, 47);
+            comboBox1.Location = new Point(212, 26);
             comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(369, 38);
@@ -170,7 +170,7 @@
             btOK.Dock = DockStyle.Bottom;
             btOK.Font = new Font("Segoe UI", 12F);
             btOK.ForeColor = Color.White;
-            btOK.Location = new Point(1245, 625);
+            btOK.Location = new Point(1222, 561);
             btOK.Margin = new Padding(3, 4, 3, 4);
             btOK.Name = "btOK";
             btOK.Size = new Size(215, 74);
@@ -186,7 +186,7 @@
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1480, 824);
+            ClientSize = new Size(1457, 760);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);

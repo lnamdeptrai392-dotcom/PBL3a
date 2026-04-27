@@ -58,8 +58,8 @@ namespace PBL3a.UI.AdminTC
                 if (row["Số tiền"] != DBNull.Value)
                 {
                     string loai = row["Loại Giao Dịch"].ToString();
-                    if (loai == "Thu") { tong += Convert.ToDecimal(row["Số tiền"]); }
-                    else if (loai == "Chi") { tong -= Convert.ToDecimal(row["Số tiền"]); }
+                    if (loai == "Thu") { tong += Convert.ToDecimal(row["Số tiền"]);  }
+                    else if(loai == "Chi") { tong -= Convert.ToDecimal(row["Số tiền"]); }
                     else { MessageBox.Show("Loai giao dich tren khong hop le!!!"); }
                 }
             }

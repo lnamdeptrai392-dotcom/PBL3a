@@ -70,7 +70,7 @@
             tableLayoutPanel1.RowCount = 8;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 40.625F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 59.375F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 123F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 226F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 142F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 104F));
@@ -83,7 +83,7 @@
             // 
             tbTL.Dock = DockStyle.Fill;
             tbTL.Enabled = false;
-            tbTL.Location = new Point(794, 57);
+            tbTL.Location = new Point(802, 48);
             tbTL.Margin = new Padding(3, 4, 3, 4);
             tbTL.Name = "tbTL";
             tbTL.Size = new Size(405, 35);
@@ -94,9 +94,9 @@
             laML.Dock = DockStyle.Fill;
             laML.Font = new Font("Segoe UI", 9.857143F);
             laML.ForeColor = Color.Black;
-            laML.Location = new Point(41, 53);
+            laML.Location = new Point(65, 44);
             laML.Name = "laML";
-            laML.Size = new Size(129, 78);
+            laML.Size = new Size(103, 64);
             laML.TabIndex = 1;
             laML.Text = "Mã Lớp: ";
             // 
@@ -105,9 +105,9 @@
             laTL.Dock = DockStyle.Right;
             laTL.Font = new Font("Segoe UI", 9.857143F);
             laTL.ForeColor = Color.Black;
-            laTL.Location = new Point(678, 53);
+            laTL.Location = new Point(686, 44);
             laTL.Name = "laTL";
-            laTL.Size = new Size(110, 78);
+            laTL.Size = new Size(110, 64);
             laTL.TabIndex = 2;
             laTL.Text = "Tên Lớp: ";
             // 
@@ -115,7 +115,7 @@
             // 
             cbbML.Dock = DockStyle.Fill;
             cbbML.FormattingEnabled = true;
-            cbbML.Location = new Point(176, 57);
+            cbbML.Location = new Point(174, 48);
             cbbML.Margin = new Padding(3, 4, 3, 4);
             cbbML.Name = "cbbML";
             cbbML.Size = new Size(448, 38);
@@ -162,12 +162,12 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(25, 137);
-            dataGridView1.Margin = new Padding(4, 6, 4, 6);
+            dataGridView1.Location = new Point(26, 114);
+            dataGridView1.Margin = new Padding(5, 6, 5, 6);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 72;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 5);
-            dataGridView1.Size = new Size(1173, 660);
+            dataGridView1.Size = new Size(1179, 683);
             dataGridView1.TabIndex = 10;
             // 
             // HocPhi
