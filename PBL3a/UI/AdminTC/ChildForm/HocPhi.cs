@@ -56,7 +56,7 @@ namespace PBL3a.UI.AdminTC
             }
 
             if (cbbML.Items.Count > 0)
-                cbbML.SelectedIndex = -1;
+                cbbML.SelectedIndex = 0;
         }
 
         private void comboBox1_SelectedIndexChanged(object? sender, EventArgs e)
@@ -155,21 +155,29 @@ namespace PBL3a.UI.AdminTC
 
         private void cbbML_TextUpdate(object sender, EventArgs e)
         {
-            string keyword = cbbML.Text;
-            int cursorPosition = cbbML.SelectionStart;
-            cbbML.SelectedIndexChanged -= comboBox1_SelectedIndexChanged;
-            LoadDanhSachLop(keyword);
-
-            cbbML.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            cbbML.Text = keyword;
-            cbbML.SelectionStart = cursorPosition;
-
-            if (cbbML.Items.Count > 0)
+            try
             {
-                cbbML.DroppedDown = true;
-                Cursor.Current = Cursors.Default;
+                string keyword = cbbML.Text;
+                int cursorPosition = cbbML.SelectionStart;
+                cbbML.SelectedIndexChanged -= comboBox1_SelectedIndexChanged;
+                LoadDanhSachLop(keyword);
+
+                cbbML.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+
+                cbbML.Text = keyword;
+                cbbML.SelectionStart = cursorPosition;
+
+                if (cbbML.Items.Count > 0 && !string.IsNullOrWhiteSpace(keyword))
+                {
+                    cbbML.DroppedDown = true;
+                    Cursor.Current = Cursors.Default;
+                }
+                else
+                {
+                    cbbML.DroppedDown = false;
+                }
             }
-            else
+            catch (Exception)
             {
                 cbbML.DroppedDown = false;
             }

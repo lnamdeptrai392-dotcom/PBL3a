@@ -259,6 +259,7 @@
             BackColor = Color.White;
             ClientSize = new Size(1690, 900);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "ThietLapHP";
             Text = "ThietLapHP";
