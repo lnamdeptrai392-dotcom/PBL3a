@@ -12,13 +12,25 @@ namespace PBL3a.UI.AdminC
     public partial class AdminC : Form
     {
         private Form activeForm;
-
+        private Color defaultColor = Color.FromArgb(112, 146, 190);
+        private Color activeColor = Color.FromArgb(70, 130, 180);
 
         public AdminC()
         {
             InitializeComponent();
         }
 
+        private void SetActiveMenu(Button clickedButton)
+        {
+            // 1. Trả toàn bộ các nút menu về màu mặc định
+            btnDuyetDon.BackColor = defaultColor;
+            btnKhoaLop.BackColor = defaultColor;
+            btnTaoTK.BackColor = defaultColor;
+            btnTaoLH.BackColor = defaultColor;
+
+            // 2. Đổi màu đậm cho riêng nút đang được click
+            clickedButton.BackColor = activeColor;
+        }
 
         private void openChildForm(Form childForm, object sender)
         {
@@ -38,32 +50,29 @@ namespace PBL3a.UI.AdminC
 
         private void btnDuyetDon_Click(object sender, EventArgs e)
         {
-
-            openChildForm(new Forms.DuyetDon(), sender);
-
-        }
-
-        private void btnDaDuyet_Click(object sender, EventArgs e)
-        {
-
-            openChildForm(new Forms.DonDaDuyet(), sender);
+            SetActiveMenu(btnDuyetDon);
+            openChildForm(new Forms.Form1(), sender);
 
         }
-
-
 
         private void btnKhoaLop_Click(object sender, EventArgs e)
         {
-
-            openChildForm(new Forms.KhoaLop(), sender);
+            SetActiveMenu(btnKhoaLop);
+            openChildForm(new Forms.Form4(), sender);
 
         }
 
         private void btnTaoTK_Click(object sender, EventArgs e)
         {
+            SetActiveMenu(btnTaoTK);
+            openChildForm(new Forms.Form5(), sender);
 
-            openChildForm(new Forms.TaoTaiKhoan(), sender);
+        }
 
+        private void btnTaoLH_Click(object sender, EventArgs e)
+        {
+            SetActiveMenu(btnTaoLH);
+            openChildForm(new Forms.Form2(), sender);
         }
 
         private void butOut_Click(object sender, EventArgs e)
@@ -72,11 +81,6 @@ namespace PBL3a.UI.AdminC
             this.Hide();
             newForm.ShowDialog();
             this.Close();
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
         }
     }
