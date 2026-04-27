@@ -258,7 +258,7 @@ namespace PBL3a.UI.AdminTC
                     string ghiChu = row.Cells["Ghi chú"].Value?.ToString() ?? "";
 
                     DateTime ngayChi = ngay.Value.Date;
-                    var cellNgay = row.Cells["Ngày thu"].Value;
+                    var cellNgay = row.Cells["Ngày chi"].Value;
 
                     if (cellNgay != null && cellNgay != DBNull.Value && cellNgay.ToString().Trim() != "")
                     {

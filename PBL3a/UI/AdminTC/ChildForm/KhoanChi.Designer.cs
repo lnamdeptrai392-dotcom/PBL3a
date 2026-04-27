@@ -82,7 +82,7 @@ namespace PBL3a.UI.AdminTC
             // 
             date.Location = new Point(3, 3);
             date.Name = "date";
-            date.Size = new Size(51, 35);
+            date.Size = new Size(45, 35);
             date.TabIndex = 13;
             // 
             // lbNgay
@@ -91,9 +91,9 @@ namespace PBL3a.UI.AdminTC
             lbNgay.Dock = DockStyle.Right;
             lbNgay.Font = new Font("Segoe UI", 9.857143F);
             lbNgay.ForeColor = Color.Black;
-            lbNgay.Location = new Point(161, 34);
+            lbNgay.Location = new Point(138, 17);
             lbNgay.Name = "lbNgay";
-            lbNgay.Size = new Size(75, 92);
+            lbNgay.Size = new Size(75, 45);
             lbNgay.TabIndex = 3;
             lbNgay.Text = "Ngày:";
             // 
@@ -103,9 +103,9 @@ namespace PBL3a.UI.AdminTC
             lbNam.Dock = DockStyle.Right;
             lbNam.Font = new Font("Segoe UI", 9.857143F);
             lbNam.ForeColor = Color.Black;
-            lbNam.Location = new Point(690, 34);
+            lbNam.Location = new Point(667, 17);
             lbNam.Name = "lbNam";
-            lbNam.Size = new Size(119, 92);
+            lbNam.Size = new Size(119, 45);
             lbNam.TabIndex = 4;
             lbNam.Text = "Chi trong:";
             // 
@@ -175,7 +175,7 @@ namespace PBL3a.UI.AdminTC
             // 
             // ngay
             // 
-            ngay.Location = new Point(242, 37);
+            ngay.Location = new Point(219, 20);
             ngay.Name = "ngay";
             ngay.Size = new Size(379, 35);
             ngay.TabIndex = 14;
@@ -184,7 +184,7 @@ namespace PBL3a.UI.AdminTC
             // 
             cbbC.FormattingEnabled = true;
             cbbC.Items.AddRange(new object[] { "ngày", "tháng", "năm" });
-            cbbC.Location = new Point(815, 37);
+            cbbC.Location = new Point(792, 20);
             cbbC.Name = "cbbC";
             cbbC.Size = new Size(403, 38);
             cbbC.TabIndex = 15;
@@ -202,6 +202,7 @@ namespace PBL3a.UI.AdminTC
             Text = "KhoanChi";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
