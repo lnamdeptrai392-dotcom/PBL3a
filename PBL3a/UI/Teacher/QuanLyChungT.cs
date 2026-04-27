@@ -62,7 +62,7 @@ namespace PBL3a.UI.Teacher
 
         private void btnScore_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new NhapDiem());
+            OpenChildForm(new NhapDiem(currentTeacherID));
         }
 
         private void btnSalary_Click(object sender, EventArgs e)

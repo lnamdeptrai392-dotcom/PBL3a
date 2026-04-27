@@ -1,10 +1,12 @@
 ﻿using Microsoft.Data.SqlClient;
+using PBL3;
+using PBL3a.services;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Transactions;
 using System.Windows.Forms;
-using PBL3a.services;
 
 namespace PBL3a.UI.Teacher
 {
@@ -13,12 +15,13 @@ namespace PBL3a.UI.Teacher
         private DatabaseHelper db = new DatabaseHelper();
         private List<string> dsLop = new List<string>();
         private bool isFiltering = false;
-
-        public NhapDiem()
+        private string currentTeacherID;
+        public NhapDiem(string teacherId)
         {
             InitializeComponent();
 
             this.Load += NhapDiem_Load;
+            currentTeacherID = teacherId;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             comboBox1.SelectionChangeCommitted += comboBox1_SelectionChangeCommitted;
             comboBox1.KeyUp += comboBox1_KeyUp;
@@ -38,7 +41,10 @@ namespace PBL3a.UI.Teacher
             comboBox1.Items.Clear();
             dsLop.Clear();
 
-            string query = "SELECT classID FROM Class ORDER BY classID";
+            string query = @"SELECT classID 
+                            FROM Class 
+                            WHERE teacherID = @currentTeacherID
+                            ORDER BY classID";
 
             using (SqlConnection conn = db.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -195,38 +201,40 @@ namespace PBL3a.UI.Teacher
             using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
-
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                SqlTransaction transaction = conn.BeginTransaction();
+                try
                 {
-                    if (row.IsNewRow) continue;
-
-                    string accountId = row.Cells["AccountID"].Value?.ToString() ?? "";
-                    string diemText = row.Cells["Diem"].Value?.ToString() ?? "";
-                    string nhanXet = row.Cells["NhanXet"].Value?.ToString() ?? "";
-
-                    if (string.IsNullOrWhiteSpace(accountId))
-                        continue;
-
-                    object diemValue = DBNull.Value;
-
-                    if (!string.IsNullOrWhiteSpace(diemText))
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
-                        if (!double.TryParse(diemText, out double diem))
+                        if (row.IsNewRow) continue;
+
+                        string accountId = row.Cells["AccountID"].Value?.ToString() ?? "";
+                        string diemText = row.Cells["Diem"].Value?.ToString() ?? "";
+                        string nhanXet = row.Cells["NhanXet"].Value?.ToString() ?? "";
+
+                        if (string.IsNullOrWhiteSpace(accountId))
+                            continue;
+
+                        object diemValue = DBNull.Value;
+
+                        if (!string.IsNullOrWhiteSpace(diemText))
                         {
-                            MessageBox.Show($"Điểm của {accountId} không hợp lệ!");
-                            return;
+                            if (!double.TryParse(diemText, out double diem))
+                            {
+                                MessageBox.Show($"Điểm của {accountId} không hợp lệ!");
+                                return;
+                            }
+
+                            if (diem < 0 || diem > 10)
+                            {
+                                MessageBox.Show($"Điểm của {accountId} phải từ 0-10!");
+                                return;
+                            }
+
+                            diemValue = diem;
                         }
 
-                        if (diem < 0 || diem > 10)
-                        {
-                            MessageBox.Show($"Điểm của {accountId} phải từ 0-10!");
-                            return;
-                        }
-
-                        diemValue = diem;
-                    }
-
-                    string query = @"
+                        string query = @"
                         IF EXISTS (
                             SELECT 1
                             FROM Diem
@@ -244,26 +252,34 @@ namespace PBL3a.UI.Teacher
                             VALUES (@AccountID, @ClassID, @Diem, @NhanXet)
                         END";
 
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@AccountID", accountId);
-                        cmd.Parameters.AddWithValue("@ClassID", classId);
-                        cmd.Parameters.AddWithValue("@Diem", diemValue);
-                        cmd.Parameters.AddWithValue("@NhanXet",
-                            string.IsNullOrWhiteSpace(nhanXet) ? DBNull.Value : (object)nhanXet);
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@AccountID", accountId);
+                            cmd.Parameters.AddWithValue("@ClassID", classId);
+                            cmd.Parameters.AddWithValue("@Diem", diemValue);
+                            cmd.Parameters.AddWithValue("@NhanXet",
+                                string.IsNullOrWhiteSpace(nhanXet) ? DBNull.Value : (object)nhanXet);
 
-                        cmd.ExecuteNonQuery();
+                            cmd.ExecuteNonQuery();
+                        }
                     }
+                    transaction.Commit();
+                    MessageBox.Show("Lưu thành công!");
                 }
+
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show("Loi khi luu" + ex.Message);
+                }
+
+                LoadHocSinhTheoLop(classId);
             }
 
-            MessageBox.Show("Lưu thành công!");
-            LoadHocSinhTheoLop(classId);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            //private void button1_Click(object sender, EventArgs e)
+            //{
+            //    this.Close();
+            //}
         }
     }
 }
