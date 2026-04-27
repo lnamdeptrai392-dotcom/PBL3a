@@ -43,11 +43,6 @@ namespace PBL3a.UI.AdminTC
             this.Close();
         }
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btKT_Click(object sender, EventArgs e)
         {
             but_chform.ActivateButton(sender);

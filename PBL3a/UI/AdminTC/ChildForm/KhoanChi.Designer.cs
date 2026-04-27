@@ -37,8 +37,6 @@ namespace PBL3a.UI.AdminTC
             ngay = new DateTimePicker();
             cbbC = new ComboBox();
             tableLayoutPanel1.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -204,10 +202,6 @@ namespace PBL3a.UI.AdminTC
             Text = "KhoanChi";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            tableLayoutPanel2.ResumeLayout(false);
-            tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 

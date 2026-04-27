@@ -91,7 +91,7 @@ namespace PBL3a.UI.AdminTC
             laMGV.ForeColor = Color.Black;
             laMGV.Location = new Point(59, 42);
             laMGV.Name = "laMGV";
-            laMGV.Size = new Size(111, 86);
+            laMGV.Size = new Size(111, 87);
             laMGV.TabIndex = 1;
             laMGV.Text = "Mã Giảng Viên: ";
             // 
@@ -103,7 +103,7 @@ namespace PBL3a.UI.AdminTC
             laTGV.ForeColor = Color.Black;
             laTGV.Location = new Point(663, 42);
             laTGV.Name = "laTGV";
-            laTGV.Size = new Size(173, 86);
+            laTGV.Size = new Size(173, 87);
             laTGV.TabIndex = 2;
             laTGV.Text = "Tên Giảng Viên: ";
             // 
@@ -130,12 +130,12 @@ namespace PBL3a.UI.AdminTC
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = Color.Gray;
-            dataGridView1.Location = new Point(24, 189);
+            dataGridView1.Location = new Point(24, 190);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             tableLayoutPanel1.SetRowSpan(dataGridView1, 5);
-            dataGridView1.Size = new Size(1202, 610);
+            dataGridView1.Size = new Size(1202, 609);
             dataGridView1.TabIndex = 8;
             dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
             // 
@@ -155,7 +155,7 @@ namespace PBL3a.UI.AdminTC
             btSetL.BackColor = Color.FromArgb(93, 156, 179);
             btSetL.Font = new Font("Segoe UI", 9.857143F);
             btSetL.ForeColor = Color.White;
-            btSetL.Location = new Point(1252, 691);
+            btSetL.Location = new Point(1248, 691);
             btSetL.Margin = new Padding(3, 4, 3, 4);
             btSetL.Name = "btSetL";
             btSetL.Size = new Size(201, 86);
@@ -172,7 +172,7 @@ namespace PBL3a.UI.AdminTC
             laThang.Dock = DockStyle.Right;
             laThang.Font = new Font("Microsoft Sans Serif", 9F);
             laThang.ForeColor = Color.Black;
-            laThang.Location = new Point(91, 128);
+            laThang.Location = new Point(91, 129);
             laThang.Name = "laThang";
             laThang.Size = new Size(79, 42);
             laThang.TabIndex = 10;
@@ -184,7 +184,7 @@ namespace PBL3a.UI.AdminTC
             laNam.Dock = DockStyle.Right;
             laNam.Font = new Font("Microsoft Sans Serif", 9F);
             laNam.ForeColor = Color.Black;
-            laNam.Location = new Point(774, 128);
+            laNam.Location = new Point(774, 129);
             laNam.Name = "laNam";
             laNam.Size = new Size(62, 42);
             laNam.TabIndex = 11;
@@ -196,7 +196,7 @@ namespace PBL3a.UI.AdminTC
             cbbThang.Dock = DockStyle.Fill;
             cbbThang.FormattingEnabled = true;
             cbbThang.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" });
-            cbbThang.Location = new Point(177, 134);
+            cbbThang.Location = new Point(177, 135);
             cbbThang.Margin = new Padding(4, 6, 4, 6);
             cbbThang.Name = "cbbThang";
             cbbThang.Size = new Size(446, 33);
@@ -205,7 +205,7 @@ namespace PBL3a.UI.AdminTC
             // txtNam
             // 
             txtNam.Dock = DockStyle.Fill;
-            txtNam.Location = new Point(843, 134);
+            txtNam.Location = new Point(843, 135);
             txtNam.Margin = new Padding(4, 6, 4, 6);
             txtNam.Name = "txtNam";
             txtNam.Size = new Size(382, 31);
