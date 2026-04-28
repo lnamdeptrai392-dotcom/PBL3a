@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using PBL3a.services;
+using PBL3a.services.BLL;
 using PBL3a.UI.AdminC.Forms;
 using System;
 using System.Data;
@@ -9,9 +10,8 @@ namespace PBL3a.UI.AdminTC
 {
     public partial class KhoanChi : Form
     {
-        private DatabaseHelper db = new DatabaseHelper();
         private DataTable dtChi = new DataTable();
-        private int selectedChiID = -1;
+        private AdminTC_Service admin_sv = new AdminTC_Service();
 
         public KhoanChi()
         {
@@ -46,91 +46,40 @@ namespace PBL3a.UI.AdminTC
             DateTime today = ngay.Value.Date;
             int month = ngay.Value.Month;
             int year = ngay.Value.Year;
-
-            string query = "";
-
-            using (SqlConnection conn = db.GetConnection())
+            if (cbbC.SelectedItem.ToString() == "ngày")
             {
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = conn;
-
-                    if (cbbC.SelectedItem.ToString() == "ngày")
-                    {
-                        query = @"
-                        SELECT ChiID AS [Mã], 
-                               LoaiChi AS [Loại chi], 
-                               NoiDung AS [Nội dung], 
-                               SoTien AS [Số tiền], 
-                               NgayChi AS [Ngày chi], 
-                               GhiChu AS [Ghi chú]
-                        FROM KhoanChi WHERE NgayChi = @date";
-
-                        cmd.Parameters.Add("@date", SqlDbType.Date).Value = today;
-                    }
-                    else if (cbbC.SelectedItem.ToString() == "tháng")
-                    {
-                        query = @"
-                        SELECT ChiID AS [Mã], 
-                               LoaiChi AS [Loại chi], 
-                               NoiDung AS [Nội dung], 
-                               SoTien AS [Số tiền], 
-                               NgayChi AS [Ngày chi], 
-                               GhiChu AS [Ghi chú]
-                        FROM KhoanChi WHERE ChiMonth = @month AND ChiYear = @year";
-
-                        cmd.Parameters.AddWithValue("@month", month);
-                        cmd.Parameters.AddWithValue("@year", year);
-                    }
-                    else if (cbbC.SelectedItem.ToString() == "năm")
-                    {
-                        query = @"
-                        SELECT ChiID AS [Mã], 
-                               LoaiChi AS [Loại chi], 
-                               NoiDung AS [Nội dung], 
-                               SoTien AS [Số tiền], 
-                               NgayChi AS [Ngày chi], 
-                               GhiChu AS [Ghi chú]
-                        FROM KhoanChi WHERE ChiYear = @year";
-
-                        cmd.Parameters.AddWithValue("@year", year);
-                    }
-
-                    if (string.IsNullOrEmpty(query)) return;
-
-                    cmd.CommandText = query;
-
-                    try
-                    {
-                        conn.Open();
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                        {
-                            dtChi = new DataTable();
-                            adapter.Fill(dtChi);
-                            dataGridView1.DataSource = dtChi;
-                            dataGridView1.RowHeadersVisible = true;
-                            dataGridView1.AllowUserToAddRows = true;
-                            dataGridView1.ReadOnly = false;
-                            dataGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
-                            dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
-
-                            if (dataGridView1.Columns.Contains("Mã"))
-                            {
-                                dataGridView1.Columns["Mã"].DefaultCellStyle.BackColor = Color.LightGray;
-                            }
-                            if (dataGridView1.Columns.Contains("Ngày chi"))
-                            {
-                                dataGridView1.Columns["Ngày chi"].DefaultCellStyle.Format = "yyyy-MM-dd";
-                            }
-                        }
-                        TinhTongKhoanChi();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi kết nối: " + ex.Message);
-                    }
-                }
+                dtChi = admin_sv.getExpenseByDate(today);
             }
+            else if (cbbC.SelectedItem.ToString() == "tháng")
+            {
+                dtChi = admin_sv.getExpenseByMonth(month, year);
+            }
+            else if (cbbC.SelectedItem.ToString() == "năm")
+            {
+                dtChi = admin_sv.getExpenseByYear(year);
+            }
+            else { return; }
+            try
+            {
+                dataGridView1.DataSource = dtChi;
+                dataGridView1.RowHeadersVisible = true;
+                dataGridView1.AllowUserToAddRows = true;
+                dataGridView1.ReadOnly = false;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
+                dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
+
+                if (dataGridView1.Columns.Contains("Mã"))
+                {
+                    dataGridView1.Columns["Mã"].DefaultCellStyle.BackColor = Color.LightGray;
+                }
+                if (dataGridView1.Columns.Contains("Ngày thu"))
+                {
+                    dataGridView1.Columns["Ngày thu"].DefaultCellStyle.Format = "yyyy-MM-dd";
+                }
+                TinhTongKhoanChi();
+            }
+            catch (Exception ex) { MessageBox.Show("Lỗi kết nối: " + ex.Message); }
+
         }
 
         private void TinhTongKhoanChi()
@@ -161,78 +110,12 @@ namespace PBL3a.UI.AdminTC
 
         private void CapNhatKhoanChiXuongDB(int chiID, string loaiChi, string noiDung, decimal soTien, DateTime ngayChi, string ghiChu)
         {
-            using (SqlConnection conn = db.GetConnection())
-            {
-                string query = @"
-                                UPDATE KhoanChi 
-                                SET LoaiChi = @loai, 
-                                    NoiDung = @nd, 
-                                    SoTien = @tien, 
-                                    NgayChi = @ngay,
-                                    ChiMonth = @month,
-                                    ChiYear = @year,
-                                    GhiChu = @gc
-                                WHERE ChiID = @id";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@loai", loaiChi);
-                    cmd.Parameters.AddWithValue("@nd", noiDung);
-                    cmd.Parameters.AddWithValue("@tien", soTien);
-
-                    cmd.Parameters.Add("@ngay", SqlDbType.Date).Value = ngayChi;
-
-                    cmd.Parameters.AddWithValue("@month", ngayChi.Month);
-                    cmd.Parameters.AddWithValue("@year", ngayChi.Year);
-
-                    cmd.Parameters.AddWithValue("@gc", ghiChu);
-                    cmd.Parameters.AddWithValue("@id", chiID);
-
-                    try
-                    {
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi đồng bộ CSDL: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
+            admin_sv.UpdateExpense(chiID, loaiChi, noiDung, soTien, ngayChi, ghiChu);
         }
 
         private int ThemMoiKhoanChiXuongDB(string loaiChi, string noiDung, decimal soTien, DateTime ngayChi, string ghiChu)
         {
-            using (SqlConnection conn = db.GetConnection())
-            {
-                string query = @"
-                                INSERT INTO KhoanChi (LoaiChi, NoiDung, SoTien, NgayChi, ChiMonth, ChiYear, GhiChu)
-                                OUTPUT INSERTED.ChiID 
-                                VALUES (@loai, @nd, @tien, @ngay, @month, @year, @gc)";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@loai", loaiChi);
-                    cmd.Parameters.AddWithValue("@nd", noiDung);
-                    cmd.Parameters.AddWithValue("@tien", soTien);
-                    cmd.Parameters.Add("@ngay", SqlDbType.Date).Value = ngayChi;
-                    cmd.Parameters.AddWithValue("@month", ngayChi.Month);
-                    cmd.Parameters.AddWithValue("@year", ngayChi.Year);
-                    cmd.Parameters.AddWithValue("@gc", ghiChu);
-
-                    try
-                    {
-                        conn.Open();
-                        int newID = (int)cmd.ExecuteScalar();
-                        return newID;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi thêm CSDL: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return -1;
-                    }
-                }
-            }
+            return admin_sv.InsertExpense(loaiChi, noiDung, soTien, ngayChi, ghiChu);
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -279,6 +162,7 @@ namespace PBL3a.UI.AdminTC
                         {
                             dataGridView1.CellValueChanged -= dataGridView1_CellValueChanged;
                             row.Cells["Mã"].Value = newID;
+                            row.Cells["Ngày chi"].Value = ngayChi;
                             dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
                         }
                     }
@@ -287,6 +171,7 @@ namespace PBL3a.UI.AdminTC
                         int chiID = int.Parse(idStr);
                         CapNhatKhoanChiXuongDB(chiID, loaiChi, noiDung, soTien, ngayChi, ghiChu);
                     }
+                    dataGridView1.EndEdit();
                     TinhTongKhoanChi();
                 }
                 catch (Exception ex)

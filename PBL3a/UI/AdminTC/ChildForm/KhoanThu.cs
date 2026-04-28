@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using PBL3a.services;
+using PBL3a.services.BLL;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -9,8 +10,8 @@ namespace PBL3a.UI.AdminTC
 {
     public partial class KhoanThu : Form
     {
-        private DatabaseHelper db = new DatabaseHelper();
         private DataTable dtThu = new DataTable();
+        private AdminTC_Service admin_sv = new AdminTC_Service();
 
         public KhoanThu()
         {
@@ -61,78 +62,12 @@ namespace PBL3a.UI.AdminTC
 
         private void CapNhatKhoanThuXuongDB(int thuID, string loaiThu, string noiDung, decimal soTien, DateTime ngayThu, string ghiChu)
         {
-            using (SqlConnection conn = db.GetConnection())
-            {
-                string query = @"
-                                UPDATE KhoanThu 
-                                SET LoaiThu = @loai, 
-                                    NoiDung = @nd, 
-                                    SoTien = @tien, 
-                                    NgayThu = @ngay,
-                                    ThuMonth = @month,
-                                    ThuYear = @year,
-                                    GhiChu = @gc
-                                WHERE ThuID = @id";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@loai", loaiThu);
-                    cmd.Parameters.AddWithValue("@nd", noiDung);
-                    cmd.Parameters.AddWithValue("@tien", soTien);
-
-                    cmd.Parameters.Add("@ngay", SqlDbType.Date).Value = ngayThu;
-
-                    cmd.Parameters.AddWithValue("@month", ngayThu.Month);
-                    cmd.Parameters.AddWithValue("@year", ngayThu.Year);
-
-                    cmd.Parameters.AddWithValue("@gc", ghiChu);
-                    cmd.Parameters.AddWithValue("@id", thuID);
-
-                    try
-                    {
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi đồng bộ CSDL: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
+            admin_sv.UpdateIncome(thuID, loaiThu, noiDung, soTien, ngayThu, ghiChu);
         }
 
         private int ThemMoiKhoanThuXuongDB(string loaiThu, string noiDung, decimal soTien, DateTime ngayThu, string ghiChu)
         {
-            using (SqlConnection conn = db.GetConnection())
-            {
-                string query = @"
-                    INSERT INTO KhoanThu (LoaiThu, NoiDung, SoTien, NgayThu, ThuMonth, ThuYear, GhiChu)
-                    OUTPUT INSERTED.ThuID 
-                    VALUES (@loai, @nd, @tien, @ngay, @month, @year, @gc)";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@loai", loaiThu);
-                    cmd.Parameters.AddWithValue("@nd", noiDung);
-                    cmd.Parameters.AddWithValue("@tien", soTien);
-                    cmd.Parameters.Add("@ngay", SqlDbType.Date).Value = ngayThu;
-                    cmd.Parameters.AddWithValue("@month", ngayThu.Month);
-                    cmd.Parameters.AddWithValue("@year", ngayThu.Year);
-                    cmd.Parameters.AddWithValue("@gc", ghiChu);
-
-                    try
-                    {
-                        conn.Open();
-                        int newID = (int)cmd.ExecuteScalar();
-                        return newID;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi thêm CSDL: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return -1;
-                    }
-                }
-            }
+            return admin_sv.InsertIncome(loaiThu, noiDung, soTien, ngayThu, ghiChu);
         }
 
         private void btOK_Click(object sender, EventArgs e)
@@ -145,91 +80,40 @@ namespace PBL3a.UI.AdminTC
             DateTime today = ngay.Value.Date;
             int month = ngay.Value.Month;
             int year = ngay.Value.Year;
-
-            string query = "";
-
-            using (SqlConnection conn = db.GetConnection())
+            if (cbbT.SelectedItem.ToString() == "ngày")
             {
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = conn;
-
-                    if (cbbT.SelectedItem.ToString() == "ngày")
-                    {
-                        query = @"
-                        SELECT ThuID AS [Mã], 
-                               LoaiThu AS [Loại thu], 
-                               NoiDung AS [Nội dung], 
-                               SoTien AS [Số tiền], 
-                               NgayThu AS [Ngày thu], 
-                               GhiChu AS [Ghi chú]
-                        FROM KhoanThu WHERE NgayThu = @date";
-
-                        cmd.Parameters.Add("@date", SqlDbType.Date).Value = today;
-                    }
-                    else if (cbbT.SelectedItem.ToString() == "tháng")
-                    {
-                        query = @"
-                        SELECT ThuID AS [Mã], 
-                               LoaiThu AS [Loại thu], 
-                               NoiDung AS [Nội dung], 
-                               SoTien AS [Số tiền], 
-                               NgayThu AS [Ngày thu], 
-                               GhiChu AS [Ghi chú]
-                        FROM KhoanThu WHERE ThuMonth = @month AND ThuYear = @year";
-
-                        cmd.Parameters.AddWithValue("@month", month);
-                        cmd.Parameters.AddWithValue("@year", year);
-                    }
-                    else if (cbbT.SelectedItem.ToString() == "năm")
-                    {
-                        query = @"
-                        SELECT ThuID AS [Mã], 
-                               LoaiThu AS [Loại thu], 
-                               NoiDung AS [Nội dung], 
-                               SoTien AS [Số tiền], 
-                               NgayThu AS [Ngày thu], 
-                               GhiChu AS [Ghi chú]
-                        FROM KhoanThu WHERE ThuYear = @year";
-
-                        cmd.Parameters.AddWithValue("@year", year);
-                    }
-
-                    if (string.IsNullOrEmpty(query)) return;
-
-                    cmd.CommandText = query;
-
-                    try
-                    {
-                        conn.Open();
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                        {
-                            dtThu = new DataTable();
-                            adapter.Fill(dtThu);
-                            dataGridView1.DataSource = dtThu;
-                            dataGridView1.RowHeadersVisible = true;
-                            dataGridView1.AllowUserToAddRows = true;
-                            dataGridView1.ReadOnly = false;
-                            dataGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
-                            dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
-
-                            if (dataGridView1.Columns.Contains("Mã"))
-                            {
-                                dataGridView1.Columns["Mã"].DefaultCellStyle.BackColor = Color.LightGray;
-                            }
-                            if (dataGridView1.Columns.Contains("Ngày thu"))
-                            {
-                                dataGridView1.Columns["Ngày thu"].DefaultCellStyle.Format = "yyyy-MM-dd";
-                            }
-                        }
-                        TinhTongKhoanThu();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi kết nối: " + ex.Message);
-                    }
-                }
+                dtThu = admin_sv.getIncomeByDate(today);
             }
+            else if (cbbT.SelectedItem.ToString() == "tháng")
+            {
+                dtThu = admin_sv.getIncomeByMonth(month, year);
+            }
+            else if (cbbT.SelectedItem.ToString() == "năm")
+            {
+                dtThu = admin_sv.getIncomeByYear(year);
+            }
+            else { return; }
+
+            try
+            {
+                dataGridView1.DataSource = dtThu;
+                dataGridView1.RowHeadersVisible = true;
+                dataGridView1.AllowUserToAddRows = true;
+                dataGridView1.ReadOnly = false;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
+                dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
+
+                if (dataGridView1.Columns.Contains("Mã"))
+                {
+                    dataGridView1.Columns["Mã"].DefaultCellStyle.BackColor = Color.LightGray;
+                }
+                if (dataGridView1.Columns.Contains("Ngày thu"))
+                {
+                    dataGridView1.Columns["Ngày thu"].DefaultCellStyle.Format = "yyyy-MM-dd";
+                }
+                TinhTongKhoanThu();
+            }
+            catch (Exception ex) { MessageBox.Show("Lỗi kết nối: " + ex.Message); }
         }
 
         private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)

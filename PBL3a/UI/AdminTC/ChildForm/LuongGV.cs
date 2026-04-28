@@ -2,6 +2,7 @@
 using Microsoft.VisualBasic.Devices;
 using PBL3;
 using PBL3a.services;
+using PBL3a.services.BLL;
 using System;
 using System.Data;
 using System.Security.Policy;
@@ -12,9 +13,8 @@ namespace PBL3a.UI.AdminTC
 {
     public partial class LuongGV : Form
     {
-        private DatabaseHelper db = new DatabaseHelper();
         private DataTable dtLuong = new DataTable();
-
+        private AdminTC_Service admin_sv = new AdminTC_Service();
         public LuongGV()
         {
             InitializeComponent();
@@ -39,27 +39,12 @@ namespace PBL3a.UI.AdminTC
         private void LoadDanhSachGiangVien(string text)
         {
             cbbMGV.Items.Clear();
-
-            using (SqlConnection conn = db.GetConnection())
+            List<string> dsgv = admin_sv.GetTeachersByID(text);
+            if (dsgv.Count > 0)
             {
-                conn.Open();
-                string query = "SELECT Id FROM accountList WHERE Role = 'Teacher' AND Id LIKE @text ORDER BY Id";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@text", "%" + text + "%");
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            cbbMGV.Items.Add(reader["Id"].ToString());
-                        }
-                    }
-                }
-            }
-
-            if (cbbMGV.Items.Count > 0)
+                cbbMGV.Items.AddRange(dsgv.ToArray());
                 cbbMGV.SelectedIndex = 0;
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object? sender, EventArgs e)
@@ -74,53 +59,13 @@ namespace PBL3a.UI.AdminTC
 
         private void LoadTenGiangVien(string teacherID)
         {
-            using (SqlConnection conn = db.GetConnection())
-            {
-                conn.Open();
-                string query = "SELECT name FROM accountList WHERE Id = @teacherID";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@teacherID", teacherID);
-                    object result = cmd.ExecuteScalar();
-                    tbTL.Text = result != null ? result.ToString() : "";
-                }
-            }
+            tbTL.Text = admin_sv.GetNameTeacherByID(teacherID);
         }
 
         private void LoadLuongTheoGV(string teacherID)
         {
-            using (SqlConnection conn = db.GetConnection())
-            {
-                conn.Open();
-
-                string query = @"
-                    SELECT 
-                        LuongID,
-                        TeacherID AS [Mã GV],
-                        SalaryMonth AS [Tháng],
-                        SalaryYear AS [Năm],
-                        SoLopDay AS [Số lớp dạy],
-                        SoBuoiDay AS [Số buổi dạy],
-                        LuongCoBan AS [Lương cơ bản],
-                        Thuong AS [Thưởng],
-                        Phat AS [Phạt],
-                        TongLuong AS [Tổng lương],
-                        TrangThai AS [Trạng thái],
-                        NgayThanhToan AS [Ngày thanh toán],
-                        GhiChu AS [Ghi chú]
-                    FROM LuongGV
-                    WHERE TeacherID = @teacherID
-                    ORDER BY SalaryYear DESC, SalaryMonth DESC";
-
-                using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
-                {
-                    adapter.SelectCommand.Parameters.AddWithValue("@teacherID", teacherID);
-                    dtLuong = new DataTable();
-                    adapter.Fill(dtLuong);
-                    dataGridView1.DataSource = dtLuong;
-                }
-            }
+            dtLuong = admin_sv.GetSalaryByID(teacherID);
+            dataGridView1.DataSource = dtLuong;
 
             if (dataGridView1.Columns["LuongID"] != null)
                 dataGridView1.Columns["LuongID"].ReadOnly = true;
@@ -180,71 +125,7 @@ namespace PBL3a.UI.AdminTC
                 MessageBox.Show("Hay chon thang va nam");
                 return;
             }
-            using (SqlConnection conn = db.GetConnection())
-            {
-                conn.Open();
-
-                string checkQuery = @"
-                SELECT COUNT(*)
-                FROM LuongGV
-                WHERE TeacherID = @teacherID AND SalaryMonth = @month AND SalaryYear = @year";
-
-                using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
-                {
-                    checkCmd.Parameters.AddWithValue("@teacherID", teacherID);
-                    checkCmd.Parameters.AddWithValue("@month", month);
-                    checkCmd.Parameters.AddWithValue("@year", year);
-
-                    int exists = (int)checkCmd.ExecuteScalar();
-
-                    if (exists > 0)
-                    {
-                        MessageBox.Show("Tháng này đã có bảng lương cho giảng viên.");
-                        LoadLuongTheoGV(teacherID);
-                        return;
-                    }
-                }
-
-                string classCountQuery = @"SELECT COUNT(*) FROM Class WHERE teacherID = @teacherID
-                                        AND start_date <= EOMONTH(DATEFROMPARTS(@year, @month, 1))
-                                        AND end_date >= DATEFROMPARTS(@year, @month, 1)";
-                int soLopDay = 0;
-
-                using (SqlCommand cmd = new SqlCommand(classCountQuery, conn))
-                {
-                    cmd.Parameters.AddWithValue("@teacherID", teacherID);
-                    cmd.Parameters.AddWithValue("@month", month);
-                    cmd.Parameters.AddWithValue("@year", year);
-                    soLopDay = (int)cmd.ExecuteScalar();
-                }
-
-                int soBuoiDay = soLopDay * 8;
-                decimal luongCoBan = soBuoiDay * 400000;
-                decimal thuong = 0;
-                decimal phat = 0;
-                decimal tongLuong = luongCoBan + thuong - phat;
-
-                string insertQuery = @"
-                INSERT INTO LuongGV
-                (TeacherID, SalaryMonth, SalaryYear, SoLopDay, SoBuoiDay, LuongCoBan, Thuong, Phat, TongLuong, TrangThai, NgayThanhToan, GhiChu)
-                VALUES
-                (@teacherID, @month, @year, @soLopDay, @soBuoiDay, @luongCoBan, @thuong, @phat, @tongLuong, N'Chưa thanh toán', NULL, NULL)";
-
-                using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
-                {
-                    insertCmd.Parameters.AddWithValue("@teacherID", teacherID);
-                    insertCmd.Parameters.AddWithValue("@month", month);
-                    insertCmd.Parameters.AddWithValue("@year", year);
-                    insertCmd.Parameters.AddWithValue("@soLopDay", soLopDay);
-                    insertCmd.Parameters.AddWithValue("@soBuoiDay", soBuoiDay);
-                    insertCmd.Parameters.AddWithValue("@luongCoBan", luongCoBan);
-                    insertCmd.Parameters.AddWithValue("@thuong", thuong);
-                    insertCmd.Parameters.AddWithValue("@phat", phat);
-                    insertCmd.Parameters.AddWithValue("@tongLuong", tongLuong);
-
-                    insertCmd.ExecuteNonQuery();
-                }
-            }
+            admin_sv.UpdateSalaryForTeacher(teacherID, month, year);
 
             MessageBox.Show("Đã tính toán lương thành công.");
             LoadLuongTheoGV(teacherID);
@@ -290,43 +171,9 @@ namespace PBL3a.UI.AdminTC
             }
         }
 
-        private void CapNhatThuongPhatXuongDB(int luongID, decimal thuong, decimal phat, decimal tongLuong, string trangThai, DateTime ngay, string ghichu)
+        private void CapNhatLuongGV(int luongID, decimal thuong, decimal phat, decimal tongLuong, string trangThai, DateTime ngay, string ghichu)
         {
-            using (SqlConnection conn = db.GetConnection())
-            {
-                string query = @"
-                                UPDATE LuongGV 
-                                SET Thuong = @thuong, 
-                                    Phat = @phat, 
-                                    TongLuong = @tongLuong,
-                                    TrangThai = @trangThai,
-                                    NgayThanhToan = @ngay,
-                                    GhiChu = @ghichu
-                                WHERE LuongID = @id";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@thuong", thuong);
-                    cmd.Parameters.AddWithValue("@phat", phat);
-                    cmd.Parameters.AddWithValue("@tongLuong", tongLuong);
-                    cmd.Parameters.AddWithValue("@id", luongID);
-
-                    cmd.Parameters.AddWithValue("@trangThai", trangThai);
-                    cmd.Parameters.AddWithValue("@ghichu", ghichu);
-
-                    cmd.Parameters.Add("@ngay", SqlDbType.Date).Value = ngay;
-
-                    try
-                    {
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi đồng bộ CSDL: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
+            admin_sv.UpdateSalaryForTeacher(luongID, thuong, phat, tongLuong, trangThai, ngay, ghichu);
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -369,7 +216,7 @@ namespace PBL3a.UI.AdminTC
 
                     if (int.TryParse(row.Cells["LuongID"].Value?.ToString(), out int luongID))
                     {
-                        CapNhatThuongPhatXuongDB(luongID, thuong, phat, tongLuong, trangThai, ngayTT, ghiChu);
+                        CapNhatLuongGV(luongID, thuong, phat, tongLuong, trangThai, ngayTT, ghiChu);
                     }
                 }
                 catch (Exception ex)
