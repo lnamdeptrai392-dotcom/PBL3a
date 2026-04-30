@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using PBL3a.services;
+using PBL3a.services.BLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ namespace PBL3a.UI.AdminTC
 {
     public partial class Lai : Form
     {
-        private DatabaseHelper db = new DatabaseHelper();
+        private AdminTC_Service admin_sv = new AdminTC_Service();
         private DataTable thuchi = new DataTable();
         public Lai()
         {
@@ -79,108 +80,34 @@ namespace PBL3a.UI.AdminTC
             DateTime today = date.Value.Date;
             int month = date.Value.Month;
             int year = date.Value.Year;
-
-            string query = "";
-
-            using (SqlConnection conn = db.GetConnection())
+            if (cbbLN.SelectedItem.ToString() == "ngày")
             {
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = conn;
-
-                    if (cbbLN.SelectedItem.ToString() == "ngày")
-                    {
-                        query = @"
-                        SELECT ThuID AS [Mã], 
-                               LoaiThu AS [Loại thu], 
-                               NoiDung AS [Nội dung], 
-                               SoTien AS [Số tiền], 
-                               NgayThu AS [Ngày thu], 
-                               GhiChu AS [Ghi chú], 
-                               'Thu' AS [Loại Giao Dịch]
-                        FROM KhoanThu WHERE NgayThu = @date
-                        UNION ALL
-                        SELECT ChiID AS [Mã chi], 
-                                LoaiChi AS [Loại chi], 
-                                NoiDung AS [Nội dung], 
-                                SoTien AS [Số tiền], 
-                                NgayChi AS [Ngày chi], 
-                                GhiChu AS [Ghi chú], 
-                                'Chi' AS [Loại Giao Dịch]
-                        FROM KhoanChi WHERE NgayChi = @date";
-
-                        cmd.Parameters.Add("@date", SqlDbType.Date).Value = today;
-                    }
-                    else if (cbbLN.SelectedItem.ToString() == "tháng")
-                    {
-                        query = @"
-                        SELECT ThuID AS [Mã], 
-                               LoaiThu AS [Loại thu], 
-                               NoiDung AS [Nội dung], 
-                               SoTien AS [Số tiền], 
-                               NgayThu AS [Ngày thu], 
-                               GhiChu AS [Ghi chú], 
-                               'Thu' AS [Loại Giao Dịch]
-                        FROM KhoanThu WHERE ThuMonth = @month AND ThuYear = @year
-                        UNION ALL
-                        SELECT ChiID AS [Mã chi], 
-                                LoaiChi AS [Loại chi], 
-                                NoiDung AS [Nội dung], 
-                                SoTien AS [Số tiền], 
-                                NgayChi AS [Ngày chi], 
-                                GhiChu AS [Ghi chú], 
-                                'Chi' AS [Loại Giao Dịch]
-                        FROM KhoanChi WHERE ChiMonth = @month AND ChiYear = @year";
-
-                        cmd.Parameters.AddWithValue("@month", month);
-                        cmd.Parameters.AddWithValue("@year", year);
-                    }
-                    else if (cbbLN.SelectedItem.ToString() == "năm")
-                    {
-                        query = @"
-                        SELECT ThuID AS [Mã], 
-                               LoaiThu AS [Loại thu], 
-                               NoiDung AS [Nội dung], 
-                               SoTien AS [Số tiền], 
-                               NgayThu AS [Ngày thu], 
-                               GhiChu AS [Ghi chú], 
-                               'Thu' AS [Loại Giao Dịch]
-                        FROM KhoanThu WHERE ThuYear = @year
-                        UNION ALL
-                        SELECT ChiID AS [Mã chi], 
-                                LoaiChi AS [Loại chi], 
-                                NoiDung AS [Nội dung], 
-                                SoTien AS [Số tiền], 
-                                NgayChi AS [Ngày chi], 
-                                GhiChu AS [Ghi chú], 
-                                'Chi' AS [Loại Giao Dịch]
-                        FROM KhoanChi WHERE ChiYear = @year";
-
-                        cmd.Parameters.AddWithValue("@year", year);
-                    }
-
-                    if (string.IsNullOrEmpty(query)) return;
-
-                    cmd.CommandText = query;
-
-                    try
-                    {
-                        conn.Open();
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                        {
-                            thuchi = new DataTable();
-                            adapter.Fill(thuchi);
-                            dataGridView1.DataSource = thuchi;
-                            dataGridView1.Columns["Ngày thu"].DefaultCellStyle.Format = "yyyy-MM-dd";
-                        }
-                        TinhTongKhoan();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi kết nối: " + ex.Message);
-                    }
-                }
+                thuchi = admin_sv.getNetIncomeByDate(today);
             }
+            else if (cbbLN.SelectedItem.ToString() == "tháng")
+            {
+                thuchi = admin_sv.getNetIncomeByMonth(month, year);
+            }
+            else if (cbbLN.SelectedItem.ToString() == "năm")
+            {
+                thuchi = admin_sv.getNetIncomeByYear(year);
+            }
+            else { return; }
+            try
+            {
+                dataGridView1.DataSource = thuchi;
+
+                if (dataGridView1.Columns.Contains("Mã"))
+                {
+                    dataGridView1.Columns["Mã"].DefaultCellStyle.BackColor = Color.LightGray;
+                }
+                if (dataGridView1.Columns.Contains("Ngày thu"))
+                {
+                    dataGridView1.Columns["Ngày thu"].DefaultCellStyle.Format = "yyyy-MM-dd";
+                }
+                TinhTongKhoan();
+            }
+            catch (Exception ex) { MessageBox.Show("Lỗi kết nối: " + ex.Message); }
         }
     }
 }

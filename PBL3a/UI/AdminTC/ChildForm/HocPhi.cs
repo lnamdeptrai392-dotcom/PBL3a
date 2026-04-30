@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using PBL3a.services;
+using PBL3a.services.BLL;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -8,9 +9,8 @@ namespace PBL3a.UI.AdminTC
 {
     public partial class HocPhi : Form
     {
-        private DatabaseHelper db = new DatabaseHelper();
         private DataTable dtHocPhi = new DataTable();
-        
+        private AdminTC_Service admin_sv = new AdminTC_Service();
 
         public HocPhi()
         {
@@ -36,27 +36,12 @@ namespace PBL3a.UI.AdminTC
         private void LoadDanhSachLop(string text)
         {
             cbbML.Items.Clear();
-
-            using (SqlConnection conn = db.GetConnection())
+            List<string> dslop = admin_sv.GetClassIDsByKeyword(text);
+            if (dslop.Count > 0)
             {
-                conn.Open();
-                string query = "SELECT classID FROM Class WHERE classID LIKE @text ORDER BY classID";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@text", "%" + text + "%");
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            cbbML.Items.Add(reader["classID"].ToString());
-                        }
-                    }
-                }
-            }
-
-            if (cbbML.Items.Count > 0)
+                cbbML.Items.AddRange(dslop.ToArray());
                 cbbML.SelectedIndex = 0;
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object? sender, EventArgs e)
@@ -72,50 +57,13 @@ namespace PBL3a.UI.AdminTC
 
         private void LoadTenLop(string classID)
         {
-            using (SqlConnection conn = db.GetConnection())
-            {
-                conn.Open();
-                string query = "SELECT class_name FROM Class WHERE classID = @classID";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@classID", classID);
-                    object result = cmd.ExecuteScalar();
-                    tbTL.Text = result != null ? result.ToString() : "";
-                }
-            }
+            tbTL.Text = admin_sv.GetClassNameByID(classID);
         }
 
         private void LoadHocPhiTheoLop(string classID)
         {
-            using (SqlConnection conn = db.GetConnection())
-            {
-                conn.Open();
-
-                string query = @"
-                    SELECT 
-                        hp.HocPhiID AS [ID],
-                        hp.AccountID AS [Mã HS],
-                        a.name AS [Tên học sinh],
-                        hp.TuitionMonth AS [Tháng],
-                        hp.TuitionYear AS [Năm],
-                        hp.SoTien AS [Số tiền],
-                        hp.TrangThai AS [Trạng thái],
-                        hp.NgayDong AS [Ngày đóng],
-                        hp.GhiChu AS [Ghi chú]
-                    FROM HocPhi hp
-                    INNER JOIN accountList a ON hp.AccountID = a.Id
-                    WHERE hp.ClassID = @classID
-                    ORDER BY hp.TuitionYear DESC, hp.TuitionMonth DESC, a.Id";
-
-                using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
-                {
-                    adapter.SelectCommand.Parameters.AddWithValue("@classID", classID);
-                    dtHocPhi = new DataTable();
-                    adapter.Fill(dtHocPhi);
-                    dataGridView1.DataSource = dtHocPhi;
-                }
-            }
+            DataTable dtHocPhi = admin_sv.GetTuitionByClass(classID);
+            dataGridView1.DataSource = dtHocPhi;
 
             if (dataGridView1.Columns["HocPhiID"] != null)
                 dataGridView1.Columns["HocPhiID"].ReadOnly = true;
